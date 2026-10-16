@@ -142,11 +142,17 @@ def siunitx_num(m):
     return re.sub(r"\\num\{([^}]*)\}", rep, m)
 
 
+def bracket_slices(m):
+    """X[:,1] -> X\\lbrack :,1\\rbrack (same rendering; GitBook's parser trips on [:...] in math)."""
+    return re.sub(r"\[(:[^\[\]]*)\]", r"\\lbrack \1\\rbrack ", m)
+
+
 def clean_math(m):
     for bad, good in SLIDE_TYPOS.items():
         m = m.replace(bad, good)
     m = siunitx_num(m)
     m = tabular_to_array(m)
+    m = bracket_slices(m)
     m = re.sub(r"\\label\{[^}]*\}", "", m)
     m = re.sub(r"\\(nonumber|notag)\b", "", m)
     m = re.sub(r"\\(displaystyle)\b", r"\\displaystyle", m)

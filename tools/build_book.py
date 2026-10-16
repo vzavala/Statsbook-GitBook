@@ -209,7 +209,7 @@ def nb_math(md):
     """Jupyter $x$ -> GitBook $$x$$; display $$..$$ on its own lines."""
     store = T.Store()
     md = re.sub(r"\$\$(.+?)\$\$", lambda m: store.put("\n$$\n" + m.group(1).strip() + "\n$$\n"), md, flags=re.S)
-    md = re.sub(r"(?<![\\$])\$([^$\n]+?)\$", lambda m: store.put("$$" + m.group(1) + "$$"), md)
+    md = re.sub(r"(?<![\\$])\$([^$\n]+?)\$", lambda m: store.put("$$" + T.bracket_slices(m.group(1)) + "$$"), md)
     md = re.sub(r"\\begin\{(align\*?|equation\*?)\}(.*?)\\end\{\1\}",
                 lambda m: store.put("\n$$\n\\begin{aligned}" + m.group(2) + "\\end{aligned}\n$$\n"),
                 md, flags=re.S)

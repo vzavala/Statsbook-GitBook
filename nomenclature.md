@@ -390,7 +390,7 @@ of every notebook in the book.
 |---|---|---|
 | $$\mathbf{X}=\mathbf{U}\mathbf{S}\mathbf{V}^T$$ | `U`, `s`, `Vt` | SVD (`s` holds the singular values $$s_j$$; `S` is the sample size) |
 | $$\lambda_i=s_i^2$$ | `lam` | eigenvalues of $$\mathbf{X}^T\mathbf{X}$$ |
-| $$\mathrm{rank}(\mathbf{X}[:,1..k])$$ | `np.linalg.matrix_rank` | rank as columns are added |
+| $$\mathrm{rank}(\mathbf{X}\lbrack :,1..k\rbrack )$$ | `np.linalg.matrix_rank` | rank as columns are added |
 
 
 ### Chapter 6: Statistical Data Analysis and Learning — Part II: Signal Processing
