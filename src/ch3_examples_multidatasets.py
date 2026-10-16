@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # Examples of multivariate data sets (Victor Z, UW-Madison, 2024): realizations
 # $x_\omega=(x_{\omega,1},x_{\omega,2})$ (`x_omega[:, 0]`, `x_omega[:, 1]`) that are

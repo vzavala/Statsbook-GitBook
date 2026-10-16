@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # Using the GP uncertainty to choose experiments (Victor Z, UW-Madison, 2024). The true response is
 # $y=x^2$ (plus small noise). With 3, 4, 5, and 6 experiments $(x_\omega,y_\omega)$ (`x_omega`, `y_omega`)

@@ -180,7 +180,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_discrete-09-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_discrete-07-0.png" alt="" width="520"></figure>
 
 ## Probability Density of Discrete and Continuous RVs
 
@@ -299,7 +299,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_continuous-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_continuous-03-0.png" alt="" width="520"></figure>
 
 Discrete approximations with $$\Delta x=0.5$$ built from $$S=1000$$ realizations $$x_\omega$$:
 $$\hat{f}(x)\approx\frac{\hat{F}(x+\Delta x)-\hat{F}(x)}{\Delta x}$$ (histogram) and
@@ -335,4 +335,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_continuous-07-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_continuous-05-0.png" alt="" width="520"></figure>

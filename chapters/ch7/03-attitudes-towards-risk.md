@@ -58,7 +58,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_mean_var_comparison-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_mean_var_comparison-02-0.png" alt="" width="520"></figure>
 
 ## Attitudes Towards Risk
 
@@ -196,4 +196,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_npv_comparison-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_npv_comparison-02-0.png" alt="" width="520"></figure>

@@ -242,7 +242,7 @@ nonzero singular values of X: [41.8629  1.5625  0.8498  0.5757]
 rank(X) = 4   rank(X_eps) = 10
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_svd_image_field-03-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_svd_image_field-01-1.png" alt="" width="520"></figure>
 
 ## Example: Image Compression using SVD
 

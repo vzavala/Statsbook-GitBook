@@ -62,7 +62,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_examples_surfaces-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_examples_surfaces-01-0.png" alt="" width="520"></figure>
 
 #### Python implementation
 
@@ -110,7 +110,7 @@ plt.show()
 MSE I = 0.0112,  MSE II = 0.0119
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_benchmark-03-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_benchmark-01-1.png" alt="" width="520"></figure>
 
 3-fold cross-validation: estimate on two folds, test on the third.
 

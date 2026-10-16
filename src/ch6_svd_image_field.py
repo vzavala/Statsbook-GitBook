@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # Images as matrices (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2020). We use the $10\times 10$
 # matrix $\mathbf{X}$ shown on the slide, a noisy version $\mathbf{X}_\epsilon$ (`X_eps`), and the rank-1

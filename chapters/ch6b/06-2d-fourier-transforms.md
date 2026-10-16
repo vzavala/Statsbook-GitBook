@@ -63,7 +63,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_2D-03-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_2D-01-1.png" alt="" width="520"></figure>
 
 ## Example: 2D FT Applied to Filtering
 
@@ -112,7 +112,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters_2D-03-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters_2D-01-1.png" alt="" width="520"></figure>
 
 * We now illustrate how to use FTs to perform convolutions.
 * We take original image $$f$$ and obtain its 2D FT $$\hat{f}$$.

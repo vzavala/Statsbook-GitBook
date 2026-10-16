@@ -11,15 +11,14 @@ The [Nomenclature](nomenclature.md) page collects all of these tables and the ge
 
 ### In Google Colab
 
-Use the **Open in Colab** link at the top of each Python section. Notebooks that read data (from
-`Data/`) or helper code (from `Support/`) need those folders: copy the repository's `notebooks/`
-folder to your Google Drive, mount the drive in the notebook, and set `path` to the folder, for example
+1. Click the **Open in Colab** link at the top of a Python section.
+2. Choose **Runtime → Run all** (or run the cells one by one with the ▶ button or **Shift+Enter**).
+   If Colab warns that the notebook was not authored by Google, click **Run anyway**.
+3. Notebooks that read data start with a **Setup** cell. On Colab it downloads the `Data/` and
+   `Support/` folders from the book's GitHub repository automatically (a few seconds); nothing
+   else is needed.
 
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-path = '/content/drive/MyDrive/StatsBook/notebooks/'
-```
+To keep your own edits, use **File → Save a copy in Drive**.
 
 ### On your computer
 
@@ -31,7 +30,7 @@ pip install -r requirements.txt
 cd notebooks && jupyter lab
 ```
 
-The notebooks are set up to run from the `notebooks/` folder (`path = ''`). The CNN notebooks of
+The notebooks are set up to run from the `notebooks/` folder, where they find `Data/` and `Support/`. The CNN notebooks of
 Chapter 6 also need PyTorch (`torch`).
 
 ## For maintainers: how the book is built

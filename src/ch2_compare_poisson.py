@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # Pdf and cdf of a Poisson RV $X\sim\mathcal{P}(\lambda)$ for several $\lambda$
 # (Victor Z and David Cole, UW-Madison, 2024).

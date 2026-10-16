@@ -119,4 +119,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_leastsquares_example-08-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_leastsquares_example-06-0.png" alt="" width="520"></figure>

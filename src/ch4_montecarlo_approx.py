@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # Convergence of Monte Carlo approximations (Victor Z, UW-Madison, 2024).
 # Samples come from a Weibull RV with scale $\beta=2$ and shape $\xi=1$ (as in the slide figure;

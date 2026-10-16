@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # **Additional example: residuals of a wrong model** (Victor Z and Leo Gonzalez, UW-Madison, 2024).
 # Data come from $Y=\theta X^2+\epsilon$ but we fit $Y=\theta X+\epsilon$. The residuals

@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # Pdf and cdf of a binomial RV $X\sim\mathrm{Bi}(n,p)$, and convergence of
 # $\mathcal{H}(N_y,N_t,n,p)$ to $\mathrm{Bi}(n,p)$ for large $N_t$

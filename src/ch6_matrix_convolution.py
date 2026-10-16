@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # Convolution of a $5\times 5$ matrix $f$ with a $3\times 3$ filter $g$ (written for the book to
 # accompany the slide example). `mode='valid'` keeps the window inside $f$ (a $3\times 3$ result);

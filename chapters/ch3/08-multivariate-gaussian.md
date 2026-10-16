@@ -60,7 +60,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_compare_multigaussians-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_compare_multigaussians-01-0.png" alt="" width="520"></figure>
 
 Marginals $$X_1\sim\mathcal{N}(\mu_1,\Sigma_{11})$$, $$X_2\sim\mathcal{N}(\mu_2,\Sigma_{22})$$ and conditionals with
 $$\mu_{1|2}=\mu_1+\Sigma_{12}\Sigma_{22}^{-1}(x_2-\mu_2)$$, $$\Sigma_{1|2}=\Sigma_{11}-\Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}$$
@@ -91,7 +91,7 @@ plt.show()
 print(f"X1 | x2=1 ~ N({mu_1g2:.2f}, {Sigma_1g2:.2f}),   X2 | x1=1 ~ N({mu_2g1:.2f}, {Sigma_2g1:.2f})")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_compare_multigaussians-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_compare_multigaussians-03-0.png" alt="" width="520"></figure>
 
 ```
 X1 | x2=1 ~ N(0.00, 0.75),   X2 | x1=1 ~ N(0.50, 0.75)

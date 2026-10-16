@@ -84,7 +84,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_poisson-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_poisson-01-0.png" alt="" width="520"></figure>
 
 Open in Colab: [`ch2_compare_poisson.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_compare_poisson.ipynb)
 
@@ -170,7 +170,7 @@ plt.axis([0, z + 1, 0, 4])
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_example_poisson-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_example_poisson-03-0.png" alt="" width="520"></figure>
 
 Since $$\mathbb{E}_X=\lambda$$, estimate $$\hat{\lambda}=\hat{\mathbb{E}}_X=\frac{1}{3}(8+12+14)$$ and
 evaluate $$\mathbb{P}(X=0)$$, $$\mathbb{P}(X=30)$$, and $$\mathbb{P}(X=11)$$.

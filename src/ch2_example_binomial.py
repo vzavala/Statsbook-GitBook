@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # Failures in a sequence of $n=10$ weeks (Victor Z and J E Umaña, UW-Madison, 2024).
 # The weekly status is $\mathcal{B}(p)$ with $p=0.5$, so the number of failures in

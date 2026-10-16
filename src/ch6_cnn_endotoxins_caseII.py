@@ -1,11 +1,18 @@
 # %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
+# **Setup.** Run this cell first: it locates the data files this notebook reads. On Google
+# Colab it downloads them (the `Data/` and `Support/` folders) from the book's GitHub
+# repository; on your computer, run the notebook from the `notebooks/` folder.
 
 # %% [hide]
+import os
+import sys
 path = ''
+if 'google.colab' in sys.modules and not os.path.isdir('Data'):
+    if not os.path.isdir('statsbook'):
+        os.system('git clone -q --depth 1 --filter=blob:none --sparse '
+                  'https://github.com/__GITHUB_REPO__.git statsbook')
+        os.system('git -C statsbook sparse-checkout set notebooks/Data notebooks/Support')
+    path = 'statsbook/notebooks/'
 
 # %% [markdown]
 # CNN classification of flow-cytometry scatter fields: which bacterial species produced the

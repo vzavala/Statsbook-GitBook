@@ -134,7 +134,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_generator_stoch-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_generator_stoch-02-0.png" alt="" width="520"></figure>
 
 #### Python implementation
 
@@ -181,4 +181,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_example_SAA-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_example_SAA-01-0.png" alt="" width="520"></figure>

@@ -86,7 +86,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_evt_example-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_evt_example-01-0.png" alt="" width="520"></figure>
 
 Probabilities of rare events from the GEV fit for $$S=1000$$.
 

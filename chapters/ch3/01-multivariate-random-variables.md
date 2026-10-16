@@ -59,7 +59,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_examples_multidatasets-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_examples_multidatasets-01-0.png" alt="" width="520"></figure>
 
 ```python
 x1, x2 = np.meshgrid(np.arange(0, 11, 0.5), np.arange(0, 11, 0.5))
@@ -72,7 +72,7 @@ ax.set_zlabel('$x_3$', fontsize=14)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_examples_multidatasets-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_examples_multidatasets-02-0.png" alt="" width="520"></figure>
 
 ## Domains and Subdomains
 

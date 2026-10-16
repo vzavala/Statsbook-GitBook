@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # Quadratic surfaces $SSE(\theta)=\theta^T\mathcal{H}\theta$ and the eigenvalues of the Hessian
 # $\mathcal{H}$ (`H`) (Victor Z and Leo Gonzalez, UW-Madison, 2024): large positive eigenvalues give a

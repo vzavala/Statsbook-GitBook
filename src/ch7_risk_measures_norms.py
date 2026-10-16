@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # Risk measures as norms (written for the book to accompany the slide example). For
 # $\mathbf{y}=(100,70,50,20,10)$ the slide's $\mathrm{CVaR}$ at $\alpha=k/S$ is the average of the $k$ largest

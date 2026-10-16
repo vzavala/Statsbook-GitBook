@@ -129,7 +129,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_mixer_example-06-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_mixer_example-04-0.png" alt="" width="520"></figure>
 
 ```python
 plt.scatter(omega, epsilon, marker='o', s=20, color='white', edgecolor='black')
@@ -140,7 +140,7 @@ plt.grid(True)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_mixer_example-07-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_mixer_example-05-0.png" alt="" width="520"></figure>
 
 ## Example: Gibbs Reactor
 

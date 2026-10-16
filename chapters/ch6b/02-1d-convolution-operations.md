@@ -149,7 +149,7 @@ show(t, f, np.concatenate([np.zeros(pad), g, np.zeros(pad)]), phi)
 N=5, alpha=2: [0.14 0.61 1.   0.61 0.14]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-04-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-02-1.png" alt="" width="520"></figure>
 
 ## Convolution Operations
 
@@ -212,7 +212,7 @@ show(t, f, np.concatenate([np.zeros(pad), g, np.zeros(pad)]), phi)
 sigma = 2.38
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-06-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-04-1.png" alt="" width="520"></figure>
 
 #### Python implementation: Gaussian filters for a noisy signal
 
@@ -236,7 +236,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-08-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-06-0.png" alt="" width="520"></figure>
 
 ## 1D Convolution Operations
 
@@ -316,7 +316,7 @@ plt.show()
 print(f"max |f*g - pdf| = {np.max(np.abs(phi - norm.pdf(t[1:-1]))):.4f}")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_derivative_filter-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_derivative_filter-01-0.png" alt="" width="520"></figure>
 
 ```
 max |f*g - pdf| = 0.0027

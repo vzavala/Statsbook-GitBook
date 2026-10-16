@@ -235,4 +235,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_kriging_uq-03-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_kriging_uq-01-1.png" alt="" width="520"></figure>

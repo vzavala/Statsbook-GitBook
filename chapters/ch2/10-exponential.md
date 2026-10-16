@@ -81,7 +81,7 @@ plt.axis([0, 4, 0, 1])
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_exponentials-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_exponentials-01-0.png" alt="" width="520"></figure>
 
 Open in Colab: [`ch2_compare_exponentials.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_compare_exponentials.ipynb)
 
@@ -163,7 +163,7 @@ plt.show()
 print(f"P(X > 12) = 1 - F(12) = {X.sf(12):.4f}  (e^(-12/beta) = {np.exp(-12/beta):.4f})")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_example_exponential-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_example_exponential-01-0.png" alt="" width="520"></figure>
 
 ```
 P(X > 12) = 1 - F(12) = 0.7165  (e^(-12/beta) = 0.7165)

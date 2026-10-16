@@ -57,4 +57,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_clt_convolution-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_clt_convolution-01-0.png" alt="" width="520"></figure>

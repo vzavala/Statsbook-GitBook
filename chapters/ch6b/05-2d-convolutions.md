@@ -173,7 +173,7 @@ plt.show()
  [0 0 0 1 1 1 1 0 0 0]]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gauss_filter_2D-03-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gauss_filter_2D-01-1.png" alt="" width="520"></figure>
 
 ## 2D Convolutional Filters
 

@@ -74,7 +74,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_logistic_function-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_logistic_function-01-0.png" alt="" width="520"></figure>
 
 * Function $$m(x,\theta)$$ is used to model conditional probs: $$\mathbb{P}(Y=1\,|\,x,\theta)$$ and $$\mathbb{P}(Y=0\,|\,x,\theta)=1-\mathbb{P}(Y=1\,|\,x,\theta)$$.
 * Specifically, want to capture logic:

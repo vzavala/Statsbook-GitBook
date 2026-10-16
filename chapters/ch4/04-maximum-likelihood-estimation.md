@@ -119,4 +119,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_example_mle_exp-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_example_mle_exp-02-0.png" alt="" width="520"></figure>

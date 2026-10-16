@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # **Monte Carlo estimate of the parameter covariance** (heat-capacity data). Perturb the outputs,
 # $\mathbf{y}_k=\mathbf{y}+\mathbf{e}_k$ with $\mathbf{e}_k\sim\mathcal{N}(0,\hat{\sigma}^2 I)$, re-estimate

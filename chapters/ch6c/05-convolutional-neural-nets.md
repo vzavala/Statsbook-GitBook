@@ -557,55 +557,55 @@ Epoch [2/40], Loss: 0.8795, Train Accuracy: 70.00%, Validation Accuracy: 80.00%
 Epoch [3/40], Loss: 0.3028, Train Accuracy: 86.25%, Validation Accuracy: 100.00%
 Epoch [4/40], Loss: 0.1494, Train Accuracy: 93.75%, Validation Accuracy: 80.00%
 Epoch [5/40], Loss: 0.1917, Train Accuracy: 92.50%, Validation Accuracy: 100.00%
-Epoch [6/40], Loss: 0.1480, Train Accuracy: 96.25%, Validation Accuracy: 80.00%
 ```
 
 ```
+Epoch [6/40], Loss: 0.1480, Train Accuracy: 96.25%, Validation Accuracy: 80.00%
 Epoch [7/40], Loss: 0.0584, Train Accuracy: 98.75%, Validation Accuracy: 100.00%
 Epoch [8/40], Loss: 0.0536, Train Accuracy: 97.50%, Validation Accuracy: 100.00%
 Epoch [9/40], Loss: 0.0287, Train Accuracy: 98.75%, Validation Accuracy: 100.00%
 Epoch [10/40], Loss: 0.0258, Train Accuracy: 98.75%, Validation Accuracy: 100.00%
-Epoch [11/40], Loss: 0.0229, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [12/40], Loss: 0.0180, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
+Epoch [11/40], Loss: 0.0229, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+Epoch [12/40], Loss: 0.0180, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [13/40], Loss: 0.0170, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [14/40], Loss: 0.0098, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [15/40], Loss: 0.0075, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [16/40], Loss: 0.0063, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [17/40], Loss: 0.0052, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [18/40], Loss: 0.0058, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
+Epoch [17/40], Loss: 0.0052, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+Epoch [18/40], Loss: 0.0058, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [19/40], Loss: 0.0042, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [20/40], Loss: 0.0040, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [21/40], Loss: 0.0037, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [22/40], Loss: 0.0034, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [23/40], Loss: 0.0032, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [24/40], Loss: 0.0030, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
+Epoch [23/40], Loss: 0.0032, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+Epoch [24/40], Loss: 0.0030, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [25/40], Loss: 0.0027, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [26/40], Loss: 0.0026, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [27/40], Loss: 0.0024, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [28/40], Loss: 0.0023, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [29/40], Loss: 0.0022, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [30/40], Loss: 0.0021, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
+Epoch [29/40], Loss: 0.0022, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+Epoch [30/40], Loss: 0.0021, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [31/40], Loss: 0.0019, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [32/40], Loss: 0.0020, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [33/40], Loss: 0.0017, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [34/40], Loss: 0.0017, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [35/40], Loss: 0.0016, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [36/40], Loss: 0.0015, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
+Epoch [35/40], Loss: 0.0016, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+Epoch [36/40], Loss: 0.0015, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [37/40], Loss: 0.0014, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [38/40], Loss: 0.0014, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [39/40], Loss: 0.0013, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
@@ -929,19 +929,19 @@ Epoch [2/40], Loss: 1.0402, Train Accuracy: 57.50%, Validation Accuracy: 50.00%
 Epoch [3/40], Loss: 1.0508, Train Accuracy: 43.75%, Validation Accuracy: 60.00%
 Epoch [4/40], Loss: 0.7722, Train Accuracy: 52.50%, Validation Accuracy: 70.00%
 Epoch [5/40], Loss: 0.5081, Train Accuracy: 70.00%, Validation Accuracy: 65.00%
+Epoch [6/40], Loss: 0.4463, Train Accuracy: 78.75%, Validation Accuracy: 85.00%
 ```
 
 ```
-Epoch [6/40], Loss: 0.4463, Train Accuracy: 78.75%, Validation Accuracy: 85.00%
 Epoch [7/40], Loss: 0.4289, Train Accuracy: 83.75%, Validation Accuracy: 80.00%
 Epoch [8/40], Loss: 0.3897, Train Accuracy: 86.25%, Validation Accuracy: 85.00%
 Epoch [9/40], Loss: 0.3858, Train Accuracy: 91.25%, Validation Accuracy: 65.00%
 Epoch [10/40], Loss: 0.3341, Train Accuracy: 87.50%, Validation Accuracy: 65.00%
 Epoch [11/40], Loss: 0.4578, Train Accuracy: 76.25%, Validation Accuracy: 85.00%
+Epoch [12/40], Loss: 0.3614, Train Accuracy: 87.50%, Validation Accuracy: 70.00%
 ```
 
 ```
-Epoch [12/40], Loss: 0.3614, Train Accuracy: 87.50%, Validation Accuracy: 70.00%
 Epoch [13/40], Loss: 0.3069, Train Accuracy: 85.00%, Validation Accuracy: 50.00%
 Epoch [14/40], Loss: 0.4344, Train Accuracy: 76.25%, Validation Accuracy: 50.00%
 Epoch [15/40], Loss: 0.3015, Train Accuracy: 86.25%, Validation Accuracy: 90.00%

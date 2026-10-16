@@ -123,7 +123,7 @@ plt.show()
 print(f"exact E[X] = {exact['E']:.3f},  exact P(X <= 1) = {exact['P']:.3f}")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_montecarlo_approx-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_montecarlo_approx-02-0.png" alt="" width="520"></figure>
 
 ```
 exact E[X] = 2.000,  exact P(X <= 1) = 0.393

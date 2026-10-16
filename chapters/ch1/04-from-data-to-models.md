@@ -218,13 +218,13 @@ for E_X, SD_X in ((6, 1), (9, 2)):
     print(f"E_hat = {E_hat:.2f},  V_hat = {V_hat:.2f},  SD_hat = {SD_hat:.2f}")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_mean_var_descriptors-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_mean_var_descriptors-03-0.png" alt="" width="520"></figure>
 
 ```
 E_hat = 5.95,  V_hat = 0.97,  SD_hat = 0.99
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_mean_var_descriptors-05-2.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_mean_var_descriptors-03-2.png" alt="" width="520"></figure>
 
 ```
 E_hat = 9.03,  V_hat = 3.75,  SD_hat = 1.94

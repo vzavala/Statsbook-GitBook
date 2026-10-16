@@ -188,7 +188,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example-02-0.png" alt="" width="520"></figure>
 
 $$SSE(\theta)=\frac{1}{2}\sum_\omega(y_\omega-\theta x_\omega)^2$$ (scaled by $$1/S$$) becomes sharper as $$S$$ grows.
 
@@ -206,7 +206,7 @@ plt.legend()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example-06-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example-04-0.png" alt="" width="520"></figure>
 
 ## Bias, Precision, and Information
 

@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # Comparing two random costs $Y(u)\sim\mathcal{N}(3,1.5^2)$ (option I) and $Y(u')\sim\mathcal{N}(4,0.5^2)$
 # (option II), in MUSD (Victor Z and Leo Gonzalez, UW-Madison, 2023).

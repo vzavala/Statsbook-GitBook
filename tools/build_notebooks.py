@@ -15,6 +15,7 @@ import nbformat
 from nbclient import NotebookClient
 
 sys.path.insert(0, str(Path(__file__).parent))
+import book_config as cfg  # noqa: E402
 import percent  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,7 +25,7 @@ TIMEOUT = 1800
 
 def build(src: Path, execute=True):
     cells = []
-    for c in percent.parse(src.read_text()):
+    for c in percent.parse(src.read_text().replace("__GITHUB_REPO__", cfg.GITHUB_REPO)):
         if c["type"] == "part":
             if c["source"]:
                 cells.append(nbformat.v4.new_markdown_cell("## " + c["source"].split(" @ ")[0],

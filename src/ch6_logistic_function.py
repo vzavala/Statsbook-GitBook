@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # The logistic function $m(x,\theta)=1/(1+e^{-\theta^Tx})$ for a scalar input and
 # $\theta=-1,0,+1$ (written for the book to accompany the slide figure). The evidence is $\theta x$.

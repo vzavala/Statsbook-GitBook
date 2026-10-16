@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # Derivative filter (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024). With signal $f$ = cdf of
 # $\mathcal{N}(0,1)$ (`f`) and the central-difference filter $g=(1,0,-1)/(2\Delta t)$ (`g`),

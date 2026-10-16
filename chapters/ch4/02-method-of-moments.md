@@ -106,7 +106,7 @@ S =  10:  mu_hat = 0.81,  sigma_hat = 2.38
 S = 100:  mu_hat = 1.12,  sigma_hat = 1.77
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_gaussian_moments_example-03-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_gaussian_moments_example-01-1.png" alt="" width="520"></figure>
 
 ## Example: Method of Moments for Weibull
 
@@ -186,4 +186,4 @@ S =  10:  E_hat = 0.588, V_hat = 0.088  ->  xi_hat = 2.08, beta_hat = 0.66
 S = 100:  E_hat = 0.859, V_hat = 0.210  ->  xi_hat = 1.95, beta_hat = 0.97
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_weibull_moments_example-03-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_weibull_moments_example-01-1.png" alt="" width="520"></figure>

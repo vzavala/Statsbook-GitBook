@@ -98,7 +98,7 @@ plt.show()
 print("dominant frequencies:", omega[np.argsort(power(f_hat))[-2:]])
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform-01-0.png" alt="" width="520"></figure>
 
 ```
 dominant frequencies: [60. 30.]
@@ -124,7 +124,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform-03-0.png" alt="" width="520"></figure>
 
 ## Example: FT of Pulse and Gaussian
 
@@ -178,7 +178,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters-01-0.png" alt="" width="520"></figure>
 
 #### Python implementation
 
@@ -226,7 +226,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_convolution_filters-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_convolution_filters-01-0.png" alt="" width="520"></figure>
 
 #### Python implementation
 

@@ -276,7 +276,7 @@ plt.show()
 number of parameters = 18
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_neuralnet_basis-03-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_neuralnet_basis-01-1.png" alt="" width="520"></figure>
 
 The sigmoids $$h(a_j)$$ are the basis functions mixed by the output layer:
 
@@ -291,7 +291,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_neuralnet_basis-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_neuralnet_basis-03-0.png" alt="" width="520"></figure>
 
 Several eigenvalues of the Gauss-Newton Hessian are close to zero: the model is very flexible
 and the 20 data points are overfit.

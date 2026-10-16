@@ -230,7 +230,7 @@ plt.grid(True)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_lin_est-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_lin_est-02-0.png" alt="" width="520"></figure>
 
 With $$\Sigma=\sigma^2 I$$, MLE is SSE minimization:
 $$\hat{\theta}=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}$$. The minimizer is unique if the Hessian
@@ -263,7 +263,7 @@ theta_hat = [ 6.310e+00  2.747e-03 -6.348e-07]
 eigenvalues of X^T X: [5.263e-01 6.980e+05 7.938e+12]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_lin_est-06-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_lin_est-04-1.png" alt="" width="520"></figure>
 
 ## Multidimensional Linear Models
 

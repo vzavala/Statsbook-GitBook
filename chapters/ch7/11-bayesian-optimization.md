@@ -165,4 +165,4 @@ best scaled conditions u = [1.    0.436 0.246]   yield = 19.396
 in physical units: [100.      1.718   0.225]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_bayesopt_yield-05-2.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_bayesopt_yield-03-2.png" alt="" width="520"></figure>

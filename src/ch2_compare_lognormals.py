@@ -1,12 +1,3 @@
-# %% [markdown] [hide]
-# **Setup.** Run this notebook from the `notebooks/` folder of the book
-# repository (it reads files from `Data/` and `Support/`). On Google Colab,
-# upload the folder to your Drive and set `path` to its location, e.g.
-# `path = '/content/drive/MyDrive/StatsBook/notebooks/'`.
-
-# %% [hide]
-path = ''
-
 # %% [markdown]
 # Log-normal RVs for several $(\mu,\sigma)$ (Victor Z and David Cole, UW-Madison, 2024).
 # In `scipy.stats.lognorm`, the shape `s` is $\sigma$ and `scale` is $e^{\mu}$ (the median $\mathbb{M}_X$).

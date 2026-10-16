@@ -51,7 +51,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_chisq-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_chisq-01-0.png" alt="" width="520"></figure>
 
 $$\mathbb{Q}_Y(1-\alpha)$$ for $$Y\sim\chi^2(1)$$ equals $$\mathbb{Q}_Z(1-\alpha/2)^2$$ for $$Z\sim\mathcal{N}(0,1)$$.
 
@@ -73,7 +73,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_chisq-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_chisq-03-0.png" alt="" width="520"></figure>
 
 Open in Colab: [`ch2_compare_chisq.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_compare_chisq.ipynb)
 
