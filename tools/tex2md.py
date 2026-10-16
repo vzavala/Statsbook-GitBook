@@ -261,8 +261,12 @@ def convert_tabular(body, ctx):
     n = max(len(r) for r in rows)
     rows = [r + [""] * (n - len(r)) for r in rows]
     numeric = all(re.fullmatch(r"[-+\d.\u22ee\u22ef\s]*", c) for c in rows[0])
-    if numeric:                       # no header row in the slide: use an empty one
-        rows = [[" "] * n] + rows
+    if numeric:
+        # a header-less numeric table (e.g. a matrix): render it as a math array,
+        # since GitBook cannot parse a Markdown table with an empty header row
+        body = " \\\\\n".join(" & ".join(c.strip().replace("\u22ee", "\\vdots").replace("\u22ef", "\\cdots")
+                                        for c in r) for r in rows)
+        return "\n\n$$\n\\left[\\begin{array}{" + "c" * n + "}\n" + body + "\n\\end{array}\\right]\n$$\n\n"
     lines = ["| " + " | ".join(rows[0]) + " |", "|" + "---|" * n]
     lines += ["| " + " | ".join(r) + " |" for r in rows[1:]]
     return "\n\n" + "\n".join(lines) + "\n\n"
@@ -376,6 +380,8 @@ def tidy(md):
     # tight lists: no blank line between consecutive single-line items
     md = re.sub(r"(\n *(?:\*|1\.) [^\n]+)\n\n(?= *(?:\*|1\.) )", r"\1\n", md)
     md = re.sub(r"(\n *(?:\*|1\.) [^\n]+)\n\n(?= *(?:\*|1\.) )", r"\1\n", md)
+    # "$$X =$$" on its own line followed by a display block: fold it into the block
+    md = re.sub(r"\n *\$\$([^$\n]*=[^$\n]*)\$\$ *\n\n( *)\$\$\n", lambda m: f"\n{m.group(2)}$$\n{m.group(2)}{m.group(1).strip()}\n", md)
     md = re.sub(r"\{% hint style=\"info\" %\}\s*\{% endhint %\}", "", md)
     md = re.sub(r"\{% hint style=\"info\" %\}\n\n", "{% hint style=\"info\" %}\n", md)
     md = re.sub(r"\n\n\{% endhint %\}", "\n{% endhint %}", md)

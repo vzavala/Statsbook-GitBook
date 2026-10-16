@@ -148,20 +148,21 @@ rank(X[:, 1..6]) = 3
 * Similarly, any grayscale image can be represented as a matrix $$\mathbf{X}$$ and this is the basic property that enables image processing (e.g., compression and filtering).
 * To illustrate this, consider matrix (notice symmetry and decaying magnitudes):
 
-   $$\mathbf{X}\;=\;$$
-
-|   |   |   |   |   |   |   |   |   |   |
-|---|---|---|---|---|---|---|---|---|---|
-| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 2 | 4 | 4 | 2 | 1 | 0 | 0 |
-| 0 | 1 | 2 | 6 | 9 | 9 | 6 | 2 | 1 | 0 |
-| 0 | 1 | 4 | 9 | 14 | 14 | 9 | 4 | 1 | 0 |
-| 0 | 1 | 4 | 9 | 14 | 14 | 9 | 4 | 1 | 0 |
-| 0 | 1 | 2 | 6 | 9 | 9 | 6 | 2 | 1 | 0 |
-| 0 | 0 | 1 | 2 | 4 | 4 | 2 | 1 | 0 | 0 |
-| 0 | 0 | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+  $$
+  \mathbf{X}\;=\;
+  \left[\begin{array}{cccccccccc}
+  0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+  0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+  0 & 0 & 1 & 2 & 4 & 4 & 2 & 1 & 0 & 0 \\
+  0 & 1 & 2 & 6 & 9 & 9 & 6 & 2 & 1 & 0 \\
+  0 & 1 & 4 & 9 & 14 & 14 & 9 & 4 & 1 & 0 \\
+  0 & 1 & 4 & 9 & 14 & 14 & 9 & 4 & 1 & 0 \\
+  0 & 1 & 2 & 6 & 9 & 9 & 6 & 2 & 1 & 0 \\
+  0 & 0 & 1 & 2 & 4 & 4 & 2 & 1 & 0 & 0 \\
+  0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 \\
+  0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+  \end{array}\right]
+  $$
 
 * What is image corresponding to this matrix? What if this is corrupted with noise?
 
