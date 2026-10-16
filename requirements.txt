@@ -1,0 +1,14 @@
+# Python packages used by the notebooks (versions tested with Python 3.9)
+numpy>=1.24
+scipy>=1.11
+matplotlib>=3.7
+pandas>=2.0
+scikit-learn>=1.3
+scikit-image>=0.21
+statsmodels>=0.14
+torch>=2.0            # only for the CNN notebooks in Chapter 6
+# to rebuild the notebooks and the book pages (maintainers)
+nbformat>=5.9
+nbclient>=0.8
+ipykernel>=6.0
+markdown>=3.4         # local preview only
