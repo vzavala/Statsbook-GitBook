@@ -114,8 +114,10 @@ def figure_html(ctx, imgs, caption):
         parts.append(f'<img src="{ctx.rel(out)}" alt="" width="{w}">')
     if not parts:
         return ""
+    # GitBook figures hold a single image: one <figure> per image, caption on the last
     cap = f"<figcaption><p>{caption}</p></figcaption>" if caption.strip() else ""
-    return "\n\n<figure>" + "".join(parts) + cap + "</figure>\n\n"
+    figs = [f"<figure>{img}{cap if k == len(parts) - 1 else ''}</figure>" for k, img in enumerate(parts)]
+    return "\n\n" + "\n\n".join(figs) + "\n\n"
 
 
 GRAPHIC = re.compile(r"\\includegraphics\s*(\[[^\]]*\])?\s*\{\s*\\(path[a-z]+)\s*([^}]*)\}")

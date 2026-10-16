@@ -260,7 +260,9 @@ rank(X) = 4   rank(X_eps) = 10
 * Observe that  a nearly perfect image is obtained with $$n=100$$.
 * Truncating series filters out granular features (*imperceptible to human eye*).
 
-<figure><img src="../../.gitbook/assets/slides/droplet1g.jpg" alt="" width="280"><img src="../../.gitbook/assets/slides/ch6_approximation_droplet.png" alt="" width="280"><figcaption><p>Original image (left) and compressions using $$n=1,3,10,100$$ singular values (right).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/droplet1g.jpg" alt="" width="280"></figure>
+
+<figure><img src="../../.gitbook/assets/slides/ch6_approximation_droplet.png" alt="" width="280"><figcaption><p>Original image (left) and compressions using $$n=1,3,10,100$$ singular values (right).</p></figcaption></figure>
 
 #### Python implementation
 
