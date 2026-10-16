@@ -33,37 +33,4 @@ cd notebooks && jupyter lab
 The notebooks are set up to run from the `notebooks/` folder, where they find `Data/` and `Support/`. The CNN notebooks of
 Chapter 6 also need PyTorch (`torch`).
 
-## For maintainers: how the book is built
 
-The pages are generated; edit the sources, not the generated files.
-
-| What | Where | Edit? |
-|---|---|---|
-| Slide content | `../Slides/Slides-New/*.tex` | yes (source of the concept text) |
-| Python examples | `src/*.py` (Jupyter "percent" format) | yes (source of the notebooks) |
-| Book layout (chapters, page splits, notebook placement) | `tools/book_config.py` | yes |
-| Notebooks with outputs | `notebooks/*.ipynb` | generated |
-| Pages and table of contents | `chapters/**.md`, `SUMMARY.md`, `nomenclature.md` | generated |
-| Figures | `.gitbook/assets/` | generated |
-
-In `src/*.py`, cells start with `# %%` (code) or `# %% [markdown]`. `# %% [hide]` cells run in the notebook
-but are not shown in the book, and `# %% [part] Title` splits a notebook so that its parts follow
-successive slide examples (`# %% [part] Title @ Frame title #k` places a part after the k-th group of
-frames with that title).
-
-To rebuild after editing:
-
-```bash
-python tools/build_notebooks.py
-```
-
-```bash
-python3 tools/build_book.py
-```
-
-`build_notebooks.py` executes the notebooks whose sources changed (pass names to rebuild specific ones,
-or `--all`). `build_book.py` converts the slides, inserts the notebooks, converts the slide figures to PNG
-(it needs Ghostscript), and rewrites `SUMMARY.md` and `nomenclature.md`. `python tools/preview.py <folder>`
-writes an approximate HTML preview of the pages.
-
-`REVIEW.md` lists issues found in the slides and in the original notebooks while aligning them.
