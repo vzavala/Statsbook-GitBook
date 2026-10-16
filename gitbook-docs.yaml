@@ -1,0 +1,12 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Statistics for Chemical Engineers
+  structure:
+    - type: space
+      key: statsbook
+      title: Statistics for Chemical Engineers
+      path: book
+      default: true
+      content:
+        directory: ./
+        language: en
