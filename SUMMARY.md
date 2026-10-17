@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Preface](README.md)
+* [Statistics for Chemical Engineers](README.md)
 * [How to use this book](how-to-use.md)
 * [Nomenclature: math and Python](nomenclature.md)
 

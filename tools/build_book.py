@@ -433,7 +433,7 @@ def build_chapter(ch):
 
 
 def write_summary(all_pages):
-    lines = ["# Table of contents\n", "* [Preface](README.md)",
+    lines = ["# Table of contents\n", "* [Statistics for Chemical Engineers](README.md)",
              "* [How to use this book](how-to-use.md)",
              "* [Nomenclature: math and Python](nomenclature.md)", ""]
     current_group = None
