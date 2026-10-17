@@ -155,3 +155,9 @@ was changed in the slides; numbers in the notebooks were left as computed.
   W(X) = min(u, X1 + X2), instead of a nonsmooth optimization over 200 variables;
   results match the slide (u* = 1, u_D* = 10).
 - New notebook `ch7_risk_measures_norms` for the CVaR-as-norm example.
+
+## Python folder
+- On 2026-10-17 the notebooks in `Content/Python` were replaced by the book's
+  versions (same file names, plus 9 new notebooks). The previous versions are in
+  `ARCHIVE/Python_10_17_2026`. `tools/build_notebooks.py` now copies every rebuilt
+  notebook to `Content/Python`, so the two stay identical.

@@ -191,5 +191,5 @@ print(f"max |f_1 (FFT) - f_1 (direct)| = {np.max(np.abs(results[0][1] - direct))
 ```
 
 ```
-max |f_1 (FFT) - f_1 (direct)| = 4.26e-13
+max |f_1 (FFT) - f_1 (direct)| = 4.55e-13
 ```
