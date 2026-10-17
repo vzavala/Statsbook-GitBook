@@ -24,7 +24,7 @@ To account for this, we also often build predictive models based purely on obser
 Engineering decisions rely on a combination of mechanistic and empirical knowledge.
 
 {% hint style="info" %}
-Can you think of fundamental laws used in chemical engineering?
+Can you think of empirical models used in chemical engineering?
 {% endhint %}
 
 However:

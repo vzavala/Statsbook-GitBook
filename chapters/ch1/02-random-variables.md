@@ -11,7 +11,7 @@
 
 {% hint style="info" %}
 * Deterministic Thinking: Temperature is 20$${}^o$$C (no uncertainty)
-* Statistical Thinking: Temperature is 20$$\pm$$$$0.5{}^o$$C (account for uncertainty)
+* Statistical Thinking: Temperature is 20$$\pm 0.5{}^o$$C (account for uncertainty)
 {% endhint %}
 
 An RV model (denoted as $$X$$) has the following elements:
