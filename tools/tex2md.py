@@ -386,6 +386,8 @@ def tidy(md):
     # tight lists: no blank line between consecutive single-line items
     md = re.sub(r"(\n *(?:\*|1\.) [^\n]+)\n\n(?= *(?:\*|1\.) )", r"\1\n", md)
     md = re.sub(r"(\n *(?:\*|1\.) [^\n]+)\n\n(?= *(?:\*|1\.) )", r"\1\n", md)
+    # adjacent inline math from the slides ("$\\pm$$0.5$") -> one formula
+    md = re.sub(r"\$\$([^$\n]+)\$\$\$\$([^$\n]+)\$\$", r"$$\1 \2$$", md)
     # "$$X =$$" on its own line followed by a display block: fold it into the block
     md = re.sub(r"\n *\$\$([^$\n]*=[^$\n]*)\$\$ *\n\n( *)\$\$\n", lambda m: f"\n{m.group(2)}$$\n{m.group(2)}{m.group(1).strip()}\n", md)
     md = re.sub(r"\{% hint style=\"info\" %\}\s*\{% endhint %\}", "", md)
