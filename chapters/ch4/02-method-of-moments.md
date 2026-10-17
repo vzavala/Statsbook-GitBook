@@ -49,9 +49,7 @@
 
 * We used moment matching with $$S=10$$ and $$S=100$$ data points to estimate parameters. If we use $$S=10$$, the estimates are $$\hat{\mu}=0.45$$ and $$\hat{\sigma}=1.43$$;  if we use $$S=100$$, the estimates are $$\hat{\mu}=0.9$$ and $$\hat{\sigma}=2$$. The true parameters are $$\mu=1$$ and $$\sigma=2$$; we can thus see that we get closer as we increase $$S$$.
 
-  <figure><img src="../../.gitbook/assets/slides/ch4_gaussian_moments_example.png" alt="" width="420"></figure>
-
-  *Empirical pdf/cdf for Gaussian RV obtained from data and model predictions obtained with estimated parameters. Results for $$S=10$$ (top row) and for $$S=100$$ (bottom row).*
+  <figure><img src="../../.gitbook/assets/slides/ch4_gaussian_moments_example.png" alt="" width="420"><figcaption><p>Empirical pdf/cdf for Gaussian RV obtained from data and model predictions obtained with estimated parameters. Results for 𝑆 = 10 (top row) and for 𝑆 = 100 (bottom row).</p></figcaption></figure>
 
 #### Python implementation
 

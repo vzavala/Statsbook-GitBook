@@ -197,9 +197,7 @@ N=5, alpha=2: [0.14 0.61 1.   0.61 0.14]
 * Show signal $$f$$ and convolution $$\phi=f*g$$ using Gaussian filter $$g=(0.60,    0.94, 0.94, 0.60)$$.
 * We also perform convolution using Gaussian filter $$g=(0.0003, 0.41, 0.41, 0.003)$$. Smoothing is not as effective; why?
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_noise_gauss_filter.png" alt="" width="350"></figure>
-
-  *Signal (top), convolution with Gaussian filter with $$\sigma=1.5$$ (middle), and convolution with Gaussian filter with $$\sigma=0.37$$ (bottom).*
+  <figure><img src="../../.gitbook/assets/slides/ch6_noise_gauss_filter.png" alt="" width="350"><figcaption><p>Signal (top), convolution with Gaussian filter with σ = 1.5 (middle), and convolution with Gaussian filter with σ = 0.37 (bottom).</p></figcaption></figure>
 
 #### Python implementation: Gaussian filter for a pulse
 

@@ -51,9 +51,7 @@
 
 ## Example Conflict Resolution in Sizing
 
-<figure><img src="../../.gitbook/assets/slides/ch7_generator_conflict.png" alt="" width="489"></figure>
-
-*Trade-off curve obtained as we span $$\kappa$$ in mean-variance risk measure (top). Trade-off curve obtained as we span $$\alpha$$ in CVaR risk measure (bottom).*
+<figure><img src="../../.gitbook/assets/slides/ch7_generator_conflict.png" alt="" width="489"><figcaption><p>Trade-off curve obtained as we span κ in mean-variance risk measure (top). Trade-off curve obtained as we span α in CVaR risk measure (bottom).</p></figcaption></figure>
 
 #### Python implementation
 

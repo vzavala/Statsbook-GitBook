@@ -46,9 +46,7 @@ Model inspired by the fact that, in many applications, we often have limited dat
 
 * Uniform model has many applications and is used in sampling (data collection) schemes (e.g., want equally-likely samples).
 
-<figure><img src="../../.gitbook/assets/slides/ch2_pdfcdfuniformd.png" alt="" width="489"></figure>
-
-*Pdf and cdf for a uniform random variable with $$a=-1,b=1$$.*
+<figure><img src="../../.gitbook/assets/slides/ch2_pdfcdfuniformd.png" alt="" width="489"><figcaption><p>Pdf and cdf for a uniform random variable with 𝑎 = −1, 𝑏 = 1.</p></figcaption></figure>
 
 <details>
 

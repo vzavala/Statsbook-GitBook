@@ -30,9 +30,7 @@
 
 * Bernoulli RV is used in sampling and forms basis of more sophisticated RVs.
 
-<figure><img src="../../.gitbook/assets/slides/ch2_pdfcdfbernoulli.png" alt="" width="489"></figure>
-
-*Pdf and cdf for Bernoulli random variable with $$p=0.3$$.*
+<figure><img src="../../.gitbook/assets/slides/ch2_pdfcdfbernoulli.png" alt="" width="489"><figcaption><p>Pdf and cdf for Bernoulli random variable with 𝑝 = 0.3.</p></figcaption></figure>
 
 <details>
 

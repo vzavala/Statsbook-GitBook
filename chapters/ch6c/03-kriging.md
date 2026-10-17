@@ -23,9 +23,7 @@
 * $$\mathbf{K}(\gamma)$$ as a matrix function that generates samples of model $$\mathbf{m}$$.
 * In parametric models we  generate alternatives by tuning parameters, kriging generates alternatives via sampling.
 
-  <figure><img src="../../.gitbook/assets/slides/gp.png" alt="" width="350"></figure>
-
-  *Generation of alternative models for parametric model $$\mathbf{m}(\theta)$$ using $$\theta$$ (left). Generation of alternative models for GP using realizations of $$\mathbf{m}\sim \mathcal{N}(0,\mathbf{K}(\gamma))$$ (right).*
+  <figure><img src="../../.gitbook/assets/slides/gp.png" alt="" width="350"><figcaption><p>Generation of alternative models for parametric model 𝐦(θ) using θ (left). Generation of alternative models for GP using realizations of 𝐦 ∼ 𝒩(0, 𝐊(γ)) (right).</p></figcaption></figure>
 
 * Covariance is a kernel matrix with entries:
 

@@ -44,9 +44,7 @@
 * Reversing sign of param has effect of reversing logic.
 * Param $$\theta_0$$ does not weight any input; known as bias (ignores evidence).
 
-<figure><img src="../../.gitbook/assets/slides/ch6_logistic_function.png" alt="" width="630"></figure>
-
-*Behavior of logistic function for $$\theta=-1$$, $$\theta=0$$, and $$\theta=+1$$.*
+<figure><img src="../../.gitbook/assets/slides/ch6_logistic_function.png" alt="" width="630"><figcaption><p>Behavior of logistic function for θ = −1, θ = 0, and θ = +1.</p></figcaption></figure>
 
 #### Python implementation
 
