@@ -7,8 +7,8 @@ Usage:
     python tools/build_notebooks.py ch2_example_poisson ch1_gibbs_example
     python tools/build_notebooks.py --all --no-exec # rebuild without running
 
-Built notebooks are also copied to ../Python (the course's Python folder) when
-it exists; pass --no-export to skip that.
+Built notebooks are also copied to ../Python and ../GitRepo/Python (the course's
+Python folder and the StatsBook GitHub repository) when they exist; pass --no-export to skip that.
 """
 import shutil
 import sys
@@ -26,7 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC, NB = ROOT / "src", ROOT / "notebooks"
 # The course's Python folder (next to this repository) gets the same notebooks,
 # so students see one version of the code everywhere.
-PYTHON_FOLDER = ROOT.parent / "Python"
+PYTHON_FOLDERS = [ROOT.parent / "Python", ROOT.parent / "GitRepo" / "Python"]
 TIMEOUT = 1800
 
 
@@ -81,11 +81,12 @@ def main():
 
 def export(names):
     """Copy built notebooks to the course's Python folder (Data/ and Support/ are shared)."""
-    if not PYTHON_FOLDER.is_dir():
-        return
-    for name in names:
-        shutil.copy2(NB / f"{name}.ipynb", PYTHON_FOLDER / f"{name}.ipynb")
-    print(f"copied {len(names)} notebook(s) to {PYTHON_FOLDER}")
+    for folder in PYTHON_FOLDERS:
+        if not folder.is_dir():
+            continue
+        for name in names:
+            shutil.copy2(NB / f"{name}.ipynb", folder / f"{name}.ipynb")
+        print(f"copied {len(names)} notebook(s) to {folder}")
 
 
 if __name__ == "__main__":
