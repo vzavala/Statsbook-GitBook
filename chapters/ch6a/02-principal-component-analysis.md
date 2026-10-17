@@ -132,7 +132,9 @@
 * PCA can be seen as a projection of the data from a physical space to an information space (a.k.a. as latent space).
 * Can project back from latent space to physical space using $$\mathbf{X}=\mathbf{T}\mathbf{W}^T$$.
 
-<figure><img src="../../.gitbook/assets/slides/projection.png" alt="" width="420"><figcaption><p>Projection of data from physical space  to information/latent space (and back) using the eigenvectors $$\mathbf{W}$$.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/projection.png" alt="" width="420"></figure>
+
+*Projection of data from physical space  to information/latent space (and back) using the eigenvectors $$\mathbf{W}$$.*
 
 * From projection $$\mathbf{T}=\mathbf{X}\mathbf{W}$$:
 
@@ -164,7 +166,9 @@
 * We visualize data in 2D but in info space of PCs $$(T_1,T_2)$$ and of $$(T_2,T_3)$$.
 * Visualization clearly reveals the clusters.
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_pca_gibbs.png" alt="" width="420"><figcaption><p>3D visual in physical space of $$P,T,C$$ (top-left). 2D visualization in physical space of $$C,P$$ (top-right). 2D visual in info space of $$T_1,T_2$$ (bottom-left) and of $$T_2,T_3$$ (bottom-right).</p></figcaption></figure>
+  <figure><img src="../../.gitbook/assets/slides/ch6_pca_gibbs.png" alt="" width="420"></figure>
+
+  *3D visual in physical space of $$P,T,C$$ (top-left). 2D visualization in physical space of $$C,P$$ (top-right). 2D visual in info space of $$T_1,T_2$$ (bottom-left) and of $$T_2,T_3$$ (bottom-right).*
 
 #### Python implementation
 

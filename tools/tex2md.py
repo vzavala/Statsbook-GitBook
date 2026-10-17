@@ -359,8 +359,12 @@ def tidy(md):
     """Normalise whitespace and keep display math / figures inside list items."""
     out, indent = [], None   # indent: content column of the current list item
     in_math = False
+    last_figure = False                       # was the previous non-blank line a figure?
     for line in md.split("\n"):
         line = line.rstrip()
+        after_figure = last_figure
+        if line.strip():
+            last_figure = line.lstrip().startswith("<figure>")
         m = ITEM.match(line)
         if in_math:
             out.append((" " * indent if indent else "") + line.strip() if line.strip() else "")
@@ -374,6 +378,8 @@ def tidy(md):
             in_math = True
             out.append((" " * indent if indent else "") + "$$")
             continue
+        elif line.startswith("*") and not line.startswith("* ") and indent and after_figure:
+            line = " " * indent + line          # math caption below a figure in a list item
         elif line.startswith("{% "):
             indent = None
         elif line and not line.startswith(" ") and not line.startswith("<figure>"):

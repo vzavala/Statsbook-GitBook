@@ -38,7 +38,9 @@
 * Repeat procedure for different sets of samples and visualize pdf of $$X_{max}^S$$.
 * We do this for different $$S$$ to verify that pdf follows that of a GEV as we increase $$S$$.
 
-  <figure><img src="../../.gitbook/assets/slides/ch4_evt_weibull.png" alt="" width="350"><figcaption><p>Pdf for $$X\sim \mathcal{N}(2,1)$$ (top-left) and sample max $$X_{max}^S$$ with $$S=10$$ (top-right), $$S=100$$ (bottom-left) and $$S=1000$$ (bottom-right).</p></figcaption></figure>
+  <figure><img src="../../.gitbook/assets/slides/ch4_evt_weibull.png" alt="" width="350"></figure>
+
+  *Pdf for $$X\sim \mathcal{N}(2,1)$$ (top-left) and sample max $$X_{max}^S$$ with $$S=10$$ (top-right), $$S=100$$ (bottom-left) and $$S=1000$$ (bottom-right).*
 
 #### Python implementation
 

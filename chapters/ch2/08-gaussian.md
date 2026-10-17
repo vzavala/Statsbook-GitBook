@@ -145,7 +145,9 @@ Computing cdf involves evaluating an integral that depends on $$\mu$$ and $$\sig
 * Recall $$F_3\sim\mathcal{N}(10+\kappa\cdot 20,\kappa^2\cdot 1)$$
 * Consider $$\kappa=1$$ and thus flow $$F_3\sim\mathcal{N}(30,1)$$
 
-  <figure><img src="../../.gitbook/assets/slides/ch2_mixing_gauss.png" alt="" width="560"><figcaption><p>Quantile functions for $$\mathcal{N}(0,1)$$ (left) and $$\mathcal{N}(30,1)$$ (right).</p></figcaption></figure>
+  <figure><img src="../../.gitbook/assets/slides/ch2_mixing_gauss.png" alt="" width="560"></figure>
+
+  *Quantile functions for $$\mathcal{N}(0,1)$$ (left) and $$\mathcal{N}(30,1)$$ (right).*
 
 * Quantile of $$\mathcal{N}(0,1)$$ at $$\alpha=0.977$$ is  $$z_\alpha=2$$
 * Quantile of  $$\mathcal{N}(\mu,\sigma)$$ should be $$\mu+2\cdot \sigma=32$$.  Confirm this is true from plot

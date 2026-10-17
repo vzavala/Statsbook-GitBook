@@ -168,7 +168,9 @@ plt.show()
 
 * We can see that regularizer helps better define minimum points of SSE unction but does not avoid presence of non-physical regions.
 
-  <figure><img src="../../.gitbook/assets/slides/ch5_hougen_span_reg.png" alt="" width="489"><figcaption><p>Behavior of regularized SSE function as we span values for $$\theta_1$$ and $$\theta_2$$.</p></figcaption></figure>
+  <figure><img src="../../.gitbook/assets/slides/ch5_hougen_span_reg.png" alt="" width="489"></figure>
+
+  *Behavior of regularized SSE function as we span values for $$\theta_1$$ and $$\theta_2$$.*
 
 #### Python implementation
 

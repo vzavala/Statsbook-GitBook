@@ -33,7 +33,9 @@
 * In hypergeometric setting, we choose $$n$$ items at once while in binomial setting we choose $$n$$ items by choosing one item at a time (resetting system each time).
 * Intuitively, when population $$N_t$$ is large, size of the sample does not matter as much and picking $$n$$ items at once or as an independent sequence is equivalent.
 
-<figure><img src="../../.gitbook/assets/slides/ch2_pdfcdfbinomial.png" alt="" width="489"><figcaption><p>Pdf and cdf for binomial RV with $$n=10$$ and $$p=0.3$$ (top). Binomial pdf for different $$p$$ (bottom-left). Convergence of hypergeometric pdf to binomial pdf for $$N=1000$$ (bottom-right).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch2_pdfcdfbinomial.png" alt="" width="489"></figure>
+
+*Pdf and cdf for binomial RV with $$n=10$$ and $$p=0.3$$ (top). Binomial pdf for different $$p$$ (bottom-left). Convergence of hypergeometric pdf to binomial pdf for $$N=1000$$ (bottom-right).*
 
 <details>
 

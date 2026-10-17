@@ -132,13 +132,17 @@ plt.show()
 * In other words, event $$\mathcal{A}$$ must satisfy all the restrictions imposed by $$\mathcal{R}$$ and $$\mathcal{D}$$.
 * This means domain $$\mathcal{A}$$ is more restrictive than domain $$\mathcal{D}$$  and thus $$\mathcal{A}\subseteq \mathcal{D}$$.
 
-<figure><img src="../../.gitbook/assets/slides/domainint2D.png" alt="" width="489"><figcaption><p>Subdomain $$\mathcal{A}$$ of $$\mathcal{D}$$ for discrete (left) and continuous (right) RV.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/domainint2D.png" alt="" width="489"></figure>
+
+*Subdomain $$\mathcal{A}$$ of $$\mathcal{D}$$ for discrete (left) and continuous (right) RV.*
 
 * Different types of events $$\mathcal{A}$$ capture different *logic*.
 * For instance, we can build subdomain $$\mathcal{A}$$ that enforces constraint that $$\{X_1=X_2\}$$ (to compute probability that $$X_1=X_2$$).
 * Can also build a subdomain $$\mathcal{A}$$ that enforces constraint that $$\{X_1^2+X_2^2\leq 1\}$$ (to compute probability that $$X$$ is in a circular region).
 
-  <figure><img src="../../.gitbook/assets/slides/subdomains2D.png" alt="" width="420"><figcaption><p>Examples of subdomains $$\mathcal{A}\subseteq \mathcal{D}$$ capturing different constraints.</p></figcaption></figure>
+  <figure><img src="../../.gitbook/assets/slides/subdomains2D.png" alt="" width="420"></figure>
+
+  *Examples of subdomains $$\mathcal{A}\subseteq \mathcal{D}$$ capturing different constraints.*
 
 * When making decisions, we are interested in events that capture “*or*” logic.
 * Want prob that $$X$$ is in $$\mathcal{R}_1=\{X_1\geq 0\,\&\,X_2\geq 0\}$$ *or* that it is in $$\mathcal{R}_2=\{X_1\leq -1\,\&\,X_2\leq -1\}$$.
@@ -146,7 +150,9 @@ plt.show()
 * Here, $$\mathbb{P}(X\in \mathcal{R})$$ indicates probability that $$X\in \mathcal{R}_1$$ or that $$X\in \mathcal{R}_2$$.
 * $$\mathcal{A}$$ must be a subdomain of $$\mathcal{D}$$, we achieve this by enforcing $$\mathcal{A}=\mathcal{R}\cap \mathcal{D}$$ ($$X$$ is in $$\mathcal{R}$$ and $$\mathcal{D}$$).
 
-  <figure><img src="../../.gitbook/assets/slides/setunion.png" alt="" width="350"><figcaption><p>Union of $$\mathcal{R}_1$$ and $$\mathcal{R}_2$$ to obtain $$\mathcal{R}=\mathcal{R}_1\cup\mathcal{R}_2$$ (left). Intersection of $$\mathcal{R}$$ with $$\mathcal{D}$$ to obtain event $$\mathcal{A}=\mathcal{R}\cap\mathcal{D}$$ (right).</p></figcaption></figure>
+  <figure><img src="../../.gitbook/assets/slides/setunion.png" alt="" width="350"></figure>
+
+  *Union of $$\mathcal{R}_1$$ and $$\mathcal{R}_2$$ to obtain $$\mathcal{R}=\mathcal{R}_1\cup\mathcal{R}_2$$ (left). Intersection of $$\mathcal{R}$$ with $$\mathcal{D}$$ to obtain event $$\mathcal{A}=\mathcal{R}\cap\mathcal{D}$$ (right).*
 
 * In decision-making, we also often want probability that $$\mathcal{A}_1$$ occurs given knowledge that $$\mathcal{A}_2$$ has occurred.
 * This is captured by *conditional probability* $$\mathbb{P}(\mathcal{A}_1|\mathcal{A}_2)$$:

@@ -27,7 +27,9 @@ In this context, it is important to make a couple of important observations:
 * Nature of $$Y$$ depends on action $$u$$.  Can use action to mitigate/manipulate uncertainty of $$Y$$.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/slides/uncertainty_propagation.png" alt="" width="630"><figcaption><p>Illustration of propagation of a random variable $$X$$ through a system. The propagation results in a  random output $$Y$$ that has different characteristics (e.g., higher variability/uncertainty.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/uncertainty_propagation.png" alt="" width="630"></figure>
+
+*Illustration of propagation of a random variable $$X$$ through a system. The propagation results in a  random output $$Y$$ that has different characteristics (e.g., higher variability/uncertainty.*
 
 Having data $$x_\omega,\; \omega \in \mathcal{S}$$ and a system model $$\varphi$$, we can characterize cdf, pdf, domain, and summarizing statistics of $$Y$$ using the following simulation procedure:
 
@@ -106,7 +108,9 @@ Consider the questions:
 
 ## Decision-Making Under Uncertainty
 
-<figure><img src="../../.gitbook/assets/slides/decision-making.png" alt="" width="489"><figcaption><p>Paradigms for decision-making under uncertainty. Comparison between decisions $$u,u'$$ and associated outputs $$Y(u),Y(u')$$ (top). Find best decision $$u^*$$ that shapes $$Y(u^*)$$ in a desirable way (bottom).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/decision-making.png" alt="" width="489"></figure>
+
+*Paradigms for decision-making under uncertainty. Comparison between decisions $$u,u'$$ and associated outputs $$Y(u),Y(u')$$ (top). Find best decision $$u^*$$ that shapes $$Y(u^*)$$ in a desirable way (bottom).*
 
 ## Decision-Making under Uncertainty
 

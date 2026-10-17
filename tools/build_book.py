@@ -114,9 +114,15 @@ def figure_html(ctx, imgs, caption):
         parts.append(f'<img src="{ctx.rel(out)}" alt="" width="{w}">')
     if not parts:
         return ""
-    # GitBook figures hold a single image: one <figure> per image, caption on the last
-    cap = f"<figcaption><p>{caption}</p></figcaption>" if caption.strip() else ""
+    # GitBook figures hold a single image: one <figure> per image, caption on the last.
+    # GitBook does not render math inside HTML, so a caption with math goes in an
+    # italic Markdown line right below the image instead of in <figcaption>.
+    caption = caption.strip()
+    math_caption = "$$" in caption
+    cap = f"<figcaption><p>{caption}</p></figcaption>" if caption and not math_caption else ""
     figs = [f"<figure>{img}{cap if k == len(parts) - 1 else ''}</figure>" for k, img in enumerate(parts)]
+    if math_caption:
+        figs[-1] += f"\n\n*{caption}*"
     return "\n\n" + "\n\n".join(figs) + "\n\n"
 
 

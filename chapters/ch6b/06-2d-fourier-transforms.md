@@ -26,7 +26,9 @@
 * Below we plot this function in 3D and we can see that this forms a wavy field (sheet) and show two waves that form function.
 * We also visualize function as 2D projection. This is is what you would see if you observed wavy sheet from the top.
 
-<figure><img src="../../.gitbook/assets/slides/ch6_2dsinetotal.png" alt="" width="489"><figcaption><p>2D function $$f(x_1,x_2)$$ shown in 3D and as a projection in 2D (top panels). Low-frequency component (middle panels) and high-frequency component (bottom panels).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_2dsinetotal.png" alt="" width="489"></figure>
+
+*2D function $$f(x_1,x_2)$$ shown in 3D and as a projection in 2D (top panels). Low-frequency component (middle panels) and high-frequency component (bottom panels).*
 
 #### Python implementation
 

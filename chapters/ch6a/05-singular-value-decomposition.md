@@ -166,7 +166,9 @@ rank(X[:, 1..6]) = 3
 
 * What is image corresponding to this matrix? What if this is corrupted with noise?
 
-<figure><img src="../../.gitbook/assets/slides/ch6_svd_matrix_images.png" alt="" width="420"><figcaption><p>Image corresponding to matrix $$\mathbf{X}$$ (top-left) and to perturbed matrix $$\mathbf{X}_\epsilon$$ (top-right). Image corresponding to compression of matrix $$\mathbf{X}$$ (bottom-left) and of perturbed matrix $$\mathbf{X}_\epsilon$$ (bottom-right) using first singular value.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_svd_matrix_images.png" alt="" width="420"></figure>
+
+*Image corresponding to matrix $$\mathbf{X}$$ (top-left) and to perturbed matrix $$\mathbf{X}_\epsilon$$ (top-right). Image corresponding to compression of matrix $$\mathbf{X}$$ (bottom-left) and of perturbed matrix $$\mathbf{X}_\epsilon$$ (bottom-right) using first singular value.*
 
 * Images contain $$10\times 10=$$100 pixels and capture spatial pattern of matrices.
 * To human eye, it is easier to visualize patterns using images.
@@ -262,7 +264,9 @@ rank(X) = 4   rank(X_eps) = 10
 
 <figure><img src="../../.gitbook/assets/slides/droplet1g.jpg" alt="" width="280"></figure>
 
-<figure><img src="../../.gitbook/assets/slides/ch6_approximation_droplet.png" alt="" width="280"><figcaption><p>Original image (left) and compressions using $$n=1,3,10,100$$ singular values (right).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_approximation_droplet.png" alt="" width="280"></figure>
+
+*Original image (left) and compressions using $$n=1,3,10,100$$ singular values (right).*
 
 #### Python implementation
 

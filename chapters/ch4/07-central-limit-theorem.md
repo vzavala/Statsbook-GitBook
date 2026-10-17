@@ -35,7 +35,9 @@
 * We i.i.d. samples $$X_1,...,,X_S$$ from $$X\sim \textrm{Weibull}(2,1)$$ and compute $$\hat{\mathbb{E}}_X^S=\frac{1}{S}\sum_{\omega=1}X_\omega$$.
 * We repeat procedure for different sets of samples and visualize pdf of $$\bar{X}=\hat{\mathbb{E}}_X^S$$.
 
-  <figure><img src="../../.gitbook/assets/slides/ch4_clt_weibull.png" alt="" width="350"><figcaption><p>Pdf for $$X\sim \textrm{Weibull}(2,1)$$ (top-left) and sample average $$\bar{X}$$ with $$S=10$$ (top-right), $$S=100$$ (bottom-left) and $$S=1000$$ (bottom-right).</p></figcaption></figure>
+  <figure><img src="../../.gitbook/assets/slides/ch4_clt_weibull.png" alt="" width="350"></figure>
+
+  *Pdf for $$X\sim \textrm{Weibull}(2,1)$$ (top-left) and sample average $$\bar{X}$$ with $$S=10$$ (top-right), $$S=100$$ (bottom-left) and $$S=1000$$ (bottom-right).*
 
 #### Python implementation
 
