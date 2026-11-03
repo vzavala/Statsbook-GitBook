@@ -2,8 +2,8 @@
 
 **Victor M. Zavala** · Department of Chemical and Biological Engineering, University of Wisconsin-Madison
 
-This online companion follows the lecture slides of the course and places the Python implementation
-of every example right next to the concepts and equations it implements. Read a concept, see its
+This online companion follows the [lecture slides](https://github.com/vzavala/StatsBook/tree/master/Slides) of the course and places the
+[Python implementation](https://github.com/vzavala/StatsBook/tree/master/Python) of every example right next to the concepts and equations it implements. Read a concept, see its
 equations, then see the code that computes them, with its output, in the same notation.
 
 {% hint style="info" %}
