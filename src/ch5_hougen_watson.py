@@ -70,13 +70,14 @@ plt.show()
 # Solve $\min_\theta \frac{1}{2}\lVert\mathbf{y}-\mathbf{m}(\theta)\rVert^2$ with a Levenberg-Marquardt
 # (Newton-like) method, from $\theta=(1,\dots,1)$ and from $\theta=(-1,\dots,-1)$.
 # (The slides use Matlab's `fitnlm`; `scipy.optimize.least_squares` plays the same role.)
+# As in the book, the reported value is the sum of squared residuals (without the factor 1/2).
 
 # %%
 fits = {}
 for label, theta0 in (("theta0 = (1,...,1)", np.ones(5)), ("theta0 = (-1,...,-1)", -np.ones(5))):
     sol = least_squares(lambda th: y - m(th, X), theta0, method='lm', max_nfev=2000)
     fits[label] = sol.x
-    print(f"{label}:  theta_hat = {np.round(sol.x, 2)},  SSE = {SSE(sol.x):.4f}")
+    print(f"{label}:  theta_hat = {np.round(sol.x, 2)},  SSE = {2*SSE(sol.x):.4f}")
 
 fig, axs = plt.subplots(1, 2, figsize=(12, 5))
 for ax, (label, th) in zip(axs, fits.items()):
