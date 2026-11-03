@@ -215,7 +215,7 @@ def frame_title(title_tex, ctx, macros):
 
 def colab_url(nb):
     return (f"https://colab.research.google.com/github/{cfg.GITHUB_REPO}/blob/"
-            f"{cfg.GITHUB_BRANCH}/notebooks/{nb}.ipynb")
+            f"{cfg.GITHUB_BRANCH}/{cfg.NOTEBOOK_DIR}/{nb}.ipynb")
 
 
 def nb_math(md):
@@ -471,7 +471,7 @@ def write_nomenclature(all_pages):
     for ch, pages in all_pages:
         section = []
         for _, page in pages:
-            for name in re.findall(r"notebooks/(ch\d_[A-Za-z0-9_]+)\.ipynb", (ROOT / page).read_text()):
+            for name in re.findall(r"/(ch\d_[A-Za-z0-9_]+)\.ipynb", (ROOT / page).read_text()):
                 if name in seen or not (SRC / f"{name}.py").exists():
                     continue
                 seen.add(name)

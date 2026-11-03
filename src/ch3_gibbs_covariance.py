@@ -1,7 +1,7 @@
 # %% [markdown] [hide]
 # **Setup.** Run this cell first: it locates the data files this notebook reads. On Google
 # Colab it downloads them (the `Data/` and `Support/` folders) from the book's GitHub
-# repository; on your computer, run the notebook from the `notebooks/` folder.
+# repository; on your computer, run the notebook from the folder that contains `Data/`.
 
 # %% [hide]
 import os
@@ -11,8 +11,8 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
     if not os.path.isdir('statsbook'):
         os.system('git clone -q --depth 1 --filter=blob:none --sparse '
                   'https://github.com/__GITHUB_REPO__.git statsbook')
-        os.system('git -C statsbook sparse-checkout set notebooks/Data notebooks/Support')
-    path = 'statsbook/notebooks/'
+        os.system('git -C statsbook sparse-checkout set __NOTEBOOK_DIR__/Data __NOTEBOOK_DIR__/Support')
+    path = 'statsbook/__NOTEBOOK_DIR__/'
 
 # %% [markdown]
 # Covariance and correlation for the Gibbs reactor (Victor Z, UW-Madison, 2024).
@@ -67,7 +67,7 @@ print("\nPCorr_hat[X] =")
 print(pd.DataFrame(PCorr_hat, index=names, columns=names))
 print("\neigenvalues of Cov_hat (all >= 0):", np.round(np.linalg.eigvalsh(Cov_hat), 3))
 
-# %% [part] Conditional variance of pressure and conversion @ Example:Uncertainty Reduction in Gibbs Reactor
+# %% [part] Conditional variance of pressure and conversion @ Example: Uncertainty Reduction in Gibbs Reactor (Part II)
 
 # %% [markdown]
 # For a Gaussian $(X_1,X_2)$ (pressure, conversion):

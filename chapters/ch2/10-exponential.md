@@ -81,9 +81,7 @@ plt.axis([0, 4, 0, 1])
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_exponentials-01-0.png" alt="" width="520"></figure>
-
-Open in Colab: [`ch2_compare_exponentials.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_compare_exponentials.ipynb)
+Open in Colab: [`ch2_compare_exponentials.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_exponentials.ipynb)
 
 </details>
 
@@ -119,7 +117,7 @@ For how long will a tracer particle reside in the system?  What factors influenc
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch2_example_exponential.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_example_exponential.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch2_example_exponential.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_exponential.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 **Additional example: failure time of an adhesive** (Victor Z and J E Umaña, UW-Madison, 2024).
@@ -162,8 +160,6 @@ plt.show()
 
 print(f"P(X > 12) = 1 - F(12) = {X.sf(12):.4f}  (e^(-12/beta) = {np.exp(-12/beta):.4f})")
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch2_example_exponential-01-0.png" alt="" width="520"></figure>
 
 ```
 P(X > 12) = 1 - F(12) = 0.7165  (e^(-12/beta) = 0.7165)

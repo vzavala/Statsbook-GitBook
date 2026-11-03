@@ -31,7 +31,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_fourier_transform_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_fourier_transform_2D.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_fourier_transform_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_fourier_transform_2D.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 A 2D signal as a superposition of 2D waves (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024):
@@ -63,8 +63,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_2D-01-1.png" alt="" width="520"></figure>
-
 ## Example: 2D FT Applied to Filtering
 
 * We analyze frequency content of a 2D uniform average filter (defined by a 2D step function) and of a 2D Gaussian filter (defined a by 2D Gaussian kernel).
@@ -74,7 +72,7 @@ plt.show()
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_fourier_transform_filters_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_fourier_transform_filters_2D.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_fourier_transform_filters_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_fourier_transform_filters_2D.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 2D Fourier transforms of a uniform (box) filter and of a Gaussian filter
@@ -112,8 +110,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters_2D-01-1.png" alt="" width="520"></figure>
-
 * We now illustrate how to use FTs to perform convolutions.
 * We take original image $$f$$ and obtain its 2D FT $$\hat{f}$$.
 * Construct Gaussian filter with $$\sigma=1$$ ($${g}_{1}$$).  We obtain its FT $$\hat{g}_1=\mathcal{F}\{g_1\}$$.
@@ -127,7 +123,7 @@ plt.show()
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_image_filters_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_image_filters_2D.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_image_filters_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_image_filters_2D.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Filtering an image with the convolution theorem (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
@@ -178,8 +174,6 @@ for ax in axs.ravel():
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_image_filters_2D-03-0.png" alt="" width="520"></figure>
 
 Check: the result equals a direct (spatial) Gaussian convolution.
 

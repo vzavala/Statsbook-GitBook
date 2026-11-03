@@ -65,7 +65,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch4_example_mle_exp.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch4_example_mle_exp.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch4_example_mle_exp.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_example_mle_exp.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Maximum likelihood estimation for an exponential RV (Victor Z, UW-Madison, 2014).
@@ -118,5 +118,3 @@ for a in fig.axes:
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch4_example_mle_exp-02-0.png" alt="" width="520"></figure>

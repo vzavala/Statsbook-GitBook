@@ -96,7 +96,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_gibbs_pca_estimation_svd.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_gibbs_pca_estimation_svd.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_gibbs_pca_estimation_svd.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gibbs_pca_estimation_svd.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Finding data redundancies with the SVD (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024).
@@ -193,7 +193,7 @@ rank(X[:, 1..6]) = 3
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_svd_image_field.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_svd_image_field.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_svd_image_field.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_svd_image_field.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Images as matrices (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2020). We use the $$10\times 10$$
@@ -242,8 +242,6 @@ nonzero singular values of X: [41.8629  1.5625  0.8498  0.5757]
 rank(X) = 4   rank(X_eps) = 10
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_svd_image_field-01-1.png" alt="" width="520"></figure>
-
 ## Example: Image Compression using SVD
 
 * Decompose complex image $$\mathbf{X}=\sum_{k=1}^ns_k\mathbf{u}_k\mathbf{v}_k^T$$.
@@ -267,7 +265,7 @@ rank(X) = 4   rank(X_eps) = 10
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_svd_reconstruction.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_svd_reconstruction.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_svd_reconstruction.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_svd_reconstruction.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Image compression with the SVD (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2020).
@@ -305,5 +303,3 @@ plt.show()
 ```
 image size: (199, 199)   rank: 199
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_svd_reconstruction-03-2.png" alt="" width="520"></figure>

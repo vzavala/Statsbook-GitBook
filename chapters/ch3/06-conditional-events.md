@@ -1,7 +1,7 @@
 # Conditional Events
 
-* Focused on probs that are conditional to simple events (e.g., $$X_1=x_1$$,  $$X_2\leq x_2$$).
-* Probs that are conditional of general events can be derived from domain properties.
+* We have focused on probabilities conditional on simple events (e.g., $$X_1=x_1$$,  $$X_2\leq x_2$$).
+* Probabilities conditional on general events can be derived from domain properties.
 * Return to definition of conditional probability:
 
   $$
@@ -40,7 +40,7 @@
 
 * This explains why joint cdf is product of marginal cdfs for $$X_1,X_2$$ independent.
 
-* Prob that event $$\mathcal{A}_1$$ *or* $$\mathcal{A}_2$$ occur is given by:
+* Probability that event $$\mathcal{A}_1$$ *or* $$\mathcal{A}_2$$ occurs is given by:
 
   $$
   \mathbb{P}(X\in \mathcal{A}_1\cup \mathcal{A}_2)=\mathbb{P}(X\in \mathcal{A}_1)+\mathbb{P}(X\in \mathcal{A}_2)- \mathbb{P}(X\in \mathcal{A}_1\cap \mathcal{A}_2).
@@ -57,7 +57,7 @@
 ## Example: Lifetime of Thermostat
 
 {% hint style="info" %}
-Compute probability that sensor or processor last more than a year.
+Compute probability that sensor or processor lasts more than a year.
 {% endhint %}
 
 * We build events $$\mathcal{A}_1=\{x_1\geq 1\;\&\; x_2\in \mathcal{D}_2\}$$ and $$\mathcal{A}_2=\{x_1\in \mathcal{D}_1\;\& \;x_2\geq 1\}$$, which give $$\mathcal{A}_1\cap\mathcal{A}_2=\{x_1\geq 1\; \& \; x_2\geq 1\}$$, and $$\mathcal{A}_1\cup\mathcal{A}_2=\{x_1\geq 1\; \textrm{or} \; x_2\geq 1\}$$.

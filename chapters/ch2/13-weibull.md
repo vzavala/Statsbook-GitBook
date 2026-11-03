@@ -72,9 +72,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_weibull-01-0.png" alt="" width="520"></figure>
-
-Open in Colab: [`ch2_compare_weibull.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_compare_weibull.ipynb)
+Open in Colab: [`ch2_compare_weibull.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_weibull.ipynb)
 
 </details>
 
@@ -132,7 +130,7 @@ Use the pdf and cdf to determine the following:
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch2_example_weibull.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_example_weibull.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch2_example_weibull.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_weibull.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 10-min wind speed as a Weibull RV (Victor Z and David Cole, UW-Madison, 2024).
@@ -200,8 +198,6 @@ for ax in (ax1, ax2, ax3):
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch2_example_weibull-04-0.png" alt="" width="520"></figure>
 
 $$\mathbb{E}_X=\beta\,\Gamma(1+1/\xi)$$, $$\mathbb{MO}_X=\beta\left(\frac{\xi-1}{\xi}\right)^{1/\xi}$$, and
 $$\mathbb{P}(10\leq X\leq 20)=F(20)-F(10)$$.

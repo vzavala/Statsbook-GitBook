@@ -54,7 +54,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch4_gaussian_moments_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch4_gaussian_moments_example.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch4_gaussian_moments_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_gaussian_moments_example.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Method of moments for a Gaussian (Victor Z, UW-Madison, 2024).
@@ -106,8 +106,6 @@ S =  10:  mu_hat = 0.81,  sigma_hat = 2.38
 S = 100:  mu_hat = 1.12,  sigma_hat = 1.77
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_gaussian_moments_example-01-1.png" alt="" width="520"></figure>
-
 ## Example: Method of Moments for Weibull
 
 Now want to postulate $$\textrm{Weibull}(\xi,\beta)$$ and see if this matches data.
@@ -129,7 +127,7 @@ Now want to postulate $$\textrm{Weibull}(\xi,\beta)$$ and see if this matches da
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch4_weibull_moments_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch4_weibull_moments_example.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch4_weibull_moments_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_weibull_moments_example.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Method of moments for a Weibull RV (Victor Z, UW-Madison, 2023).
@@ -185,5 +183,3 @@ plt.show()
 S =  10:  E_hat = 0.588, V_hat = 0.088  ->  xi_hat = 2.08, beta_hat = 0.66
 S = 100:  E_hat = 0.859, V_hat = 0.210  ->  xi_hat = 1.95, beta_hat = 0.97
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch4_weibull_moments_example-01-1.png" alt="" width="520"></figure>

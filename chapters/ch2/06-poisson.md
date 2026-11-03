@@ -84,9 +84,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_poisson-01-0.png" alt="" width="520"></figure>
-
-Open in Colab: [`ch2_compare_poisson.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_compare_poisson.ipynb)
+Open in Colab: [`ch2_compare_poisson.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_poisson.ipynb)
 
 </details>
 
@@ -132,7 +130,7 @@ Open in Colab: [`ch2_compare_poisson.ipynb`](https://colab.research.google.com/g
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch2_example_poisson.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_example_poisson.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch2_example_poisson.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_poisson.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Pump failures as a Poisson RV (Victor Z and David Cole, UW-Madison, 2024).
@@ -169,8 +167,6 @@ plt.grid(True)
 plt.axis([0, z + 1, 0, 4])
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch2_example_poisson-03-0.png" alt="" width="520"></figure>
 
 Since $$\mathbb{E}_X=\lambda$$, estimate $$\hat{\lambda}=\hat{\mathbb{E}}_X=\frac{1}{3}(8+12+14)$$ and
 evaluate $$\mathbb{P}(X=0)$$, $$\mathbb{P}(X=30)$$, and $$\mathbb{P}(X=11)$$.

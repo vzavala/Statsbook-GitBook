@@ -106,7 +106,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_gibbs_pca_estimation.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_gibbs_pca_estimation.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_gibbs_pca_estimation.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gibbs_pca_estimation.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Principal component estimation for the Gibbs reactor (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024).
@@ -193,5 +193,3 @@ plt.show()
 SSE (PCA) = 2.549e-03
 V(theta_hat) with PCA: [7.63e-13 3.32e-07 1.84e-07 2.59e-07 2.67e-07 2.60e-07]
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca_estimation-07-2.png" alt="" width="520"></figure>

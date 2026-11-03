@@ -130,7 +130,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_cnn_endotoxins_caseI.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_cnn_endotoxins_caseI.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_cnn_endotoxins_caseI.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_cnn_endotoxins_caseI.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 CNN classification of flow-cytometry scatter fields: is endotoxin present? (Python version of
@@ -208,8 +208,6 @@ plt.show()
 print(f"training accuracy = {history[-1, 0]:.0%},  validation accuracy = {history[-1, 1]:.0%}")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseI-04-0.png" alt="" width="520"></figure>
-
 ```
 training accuracy = 100%,  validation accuracy = 100%
 ```
@@ -229,8 +227,6 @@ for ax, ids, title in ((axs[0], train, 'training'), (axs[1], valid, 'validation'
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseI-05-0.png" alt="" width="520"></figure>
 
 The learned filter $$\Theta$$ and the activated images $$\mathbf{Z}=h(\mathbf{X}*\Theta+\theta)$$ for nine
 validation images.
@@ -256,8 +252,6 @@ Theta =
  [-0.235  0.313  0.159]]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseI-07-1.png" alt="" width="520"></figure>
-
 * Now train CNN to distinguish bacterial species that generate endotoxin.
 * Collect 84 obs; 24 for Escherichia Coli (EC), 28 for Pseudomonas Aeruginosa (PA), and 32 for Salmonella Minnesota (SM).
 * We use 45 observations for training and 39 for validation.
@@ -269,7 +263,7 @@ Theta =
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_cnn_endotoxins_caseII.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_cnn_endotoxins_caseII.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_cnn_endotoxins_caseII.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_cnn_endotoxins_caseII.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 CNN classification of flow-cytometry scatter fields: which bacterial species produced the
@@ -347,8 +341,6 @@ plt.show()
 print(f"training accuracy = {history[-1, 0]:.0%},  validation accuracy = {history[-1, 1]:.0%}")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseII-04-0.png" alt="" width="520"></figure>
-
 ```
 training accuracy = 93%,  validation accuracy = 74%
 ```
@@ -368,8 +360,6 @@ for ax, ids, title in ((axs[0], train, 'training'), (axs[1], valid, 'validation'
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseII-05-0.png" alt="" width="520"></figure>
 
 The learned filters $$\Theta_j$$ and the activated images (first filter) for nine validation images.
 
@@ -399,12 +389,10 @@ Theta_2 =
  [-0.999 -0.573  0.168]]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseII-07-1.png" alt="" width="520"></figure>
-
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_cnn_sds_caseI.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_cnn_sds_caseI.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_cnn_sds_caseI.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_cnn_sds_caseI.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 **Additional example: CNN classification of liquid-crystal droplet images (case I).**
@@ -573,38 +561,41 @@ Epoch [12/40], Loss: 0.0180, Train Accuracy: 100.00%, Validation Accuracy: 100.0
 Epoch [13/40], Loss: 0.0170, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [14/40], Loss: 0.0098, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [15/40], Loss: 0.0075, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [16/40], Loss: 0.0063, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
+Epoch [16/40], Loss: 0.0063, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [17/40], Loss: 0.0052, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [18/40], Loss: 0.0058, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [19/40], Loss: 0.0042, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [20/40], Loss: 0.0040, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [21/40], Loss: 0.0037, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [22/40], Loss: 0.0034, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
+Epoch [21/40], Loss: 0.0037, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+Epoch [22/40], Loss: 0.0034, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [23/40], Loss: 0.0032, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [24/40], Loss: 0.0030, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [25/40], Loss: 0.0027, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [26/40], Loss: 0.0026, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [27/40], Loss: 0.0024, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [28/40], Loss: 0.0023, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
+Epoch [26/40], Loss: 0.0026, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+Epoch [27/40], Loss: 0.0024, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+Epoch [28/40], Loss: 0.0023, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [29/40], Loss: 0.0022, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [30/40], Loss: 0.0021, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+```
+
+```
 Epoch [31/40], Loss: 0.0019, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [32/40], Loss: 0.0020, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [33/40], Loss: 0.0017, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [34/40], Loss: 0.0017, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+Epoch [35/40], Loss: 0.0016, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
-Epoch [35/40], Loss: 0.0016, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [36/40], Loss: 0.0015, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [37/40], Loss: 0.0014, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [38/40], Loss: 0.0014, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
@@ -665,8 +656,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-16-0.png" alt="" width="520"></figure>
-
 ```python
 # Display some images from the validation set
 def imshow(img, title):
@@ -684,8 +673,6 @@ for i in range(9):
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-17-0.png" alt="" width="520"></figure>
 
 ```python
 # Display some images from the validation set
@@ -707,8 +694,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-18-0.png" alt="" width="520"></figure>
-
 ```python
 # Display activations
 model.eval()
@@ -729,8 +714,6 @@ for i in range(9):
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-20-0.png" alt="" width="520"></figure>
 
 ```python
 filter_weight = model.conv1.weight.data.cpu().numpy()[0]
@@ -771,12 +754,10 @@ fig.colorbar(plot, cax=cbar_ax)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-23-0.png" alt="" width="520"></figure>
-
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_cnn_sds_caseII.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_cnn_sds_caseII.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_cnn_sds_caseII.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_cnn_sds_caseII.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 **Additional example: CNN classification of liquid-crystal droplet images (case II).**
@@ -929,46 +910,49 @@ Epoch [2/40], Loss: 1.0402, Train Accuracy: 57.50%, Validation Accuracy: 50.00%
 Epoch [3/40], Loss: 1.0508, Train Accuracy: 43.75%, Validation Accuracy: 60.00%
 Epoch [4/40], Loss: 0.7722, Train Accuracy: 52.50%, Validation Accuracy: 70.00%
 Epoch [5/40], Loss: 0.5081, Train Accuracy: 70.00%, Validation Accuracy: 65.00%
-Epoch [6/40], Loss: 0.4463, Train Accuracy: 78.75%, Validation Accuracy: 85.00%
 ```
 
 ```
+Epoch [6/40], Loss: 0.4463, Train Accuracy: 78.75%, Validation Accuracy: 85.00%
 Epoch [7/40], Loss: 0.4289, Train Accuracy: 83.75%, Validation Accuracy: 80.00%
 Epoch [8/40], Loss: 0.3897, Train Accuracy: 86.25%, Validation Accuracy: 85.00%
 Epoch [9/40], Loss: 0.3858, Train Accuracy: 91.25%, Validation Accuracy: 65.00%
 Epoch [10/40], Loss: 0.3341, Train Accuracy: 87.50%, Validation Accuracy: 65.00%
-Epoch [11/40], Loss: 0.4578, Train Accuracy: 76.25%, Validation Accuracy: 85.00%
-Epoch [12/40], Loss: 0.3614, Train Accuracy: 87.50%, Validation Accuracy: 70.00%
 ```
 
 ```
+Epoch [11/40], Loss: 0.4578, Train Accuracy: 76.25%, Validation Accuracy: 85.00%
+Epoch [12/40], Loss: 0.3614, Train Accuracy: 87.50%, Validation Accuracy: 70.00%
 Epoch [13/40], Loss: 0.3069, Train Accuracy: 85.00%, Validation Accuracy: 50.00%
 Epoch [14/40], Loss: 0.4344, Train Accuracy: 76.25%, Validation Accuracy: 50.00%
 Epoch [15/40], Loss: 0.3015, Train Accuracy: 86.25%, Validation Accuracy: 90.00%
-Epoch [16/40], Loss: 0.2287, Train Accuracy: 96.25%, Validation Accuracy: 90.00%
-Epoch [17/40], Loss: 0.2038, Train Accuracy: 96.25%, Validation Accuracy: 90.00%
 ```
 
 ```
+Epoch [16/40], Loss: 0.2287, Train Accuracy: 96.25%, Validation Accuracy: 90.00%
+Epoch [17/40], Loss: 0.2038, Train Accuracy: 96.25%, Validation Accuracy: 90.00%
 Epoch [18/40], Loss: 0.1900, Train Accuracy: 97.50%, Validation Accuracy: 80.00%
 Epoch [19/40], Loss: 0.1962, Train Accuracy: 96.25%, Validation Accuracy: 80.00%
 Epoch [20/40], Loss: 0.1513, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
-Epoch [21/40], Loss: 0.1350, Train Accuracy: 98.75%, Validation Accuracy: 85.00%
-Epoch [22/40], Loss: 0.1213, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
-Epoch [23/40], Loss: 0.1139, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
 ```
 
 ```
+Epoch [21/40], Loss: 0.1350, Train Accuracy: 98.75%, Validation Accuracy: 85.00%
+Epoch [22/40], Loss: 0.1213, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
+Epoch [23/40], Loss: 0.1139, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
 Epoch [24/40], Loss: 0.1069, Train Accuracy: 100.00%, Validation Accuracy: 80.00%
 Epoch [25/40], Loss: 0.1074, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
+```
+
+```
 Epoch [26/40], Loss: 0.1040, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
 Epoch [27/40], Loss: 0.0886, Train Accuracy: 100.00%, Validation Accuracy: 80.00%
 Epoch [28/40], Loss: 0.0886, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
 Epoch [29/40], Loss: 0.0818, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
+Epoch [30/40], Loss: 0.0825, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
 ```
 
 ```
-Epoch [30/40], Loss: 0.0825, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
 Epoch [31/40], Loss: 0.0849, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
 Epoch [32/40], Loss: 0.0620, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
 Epoch [33/40], Loss: 0.0602, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
@@ -1037,8 +1021,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-16-0.png" alt="" width="520"></figure>
-
 ```python
 # Display some images from the validation set
 def imshow(img, title):
@@ -1056,8 +1038,6 @@ for i in range(9):
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-17-0.png" alt="" width="520"></figure>
 
 ```python
 # Display some images from the validation set
@@ -1079,8 +1059,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-18-0.png" alt="" width="520"></figure>
-
 ```python
 # Display activations
 model.eval()
@@ -1101,8 +1079,6 @@ for i in range(9):
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-20-0.png" alt="" width="520"></figure>
 
 ```python
 filter_weight = model.conv1.weight.data.cpu().numpy()[0]
@@ -1141,5 +1117,3 @@ cbar_ax = fig.add_axes([0.92, 0.15, 0.02, 0.7])
 fig.colorbar(plot, cax=cbar_ax)
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-23-0.png" alt="" width="520"></figure>

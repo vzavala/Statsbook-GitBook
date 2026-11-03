@@ -94,7 +94,7 @@ How much can we trust our parameter estimate and model predictions?
 #### Python implementation: Confidence intervals for the parameters
 
 {% hint style="success" %}
-Notebook [`ch5_heat_capacity_uncertainty.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch5_heat_capacity_uncertainty.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch5_heat_capacity_uncertainty.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_heat_capacity_uncertainty.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Uncertainty quantification for the heat-capacity model (Victor Z and Jaron T, UW-Madison, 2024).
@@ -158,8 +158,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_uncertainty-06-0.png" alt="" width="520"></figure>
-
 #### Python implementation: Confidence intervals for the predictions
 
 $$\hat{\mathbf{y}}\sim\mathcal{N}(\mathbf{y},\mathbf{X}\mathrm{Cov}[\hat{\theta}]\mathbf{X}^T)$$, so
@@ -185,8 +183,6 @@ plt.show()
 ```
 q_S = 43.77  (S = 30)
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_uncertainty-09-2.png" alt="" width="520"></figure>
 
 For comparison, `statsmodels` reports the usual $$t$$-based (marginal) 95% intervals, which are
 narrower than the joint $$\chi^2(n+1)$$ intervals above.

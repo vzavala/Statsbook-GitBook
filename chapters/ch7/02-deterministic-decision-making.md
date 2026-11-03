@@ -82,7 +82,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch7_generator_det.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch7_generator_det.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch7_generator_det.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_generator_det.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Generator sizing: the deterministic decision (Victor Z and David Cole, UW-Madison, 2024).
@@ -155,5 +155,3 @@ plt.show()
 average cost: u_D* -> 844.6,  do nothing -> 501.8
 maximum cost: u_D* -> 3212.4,  do nothing -> 4280.5
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch7_generator_det-05-1.png" alt="" width="520"></figure>

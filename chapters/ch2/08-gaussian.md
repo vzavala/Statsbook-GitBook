@@ -153,7 +153,7 @@ Computing cdf involves evaluating an integral that depends on $$\mu$$ and $$\sig
 #### Python implementation: Quantiles of the output flow
 
 {% hint style="success" %}
-Notebook [`ch2_mixing_gaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_mixing_gaussians.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch2_mixing_gaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_mixing_gaussians.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Gaussian mixing problem (Victor Z and J E Umaña, UW-Madison, 2024).
@@ -216,8 +216,6 @@ plt.show()
 ```
 z_alpha = 1.995,  Q_F3(alpha) = 31.995  (direct: 31.995)
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch2_mixing_gaussians-04-1.png" alt="" width="520"></figure>
 
 ## Gaussian
 
@@ -285,8 +283,6 @@ plt.axis([-5, 5, 0, 1.02])
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_gaussians-01-0.png" alt="" width="520"></figure>
-
 Levels $$\mu+k\sigma$$, $$k=0,1,2,3$$, and their probabilities
 $$\mathbb{P}(X\leq\mu+k\sigma)=F_Z(k)$$ for the standard normal $$Z$$.
 
@@ -318,9 +314,7 @@ P(Z <= 2) = F_Z(2) = 0.977
 P(Z <= 3) = F_Z(3) = 0.999
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_gaussians-03-1.png" alt="" width="520"></figure>
-
-Open in Colab: [`ch2_compare_gaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_compare_gaussians.ipynb)
+Open in Colab: [`ch2_compare_gaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_gaussians.ipynb)
 
 </details>
 
@@ -382,5 +376,3 @@ plt.show()
 ```
 z_alpha/2 = 1.645;  F3 in [28.36, 31.64] with 90% probability
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch2_mixing_gaussians-07-1.png" alt="" width="520"></figure>

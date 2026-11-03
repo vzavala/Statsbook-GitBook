@@ -66,9 +66,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_lognormals-01-0.png" alt="" width="520"></figure>
-
-Open in Colab: [`ch2_compare_lognormals.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_compare_lognormals.ipynb)
+Open in Colab: [`ch2_compare_lognormals.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_lognormals.ipynb)
 
 </details>
 
@@ -117,7 +115,7 @@ Open in Colab: [`ch2_compare_lognormals.ipynb`](https://colab.research.google.co
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch2_example_lognormal.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_example_lognormal.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch2_example_lognormal.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_lognormal.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Particle size distribution as a log-normal RV (Victor Z and David Cole, UW-Madison, 2024).
@@ -174,8 +172,6 @@ for ax in axs:
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch2_example_lognormal-04-0.png" alt="" width="520"></figure>
 
 Acceptable fraction $$\mathbb{P}(250\leq X\leq 400)=F(400)-F(250)$$ of a 1000 kg batch.
 

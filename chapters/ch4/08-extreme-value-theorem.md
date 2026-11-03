@@ -43,7 +43,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch4_evt_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch4_evt_example.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch4_evt_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_evt_example.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Verifying the extreme value theorem (Victor Z, UW-Madison, 2024).
@@ -85,8 +85,6 @@ for ax in axs.ravel():
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch4_evt_example-01-0.png" alt="" width="520"></figure>
 
 Probabilities of rare events from the GEV fit for $$S=1000$$.
 

@@ -55,7 +55,7 @@ Some observations:
 #### Python implementation: Realizations, frequency, and cumulative frequency
 
 {% hint style="success" %}
-Notebook [`ch1_gibbs_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch1_gibbs_example.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch1_gibbs_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch1_gibbs_example.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Gibbs reactor example (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
@@ -108,8 +108,6 @@ plt.grid(True)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-07-0.png" alt="" width="520"></figure>
-
 The *frequency* counts the observations in each bin $$[x, x+\Delta x]$$:
 
 $$
@@ -134,8 +132,6 @@ plt.grid(True)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-09-0.png" alt="" width="520"></figure>
-
 The same frequency plot can be produced directly with a histogram:
 
 ```python
@@ -145,8 +141,6 @@ plt.ylabel('Frequency', fontsize=14)
 plt.axis([60, 240, 0, 180])
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-11-0.png" alt="" width="520"></figure>
 
 The *cumulative frequency* counts the observations below $$x$$:
 
@@ -168,5 +162,3 @@ plt.axis([60, 240, 0, 1000])
 plt.grid(True)
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-13-0.png" alt="" width="520"></figure>

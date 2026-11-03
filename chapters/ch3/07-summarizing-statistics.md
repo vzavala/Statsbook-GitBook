@@ -85,7 +85,7 @@ For univ $$X$$, we seek to understand variability of RV because this is a measur
 
 For multiv $$X$$, we seek to understand variability of $$X_1$$ and $$X_2$$ and to understand how $$X_1$$ and $$X_2$$ vary together.
 
-* *Covariance* of $$X=(X_1,X_2)$$ is matrix $$\textrm{Cov}(X)\in \mathbb{R}^{2\times 2}$$:
+* *Covariance* of $$X=(X_1,X_2)$$ is matrix $$\textrm{Cov}[X]\in \mathbb{R}^{2\times 2}$$:
 
   $$
   \textrm{Cov}[X]=\mathbb{E}\left[(X-\mathbb{E}[X])(X-\mathbb{E}[X])^T\right]
@@ -150,7 +150,7 @@ For multiv $$X$$, we seek to understand variability of $$X_1$$ and $$X_2$$ and t
 
   $$
   \begin{aligned}
-  \textrm{Cov}(X)=\textrm{ACorr}[X]-\mathbb{E}[X]\mathbb{E}[X]^T.
+  \textrm{Cov}[X]=\textrm{ACorr}[X]-\mathbb{E}[X]\mathbb{E}[X]^T.
   \end{aligned}
   $$
 
@@ -192,14 +192,14 @@ For multiv $$X$$, we seek to understand variability of $$X_1$$ and $$X_2$$ and t
   \textrm{Cov}[X]_{ij}=\mathbb{E}[(X_i-\mathbb{E}[X_i])(X_j-\mathbb{E}[X_j])],\; i,j=1,...,n.
   $$
 
-* Peason correlation of $$X=(X_1,X_2,...,X_n)$$ is:
+* Pearson correlation of $$X=(X_1,X_2,...,X_n)$$ is:
 
   $$
   \begin{aligned}
   \textrm{PCorr}[X]=\left[\begin{array}{ccccc}1&\textrm{PCorr}[X]_{12}&\cdots &\textrm{PCorr}[X]_{1n}\\
   \textrm{PCorr}[X]_{21}&1&\cdots &\textrm{PCorr}[X]_{2n}\\
   \vdots&\vdots&\ddots&\vdots\\
-  \textrm{Pcorr}[X]_{n1}&\textrm{PCorr}[X]_{n2}&\cdots &1
+  \textrm{PCorr}[X]_{n1}&\textrm{PCorr}[X]_{n2}&\cdots &1
   \end{array}\right]
   \end{aligned}
   $$
@@ -234,7 +234,7 @@ For multiv $$X$$, we seek to understand variability of $$X_1$$ and $$X_2$$ and t
 
 ## Example: Covariance and Correlation for Gibbs Reactor
 
-* Revisit reactor under which the reaction $$CO+2H_2\leftrightarrow CH_3OH$$ takes place.
+* Revisit reactor in which the reaction $$CO+2H_2\leftrightarrow CH_3OH$$ takes place.
 * Recall that this reaction is favored at high pressure.
 * Have data available for $$n=5$$ RVs: pressure, conversion, output flow for reactants ($$CO$$, $$H_2$$) and for product $$CH_3OH$$.
 
@@ -246,12 +246,12 @@ Consider the following questions:
 * How are the output flows for $$CO$$, $$H_2$$, and $$CH_3OH$$ related?
 {% endhint %}
 
-* Without even looking at the data, our physical understanding of reactor gives us so intuition as to how the variables are connected between each other.
+* Without even looking at the data, our physical understanding of reactor gives us some intuition as to how the variables are connected to each other.
 * We know that reaction is favored by high pressure and thus expect that conversion is positively correlated with pressure.
 * From conservation laws, we also know that output flows of reactants decrease as we increase the output flow of product (with higher conversion).
 * We thus expect that output flow of $$CO$$ is negatively correlated with pressure (knowledge of one variable is encoded in another variable).
 
-Interdependencies are confirmed visually from data but trends hidden by noise.
+Interdependencies are confirmed visually from data, but trends are partly hidden by noise.
 
 <figure><img src="../../.gitbook/assets/slides/ch3_correlation_gibbs.png" alt="" width="489"></figure>
 
@@ -285,12 +285,12 @@ Interdependencies are confirmed visually from data but trends hidden by noise.
   \end{aligned}
   $$
 
-* Sample covariance and correlation matrix confirm physical intuition.
+* Sample covariance and correlation matrices confirm physical intuition.
 
 #### Python implementation: Sample covariance and correlation
 
 {% hint style="success" %}
-Notebook [`ch3_gibbs_covariance.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch3_gibbs_covariance.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch3_gibbs_covariance.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_gibbs_covariance.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Covariance and correlation for the Gibbs reactor (Victor Z, UW-Madison, 2024).
@@ -323,8 +323,6 @@ for ax, (i, j) in zip(axs.ravel(), [(0, 1), (0, 2), (2, 3), (3, 4)]):
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch3_gibbs_covariance-04-0.png" alt="" width="520"></figure>
 
 $$\hat{\mathrm{Cov}}[X]_{ij}=\frac{1}{S}\sum_{\omega}(x_{\omega,i}-\hat{m}_i)(x_{\omega,j}-\hat{m}_j)$$.
 (`np.cov` divides by $$S-1$$ unless `bias=True`.)

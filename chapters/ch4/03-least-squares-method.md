@@ -37,7 +37,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch4_leastsquares_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch4_leastsquares_example.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch4_leastsquares_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_leastsquares_example.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Least-squares fit of a Weibull cdf (Victor Z, UW-Madison, 2024).
@@ -118,5 +118,3 @@ for ax in axs:
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch4_leastsquares_example-06-0.png" alt="" width="520"></figure>

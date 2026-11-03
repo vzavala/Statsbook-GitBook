@@ -56,7 +56,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch7_generator_conflict.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch7_generator_conflict.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch7_generator_conflict.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_generator_conflict.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Conflict resolution in generator sizing (Victor Z and David Cole, UW-Madison, 2024). We trace trade-off
@@ -107,5 +107,3 @@ for ax in axs.ravel():
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch7_generator_conflict-01-0.png" alt="" width="520"></figure>

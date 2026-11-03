@@ -101,8 +101,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_compare_multigaussians-01-0.png" alt="" width="520"></figure>
-
 Marginals $$X_1\sim\mathcal{N}(\mu_1,\Sigma_{11})$$, $$X_2\sim\mathcal{N}(\mu_2,\Sigma_{22})$$ and conditionals with
 $$\mu_{1|2}=\mu_1+\Sigma_{12}\Sigma_{22}^{-1}(x_2-\mu_2)$$, $$\Sigma_{1|2}=\Sigma_{11}-\Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}$$
 (and symmetrically for $$2|1$$), evaluated at $$x_2=1$$ and $$x_1=1$$.
@@ -132,13 +130,11 @@ plt.show()
 print(f"X1 | x2=1 ~ N({mu_1g2:.2f}, {Sigma_1g2:.2f}),   X2 | x1=1 ~ N({mu_2g1:.2f}, {Sigma_2g1:.2f})")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_compare_multigaussians-03-0.png" alt="" width="520"></figure>
-
 ```
 X1 | x2=1 ~ N(0.00, 0.75),   X2 | x1=1 ~ N(0.50, 0.75)
 ```
 
-Open in Colab: [`ch3_compare_multigaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch3_compare_multigaussians.ipynb)
+Open in Colab: [`ch3_compare_multigaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_compare_multigaussians.ipynb)
 
 </details>
 
@@ -165,7 +161,7 @@ Open in Colab: [`ch3_compare_multigaussians.ipynb`](https://colab.research.googl
 * We thus have $$X_1|X_2\sim \mathcal{N}(\mu_{1|2},\Sigma_{1|2})$$ and $$X_2|X_1\sim \mathcal{N}(\mu_{2|1},\Sigma_{2|1})$$.
 * This provides important insights on how covariance between $$X_1$$ and $$X_2$$ affects to what degree knowledge of one resolves uncertainty of the other.
 
-## Example:Uncertainty Reduction in Gibbs Reactor (Part I)
+## Example: Uncertainty Reduction in Gibbs Reactor (Part I)
 
 Pressure and conversion $$(X_1,X_2)$$ are Gaussian with covariance and correlation:
 
@@ -181,13 +177,13 @@ $$
 $$
 
 {% hint style="info" %}
-* How does having knowledge in pressure resolves uncertainty in conversion?
+* How does knowledge of pressure resolve uncertainty in conversion?
 * How does having knowledge in conversion resolves uncertainty in pressure?
 {% endhint %}
 
-## Example:Uncertainty Reduction in Gibbs Reactor
+## Example: Uncertainty Reduction in Gibbs Reactor (Part II)
 
-* To quantify by how much is uncertainty in conversion reduced by having knowledge of pressure,  we compute variance of conditional pdf $$f(x_2|x_1)$$.
+* To quantify by how much uncertainty in conversion is reduced by having knowledge of pressure,  we compute variance of conditional pdf $$f(x_2|x_1)$$.
 * Variance of $$X_2|X_1$$ is given by:
 
   $$
@@ -255,7 +251,7 @@ V[conversion] = 0.0158,  V[conversion | other 4 variables] = 0.0111
 ## Multivariate Gaussian
 
 * Propagation of a Gaussian through a linear model yields another Gaussian.
-* Consider $$X\sim\mathcal{N}(\mu,\Sigma)$$ and $$Y=\varphi(X)=AX+b$$ with $$A\in \mathbb{R}^{p\times n}$$ and $$b\in \mathbb{R}^n$$.
+* Consider $$X\sim\mathcal{N}(\mu,\Sigma)$$ and $$Y=\varphi(X)=AX+b$$ with $$A\in \mathbb{R}^{p\times n}$$ and $$b\in \mathbb{R}^p$$.
 * Can show that $$Y\sim \mathcal{N}(A\mu+b,A\Sigma A^T)$$.
 * Property can be used to establish useful properties.
 * For example, consider Gaussian *mixture* $$Y=X_1+X_2$$ with independent $$X_1\sim \mathcal{N}(\mu_1,\sigma_1^2)$$ and $$X_2\sim \mathcal{N}(\mu_2,\sigma_2^2)$$ .
@@ -304,7 +300,7 @@ $$
    * If $$\rho>0$$ (positive correlation), ellipse is tilted to right
    * If $$\rho<0$$ (negative correlation), ellipse is tilted to left
    * If $$\rho=0$$, (no correlation), ellipse has no tilt.
-* Correlation *does not* affect size of ellipsoid (only its orientation).
+* Correlation *does not* affect size of ellipse (only its orientation).
 
 * Want *confidence regions* (regions over which we expect to find $$X$$ with a given prob).
 * We want to determine  box region $$\mathcal{B}\subseteq \mathcal{D}$$ that contains $$X$$ with probability $$1-\alpha$$:
@@ -375,7 +371,7 @@ We visualize joint pdf and marginal pdfs for $$\mu=(0,0)$$ and $$\Sigma=\left[\b
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch3_gaussian_geometry.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch3_gaussian_geometry.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch3_gaussian_geometry.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_gaussian_geometry.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Geometry of a 2D Gaussian (Victor Z, UW-Madison, 2024).
@@ -441,8 +437,6 @@ plt.show()
 print(f"chi2(2) quantile Q_n = {Q_n:.2f},  chi2(1) quantile Q_1 = {Q_1:.2f}")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_gaussian_geometry-04-0.png" alt="" width="520"></figure>
-
 ```
 chi2(2) quantile Q_n = 5.99,  chi2(1) quantile Q_1 = 3.84
 ```
@@ -458,7 +452,7 @@ We now present 95% ellipsoidal region and 1000 realizations from  Gaussian.
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch3_gaussian_samples_ellipse.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch3_gaussian_samples_ellipse.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch3_gaussian_samples_ellipse.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_gaussian_samples_ellipse.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Realizations of a 2D Gaussian and the 95% ellipsoidal region (Victor Z, UW-Madison, 2019).
@@ -500,5 +494,3 @@ plt.show()
 ```
 954 of S = 1000 realizations (95.4%) lie inside the ellipse
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch3_gaussian_samples_ellipse-03-1.png" alt="" width="520"></figure>

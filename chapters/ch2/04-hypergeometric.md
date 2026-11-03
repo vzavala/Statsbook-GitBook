@@ -106,9 +106,7 @@ plt.show()
 mode = 5,  E_X = n p = 5.0
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_hypergeometric-01-1.png" alt="" width="520"></figure>
-
-Open in Colab: [`ch2_compare_hypergeometric.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_compare_hypergeometric.ipynb)
+Open in Colab: [`ch2_compare_hypergeometric.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_hypergeometric.ipynb)
 
 </details>
 
@@ -165,7 +163,7 @@ We inspect at random, it is thus appropriate to model number of failures as $$X\
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch2_example_hypergeometric.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_example_hypergeometric.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch2_example_hypergeometric.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_hypergeometric.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Inspecting the machine at random (Victor Z and David Cole, UW-Madison, 2024).

@@ -33,7 +33,7 @@ Which option is better?
 #### Python implementation: Pdfs and cdfs of the two options
 
 {% hint style="success" %}
-Notebook [`ch7_mean_var_comparison.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch7_mean_var_comparison.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch7_mean_var_comparison.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_mean_var_comparison.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Comparing two random costs $$Y(u)\sim\mathcal{N}(3,1.5^2)$$ (option I) and $$Y(u')\sim\mathcal{N}(4,0.5^2)$$
@@ -57,8 +57,6 @@ for ax in axs:
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch7_mean_var_comparison-02-0.png" alt="" width="520"></figure>
 
 ## Attitudes Towards Risk
 
@@ -157,7 +155,7 @@ Option II: E = 4.00,  P(Y <= 5) = 0.977,  VaR = 4.64,  CVaR = 4.88 (4.88)
 #### Python implementation: Distributions of the NPV
 
 {% hint style="success" %}
-Notebook [`ch7_npv_comparison.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch7_npv_comparison.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch7_npv_comparison.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_npv_comparison.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Comparing investment options through their net present value (Victor Z and Leo Gonzalez, UW-Madison, 2024).
@@ -195,5 +193,3 @@ for ax in axs:
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch7_npv_comparison-02-0.png" alt="" width="520"></figure>

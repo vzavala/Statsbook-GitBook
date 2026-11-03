@@ -64,9 +64,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_uniformc-01-0.png" alt="" width="520"></figure>
-
-Open in Colab: [`ch2_compare_uniformc.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_compare_uniformc.ipynb)
+Open in Colab: [`ch2_compare_uniformc.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_uniformc.ipynb)
 
 </details>
 
@@ -129,7 +127,7 @@ Consider Gibbs reactor and consider situation in which there is no pressure data
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch2_example_alarm.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_example_alarm.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch2_example_alarm.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_alarm.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Setting up a pressure alarm with a uniform model $$X\sim\mathcal{U}_c(a,b)$$, $$a=63$$, $$b=234$$ bar

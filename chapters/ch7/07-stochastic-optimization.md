@@ -63,7 +63,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch7_generator_stoch.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch7_generator_stoch.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch7_generator_stoch.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_generator_stoch.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Generator sizing: deterministic versus stochastic decision (Victor Z and David Cole, UW-Madison, 2024).
@@ -134,12 +134,10 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_generator_stoch-02-0.png" alt="" width="520"></figure>
-
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch7_example_SAA.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch7_example_SAA.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch7_example_SAA.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_example_SAA.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 **Additional example: sample average approximation (SAA)** (Victor Zavala and Leo Gonzalez, UW-Madison, 2024).
@@ -180,5 +178,3 @@ for ax, m, h, ref, label in ((axs[0], E_mean, E_half, sigma**2, r'$\hat{\mathbb{
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch7_example_SAA-01-0.png" alt="" width="520"></figure>

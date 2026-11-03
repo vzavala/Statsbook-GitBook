@@ -147,7 +147,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_gibbs_neuralnet.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_gibbs_neuralnet.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_gibbs_neuralnet.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gibbs_neuralnet.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Neural net versus kriging for the Gibbs reactor (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
@@ -193,8 +193,6 @@ plt.show()
 NN parameters: 9;  MSE NN = 9.29e-04,  MSE kriging = 8.71e-04
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_neuralnet-03-2.png" alt="" width="520"></figure>
-
 ## Example: Perceptrons as Basis Functions
 
 * Why are NNs so effective at capturing such behavior?
@@ -222,7 +220,7 @@ NN parameters: 9;  MSE NN = 9.29e-04,  MSE kriging = 8.71e-04
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_neuralnet_basis.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_neuralnet_basis.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_neuralnet_basis.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_neuralnet_basis.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Perceptrons as basis functions (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
@@ -276,8 +274,6 @@ plt.show()
 number of parameters = 18
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_neuralnet_basis-01-1.png" alt="" width="520"></figure>
-
 The sigmoids $$h(a_j)$$ are the basis functions mixed by the output layer:
 
 ```python
@@ -290,8 +286,6 @@ for j, ax in enumerate(axs.ravel()):
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_neuralnet_basis-03-0.png" alt="" width="520"></figure>
 
 Several eigenvalues of the Gauss-Newton Hessian are close to zero: the model is very flexible
 and the 20 data points are overfit.

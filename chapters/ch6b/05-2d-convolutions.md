@@ -76,7 +76,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_matrix_convolution.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_matrix_convolution.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_matrix_convolution.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_matrix_convolution.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Convolution of a $$5\times 5$$ matrix $$f$$ with a $$3\times 3$$ filter $$g$$ (written for the book to
@@ -135,7 +135,7 @@ phi = f*g (same):
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_gauss_filter_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_gauss_filter_2D.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_gauss_filter_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gauss_filter_2D.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Weight matrix of a 2D Gaussian filter (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024):
@@ -172,8 +172,6 @@ plt.show()
  [0 1 1 2 2 2 2 1 1 0]
  [0 0 0 1 1 1 1 0 0 0]]
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_gauss_filter_2D-01-1.png" alt="" width="520"></figure>
 
 ## 2D Convolutional Filters
 
@@ -230,7 +228,7 @@ plt.show()
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_micrograph_filters_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_micrograph_filters_2D.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_micrograph_filters_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_micrograph_filters_2D.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Applying 2D filters to a micrograph (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
@@ -261,5 +259,3 @@ for ax, img, title in ((axs[0], f, '$f$'), (axs[1], np.abs(f_1), r'$|f*g|$ (Sobe
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_micrograph_filters_2D-03-0.png" alt="" width="520"></figure>

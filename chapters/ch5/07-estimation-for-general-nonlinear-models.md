@@ -107,7 +107,7 @@ What is different about nonlinear estimation (compared to linear case)?
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch5_heat_capacity_mc.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch5_heat_capacity_mc.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch5_heat_capacity_mc.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_heat_capacity_mc.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 **Monte Carlo estimate of the parameter covariance** (heat-capacity data). Perturb the outputs,
@@ -228,7 +228,7 @@ ratio of variances (MC / exact): [0.928 0.94  0.944]
 #### Python implementation: The SSE function is highly nonlinear
 
 {% hint style="success" %}
-Notebook [`ch5_hougen_watson.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch5_hougen_watson.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch5_hougen_watson.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_hougen_watson.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Nonlinear estimation for the Hougen-Watson model (Victor Z and Leo Gonzalez, UW-Madison, 2024).

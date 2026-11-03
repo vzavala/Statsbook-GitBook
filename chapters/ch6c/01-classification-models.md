@@ -49,7 +49,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_logistic_function.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_logistic_function.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_logistic_function.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_logistic_function.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 The logistic function $$m(x,\theta)=1/(1+e^{-\theta^Tx})$$ for a scalar input and
@@ -73,8 +73,6 @@ for ax, theta in zip(axs, (-1, 0, 1)):
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_logistic_function-01-0.png" alt="" width="520"></figure>
 
 * Function $$m(x,\theta)$$ is used to model conditional probs: $$\mathbb{P}(Y=1\,|\,x,\theta)$$ and $$\mathbb{P}(Y=0\,|\,x,\theta)=1-\mathbb{P}(Y=1\,|\,x,\theta)$$.
 * Specifically, want to capture logic:
@@ -112,7 +110,7 @@ plt.show()
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_gibbs_logistic.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_gibbs_logistic.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_gibbs_logistic.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gibbs_logistic.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Logistic classification for fault detection in the Gibbs reactor
@@ -148,8 +146,6 @@ plt.xlabel('$P$'); plt.ylabel('$C$'); plt.legend(loc='lower right'); plt.grid(Tr
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_logistic-03-0.png" alt="" width="520"></figure>
-
 MLE: $$\max_\theta \sum_\omega y_\omega\log m(x_\omega,\theta)+(1-y_\omega)\log(1-m(x_\omega,\theta))$$.
 (`penalty=None` gives plain MLE; scikit-learn regularizes by default.)
 
@@ -183,8 +179,6 @@ theta_hat = [-2.229 -0.071 21.873]
 accuracy = 87.80%  (439 of 500)
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_logistic-05-1.png" alt="" width="520"></figure>
-
 Train/test split (60/40) to check that the classifier generalizes.
 
 ```python
@@ -196,5 +190,3 @@ plot_confusion(axs[1], confusion_matrix(y_te, model_tr.predict(X_te)), 'test')
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_logistic-07-0.png" alt="" width="520"></figure>

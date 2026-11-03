@@ -95,9 +95,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_binomial-01-0.png" alt="" width="520"></figure>
-
-Open in Colab: [`ch2_compare_binomial.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_compare_binomial.ipynb)
+Open in Colab: [`ch2_compare_binomial.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_binomial.ipynb)
 
 </details>
 
@@ -134,7 +132,7 @@ Status is a Bernoulli RV with $$p=0.5$$ and thus the number of failures in an $$
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch2_example_binomial.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_example_binomial.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch2_example_binomial.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_binomial.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Failures in a sequence of $$n=10$$ weeks (Victor Z and J E Umaña, UW-Madison, 2024).

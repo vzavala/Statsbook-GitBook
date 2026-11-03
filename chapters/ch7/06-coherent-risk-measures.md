@@ -156,7 +156,7 @@ Note how the CVaR has mean and worst-case values as extremes.
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch7_risk_measures_norms.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch7_risk_measures_norms.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch7_risk_measures_norms.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_risk_measures_norms.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Risk measures as norms (written for the book to accompany the slide example). For

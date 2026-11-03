@@ -104,7 +104,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_gibbs_kriging.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_gibbs_kriging.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_gibbs_kriging.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gibbs_kriging.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Kriging (Gaussian process) model for the Gibbs reactor (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
@@ -157,8 +157,6 @@ plt.show()
 fitted kernel: Matern(length_scale=97, nu=1.5) + WhiteKernel(noise_level=0.0462)
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-05-2.png" alt="" width="520"></figure>
-
 Compare the residuals through the empirical cdf of $$|\epsilon|$$.
 
 ```python
@@ -171,8 +169,6 @@ plt.legend(loc='lower right'); plt.grid(True)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-07-0.png" alt="" width="520"></figure>
-
 95% confidence intervals $$m(x_\omega)\pm 1.96\,\sigma(x_\omega)$$ for the first 50 observations.
 
 ```python
@@ -183,8 +179,6 @@ plt.xlabel(r'Observation $\omega$'); plt.ylabel('$y$')
 plt.legend(); plt.grid(True)
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-09-0.png" alt="" width="520"></figure>
 
 ## Example: Experimental Design using GP Models
 
@@ -198,7 +192,7 @@ plt.show()
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_kriging_uq.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_kriging_uq.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_kriging_uq.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_kriging_uq.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Using the GP uncertainty to choose experiments (Victor Z, UW-Madison, 2024). The true response is
@@ -234,5 +228,3 @@ for ax, design in zip(axs.ravel(), designs):
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_kriging_uq-01-1.png" alt="" width="520"></figure>

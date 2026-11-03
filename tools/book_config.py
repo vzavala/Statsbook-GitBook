@@ -1,10 +1,12 @@
 """Book layout: chapters, how slide frames are split into pages, and where
 notebooks that the slides do not cite by name are placed."""
 
-# Where students open notebooks. Set this to the GitHub repository that GitBook
-# syncs with (owner/name and branch); used for "Open in Colab" links.
-GITHUB_REPO = "vzavala/StatsBook-GitBook"
-GITHUB_BRANCH = "main"
+# Where students open notebooks: the book's GitHub repository (owner/name, branch, and
+# folder that holds the notebooks with their Data/ and Support/ folders). Used for the
+# "Open in Colab" links and for the data download in the notebooks' Colab setup cell.
+GITHUB_REPO = "vzavala/StatsBook"
+GITHUB_BRANCH = "master"
+NOTEBOOK_DIR = "Python"
 
 SLIDES_DIR = "../Slides"
 

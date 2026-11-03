@@ -54,7 +54,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_fourier_transform.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_fourier_transform.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_fourier_transform.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_fourier_transform.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Fourier transform of a periodic signal (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024).
@@ -98,8 +98,6 @@ plt.show()
 print("dominant frequencies:", omega[np.argsort(power(f_hat))[-2:]])
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform-01-0.png" alt="" width="520"></figure>
-
 ```
 dominant frequencies: [60. 30.]
 ```
@@ -124,8 +122,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform-03-0.png" alt="" width="520"></figure>
-
 ## Example: FT of Pulse and Gaussian
 
 * FT for rect pulse function and for Gaussian function.
@@ -138,7 +134,7 @@ plt.show()
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_fourier_transform_filters.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_fourier_transform_filters.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_fourier_transform_filters.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_fourier_transform_filters.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Fourier transforms of a rectangular pulse and of Gaussians (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2020).
@@ -178,12 +174,10 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters-01-0.png" alt="" width="520"></figure>
-
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_convolution_filters.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_convolution_filters.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_convolution_filters.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_convolution_filters.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 **Additional example: a Gaussian filter as a low-pass filter** (Shiyi (Amy) Qin and Victor Z,
@@ -226,12 +220,10 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_convolution_filters-01-0.png" alt="" width="520"></figure>
-
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_sysid_co2_est.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_sysid_co2_est.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_sysid_co2_est.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_sysid_co2_est.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 **Additional example: system identification with Fourier transforms** (Victor M Zavala, UW-Madison, 2024).
@@ -286,8 +278,6 @@ plt.show()
 ```
 K = 11.105,  tau = 9.92 min
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_sysid_co2_est-03-2.png" alt="" width="520"></figure>
 
 Physical parameters for a building of volume $$V$$: air flow $$Q=V/\tau$$ and generation $$G=KQ$$.
 

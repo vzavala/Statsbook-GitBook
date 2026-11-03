@@ -96,7 +96,7 @@ $$
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch7_bayesopt_yield.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch7_bayesopt_yield.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch7_bayesopt_yield.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_bayesopt_yield.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Bayesian optimization of pectin extraction (Victor Z and Leo Gonzalez, UW-Madison, 2024).
@@ -164,5 +164,3 @@ plt.show()
 best scaled conditions u = [1.    0.436 0.246]   yield = 19.396
 in physical units: [100.      1.718   0.225]
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch7_bayesopt_yield-03-2.png" alt="" width="520"></figure>

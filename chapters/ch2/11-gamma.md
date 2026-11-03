@@ -69,9 +69,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_gammas-01-0.png" alt="" width="520"></figure>
-
-Open in Colab: [`ch2_compare_gammas.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_compare_gammas.ipynb)
+Open in Colab: [`ch2_compare_gammas.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_gammas.ipynb)
 
 </details>
 
@@ -122,7 +120,7 @@ You are interested in addressing the following questions:
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch2_example_service_time.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_example_service_time.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch2_example_service_time.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_service_time.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Waiting time at a charging station as a Gamma RV (written for the book to accompany the

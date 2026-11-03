@@ -22,7 +22,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_clt_convolution.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_clt_convolution.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_clt_convolution.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_clt_convolution.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 The central limit theorem through convolutions (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
@@ -56,5 +56,3 @@ axs[0, 1].legend()
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_clt_convolution-01-0.png" alt="" width="520"></figure>

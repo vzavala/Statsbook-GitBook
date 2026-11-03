@@ -124,7 +124,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch5_linear_est_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch5_linear_est_example.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch5_linear_est_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_linear_est_example.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Scalar linear estimation with the correct model (Victor Z and Jaron T, UW-Madison, 2024).
@@ -188,8 +188,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example-02-0.png" alt="" width="520"></figure>
-
 $$SSE(\theta)=\frac{1}{2}\sum_\omega(y_\omega-\theta x_\omega)^2$$ (scaled by $$1/S$$) becomes sharper as $$S$$ grows.
 
 ```python
@@ -205,8 +203,6 @@ plt.ylabel(r'$SSE(\theta)/S$', fontsize=14)
 plt.legend()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example-04-0.png" alt="" width="520"></figure>
 
 ## Bias, Precision, and Information
 

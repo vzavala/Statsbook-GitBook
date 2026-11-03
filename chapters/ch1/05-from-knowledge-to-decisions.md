@@ -91,8 +91,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-28-0.png" alt="" width="520"></figure>
-
 ## Decision-Making under Uncertainty
 
 We would like now to find a decision $$u$$ that manipulates $$Y(u)=\varphi(X,u)$$ in some desirable way (e.g., minimizes uncertainty/variance).
@@ -154,8 +152,6 @@ ax[1].legend(loc='upper left')
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-31-0.png" alt="" width="520"></figure>
 
 ## Decision-Making under Uncertainty
 

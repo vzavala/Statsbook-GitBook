@@ -8,8 +8,8 @@ Questions that we are interested in answering are:
 {% hint style="info" %}
 * Are there any connections between RVs? Is there a clear trend that suggests they vary together? Do they vary independently of one another?
 * How strong are connections?
-* How does knowledge of one resolves uncertainty of the other?
-* How to analyze connections between many RVs? (e.g., $$n$$ is in the hundreds)?
+* How does knowledge of one resolve uncertainty of the other?
+* How to analyze connections between many RVs (e.g., $$n$$ is in the hundreds)?
 {% endhint %}
 
 These questions are relevant from a *decision-making* standpoint:
@@ -28,7 +28,7 @@ Unfortunately, there are extremely few multivariate RV models that are of practi
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch3_examples_multidatasets.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch3_examples_multidatasets.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch3_examples_multidatasets.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_examples_multidatasets.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Examples of multivariate data sets (Victor Z, UW-Madison, 2024): realizations
@@ -59,8 +59,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_examples_multidatasets-01-0.png" alt="" width="520"></figure>
-
 ```python
 x1, x2 = np.meshgrid(np.arange(0, 11, 0.5), np.arange(0, 11, 0.5))
 x3 = 2 * x1**2 + 2 * x2**2 + 20 * np.random.normal(0, 1, x1.shape)
@@ -71,8 +69,6 @@ ax.set_ylabel('$x_2$', fontsize=14)
 ax.set_zlabel('$x_3$', fontsize=14)
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch3_examples_multidatasets-02-0.png" alt="" width="520"></figure>
 
 ## Domains and Subdomains
 
@@ -90,7 +86,7 @@ plt.show()
   \mathcal{D}=\mathcal{D}_{X_1}\times \mathcal{D}_{X_2}
   $$
 
-   where $$\mathcal{D}_{X_1}\subseteq \mathbb{R}$$ is domain of the $$X_1$$ and $$\mathcal{D}_{X_2}\subseteq\mathbb{R}$$ is domain of $$X_2$$.
+   where $$\mathcal{D}_{X_1}\subseteq \mathbb{R}$$ is the domain of $$X_1$$ and $$\mathcal{D}_{X_2}\subseteq\mathbb{R}$$ is domain of $$X_2$$.
 
 * For *discrete* $$X$$, $$\mathcal{D}_1$$ and $$\mathcal{D}_2$$ are discrete. If $$\mathcal{D}_1=\{l_1,u_1\}$$ and $$\mathcal{D}_2=\{l_2,u_2\}$$, then:
 
@@ -188,7 +184,7 @@ plt.show()
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch3_gibbs_subdomains.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch3_gibbs_subdomains.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch3_gibbs_subdomains.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_gibbs_subdomains.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Subdomains (events) for the Gibbs reactor data (Victor Z, UW-Madison, 2024).
@@ -226,5 +222,3 @@ for ax, (title, boxes) in zip(axs.ravel(), events):
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch3_gibbs_subdomains-03-0.png" alt="" width="520"></figure>

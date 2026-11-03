@@ -87,7 +87,7 @@ Common choices for penalty function $$\rho(\theta)$$ are:
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch5_gibbs_tradeoff.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch5_gibbs_tradeoff.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch5_gibbs_tradeoff.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_gibbs_tradeoff.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 **Additional example: lasso trade-off for the Gibbs reactor** (Victor Z and Jaron T, UW-Madison, 2024).
@@ -154,8 +154,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_gibbs_tradeoff-04-1.png" alt="" width="520"></figure>
-
 ## Example: Hougen-Watson Regularized
 
 * We augment SSE using a ridge regularizer:
@@ -173,7 +171,7 @@ plt.show()
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch5_hougen_watson_regularized.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch5_hougen_watson_regularized.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch5_hougen_watson_regularized.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_hougen_watson_regularized.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Ridge-regularized SSE for the Hougen-Watson model (Victor Z and Leo Gonzalez, UW-Madison, 2024):
@@ -223,8 +221,6 @@ for ax, (title, Z) in zip(axs, maps.items()):
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson_regularized-03-1.png" alt="" width="520"></figure>
 
 ## Example: Hougen-Watson Constrained
 
@@ -283,7 +279,7 @@ plt.show()
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch5_hougen_watson_constraints.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch5_hougen_watson_constraints.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch5_hougen_watson_constraints.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_hougen_watson_constraints.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Hougen-Watson estimation with bounds $$\underline{\theta}\leq\theta\leq\overline{\theta}$$
@@ -344,8 +340,6 @@ plt.show()
 ```
 constrained theta_hat = [1.25 0.06 0.04 0.11 1.19]
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson_constraints-07-1.png" alt="" width="520"></figure>
 
 Gauss-Newton Hessian, its eigenvalues, and $$\mathrm{Cov}[\hat{\theta}]=\mathcal{H}(\hat{\theta})^{-1}\hat{\sigma}^2$$.
 

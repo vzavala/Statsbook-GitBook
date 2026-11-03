@@ -58,12 +58,10 @@ plt.show()
 R^2 = S_m/S_y = 0.9549   (1 - S_e/S_y = 0.9549)
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_lin_est-13-1.png" alt="" width="520"></figure>
-
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch5_linear_est_example_wrong.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch5_linear_est_example_wrong.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch5_linear_est_example_wrong.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_linear_est_example_wrong.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 **Additional example: residuals of a wrong model** (Victor Z and Leo Gonzalez, UW-Madison, 2024).
@@ -112,5 +110,3 @@ plt.show()
 ```
 theta_hat = 1.544
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example_wrong-01-1.png" alt="" width="520"></figure>

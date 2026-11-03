@@ -29,7 +29,7 @@ We make following observations:
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch4_random_sample.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch4_random_sample.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch4_random_sample.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_random_sample.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Random and non-random samples (Victor Z, UW-Madison, 2024).
@@ -68,5 +68,3 @@ plt.show()
 bias (random)     = +0.060
 bias (non-random) = -0.214
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch4_random_sample-01-1.png" alt="" width="520"></figure>

@@ -51,8 +51,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_chisq-01-0.png" alt="" width="520"></figure>
-
 $$\mathbb{Q}_Y(1-\alpha)$$ for $$Y\sim\chi^2(1)$$ equals $$\mathbb{Q}_Z(1-\alpha/2)^2$$ for $$Z\sim\mathcal{N}(0,1)$$.
 
 ```python
@@ -73,9 +71,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_chisq-03-0.png" alt="" width="520"></figure>
-
-Open in Colab: [`ch2_compare_chisq.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_compare_chisq.ipynb)
+Open in Colab: [`ch2_compare_chisq.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_chisq.ipynb)
 
 </details>
 
@@ -96,7 +92,7 @@ Open in Colab: [`ch2_compare_chisq.ipynb`](https://colab.research.google.com/git
 #### Python implementation: 90% interval for the mixer output
 
 {% hint style="success" %}
-Notebook [`ch2_example_chisquare.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch2_example_chisquare.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch2_example_chisquare.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_chisquare.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Confidence intervals and regions from chi-squared quantiles (Victor Z and J E Umaña, UW-Madison, 2024).
@@ -160,8 +156,6 @@ z_omega = np.random.multivariate_normal(mu_vec, Sigma, S)
 inside = np.einsum('ij,jk,ik->i', z_omega - mu_vec, np.linalg.inv(Sigma), z_omega - mu_vec) <= level
 print(f"{inside.sum()} of {S} samples fall in the ellipse (expected about {S*(1-alpha):.0f})")
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch2_example_chisquare-07-0.png" alt="" width="520"></figure>
 
 ```
 897 of 1000 samples fall in the ellipse (expected about 900)

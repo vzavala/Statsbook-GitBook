@@ -100,7 +100,7 @@
 #### Python implementation: Moving average filter for a pulse
 
 {% hint style="success" %}
-Notebook [`ch6_example_convolutions.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_example_convolutions.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_example_convolutions.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_example_convolutions.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 1D convolutions with moving-average and Gaussian filters (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024).
@@ -148,8 +148,6 @@ show(t, f, np.concatenate([np.zeros(pad), g, np.zeros(pad)]), phi)
 ```
 N=5, alpha=2: [0.14 0.61 1.   0.61 0.14]
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-02-1.png" alt="" width="520"></figure>
 
 ## Convolution Operations
 
@@ -212,8 +210,6 @@ show(t, f, np.concatenate([np.zeros(pad), g, np.zeros(pad)]), phi)
 sigma = 2.38
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-04-1.png" alt="" width="520"></figure>
-
 #### Python implementation: Gaussian filters for a noisy signal
 
 ```python
@@ -235,8 +231,6 @@ axs[2].set_xlabel('$t$')
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-06-0.png" alt="" width="520"></figure>
 
 ## 1D Convolution Operations
 
@@ -282,7 +276,7 @@ plt.show()
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_derivative_filter.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_derivative_filter.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_derivative_filter.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_derivative_filter.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Derivative filter (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024). With signal $$f$$ = cdf of
@@ -315,8 +309,6 @@ plt.tight_layout()
 plt.show()
 print(f"max |f*g - pdf| = {np.max(np.abs(phi - norm.pdf(t[1:-1]))):.4f}")
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_derivative_filter-01-0.png" alt="" width="520"></figure>
 
 ```
 max |f*g - pdf| = 0.0027

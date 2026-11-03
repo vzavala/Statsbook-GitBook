@@ -84,7 +84,7 @@ Collect  100 observations and monitor mismatch  $$\epsilon(\omega)=f_3(\omega)-f
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch1_mixer_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch1_mixer_example.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch1_mixer_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch1_mixer_example.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Flow mixer example (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
@@ -129,8 +129,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_mixer_example-04-0.png" alt="" width="520"></figure>
-
 ```python
 plt.scatter(omega, epsilon, marker='o', s=20, color='white', edgecolor='black')
 plt.plot(omega, np.zeros(S), 'k--')
@@ -139,8 +137,6 @@ plt.ylabel(r'$\epsilon(\omega)$ [gpm]')
 plt.grid(True)
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch1_mixer_example-05-0.png" alt="" width="520"></figure>
 
 ## Example: Gibbs Reactor
 
@@ -160,7 +156,7 @@ plt.show()
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch1_gibbs_data.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch1_gibbs_data.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch1_gibbs_data.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch1_gibbs_data.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Data for the Gibbs reactor (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
@@ -205,8 +201,6 @@ axs[1].grid(True)
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_data-06-0.png" alt="" width="520"></figure>
 
 <figure><img src="../../.gitbook/assets/slides/gibbs_diagram.png" alt="" width="700"></figure>
 

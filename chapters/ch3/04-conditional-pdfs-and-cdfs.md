@@ -60,7 +60,7 @@
   $$
 
 * Note  $$f(x_1|x_2)$$ does not depend on $$x_2$$ and $$f(x_2|x_1)$$ does not depend on $$x_1$$.
-* Knowing $$X_2$$ does not influence probability of failure of $$X_1$$ and viceversa.
+* Knowing $$X_2$$ does not influence probability of failure of $$X_1$$ and vice versa.
 * Note conditional pdfs are marginal pdfs of $$X_1$$ and $$X_2$$.
 * Thus have $$\mathbb{P}(X_1\geq 1|X_2 = 1)=\mathbb{P}(X_1 \geq 1)=0.37$$ and $$\mathbb{P}(X_2 \geq 1|X_1 = 1)=\mathbb{P}(X_2 \geq 1)=0.90$$.
 

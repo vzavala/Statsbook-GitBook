@@ -31,8 +31,15 @@ TIMEOUT = 1800
 
 
 def build(src: Path, execute=True):
-    cells = []
-    for c in percent.parse(src.read_text().replace("__GITHUB_REPO__", cfg.GITHUB_REPO)):
+    text = (src.read_text().replace("__GITHUB_REPO__", cfg.GITHUB_REPO)
+            .replace("__NOTEBOOK_DIR__", cfg.NOTEBOOK_DIR))
+    # first cell: "Open in Colab" badge (tagged book-hide: the online book has its own link)
+    url = (f"https://colab.research.google.com/github/{cfg.GITHUB_REPO}/blob/"
+           f"{cfg.GITHUB_BRANCH}/{cfg.NOTEBOOK_DIR}/{src.stem}.ipynb")
+    cells = [nbformat.v4.new_markdown_cell(
+        f'<a href="{url}" target="_parent"><img src="https://colab.research.google.com/assets/'
+        f'colab-badge.svg" alt="Open In Colab"/></a>', metadata={"part": 0, "tags": ["book-hide"]})]
+    for c in percent.parse(text):
         if c["type"] == "part":
             if c["source"]:
                 cells.append(nbformat.v4.new_markdown_cell("## " + c["source"].split(" @ ")[0],

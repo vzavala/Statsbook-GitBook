@@ -84,7 +84,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch7_generator_twostage.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch7_generator_twostage.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch7_generator_twostage.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_generator_twostage.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Two-stage formulation for generator sizing (Victor Z and David Cole, UW-Madison, 2024).
@@ -152,5 +152,3 @@ for ax in axs:
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch7_generator_twostage-02-0.png" alt="" width="520"></figure>

@@ -40,7 +40,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch4_clt_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch4_clt_example.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch4_clt_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_clt_example.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Verifying the central limit theorem (Victor Z, UW-Madison, 2024).
@@ -93,5 +93,3 @@ S =   10:  mean(x_bar) = 1.981 (e = 2.000),  S * var(x_bar) = 4.073 (v^2 = 4.000
 S =  100:  mean(x_bar) = 2.004 (e = 2.000),  S * var(x_bar) = 3.909 (v^2 = 4.000)
 S = 1000:  mean(x_bar) = 2.003 (e = 2.000),  S * var(x_bar) = 3.929 (v^2 = 4.000)
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch4_clt_example-01-1.png" alt="" width="520"></figure>

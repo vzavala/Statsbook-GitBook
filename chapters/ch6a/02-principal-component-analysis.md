@@ -169,7 +169,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch6_gibbs_pca.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch6_gibbs_pca.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch6_gibbs_pca.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gibbs_pca.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 PCA of the Gibbs reactor data (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024).
@@ -238,5 +238,3 @@ for a in fig.axes[1:]:
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca-06-0.png" alt="" width="520"></figure>

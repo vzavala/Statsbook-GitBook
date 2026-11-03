@@ -74,7 +74,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch3_gibbs_conditional.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch3_gibbs_conditional.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch3_gibbs_conditional.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_gibbs_conditional.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Empirical event probabilities for the Gibbs reactor (Victor Z, UW-Madison, 2024).
@@ -115,8 +115,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_gibbs_conditional-03-0.png" alt="" width="520"></figure>
-
 $$\hat{\mathbb{P}}(X\in\mathcal{A})=\frac{1}{S}\sum_\omega\mathbf{1}[x_\omega\in\mathcal{A}]$$ and
 $$\hat{\mathbb{P}}(X\in\mathcal{A}_1|X\in\mathcal{A}_2)=\hat{\mathbb{P}}(X\in\mathcal{A}_1\cap\mathcal{A}_2)/\hat{\mathbb{P}}(X\in\mathcal{A}_2)$$.
 
@@ -154,7 +152,7 @@ Bayes' rule check: P(A2|A1) P(A1) / P(A2) = 0.600
 
 {% hint style="info" %}
 * Compute probability that both components last less than 1 year.
-* Compute probability that of event that $$X_1\geq 1$$ and $$X_2\geq 2$$.
+* Compute the probability of the event that $$X_1\geq 1$$ and $$X_2\geq 2$$.
 {% endhint %}
 
 * Probability that both components last less than 1 year corresponds to $$\mathcal{A}=\{0\leq x_1\leq 1\;\& \; 0\leq x_2\leq 1\}$$.
@@ -179,7 +177,7 @@ Bayes' rule check: P(A2|A1) P(A1) / P(A2) = 0.600
 #### Python implementation: Probabilities of box events
 
 {% hint style="success" %}
-Notebook [`ch3_thermostat_lifetime.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch3_thermostat_lifetime.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch3_thermostat_lifetime.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_thermostat_lifetime.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Lifetime of a thermostat (written for the book to accompany the slide examples).
@@ -239,7 +237,7 @@ P(X1 >= 1 & X2 >= 2) = 0.30
   $$
 
 * To obtain joint pdf, we count number of droplets (observations) in each value of the domain and normalize them by the total number of observations $$S=10,000$$.
-* The (empirical) joint pdf can expressed as a matrix of the form:
+* The (empirical) joint pdf can be expressed as a matrix of the form:
 
   $$
   \begin{aligned}
@@ -261,12 +259,12 @@ P(X1 >= 1 & X2 >= 2) = 0.30
    Here, the rows correspond to  SSC values and columns to the FSC values.
 
 * One can confirm that all the entries in the matrix add up to one.
-* Most likely category is $$(L,M)$$, which as a joint pdf $$\hat{\mathbb{P}}(X_1=L,X_2=M)=0.5994$$. This means that 5,994 droplets lie on this category.
+* Most likely category is $$(L,M)$$, which has a joint pdf $$\hat{\mathbb{P}}(X_1=L,X_2=M)=0.5994$$. This means that 5,994 droplets lie on this category.
 
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch3_flow_cytometer_discrete.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch3_flow_cytometer_discrete.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch3_flow_cytometer_discrete.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_flow_cytometer_discrete.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Flow cytometry data treated as a discrete 2D RV (Victor Z, UW-Madison, 2024).
@@ -333,8 +331,6 @@ sum = 1.0
 Most likely category: (FSC, SSC) = (L, M),  f_hat = 0.5996
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_discrete-05-1.png" alt="" width="520"></figure>
-
 Marginals add the joint pdf over the other variable; conditionals divide the joint pdf by a marginal:
 $$\hat{f}(x_1|x_2)=\hat{f}(x_1,x_2)/\hat{f}_2(x_2)$$.
 
@@ -387,7 +383,7 @@ f_hat(x2 | x1):
   f(x_1,x_2)=\frac{\partial}{\partial x_2}\left(\frac{\partial F(x_1,x_2)}{\partial x_1}\right)=\frac{\partial^2F(x_1,x_2)}{\partial x_1\partial x_2},\;\; (x_1,x_2)\in\mathcal{D}.
   $$
 
-* Interpretation of derivative as limit of an infinitesimal small domain is:
+* Interpretation of derivative as limit of an infinitesimally small domain is:
 
   $$
   f(x_1,x_2)=\lim_{\Delta x_2\to 0}\frac{1}{\Delta x_2}\left({\frac{dF(x_1,x_2+\Delta x_2)}{dx_1}-\frac{dF(x_1,x_2)}{dx_1}}\right)
@@ -426,7 +422,7 @@ f_hat(x2 | x1):
 
 ## Example: Lifetime of Thermostat
 
-Determine cdf for thermostat and prob that lifetime of sensor *and* processor  is $$\leq 1 yr$$.
+Determine cdf for thermostat and prob that lifetime of sensor *and* processor  is $$\leq 1$$ yr.
 
 * Domain is $$\mathcal{D}=\{0\leq x_1\leq \infty\;\&\; 0\leq x_2\leq \infty\}$$.
 * We have $$\mathcal{F}=\mathcal{D}\cap \{x_1\leq t_1\,\&\,x_2\leq t_2\}$$ and thus $$\mathcal{F}=\{0\leq x_1\leq t_1\;\&\; 0\leq x_2\leq t_2\}$$.
@@ -482,7 +478,7 @@ F(1, 1) = 0.060   (integral: 0.060)
 
 ## Example: Flow Cytometry
 
-* Treating the FSC and SSC as discrete facilitates analysis but more appropriate to treat these as continuous.
+* Treating the FSC and SSC as discrete facilitates analysis, but it is more appropriate to treat these as continuous.
 * Use flow cytometer data to obtain an empirical joint pdf of FSC and SSC.
 * To construct the approximation, we first determine the empirical domain covered by the observations.  From the data, we find:
 
@@ -494,14 +490,14 @@ F(1, 1) = 0.060   (integral: 0.060)
 
 * We partition (discretize) box by using bins of size $$\Delta x_1=\Delta x_2=0.05$$.
 * This gives 46 bins in SSC domain and 38 bins in FSC domain (total of $$1748$$ bins).
-* To construct empirical pdf, we count number of observations in each of bins.
+* To construct empirical pdf, we count number of observations in each of the bins.
 
 <figure><img src="../../.gitbook/assets/slides/ch3_flow_cytometer_joint.png" alt="" width="560"><figcaption><p>Top-left: Scatter plot showing observations. Top-right: Density of observations in bins (darker is denser). Bottom: Empirical pdf shown as 2D histogram.</p></figcaption></figure>
 
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch3_flow_cytometer_empirical.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch3_flow_cytometer_empirical.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch3_flow_cytometer_empirical.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_flow_cytometer_empirical.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Empirical joint pdf of flow cytometry data (Victor Z, UW-Madison, 2024).
@@ -563,8 +559,6 @@ plt.show()
 37 x 45 bins;  integral of f_hat = 1.000
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_empirical-05-2.png" alt="" width="520"></figure>
-
 Empirical marginal pdfs $$\hat{f}_1(x_1)$$ and $$\hat{f}_2(x_2)$$.
 
 ```python
@@ -578,5 +572,3 @@ axs[1].set_ylabel(r'$\hat{f}_2(x_2)$')
 plt.tight_layout()
 plt.show()
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_empirical-07-0.png" alt="" width="520"></figure>

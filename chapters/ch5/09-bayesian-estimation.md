@@ -78,7 +78,7 @@
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch5_bayes_estimation.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch5_bayes_estimation.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch5_bayes_estimation.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_bayes_estimation.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Bayesian estimation for $$Y=\theta X+\epsilon$$ with one observation $$(x=1,y=2)$$
@@ -119,8 +119,6 @@ for vals, name in ((log_f_theta, 'prior'), (log_f_y_theta, 'likelihood (MLE)'), 
     print(f"{name:18s} is maximized at theta = {theta[np.argmax(vals)]:.2f}")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_bayes_estimation-01-0.png" alt="" width="520"></figure>
-
 ```
 prior              is maximized at theta = -0.01
 likelihood (MLE)   is maximized at theta = 1.99
@@ -130,7 +128,7 @@ posterior (Bayes)  is maximized at theta = 1.00
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch5_heat_capacity_bayes.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch5_heat_capacity_bayes.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch5_heat_capacity_bayes.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_heat_capacity_bayes.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 **Additional example: recursive Bayesian estimation of the heat-capacity model.**
@@ -262,7 +260,7 @@ after batch 3: theta_hat = [ 6.2546e+00  2.9045e-03 -8.1641e-07],  SD = [9.70e-0
 #### Python implementation
 
 {% hint style="success" %}
-Notebook [`ch5_data_reconciliation.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch5_data_reconciliation.ipynb) — open it in Colab and run the cells alongside this section.
+Notebook [`ch5_data_reconciliation.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_data_reconciliation.ipynb) — open it in Colab and run the cells alongside this section.
 {% endhint %}
 
 Data reconciliation with Bayesian estimation (written for the book to accompany the slide
