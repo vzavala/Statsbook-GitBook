@@ -17,7 +17,7 @@
 
    where $$f_X(x)$$ is the joint pdf of $$X$$.
 
-* Computing expectation thus involves computing a multi-dimensional integral (operation cannot be carried out analytically).
+* Computing expectation thus involves computing a multi-dimensional integral (which usually cannot be carried out analytically).
 * MC provides a numerical technique to approximate such an integral.
 
 * Many quantities of interest can be expressed as expectation operations and thus can be computed via MC.
@@ -25,7 +25,7 @@
    * Expectation of $$X$$: $$\displaystyle\hat{\mathbb{E}}_X^S:=\frac{1}{S}\sum_{\omega \in \mathcal{S}}x_\omega\approx \mathbb{E}[X]$$
    * Variance of $$X$$: $$\displaystyle\hat{\mathbb{V}}_X^S:=\frac{1}{S}\sum_{\omega \in \mathcal{S}}(x_\omega-\hat{\mathbb{E}}_X^S)^2\approx \mathbb{V}[X]$$
    * CDF of $$X$$: $$\displaystyle\hat{F}_X^S(x):=\frac{1}{S}\sum_{\omega  \in \mathcal{S}}\mathbf{1}[x_\omega \leq x]\approx F_X(x)$$
-   * Expectation of function $$\displaystyle\hat{\mathbb{E}}_\varphi^S:=\frac{1}{S}\sum_{\omega  \in \mathcal{S}}\varphi(x_\omega,u)\approx \mathbb{E}[{\varphi(X,u)}]$$.
+   * Expectation of function: $$\displaystyle\hat{\mathbb{E}}_\varphi^S:=\frac{1}{S}\sum_{\omega  \in \mathcal{S}}\varphi(x_\omega,u)\approx \mathbb{E}[{\varphi(X,u)}]$$.
    * Probability of event: $$\hat{\mathbb{P}}(X\in\mathcal{A}):=\frac{1}{S}\sum_{\omega  \in \mathcal{S}}\mathbf{1}[x_\omega \in  \mathcal{A}] \approx \mathbb{P}(X\in\mathcal{A})$$.
 * Note dependence of empirical approxs on number of samples $$S$$.
 * When empirical approx use data, these are called data-driven approxs.
@@ -35,14 +35,14 @@
    * Do the approximations become exact as we accumulate data?
    * How accurate are these approximations when we have a limited amount of data?
    * How much data do we need to obtain a desired accuracy?
-   * How to approximation errors behave as we change our sample data?
+   * How do approximation errors behave as we change our sample data?
 * We will now explore tools to answer these questions; the use of these tools is enabled by the fact that samples are collected at random.
 * As part of our discussion we will also see that RVs exhibit “universal" behavior as we accumulate data (i.e., as $$S\to \infty$$).
 
 ## Law of Large Numbers
 
-* Lets assess quality of empirical approximations as $$S\to \infty$$.
-* Consider an i.i.d. random sequence $$X_1,X_2,...,X_S$$ for univariate RV $$X$$. Since the samples are i.i.d, they have same underlying pdf with $$\mathbb{E}[X]$$.
+* Let's assess quality of empirical approximations as $$S\to \infty$$.
+* Consider an i.i.d. random sequence $$X_1,X_2,...,X_S$$ for univariate RV $$X$$. Since the samples are i.i.d., they have same underlying pdf with $$\mathbb{E}[X]$$.
 * Since samples are random, they are unbiased $$\mathbb{E}[X_1]=\mathbb{E}[X_2]=\cdots=\mathbb{E}[X_S]=\mathbb{E}[X]$$.
 * Consider now the MC approximation of $$\mathbb{E}[X]$$:
 
@@ -52,7 +52,7 @@
 
    Because the samples $$X_\omega,\,\omega \in \mathcal{S}$$ are random, approx $$\hat{\mathbb{E}}_X^S$$ is also random (i.e., different samples give different approxs).
 
-* There is thus inherent variability in approx $$\hat{\mathbb{E}}_X^S$$  (variability is a approx accuracy).
+* There is thus inherent variability in approx $$\hat{\mathbb{E}}_X^S$$  (variability is a measure of approximation accuracy).
 * Law of large numbers (LLN) indicates that:
 
   $$
@@ -64,7 +64,7 @@
 ## Example: Monte Carlo Approximations
 
 * We generate random samples $$X_\omega,\; \omega \in \mathcal{S}$$ from $$X\sim \textrm{Weibull}(1,2)$$.
-* Compute MC approxs for $$\mathbb{E}[X],\mathbb{E}[\log(X)]$$ and $$\mathbb{V}[\exp(X)+X^2]$$, and $$\mathbb{P}(X>\geq 1)$$  for different $$S$$.
+* Compute MC approxs for $$\mathbb{E}[X]$$, $$\mathbb{E}[\log(X)]$$, $$\mathbb{V}[\exp(X)+X^2]$$, and $$\mathbb{P}(X\geq 1)$$  for different $$S$$.
 
   <figure><img src="../../.gitbook/assets/slides/ch4_convergence_mc.png" alt="" width="420"></figure>
 

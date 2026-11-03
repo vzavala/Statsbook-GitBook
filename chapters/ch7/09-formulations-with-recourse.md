@@ -2,11 +2,11 @@
 
 ## Stochastic Optimization: Formulations with Recourse
 
-* Stochastic formulation finds a decision $$u$$ that protect us against uncertainty.
+* Stochastic formulation finds a decision $$u$$ that protects us against uncertainty.
 * This decision is taken in *anticipation* of uncertainty.
 * However, in practical situations, we also have ability to protect ourselves by using *corrective actions* that are taken once we face a particular outcome of uncertainty.
-* Such corrective actions are known as *recourse of feedback*.
-* Consider, *design of a chemical process* in the face of uncertain market conditions.
+* Such corrective actions are known as *recourse or feedback*.
+* Consider the *design of a chemical process* in the face of uncertain market conditions.
 * The design sets the size and layout of equipment.
 * Once process is installed, we can correct how we run the process to respond to market conditions (e.g., by correcting operating conditions).
 * *Sequential* decisions capture how humans anticipate & respond to uncertainty.

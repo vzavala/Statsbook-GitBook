@@ -20,7 +20,7 @@
   \min_\theta \log\left((2\pi)^{S/2}|\Sigma|^{1/2}\right) +\frac{1}{2}(\mathbf{y}-\mathbf{m}(\theta))^T\Sigma^{-1}(\mathbf{y}-\mathbf{m}(\theta)).
   $$
 
-* As in linear case, if $$\Sigma$$ is diagonal with entries $$\Sigma_{\omega,\omega}=\sigma^2$$, MLE problem reduces to: SSE minimization problem.
+* As in linear case, if $$\Sigma$$ is diagonal with entries $$\Sigma_{\omega,\omega}=\sigma^2$$, MLE problem reduces to an SSE minimization problem.
 
 * Solution $$\hat{\theta}$$ must satisfy necessary conditions (score equations):
 
@@ -78,7 +78,7 @@ What is different about nonlinear estimation (compared to linear case)?
 
 * This approximation is accurate if nonlinearity of $$\mathbf{m}(\theta)$$ is not too strong.
 * Here, we make assumption that $$\textrm{Cov}[\hat{\theta}]=\mathcal{H}(\hat{\theta})^{-1}$$.
-* Hessian can be difficult to compute but modern modeling languages can compute this  automatically (e.g., JuMP, Pyomo, Casadi).
+* Hessian can be difficult to compute but modern modeling languages can compute this  automatically (e.g., JuMP, Pyomo, CasADi).
 * Surprisingly, most numerical packages do not provide Hessians.  In such cases, one can use Gauss-Newton approximation.
 
 * Recall $$\textrm{Cov}[\hat{\theta}]$$ tells us how $$\hat{\theta}$$ varies as we vary noise $$\mathbf{e}$$.
@@ -163,7 +163,7 @@ ratio of variances (MC / exact): [0.928 0.94  0.944]
   Y=\frac{(\theta_0X_2-X_3/\theta_4)}{(1+\theta_1X_1+\theta_2X_2+\theta_3X_3)}
   $$
 
-* Model captures competitive reaction and adsorption rates in a heterogeneous catalytic reaction (gas components adsorb into solid catalyst).
+* Model captures competitive reaction and adsorption rates in a heterogeneous catalytic reaction (gas components adsorb onto the solid catalyst).
 * In this model, $$Y$$ is reaction rate and $$(X_1,X_2,X_3)$$ are species partial pressures.
 * Parameters $$(\theta_0,\theta_1,\theta_2,\theta_3,\theta_4)$$ have physical meaning (these represent adsorption and reaction rates and thus need to be non-negative).
 

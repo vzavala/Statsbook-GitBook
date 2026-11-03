@@ -1,6 +1,6 @@
 # Convolutional Neural Nets
 
-* CNNs are NNs that specialized to take structured data as inputs in form of  vectors $$\mathbf{x}_\omega$$ (for 1D) or matrices $$\mathbf{X}_\omega$$ (for 2D) to make predictions $$y_\omega$$.
+* CNNs are NNs that are specialized to take structured data as inputs in form of  vectors $$\mathbf{x}_\omega$$ (for 1D) or matrices $$\mathbf{X}_\omega$$ (for 2D) to make predictions $$y_\omega$$.
 * Input data vectors can be a sequence of numbers that encode a certain pattern and matrices can be images or other objects containing spatial patterns.
 * e.g., can train a CNN to predict temp of a furnace from a picture of an infrared camera or to predict a property of a molecule from its sequence of atoms.
 * CNNs can be generalized to process data that includes color images and can process 3D data in the form of tensors.
@@ -12,12 +12,12 @@
 * Filter matrices and params of evidence are learned simultaneously from data.
 * CNNs can learn what are best filters to extract from data to make predictions (not necessary for us to specify filters).
 * Components of a CNN arch are: input layer, hidden layers, and fully connected layer.
-* input and hidden layers seek to extract features from the input matrices.
+* Input and hidden layers seek to extract features from the input matrices.
 * Features are passed to the fully connected layer to make a final prediction.
 
 <figure><img src="../../.gitbook/assets/slides/cnn.png" alt="" width="630"><figcaption><p>Sketch of a convolutional neural network architecture.</p></figcaption></figure>
 
-* *Input layer* is composed of $$j=1,...,n_I$$ perceptrons. Each unit performs convolution, activation, and pooling. Evidence in unit $$j$$ is :
+* *Input layer* is composed of $$j=1,...,n_I$$ perceptrons. Each unit performs convolution, activation, and pooling. Evidence in unit $$j$$ is:
 
   $$
   \mathbf{A}_j=\mathbf{X}*\Theta_{j}^{I}+\theta_j^I
@@ -26,7 +26,7 @@
    Here, $$\Theta_{j}^I$$ is param of perceptron (its filter). Matrix $$\mathbf{X}$$ is input data (e.g., image).
 
 * Layer contains $$n_I$$ filters. Filter matrices are small ($$3\times 3$$, $$5\times 5$$ or $$7\times 7$$).
-* Convolution generates evidence $$\mathbf{E}_j$$ (matrix). Evidence is activated to produce signal:
+* Convolution generates evidence $$\mathbf{A}_j$$ (matrix). Evidence is activated to produce signal:
 
   $$
   \mathbf{Z}_j=h(\mathbf{A}_j)
@@ -64,10 +64,10 @@
   \mathbf{w}=f(\mathbf{X},\Theta,\theta)
   $$
 
-   Where $$\Theta$$ contains filters of all convolutional layers and $$\theta$$ contains all biases.
+   where $$\Theta$$ contains filters of all convolutional layers and $$\theta$$ contains all biases.
 
 * *Fully connected layer* takes feature vector $$\mathbf{w}$$ and maps this to final output.
-* NN contains it own inlet, hidden, and output layers.
+* The NN contains its own input, hidden, and output layers.
 * Mapping of the NN from the feature vector $$\mathbf{w}$$ to the output is summarized as:
 
   $$
@@ -76,7 +76,7 @@
 
    where $$\gamma$$ are parameters of the NN input, hidden, and output layers.
 
-* Given params for all layers $$\beta=(\Theta,\theta,\gamma)$$; CNN propagates input $$\mathbf{X}_\omega$$ to predict $$\hat{y}=m_{\omega}(\beta)$$.
+* Given params $$\beta=(\Theta,\theta,\gamma)$$ for all layers, the CNN propagates input $$\mathbf{X}_\omega$$ to predict $$\hat{y}=m_{\omega}(\beta)$$.
 * Use MLE to estimate $$\beta$$. For regression:
 
   $$
@@ -88,7 +88,7 @@
 * CNNs are conceptually similar to NNs; the key difference is that CNNs preprocess the input data to extract features prior to making a prediction.
 * CNNs often have a large number of parameters; this is particularly evident from the fact that the parameters are matrices (the filter matrices).
 * As such, CNNs are prone to *overfitting* and conducting cross-validation is also critical to make sure that the model generalizes well (to inputs not used for training).
-* CNNs can take input objects that have multiple channels.  For example, a color image contains red, blue, and green (RGB) channels.
+* CNNs can take input objects that have multiple channels.  For example, a color image contains red, green, and blue (RGB) channels.
 * 1D CNNs can be used to process sequences (such as time series). 3D CNNs can process tensors (medical images and video).
 * After training the CNN, one can analyze the filter matrices ($$\Theta$$) to determine what patterns they are searching for in the images.
 * Techniques such as Fourier transforms are used to accelerate computations. In many cases it is also necessary to use parallel computing to accelerate training process.
@@ -97,15 +97,15 @@
 
 * Endotoxins generated from bacteria can be detected by using solution that contains small droplets that are filled with a liquid crystal.
 * Endotoxin binds to surface of droplet and generates perceptible change in configuration of liquid crystal inside droplets.
-* Change in config can be measured using a flow cytometer; thousands of droplets are passed through cytometer and generates a light scatter field.
+* Change in config can be measured using a flow cytometer; thousands of droplets are passed through cytometer and generate a light scatter field.
 * Shape of scatter field changes with concentration and type of endotoxin.
 * Train CNNs to automatically analyze scatter data to detect presence of endotoxin and to determine  bacterial species that endotoxin is associated with.
 * We train CNN to classify presence (or not) of endotoxin; to do so, we collect 98 observations (49 with no endotoxin present and 49 with endotoxin present).
 
 <figure><img src="../../.gitbook/assets/slides/ch6_endotoxins_data_caseI.png" alt="" width="420"><figcaption><p>Example observations for light scatter fields for contaminated and clean solutions.</p></figcaption></figure>
 
-* We train CNN with single hidden layer that contains 3x3 filter (this is simple CNN).
-* We use an ReLU function to activate convolved images.
+* We train CNN with single hidden layer that contains a $$3\times 3$$ filter (this is simple CNN).
+* We use a ReLU function to activate convolved images.
 * Confusion matrix shows that CNN perfectly classifies scatter fields (100% accuracy).
 * Spatial pattern of scatter fields contains significant information to tell them apart.
 
@@ -253,10 +253,10 @@ Theta =
 ```
 
 * Now train CNN to distinguish bacterial species that generate endotoxin.
-* Collect 84 obs; 24 for Escherichia Coli (EC), 28 for Pseudomonas Aeruginosa (PA), and 32 for Salmonella Minnesota (SM).
+* Collect 84 obs; 24 for *Escherichia coli* (EC), 28 for *Pseudomonas aeruginosa* (PA), and 32 for *Salmonella* Minnesota (SM).
 * We use 45 observations for training and 39 for validation.
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_endotoxins_data_caseII.png" alt="" width="280"><figcaption><p>Example observations for light scatter fields three different bacterial species.</p></figcaption></figure>
+  <figure><img src="../../.gitbook/assets/slides/ch6_endotoxins_data_caseII.png" alt="" width="280"><figcaption><p>Example observations for light scatter fields for three different bacterial species.</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/slides/ch6_endotoxins_confusion_caseII.png" alt="" width="489"><figcaption><p>Confusion matrix for training set (left) and validation set (right) for classification of bacterial species.</p></figcaption></figure>
 

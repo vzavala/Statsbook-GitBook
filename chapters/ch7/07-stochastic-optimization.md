@@ -3,7 +3,7 @@
 * Consider now the situation in which we do not want to compare decisions but we would like to *find best decision* possible.
 * We formulate optimization problems that explicitly take uncertainty into account.
 * These will use risk measures to optimally shape the distribution of $$Y(u)$$.
-* We discuss important notions of *conflict resolution* (trading-off risk measures) and *recourse* (corrective decisions).
+* We discuss important notions of *conflict resolution* (trading off risk measures) and *recourse* (corrective decisions).
 
 ## Stochastic Optimization: Basic Formulation
 
@@ -29,10 +29,10 @@
      u^*=\mathop{\textrm{argmin}}_{u\in \mathcal{U}}\; \mathbb{P}(\varphi(X,u)>\bar{y})
      $$
 
-   * Expected shortfall:
+   * Expected shortfall (CVaR):
 
      $$
-     u^*=\mathop{\textrm{argmin}}_{u\in \mathcal{U}}\; \mathbb{E}[\varphi(X,u)\,|\,\varphi(X,u)\geq \mathbb{Q}(\alpha)]
+     u^*=\mathop{\textrm{argmin}}_{u\in \mathcal{U}}\; \mathbb{E}[\varphi(X,u)\,|\,\varphi(X,u)\geq \mathbb{Q}_{\varphi(X,u)}(\alpha)]
      $$
 
 * Stochastic formulations obtain decisions $$u^*$$ that protect us (hedge) against uncertainty (or exploit uncertainty).
@@ -58,7 +58,7 @@
 * Stochastic solution offers  same level of protection to extreme costs as deterministic.
 * This indicates that deterministic solution is *unnecessarily* conservative.
 
-  <figure><img src="../../.gitbook/assets/slides/ch7_generator_stoch.png" alt="" width="350"><figcaption><p>Pdf and Cdf for generator sizing problem using deterministic and stochastic decision-making.</p></figcaption></figure>
+  <figure><img src="../../.gitbook/assets/slides/ch7_generator_stoch.png" alt="" width="350"><figcaption><p>Pdf and cdf for generator sizing problem using deterministic and stochastic decision-making.</p></figcaption></figure>
 
 #### Python implementation
 

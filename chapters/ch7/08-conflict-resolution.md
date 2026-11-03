@@ -33,7 +33,7 @@
 * DM explores trade-off by trying different values of $$\kappa\in [0,20]$$.
 * When $$\kappa=0$$, generator is sized to minimize mean cost (while ignoring large costs).
 * When $$\kappa$$ is large, generator is sized to try to reduce large costs.
-* DM is aware that $$\textrm{CVaR}_{\alpha}[Y(u)]$$ can capture similar behavior (by tuning $$\alpha)$$.
+* DM is aware that $$\textrm{CVaR}_{\alpha}[Y(u)]$$ can capture similar behavior (by tuning $$\alpha$$).
 * Specifically, when $$\alpha=0$$, CVaR is $$\mathbb{E}[Y(u)]$$ and, when $$\alpha=1$$, CVaR is $$\max Y(u)$$.
 * DM thus solves problem:
 
@@ -41,15 +41,13 @@
   \min_{u\in \mathcal{U}}\;  \textrm{CVaR}_\alpha [Y(u)]
   $$
 
-   for different values of $$\alpha=[0,1]$$.
+   for different values of $$\alpha\in[0,1]$$.
 
 * In top-left, can see that there is conflict between mean cost and its variance as we span $$\kappa$$.
 * In top-right, we see how optimal capacity increases as we put more emphasis on SD.
-* In bottom row we se trade-off curve of mean and SD as we span $$\alpha$$. This has a similar effect as spanning $$\kappa$$.
+* In bottom row we see the trade-off curve of mean and SD as we span $$\alpha$$. This has a similar effect as spanning $$\kappa$$.
 * This highlights how CVaR can be used to explore trade-offs. However, we notice differences in size of generators.
 * Difference is due to asymmetric penalization of CVaR vs. symmetric of SD.
-
-## Example Conflict Resolution in Sizing
 
 <figure><img src="../../.gitbook/assets/slides/ch7_generator_conflict.png" alt="" width="489"><figcaption><p>Trade-off curve obtained as we span κ in mean-variance risk measure (top). Trade-off curve obtained as we span α in CVaR risk measure (bottom).</p></figcaption></figure>
 

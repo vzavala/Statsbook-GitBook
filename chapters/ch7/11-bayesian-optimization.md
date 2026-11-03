@@ -52,22 +52,22 @@
 * $$\kappa\in \mathbb{R}_+$$ is parameter that balances exploration/exploitation.
 * Run experiment $$u'$$ in the system to obtain new data point $$(u',y')$$ and augment dataset $$\mathcal{D}_{\ell+1}\leftarrow \mathcal{D}_\ell\cup (u',y')$$.
 * Use new dataset to re-train kriging model $$\mu_{\ell+1}(u),\sigma_{\ell+1}(u)$$ and use this to obtain new input that maximizes $$AF_{\ell+1}(u)$$.
-* Loop is repeated over iterations $$\ell,\ell+1,\dots$$ .
+* Loop is repeated over iterations $$\ell,\ell+1,\dots$$.
 * BO selects experiments to progressively improve model and maximize performance.
-* BO captures how humans navigate world by collecting data, extract knowledge from data (learn models), and leverage knowledge to make decisions.
+* BO captures how humans navigate world by collecting data, extracting knowledge from data (learning models), and leveraging knowledge to make decisions.
 
 ## Example: BO for Experimental Design
 
 * A team of scientists want to determine optimal conditions to extract pectin from sunflower heads using oxalic acid as a solvent.
-* Need to identify how how pectin yield ($$Y$$) is influenced by $$u_1$$ (extraction temperature), $$u_2$$ (extraction time), and $$u_3$$ (oxalic acid concentration).
-* Unfortunately, there is *no physical understanding* of system and yield thus needs to optimized directly using data.
+* Need to identify how pectin yield ($$Y$$) is influenced by $$u_1$$ (extraction temperature), $$u_2$$ (extraction time), and $$u_3$$ (oxalic acid concentration).
+* Unfortunately, there is *no physical understanding* of system and yield thus needs to be optimized directly using data.
 * Apply BO to automatically identify experimental conditions that maximize yield.
 
 * Construct an initial kriging model with 3 experiments.
 * Subset of experiments proposed by BO and evolution of yield are shown below.
 * BO first runs the 3 inputs at their highest values to reduce uncertainty of model.
 * BO then progressively lowers the values of the inputs but eventually realizes that lowering temperature ($$u_1$$) is not a good strategy.
-* As such, it decides to increase temperature while, continuing to lowering time ($$u_2$$) and oxalic acid conc ($$u3$$).
+* As such, it decides to increase temperature while continuing to lower time ($$u_2$$) and oxalic acid concentration ($$u_3$$).
 * Yield is improved quickly and it eventually saturates, converging to the conditions $$u_1=1$$, $$u_2=0.426$$, and $$u_3=0.24$$.
 * BO identifies optimal conditions in less than 30 experiments.
 

@@ -16,8 +16,8 @@ Did we use enough data to estimate model parameters?
 * This connects concepts of sharpness of minimum, information, and uncertainty.
 
 * Eigenvalues of Hessian $$\mathcal{H}(\hat{\theta})$$ help us *quantify* data sufficiency.
-* For $$\hat{\theta}$$ to be minimizer, we need that all eigenvalues of are non-negative (either zero or positive). For linear model this is guaranteed.
-* If all eigs of are large and positive, estimate $$\hat{\theta}$$ is a sharp minimum of likelihood. This indicates that the estimate $$\hat{\theta}$$ is well-defined by data.
+* For $$\hat{\theta}$$ to be minimizer, we need that all eigenvalues of $$\mathcal{H}(\hat{\theta})$$ are non-negative (either zero or positive). For linear model this is guaranteed.
+* If all eigenvalues of $$\mathcal{H}(\hat{\theta})$$ are large and positive, estimate $$\hat{\theta}$$ is a sharp minimum of likelihood. This indicates that the estimate $$\hat{\theta}$$ is well-defined by data.
 * If one (or more) eigenvalues are close to zero, estimate $$\hat{\theta}$$ is sitting at a minimum that is not sharp.  This indicates that $$\hat{\theta}$$ is ill-defined by data and exhibits high variability.
 * If one eigenvalue of $$\mathcal{H}(\hat{\theta})$$ is exactly zero,  estimate $$\hat{\theta}$$ cannot be obtained uniquely from data. This indicates that estimate is sitting at a minimum that is flat. This also indicates that estimate has infinite variability (infinite uncertainty).
 

@@ -3,9 +3,9 @@
 * We have used MLE as main paradigm to determine parameters from data.
 * Idea is to  find the estimate that maximizes conditional pdf $$f(\mathbf{y}|\mathbf{X},\theta,\Sigma)$$.
 * Approach implicitly assumes that $$\mathbf{X}$$, $$\theta$$, and $$\Sigma$$ are deterministic variables.
-* This is limiting because input data $$\mathbf{X}$$ might contain uncertainty (i.e., sensors) or because we want to convey prior knowledge on $$\mathbf{X},\theta,\Sigma$$ in statistical terms.
+* This is limiting because input data $$\mathbf{X}$$ might contain uncertainty (e.g., sensor errors) or because we want to convey prior knowledge on $$\mathbf{X},\theta,\Sigma$$ in statistical terms.
 
-* The is a more general estimation paradigm known as Bayes estimation that allows us to handle overcome the limitations of MLE.
+* There is a more general estimation paradigm known as Bayes estimation that allows us to overcome the limitations of MLE.
 * Key difference is that $$\theta,\mathbf{X}$$ and $$\Sigma$$ are treated as RVs.
 * For simplicity, we will focus on $$\theta$$ (generalizing arguments is relatively easy).
 * In context of estimation problem of interest, Bayes' theorem states that:
@@ -17,7 +17,7 @@
 * $$f(\theta|\mathbf{y})$$ is prob that parameters take value $$\theta$$ given knowledge that output takes value $$\mathbf{y}$$. This pdf is known as posterior pdf.
 * $$f(\theta)$$ is prob that parameters take value $$\theta$$ given no knowledge of output.  This pdf is known as the prior pdf.
 * $$f(\mathbf{y}|\theta)$$ is prob that output takes value $$\mathbf{y}$$ given knowledge that parameters take value $$\theta$$. This pdf is likelihood function maximized in MLE.
-* $$f(\mathbf{y})$$ is marginal probability of outputs; this pdf is often neglected as it does not carry knowledge on parameters and thus one often expresses Bayes theorem as:
+* $$f(\mathbf{y})$$ is marginal probability of outputs; this pdf is often neglected as it does not carry knowledge on parameters and thus one often expresses Bayes' theorem as:
 
   $$
   f(\theta|\mathbf{y})\propto f(\mathbf{y}|\theta)f(\theta)
@@ -52,7 +52,7 @@
   \end{aligned}
   $$
 
-* Gaussian prior $$f(\theta)$$ achieves its maximum at reference point $$\bar{\theta}$$ while $$f(\mathbf{y}|\theta)$$ achieves its maximum when $$\theta$$ fits perfectly the data.
+* Gaussian prior $$f(\theta)$$ achieves its maximum at reference point $$\bar{\theta}$$ while $$f(\mathbf{y}|\theta)$$ achieves its maximum when $$\theta$$ fits the data perfectly.
 * Bayes estimation naturally seeks to strike a *balance* (trade-off) between what we previously knew about $$\theta$$ and the new knowledge gained through the data of $$\mathbf{y}$$.
 * If we ignore prior knowledge, all we know about $$\theta$$ is through data $$\mathbf{y}$$ (as in MLE).
 * This might lead to ambiguity if data is insufficient to estimate parameters uniquely.
@@ -63,14 +63,14 @@
 ## Example: Bayesian Estimation
 
 * Consider  simple linear model $$Y=\theta X+\epsilon$$ and assume that we have a single observation that we denote as $$(x=1,y=2)$$.
-* Prior knowledge is $$\theta\sim \mathcal{N}(0,1)$$ and this defines marginal $$f(\theta)$$.
+* Prior knowledge is $$\theta\sim \mathcal{N}(0,1)$$ and this defines the prior $$f(\theta)$$.
 * Info provided by data $$(x,y)$$ is $$y\sim \mathcal{N}(\theta x,1)$$ and this defines  likelihood $$f(y|\theta)$$.
 * Combined information given by posterior pdf $$f(\theta|y)\propto f(y|\theta)f(\theta)$$.
 
   <figure><img src="../../.gitbook/assets/slides/ch5_bayes.png" alt="" width="489"></figure>
 
 * Location of maximum points for pdfs and log pdfs coincides.
-* According to prior information (embedded in$$f(\theta)$$), we have that $$\theta=0$$ is the most likely value.
+* According to prior information (embedded in $$f(\theta)$$), we have that $$\theta=0$$ is the most likely value.
 * According to new information (embedded in $$f(y|\theta)$$), we have that $$\theta=2$$ is the most likely value. This would be estimate obtained with MLE (ignoring prior information).
 * According to combined prior and new information (embedded in $$f(\theta|y)$$), we have that $$\theta=1$$ is the most likely value.
 * Bayesian estimation naturally “blends" old and new information and finds an estimate that is a trade-off point.
@@ -189,7 +189,7 @@ after batch 3: theta_hat = [ 6.2546e+00  2.9045e-03 -8.1641e-07],  SD = [9.70e-0
 
 ## Bayesian Estimation
 
-* Bayes framework can be naturally capture prior info on input data $$\mathbf{X}$$.
+* Bayes framework can naturally capture prior info on input data $$\mathbf{X}$$.
 * Assume uncertainty in input data $$\mathbf{{X}}\sim \mathcal{N}(\bar{\mathbf{X}},\Sigma_X)$$; here, the reference point (mean) $$\bar{\mathbf{X}}$$ is observed value and $$\Sigma_X$$ captures their uncertainty (e.g., precision of sensor).
 * Given model $$\mathbf{y}=\mathbf{m}(\theta,\mathbf{X})$$, we *simultaneously* estimate params $$\theta$$ and inputs $$\mathbf{X}$$.
 * Bayes' theorem tells us that:
@@ -209,7 +209,7 @@ after batch 3: theta_hat = [ 6.2546e+00  2.9045e-03 -8.1641e-07],  SD = [9.70e-0
 
   $$
   \begin{aligned}
-  \min_{\theta,\mathbf{X}}& \quad \frac{1}{2}(\mathbf{y}-\mathbf{m}(\theta))^T\Sigma^{-1}(\mathbf{y}-\mathbf{m}(\theta)) +\frac{1}{2}(\theta-\bar{\theta})^T\Sigma_\theta^{-1}(\theta-\bar{\theta})+\frac{1}{2}(\mathbf{X}-\bar{\mathbf{X}})^T\Sigma_X^{-1}(\mathbf{X}-\bar{\mathbf{X}}).
+  \min_{\theta,\mathbf{X}}& \quad \frac{1}{2}(\mathbf{y}-\mathbf{m}(\theta,\mathbf{X}))^T\Sigma^{-1}(\mathbf{y}-\mathbf{m}(\theta,\mathbf{X})) +\frac{1}{2}(\theta-\bar{\theta})^T\Sigma_\theta^{-1}(\theta-\bar{\theta})+\frac{1}{2}(\mathbf{X}-\bar{\mathbf{X}})^T\Sigma_X^{-1}(\mathbf{X}-\bar{\mathbf{X}}).
   \end{aligned}
   $$
 
@@ -218,8 +218,8 @@ after batch 3: theta_hat = [ 6.2546e+00  2.9045e-03 -8.1641e-07],  SD = [9.70e-0
 ## Example: Data Reconciliation
 
 * We consider a system with output flow $$Y$$ and input flow $$X$$.
-* There is no transformation in the system and we thus know have that conservation $$Y=X$$ must hold.
-* We have a single input-output observation (measurement) that we denote as $$(x_\omega,y_\omega)$$.  This input and output measurements are subject to Gaussian errors with variances $$\sigma_x^2$$ and $$\sigma_y^2$$.
+* There is no transformation in the system and we thus know that conservation $$Y=X$$ must hold.
+* We have a single input-output observation (measurement) that we denote as $$(x_\omega,y_\omega)$$.  These input and output measurements are subject to Gaussian errors with variances $$\sigma_x^2$$ and $$\sigma_y^2$$.
 * Because of sensor errors in input and output flow, observed input and output do not satisfy conservation (i.e., $$x_\omega\neq y_\omega$$).
 * We use Bayesian estimation to obtain estimate of input flow  $$\hat{x}$$ that reconciles observed input and output data  to conservation equation (model).
 
@@ -255,7 +255,7 @@ after batch 3: theta_hat = [ 6.2546e+00  2.9045e-03 -8.1641e-07],  SD = [9.70e-0
   $$
 
 * From this expression it is clear that, if we trust output measurement much more than input measurement then $$\sigma_y^2/\sigma_x^2\to 0$$ and thus $$\hat{x}\to y_\omega$$.
-* On other other hand, if we trust input measurement much more than output measurement then $$\sigma_y^2/\sigma_x^2\to \infty$$ and thus $$\hat{x}\to x_\omega$$.
+* On the other hand, if we trust input measurement much more than output measurement then $$\sigma_y^2/\sigma_x^2\to \infty$$ and thus $$\hat{x}\to x_\omega$$.
 
 #### Python implementation
 

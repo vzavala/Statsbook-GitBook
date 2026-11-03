@@ -7,15 +7,15 @@
 We make following observations:
 
 {% hint style="info" %}
-* Data $$x_\omega \in \mathcal{S}$$ is a set of observations of $$X$$ collected from a population $$\Omega$$ by a defined procedure; i.e., sampling is a data collection procedure.
-* A data sample sequence $$x_\omega \in \mathcal{S}$$ is called *random* if each sample $$x_\omega$$ is drawn from same underlying pdf $$f_X(x)$$ and if it is drawn *independently* from  others; i.e., samples are independent and identically distributed (i.i.d).
-* If sample $$x_\omega$$ is selected at random, the sample itself is an RV. Consequently, sometimes we denote a data sample sequence as a sequence of RVs $$X_\omega \in \mathcal{S}$$.
+* Data $$x_\omega,\; \omega \in \mathcal{S}$$ is a set of observations of $$X$$ collected from a population $$\Omega$$ by a defined procedure; i.e., sampling is a data collection procedure.
+* A data sample sequence $$x_\omega,\; \omega \in \mathcal{S}$$ is called *random* if each sample $$x_\omega$$ is drawn from same underlying pdf $$f_X(x)$$ and if it is drawn *independently* from  others; i.e., samples are independent and identically distributed (i.i.d.).
+* If sample $$x_\omega$$ is selected at random, the sample itself is an RV. Consequently, sometimes we denote a data sample sequence as a sequence of RVs $$X_\omega,\; \omega \in \mathcal{S}$$.
 {% endhint %}
 
 * Random sample $$X_\omega$$ has same probability $$1/S$$ of being selected and is *unbiased*.
 * Lack of bias indicates that $$\mathbb{E}[X_\omega]=\mathbb{E}[X]$$ (drawing sample many times and averaging results gives expected value of underlying RV $$X$$).
 * Random samples can be used to construct *approximation* techniques with powerful asymptotic properties.
-* Collecting data at random is not as easy as it sounds, one must ensure that there is no bias in selecting a sample (i.e., there is no hidden mechanism).
+* Collecting data at random is not as easy as it sounds; one must ensure that there is no bias in selecting a sample (i.e., there is no hidden mechanism).
 * As humans, it is difficult to select something randomly (due to inherent biases).
 
 ## Example: Random and Non-Random Samples

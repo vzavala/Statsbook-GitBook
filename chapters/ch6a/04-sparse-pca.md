@@ -11,7 +11,7 @@
   $$
 
 * Finds vector $$w$$ that minimizes distance to data projection obtained with $$w_j$$ and minimizes $$\|w\|_1=\sum_{i=1}^n|w_i|$$.
-* $$\kappa\in\mathbb{R}_+$$ is param that trades-off sparsity of eigenvec $$\tilde{w}_j$$  and proximity to $$w_j$$.
+* $$\kappa\in\mathbb{R}_+$$ is param that trades off sparsity of eigenvec $$\tilde{w}_j$$  and proximity to $$w_j$$.
 * Sparsification is applied to eigenvecs $$w_j,\; j=1,...,n$$ to obtain a sparse $$\tilde{\mathbf{W}}$$.
 * If $$\kappa$$ is large, sparse eigenvec $$\tilde{w}_j$$ will contain a single variable.
 
@@ -48,7 +48,7 @@
   \end{aligned}
   $$
 
-* Suggests to eliminate $$X_5$$ (temperature), $$X_2$$ ($$CO$$ flow), and $$X_4$$ ($$CH_3OH$$ flow).
+* Suggests eliminating $$X_5$$ (temperature), $$X_2$$ ($$CO$$ flow), and $$X_4$$ ($$CH_3OH$$ flow).
 
 * Elimination of $$X_5,X_2,X_4$$ does not affect model fit and provides precise estimates.
 

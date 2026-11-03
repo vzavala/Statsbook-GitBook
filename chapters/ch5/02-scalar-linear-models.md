@@ -18,7 +18,7 @@
 * For now, assume that $$X$$ and $$\theta$$ are deterministic variables and therefore any variability observed in $$Y$$ is the result of a hidden RV $$\epsilon$$.
 * Postulated model contains deterministic component $$\theta X$$. This component will be called the *structural model* and captures the mechanism by which $$Y$$ depends on $$X$$.
 * Structural model $$\theta X$$ captures knowledge about $$Y$$ and allows us to make predictions.
-* Postulated model also obtains a random component, which is modeled as RV $$\epsilon$$. Here,  we assume that RV model is $$\epsilon \sim \mathcal{N}(0,\sigma^2)$$.
+* Postulated model also contains a random component, which is modeled as RV $$\epsilon$$. Here,  we assume that RV model is $$\epsilon \sim \mathcal{N}(0,\sigma^2)$$.
 * Random component is called random model (or noise model) and captures what we do not know about $$Y$$.  Random model contains parameter $$\sigma$$.
 
 * Assume observation pairs $$(y_\omega,x_\omega)$$ are related as:
@@ -28,11 +28,11 @@
   $$
 
 * Here, $$\epsilon_\omega$$ is random sample of $$\epsilon$$ (it is an RV);  as such, $$y_\omega$$ is an RV.
-* Input $$X$$ is deterministic variable and with known values $$x_\omega$$.
+* Input $$X$$ is a deterministic variable with known values $$x_\omega$$.
 * Parameter $$\theta$$ is a deterministic variable but we do not know its value.
 * Can write model as $$\epsilon_\omega=y_\omega-\theta x_\omega$$; noise variable captures discrepancy between model and observed output (it is a residual).
 * Goal is to find $$\theta,\sigma$$ that maximize knowledge extracted ($$\theta x_\omega$$) from data $$x_\omega,y_\omega$$.
-* Aspects of the data that cannot be explained with model ($$\epsilon_\omega$$) represent the unknown;  consequently, our goal is equivalent to minimize residual.
+* Aspects of the data that cannot be explained with model ($$\epsilon_\omega$$) represent the unknown;  consequently, our goal is equivalent to minimizing the residual.
 * An interesting analogy of this process is that of a separation system.
 
 <figure><img src="../../.gitbook/assets/slides/knowledge_extraction_diagram.png" alt="" width="489"><figcaption><p>Extraction of knowledge from data. The structural model represents our knowledge while the random model represents the unknown (what cannot be explained with the structural model).</p></figcaption></figure>
@@ -70,7 +70,7 @@
   \max_{\theta,\sigma^2}\; -\frac{S}{2}\log {2\pi}-\frac{S}{2}\log \sigma^2 -\sum_{\omega \in \mathcal{S}} {\frac{(y_\omega-\theta x_\omega)^2}{2\sigma^2}}
   $$
 
-* Assume now that $$\sigma^2$$ is a known quantity, first and second terms are fixed constants that do not affect the solution of optimization problem.
+* Assume now that $$\sigma^2$$ is a known quantity; the first and second terms are fixed constants that do not affect the solution of optimization problem.
 * We can thus express problem in the equivalent form:
 
   $$
@@ -88,7 +88,7 @@
   \frac{\partial SSE(\hat{\theta})}{\partial \theta}=-\sum_{\omega \in \mathcal{S}}x_\omega (y_\omega-\hat{\theta} x_\omega)=0
   $$
 
-* Satisfying this guarantees that $$\hat{\theta}$$ is a stationary point but does not guarantee that this is a minimum point for $$SSE(\theta)$$ (i.e., max point also satisfies this).
+* Satisfying this guarantees that $$\hat{\theta}$$ is a stationary point but does not guarantee that this is a minimum point for $$SSE(\theta)$$ (e.g., a maximum also satisfies it).
 * We thus say this condition is *necessary but not sufficient*.
 * Sufficient condition guaranteeing that $$SSE(\hat{\theta})$$ is a unique minimum is:
 
@@ -110,7 +110,7 @@
 * Consider $$X,Y$$ with structural  relationship $$Y=\theta X$$ and $$\theta=2$$.
 * Assume that observations $$Y$$ are corrupted by noise $$\epsilon_\omega  \sim \mathcal{N}(0,0.0625)$$.
 * Use model to generate $$S=100$$ observations $$(x_\omega,y_\omega)$$.
-* We postulate a model $$Y=\theta X + \epsilon$$ with $$\epsilon\in \mathcal{N}(0,\sigma^2)$$ and estimate $$\theta$$ using MLE.
+* We postulate a model $$Y=\theta X + \epsilon$$ with $$\epsilon\sim \mathcal{N}(0,\sigma^2)$$ and estimate $$\theta$$ using MLE.
 
   <figure><img src="../../.gitbook/assets/slides/ch5_results_lin_est.png" alt="" width="350"></figure>
 
@@ -228,8 +228,8 @@ plt.show()
   \mathbb{E}\left[-\frac{\partial \log f(\mathbf{y}|\theta)}{\partial \theta}\right]=0\qquad (\textrm{expectation wrt $\mathbf{y}$)}
   $$
 
-* Now explore how does $$\hat{\theta}$$ *vary* as we vary observations $$\mathbf{y}$$.
-* Variance tell us how certain we are that our estimate $$\hat{\theta}$$ is true value $$\theta$$ and recall also that variance is measure of estimate precision.
+* We now explore how $$\hat{\theta}$$ *varies* as we vary observations $$\mathbf{y}$$.
+* Variance tells us how certain we are that our estimate $$\hat{\theta}$$ is true value $$\theta$$ and recall also that variance is measure of estimate precision.
 * To assess how much $$\hat{\theta}$$ varies, we need to assess variance of score function:
 
   $$
@@ -249,7 +249,7 @@ plt.show()
   \mathbb{V}[\hat{\theta}]\geq \frac{1}{\mathcal{I}(\theta)}.
   $$
 
-* This is known as Cramer-Rao bound.
+* This is known as Cram\'er–Rao bound.
 
 * FI in general cannot be computed ($$\theta$$ is not known and requires expectation wrt $$\mathbf{y}$$).
 * In some special situations, however, FI can be computed.
@@ -271,7 +271,7 @@ plt.show()
   \mathcal{I}(\theta)=\mathbb{E}\left[-\frac{\partial^2 \log f(\mathbf{y}|\theta)}{\partial \theta^2}\right]=\frac{1}{\sigma^2}\sum_{\omega \in \mathcal{S}} x_\omega^2.
   $$
 
-* As increase amount of data ($$S$$ larger), FI increases (minimum becomes sharper).
+* As we increase the amount of data ($$S$$ larger), FI increases (minimum becomes sharper).
 * As variance of $$\mathbf{y}$$ decreases  ($$\sigma^2$$ smaller), FI increases.
 
 ## Estimation of Structural and Random Parameters

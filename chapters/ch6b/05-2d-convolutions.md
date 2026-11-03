@@ -10,7 +10,7 @@
   f_{j_1,j_2},\;\; j_1,j_2=-\infty,...,\infty,
   $$
 
-* Consider 2D filter represented:
+* Consider a 2D filter represented by:
 
   $$
   g_{j_1,j_2},\;\; j_1,j_2=-\infty,...,\infty.
@@ -19,10 +19,10 @@
 * Convolution is given by:
 
   $$
-  \phi_{k_1,k_2}=\sum_{j_1=-\infty}^\infty \sum_{j_2=-\infty}^\infty g_{j_1,j_2}\cdot f_{k_1-j_1,k_2-j_2},\;\; k_1,k_2=-\infty,...,\infty.
+  \varphi_{k_1,k_2}=\sum_{j_1=-\infty}^\infty \sum_{j_2=-\infty}^\infty g_{j_1,j_2}\cdot f_{k_1-j_1,k_2-j_2},\;\; k_1,k_2=-\infty,...,\infty.
   $$
 
-* As in 1D, one can think of a 2D conv $$\phi_{k_1,k_2}$$ as weighted sum in a given neighborhood of signal $$f$$ that is centered at $$f_{k_1,k_2}$$.
+* As in 1D, one can think of a 2D conv $$\varphi_{k_1,k_2}$$ as weighted sum in a given neighborhood of signal $$f$$ that is centered at $$f_{k_1,k_2}$$.
 
 * Consider $$N\times N$$ neighb of $$f$$ (centered at $$f_{k_1,k_2}$$ and $$N=3$$). This window is a matrix with $$N^2=9$$ entries.
 * Goal is to compute a weighted avg of all the entries in window; to do so, we associate a weight to each signal value in window.
@@ -64,7 +64,7 @@
   5    &1   &  4\\
   1 &    4    &  2\\
   3  &   3  &   4
-  \end{array}\right]}_\phi.
+  \end{array}\right]}_\varphi.
   \end{aligned}
   $$
 
@@ -220,8 +220,8 @@ plt.show()
 ## Example: Applying 2D Filters to an Image
 
 * Left panel is micrograph of liquid crystal droplet when exposed to polarized light.
-* Middle panel shows micrograph after applying a horizontal Sobel filter; this reveals regions in which the the brightness exhibits strong changes in intensity (gradients).
-* Right panel we see that application of Gaussian filter smooths out image and this reveals coarse features of micrograph.
+* Middle panel shows micrograph after applying a horizontal Sobel filter; this reveals regions in which the brightness exhibits strong changes in intensity (gradients).
+* In the right panel, we see that application of Gaussian filter smooths out image and this reveals coarse features of micrograph.
 
   <figure><img src="../../.gitbook/assets/slides/ch6_micrograph_2Dfilters.png" alt="" width="420"><figcaption><p>Micrograph image (left), image filtered with Sobel filter (middle), and image filtered with Gaussian filter  (right).</p></figcaption></figure>
 

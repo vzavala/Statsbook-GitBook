@@ -9,12 +9,12 @@
   $$
 
 * Convolution function is expressed as $$\varphi=f*g$$.
-* Domains of signal and filter is $$(-\infty,\infty)$$; this is symmetric and centered around zero.
+* Domains of signal and filter are $$(-\infty,\infty)$$; this is symmetric and centered around zero.
 * One can also define convolutions over asymmetric and finite domains $$t\in [0,N]$$.
 
 * Consider *discrete* signal given by sequence $$f_j,\, j=-\infty,...,\infty$$.
 * Consider filter represented by sequence  $$g_j,\; j=-\infty,...,\infty$$.
-* Convolution of signal and filter is sequence $$\varphi_k,\; k=-\infty,....,\infty$$ given by:
+* Convolution of signal and filter is sequence $$\varphi_k,\; k=-\infty,...,\infty$$ given by:
 
   $$
   \varphi_k=\sum_{j=-\infty}^\infty f_jg_{k-j},\;\; k=-\infty,...,\infty.
@@ -55,7 +55,7 @@
   \end{aligned}
   $$
 
-* Here, $$w_j=1/(b-a+1)\,j=a,...,b$$ are weights that satisfy $$\sum_{j=a}^b w_j=1$$.
+* Here, $$w_j=1/(b-a+1),\; j=a,...,b$$ are weights that satisfy $$\sum_{j=a}^b w_j=1$$.
 * Define $$a=-1$$ and $$b=+1$$ so that $$b-a+1=3$$.
 * Consider weighted average of $$f$$ over window $$k=-1,0,1$$:
 
@@ -67,8 +67,6 @@
   $$
 
 * Window is also known as *scanning* window.
-
-## Convolution Operations
 
 * Consider symmetric window with $$N$$ entries: $$a=-(N-1)/2$$ and $$b=(N-1)/2$$.
 * Weighted average over window centered at $$f_k$$ is:
@@ -90,7 +88,7 @@
 
 ## Example: Moving Average Filter for Pulse Signal
 
-* Rectangular signal $$f$$, moving average filter $$g$$, and convolution $$\phi=f*g$$.
+* Rectangular signal $$f$$, moving average filter $$g$$, and convolution $$\varphi=f*g$$.
 * Signal and filter are vectors with 100 entries.
 * Filter has window with $$N=20$$ entries and each weight is $$1/N=1/20$$.
 * Note convolution peaks at location in which filter and signal match.
@@ -149,7 +147,7 @@ show(t, f, np.concatenate([np.zeros(pad), g, np.zeros(pad)]), phi)
 N=5, alpha=2: [0.14 0.61 1.   0.61 0.14]
 ```
 
-## Convolution Operations
+## 1D Convolution Operations
 
 * Another popular filter is the Gaussian filter:
 
@@ -162,10 +160,8 @@ N=5, alpha=2: [0.14 0.61 1.   0.61 0.14]
 * Weights of moving average filter are held constant over averaging window and then are decreased abruptly to zero outside the window.
 * For Gaussian filter,  weights are progressively reduced inside averaging window and this creates a smoother transition outside the window.
 
-## 1D Convolution Operations
-
 * One often expresses discrete Gaussian filter over symmetric window.
-* Consider a window of length $$N$$, this creates symmetric domain
+* Consider a window of length $$N$$; this creates symmetric domain
 
   $$
   -(N-1)/2,...,0,...,(N-1)/2
@@ -184,7 +180,7 @@ N=5, alpha=2: [0.14 0.61 1.   0.61 0.14]
 
 ## Example: Gaussian Filter for Pulse Signal
 
-* Rectangular pulse signal $$f$$, Gaussian $$g$$, and convolution $$\phi=f*g$$.
+* Rectangular pulse signal $$f$$, Gaussian $$g$$, and convolution $$\varphi=f*g$$.
 * Filter constructed using window with $$N=20$$ and setting $$\alpha=4$$ ($$\sigma=2.4$$).
 * Applying Gaussian filter has effect of smoothing sharp edges.
 
@@ -192,7 +188,7 @@ N=5, alpha=2: [0.14 0.61 1.   0.61 0.14]
 
 ## Example: Gaussian Filter for Noisy Signal
 
-* Show signal $$f$$ and convolution $$\phi=f*g$$ using Gaussian filter $$g=(0.60,    0.94, 0.94, 0.60)$$.
+* Show signal $$f$$ and convolution $$\varphi=f*g$$ using Gaussian filter $$g=(0.60,    0.94, 0.94, 0.60)$$.
 * We also perform convolution using Gaussian filter $$g=(0.0003, 0.41, 0.41, 0.0003)$$. Smoothing is not as effective; why?
 
   <figure><img src="../../.gitbook/assets/slides/ch6_noise_gauss_filter.png" alt="" width="350"><figcaption><p>Signal (top), convolution with Gaussian filter with σ = 1.5 (middle), and convolution with Gaussian filter with σ = 0.37 (bottom).</p></figcaption></figure>
@@ -252,7 +248,7 @@ plt.show()
 * This is a convolution with filter $$g=(1,0,-1)$$ (up to the factor $$1/(2\Delta t)$$).
 * Known as gradient filter and helps identify  location of min/max/flat points of signal.
 
-* Weight has positive/negative values (Gaussian and uniform have positive).
+* Weights have positive and negative values (Gaussian and uniform weights are all positive).
 * Weights correspond to coefficients of central finite difference approx.
 * Another popular finite difference approx has weights $$g=(1,-2,1)$$:
 

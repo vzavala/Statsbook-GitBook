@@ -1,6 +1,6 @@
 # Maximum Likelihood Estimation
 
-* Maximum likelihood estimation (MLE) is a method that is conceptually similar LS in that tries to find the best possible set of parameters that match data.
+* Maximum likelihood estimation (MLE) is a method that is conceptually similar to LS in that it tries to find the best possible set of parameters that match data.
 * In MLE,  by “best" we mean parameters that are most probable (likely) given data.
 * In LS, by “best" we mean parameters that best fit data (minimize error).
 * We thus note that MLE has a natural statistical interpretation (while LS does not).

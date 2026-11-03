@@ -4,10 +4,10 @@
 * Development motivated by following questions:
    * How do humans learn from observations?
    * How do humans establish connections between variables to make predictions?
-* NNS are most general form of *parametric* models that currently exist.
+* NNs are the most general form of *parametric* models that currently exist.
 * NNs mimic how brain (a network of neurons) learns from obs (data from senses).
 * NNs are universal; they can capture virtually any relationship between variables.
-* Flexibility helps explains why humans are remarkably good at learning.
+* Flexibility helps explain why humans are remarkably good at learning.
 * On the other hand, flex comes at expense of requiring an enormous number of params; one has to verify that NNs generalize well  (predict outside domain of obs).
 
 ## Fully Connected Neural Nets
@@ -21,7 +21,7 @@
 * Model $$m(X,\theta)$$ is built by using basis functions that are mixed *hierarchically*.
 * Combinations of basis functions are captured by $$\theta$$.
 * Hierarchical structure mimics brain; the deeper the hierarchy, the more complexity.
-* Goal is to train NN model to fit obss:
+* Goal is to train NN model to fit observations:
 
   $$
   y_\omega=m(x_\omega,\theta)+\epsilon_\omega,\; \omega \in \mathcal{S}
@@ -30,7 +30,7 @@
 * Determination of $$\theta$$ from data mimics human *learning* process.
 * Specifically, NNs mimic how brain responds when exposed to data.
 
-* Neurons as processing units of brain that interact with one another through signals.
+* Neurons are processing units of brain that interact with one another through signals.
 * Math description of a neuron is called a *perceptron*.
 * Perceptron generates signal if evidence $$\theta^Tx=\sum_{i=1}^n\theta_ix_i+\theta_0$$ is strong enough.
 * Here, $$x_i$$ are inputs with weights $$\theta_i$$ and param $$\theta_0$$ is *bias*.
@@ -62,7 +62,7 @@
 
 <figure><img src="../../.gitbook/assets/slides/nn.png" alt="" width="630"><figcaption><p>Sketch of hierarchical structure of a neural network (left). Simplified visualization showing sequential transformations of data (right).</p></figcaption></figure>
 
-* *Input layer* is composed of $$j=1,...,n_I$$ perceptrons. Evidence in perceptron $$j$$ is :
+* *Input layer* is composed of $$j=1,...,n_I$$ perceptrons. Evidence in perceptron $$j$$ is:
 
   $$
   a_j=\sum_{i=1}^n\theta_{j,i}^{I}x_i+\theta_{j,0}^I
@@ -94,9 +94,9 @@
   a=\sum_{k=1}^{n_H}\theta_{k}^{O}w_k+\theta_{0}^O
   $$
 
-   Final output is $$m=\sigma(a)$$.
+   Final output is $$m=h(a)$$.
 
-* The propagation of the input $$x$$ through the layers to obtain the output as a nested, *forward proagation* mapping:
+* The propagation of the input $$x$$ through the layers to obtain the output can be written as a nested *forward propagation* mapping:
 
   $$
   \begin{aligned}
@@ -128,8 +128,8 @@
 * Newton's method is not used in NNs (e.g., Hessian is difficult to compute).
 
 * NN params have no physical meaning (difficult to convey prior knowledge).
-* Limitation manifests as need for large amounts of data to determine params which are also many (on the order of thousands to millions). In arch discussed, we have $$n=n_I\cdot n+n_H\cdot n_I+n_H$$ params.
-* A typical issue with NNs is that of *overfitting*.  Regularization (e.g., $$\rho(\theta)=\lambda \theta^T\theta$$) are often added to loss function.
+* Limitation manifests as need for large amounts of data to determine params which are also many (on the order of thousands to millions). In arch discussed, we have $$p=n_I(n+1)+n_H(n_I+1)+(n_H+1)$$ params (including biases).
+* A typical issue with NNs is that of *overfitting*.  Regularization terms (e.g., $$\rho(\theta)=\lambda \theta^T\theta$$) are often added to loss function.
 * Uncertainty of estimated parameters increases with number of params.
 * Because overfitting and high uncertainty are important issues, conducting cross-validation is critical.
 * Hessian matrix $$\nabla_\theta^2 L(\theta_\ell)$$ is impossible to compute in many apps.
@@ -142,7 +142,7 @@
 * NN fits data well; can capture high nonlinearity.
 * Fact that this can be done with one hidden layer is remarkable.
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_benchmark_gibbs_kriging_nn.png" alt="" width="489"><figcaption><p>Fit of kriging (left) and NN (right) models for Gibbs model.</p></figcaption></figure>
+  <figure><img src="../../.gitbook/assets/slides/ch6_benchmark_gibbs_kriging_nn.png" alt="" width="489"><figcaption><p>Fit of kriging (left) and NN (right) models for Gibbs reactor.</p></figcaption></figure>
 
 #### Python implementation
 
@@ -208,7 +208,7 @@ NN parameters: 9;  MSE NN = 9.29e-04,  MSE kriging = 8.71e-04
 * NN output is $$\hat{y}=\sum_{j=1}^{n_I}\theta_j^O h(a_j)$$ (there are no hidden layers).
 * NN model has a total of 18 params.
 
-* Fitx of NN model to function $$y=\sin(4x)+\sin(8x)+\exp(-x)$$ is excellent.
+* Fit of NN model to function $$y=\sin(4x)+\sin(8x)+\exp(-x)$$ is excellent.
 * Here we show the sigmoidal functions (basis functions) of the NN model.
 * Hessian reveals that several eigenvalues are close to zero.
 * NN model is highly flexible but data is overfit.

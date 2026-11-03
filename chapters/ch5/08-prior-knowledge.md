@@ -3,9 +3,9 @@
 * We often have some idea of what actual param values should be or if they must respect some general rules.
 * For instance,  our physical knowledge might tell us that a param cannot be negative or that it cannot be above a certain threshold.
 * We are interested in incorporating this *prior* knowledge in our estimation procedure.
-* Prior knowledge help us deal with situations in which the available data is insufficient to estimate params uniquely (e.g., Hessian has zero eigs) or reliably (e.g., Hessian has eigs that are close to zero).
+* Prior knowledge helps us deal with situations in which the available data is insufficient to estimate params uniquely (e.g., Hessian has zero eigs) or reliably (e.g., Hessian has eigs that are close to zero).
 * Prior knowledge helps us eliminate spurious estimates $$\hat{\theta}$$ with no physical meaning.
-* Prior knowledge helps us narrow down space over we search on.
+* Prior knowledge helps us narrow down the space over which we search.
 * Reducing number of parameters helps us address overfitting.
 * Narrowing search space helps numerical solvers find estimates.
 
@@ -35,14 +35,14 @@
   \end{aligned}
   $$
 
-* Here, $$\kappa\geq 0$$ is a constant that trades-off model fit  and allowed parameter movement.
+* Here, $$\kappa\geq 0$$ is a constant that trades off model fit  and allowed parameter movement.
 * Balances *prior knowledge* induced by $$\rho(\theta)$$ with *new knowledge* contained in data.
 
 <figure><img src="../../.gitbook/assets/slides/priorknowledge.png" alt="" width="560"><figcaption><p>Feasible region defined by bounds (left) and general constraints (middle). Penalization induced by ridge penalty (right).</p></figcaption></figure>
 
 Common choices for penalty function $$\rho(\theta)$$ are:
 
-* $$\ell$$-2 norm (a.k.a ridge or Tikhonov penalty):
+* $$\ell$$-2 norm (a.k.a. ridge or Tikhonov penalty):
 
   $$
   \begin{aligned}
@@ -159,12 +159,12 @@ plt.show()
 * We augment SSE using a ridge regularizer:
 
   $$
-  SSE(\theta)+\frac{1}{2}||\theta -\bar{\theta}||_2^2.
+  SSE(\theta)+\kappa\cdot \frac{1}{2}||\theta -\bar{\theta}||_2^2,
   $$
 
    where $$\kappa=1$$ and $$\bar{\theta}=0$$.
 
-* We can see that regularizer helps better define minimum points of SSE unction but does not avoid presence of non-physical regions.
+* We can see that regularizer helps better define minimum points of SSE function but does not avoid presence of non-physical regions.
 
   <figure><img src="../../.gitbook/assets/slides/ch5_hougen_span_reg.png" alt="" width="489"><figcaption><p>Behavior of regularized SSE function as we span values for θ₁ and θ₂.</p></figcaption></figure>
 
@@ -236,7 +236,7 @@ plt.show()
    with $$\underline \theta=(0,0,0,0,0)$$ and $$\overline \theta=(2,2,2,2,2)$$.
 
 * Constrained MLE problem solved using a numerical package that implements a Newton-like algorithm.
-* Routines uses Newton algorithm to find parameters but can also handle constraints.
+* The routine uses Newton algorithm to find parameters but can also handle constraints.
 * Solve problem with guess $$\hat{\theta}=(-1,-1,-1,-1,-1)$$ and without using constraints.
 * We find that algorithm does not converge and obtains estimates that are negative.
 * Upon incorporating constraints we find:

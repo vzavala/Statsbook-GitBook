@@ -12,7 +12,7 @@
   \mathbb{MV}_\kappa[Y(u)]=\mathbb{E}[Y(u)]+\kappa\cdot \mathbb{V}[Y(u)]
   $$
 
-   for some weight $$\kappa \in \mathbb{R}_+$$; for $$\kappa\to 0$$ we prefer mean, for $$\kappa\gg 0$$ we prefer variance.
+   for some weight $$\kappa \in \mathbb{R}_+$$; for $$\kappa\to 0$$ we emphasize the mean, for $$\kappa\gg 0$$ we emphasize the variance.
 
 * Probability of Loss:
 
@@ -28,7 +28,7 @@
   \mathbb{P}(Y(u)\in \mathcal{A})
   $$
 
-   where the event $$\mathcal{A}$$ capture conditions/constraints that $$Y(u)$$ should satisfy.
+   where the event $$\mathcal{A}$$ captures conditions/constraints that $$Y(u)$$ should satisfy.
 
 * Value-at-Risk:
 
@@ -44,7 +44,7 @@
   \mathbb{E}[Y(u)|Y(u)\geq \mathbb{Q}_{Y(u)}(\alpha)]
   $$
 
-   for some probability $$\alpha\in [0,1]$$. This is also known as “expected loss”.
+   for some probability $$\alpha\in [0,1]$$. This is also known as the “expected shortfall”.
 
 * Mean Absolute Deviation:
 
@@ -60,7 +60,7 @@
 
 * Probability of loss resembles our colloquial definition of risk. But this fails to capture important aspects (magnitude of losses).
 * There is a broad selection of risk measures that one can select.
-* In fact, any statistic can be used as risk measure (e.g., mode, moments,  median.
+* In fact, any statistic can be used as risk measure (e.g., mode, moments, median).
 * It is also important to highlight that the selection of a risk measure should be based on  nature of RV to be compared.
 * e.g., comparing Gaussian RVs (symmetric RVs with left and right tails) is not the same as comparing exponential RVs (asymmetric RVs with only right tails).
 

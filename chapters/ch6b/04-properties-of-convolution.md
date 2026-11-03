@@ -14,8 +14,8 @@
 ## Example: Recursive Application of Convolution
 
 * Consider indep RVs $$X_1,X_2,X_3,X_4\sim \mathcal{U}_c(4,6)$$ with same pdf $$f(x)$$.
-* Pdf of $$X_1$$ is $$f$$, of $$X_1+X_2$$  is $$\phi=f*f$$, of $$X_1+X_2+X_3$$ is $$\phi=f*(f*f)$$), and of $$X_1+X_2+X_3+X_4$$ is $$\phi=f*(f*(f*f))$$.
-* Result confirms central limit theorem (sum of i.i.d. RVs is Gaussian).
+* Pdf of $$X_1$$ is $$f$$, of $$X_1+X_2$$  is $$\varphi=f*f$$, of $$X_1+X_2+X_3$$ is $$\varphi=f*(f*f)$$, and of $$X_1+X_2+X_3+X_4$$ is $$\varphi=f*(f*(f*f))$$.
+* Result confirms central limit theorem (the sum of i.i.d. RVs approaches a Gaussian).
 
   <figure><img src="../../.gitbook/assets/slides/ch6_clt_convolutions.png" alt="" width="350"></figure>
 

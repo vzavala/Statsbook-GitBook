@@ -11,9 +11,9 @@
   Y=m(X,\theta)+\epsilon
   $$
 
-   where $$\theta \in \mathbb{R}^n$$ are params, $$g(X,\theta)$$ is model, and $$\epsilon$$ is a noise RV.
+   where $$\theta \in \mathbb{R}^{n+1}$$ are params, $$m(X,\theta)$$ is model, and $$\epsilon$$ is a noise RV.
 
-* Goal is to find params that best explains our obs (data):
+* Goal is to find parameters that best explain our observations (data):
 
   $$
   y_\omega=m(x_\omega,\theta)+\epsilon_\omega,\; \omega \in \mathcal{S}
@@ -78,7 +78,7 @@ plt.show()
 * Specifically, want to capture logic:
    * If evidence $$\theta^Tx$$ is large, there is a high prob that $$Y=1$$
    * If evidence $$\theta^Tx$$ is small, there is a high prob that  $$Y=0$$
-   * If no evidence ($$\theta^Tx=0$$), there is ambiguity (equally prob that $$Y=0$$ or $$Y=1$$)
+   * If no evidence ($$\theta^Tx=0$$), there is ambiguity (equally probable that $$Y=0$$ or $$Y=1$$)
 * This is captured by defining conditional pdf:
 
   $$
@@ -86,7 +86,7 @@ plt.show()
   $$
 
 * We apply MLE to estimate the parameters $$\theta$$.
-* Goal is to find $$\hat{\theta}$$ that max joint prob $$\prod_{\omega \in \mathcal{S}}f(y_\omega\,|\,x_\omega,\theta)$$:
+* Goal is to find $$\hat{\theta}$$ that maximizes the joint probability $$\prod_{\omega \in \mathcal{S}}f(y_\omega\,|\,x_\omega,\theta)$$:
 
   $$
   \max_{\theta}\; \sum_{\omega \in \mathcal{S}}y_\omega\cdot \log(m(x_\omega,\theta))+(1-y_\omega)\cdot \log(1-m(x_\omega,\theta))
@@ -96,9 +96,9 @@ plt.show()
 
 * Imagine we have data $$(P_\omega,C_\omega,T_\omega)$$ for Gibbs reactor.
 * Data is separated into two classes; one class represents normal mode (when $$T_\omega$$ is low) and we define corresponding labels as $$y_\omega=1$$.
-* Other class represent  failure mode (when $$T_\omega$$ is high)  and we define $$y_\omega=0$$.
+* The other class represents failure mode (when $$T_\omega$$ is high)  and we define $$y_\omega=0$$.
 * Our goal is to develop a classification model that predicts mode of operation by using data on pressure and conversion $$x_\omega=(P_\omega,C_\omega)$$.
-* In other words, model should be able to detect if reactor is failing by looking at a data pair of pressure and concentration.  is that possible?
+* In other words, model should be able to detect if reactor is failing by looking at a data pair of pressure and concentration. Is that possible?
 
 <figure><img src="../../.gitbook/assets/slides/ch6_gibbs_logistic_data.png" alt="" width="420"><figcaption><p>Gibbs reactor data showing separation between normal and failure operating modes.</p></figcaption></figure>
 

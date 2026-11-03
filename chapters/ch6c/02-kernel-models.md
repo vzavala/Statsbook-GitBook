@@ -2,7 +2,7 @@
 
 * Kernel models are generalizations of predictive models that we have explored.
 * These models have surprising properties:
-   * Require handful of parameters to make predictions (regardless of number of inputs)
+   * Require a handful of parameters to make predictions (regardless of number of inputs)
    * Capture complex nonlinearities (without need to postulate input-output model)
 * Concepts  have implications in techniques that we have discussed.
 * For instance, kernel concepts can be used to capture nonlinearities in PCA.
@@ -19,7 +19,7 @@
 
    where $$\phi_j(X),\; j=1,...,m$$ is collection of basic models (known as basis functions).
 
-* Here, output and input have continuous domains $$\mathcal{D}_Y\in \mathbb{R}$$ and $$\mathcal{D}_X\in \mathbb{R}^n$$.
+* Here, output and input have continuous domains $$\mathcal{D}_Y\subseteq \mathbb{R}$$ and $$\mathcal{D}_X\subseteq \mathbb{R}^n$$.
 * Predictive model is mixture $$m(X,\theta)=\sum_{j=1}^m\theta_j \phi_j(X)$$.
 * Define basis vector $$\phi(X)=(\phi_1(X),...,\phi_m(X))$$ and write $$m(X,\theta)=\theta^T\phi(X)$$.
 * Basis $$\phi(X)$$ can be linear or nonlinear (e.g., polynomial, sigmoidal, log, exponential).
@@ -56,10 +56,10 @@
   S(\theta)= \frac{1}{2}\mathbf{r}^T\boldsymbol{\Phi}\boldsymbol{\Phi}^T\boldsymbol{\Phi}\boldsymbol{\Phi}^T\mathbf{r}-\mathbf{r}^T\boldsymbol{\Phi}\boldsymbol{\Phi}^T\mathbf{y}+\frac{1}{2}\mathbf{y}^T\mathbf{y}+\frac{\lambda}{2}\mathbf{r}^T\boldsymbol{\Phi}\boldsymbol{\Phi}^T\mathbf{r}.
   $$
 
-* Data matrix $$\boldsymbol{\Phi}$$ always appear as $$\boldsymbol{\Phi}\boldsymbol{\Phi}^T$$; we define $$\mathbf{K}=\boldsymbol{\Phi}\boldsymbol{\Phi}^T\in \mathbb{R}^{S\times S}$$ and thus:
+* Data matrix $$\boldsymbol{\Phi}$$ always appears as $$\boldsymbol{\Phi}\boldsymbol{\Phi}^T$$; we define $$\mathbf{K}=\boldsymbol{\Phi}\boldsymbol{\Phi}^T\in \mathbb{R}^{S\times S}$$ and thus:
 
   $$
-  S(\theta)= \frac{1}{2}\mathbf{r}^T\mathbf{K}\mathbf{K}\mathbf{r}-\mathbf{r}^T\mathbf{K}\mathbf{y}+\frac{1}{2}\mathbf{y}^T\mathbf{y}+\frac{\lambda}{2}\mathbf{r}^TK\mathbf{r}
+  S(\theta)= \frac{1}{2}\mathbf{r}^T\mathbf{K}\mathbf{K}\mathbf{r}-\mathbf{r}^T\mathbf{K}\mathbf{y}+\frac{1}{2}\mathbf{y}^T\mathbf{y}+\frac{\lambda}{2}\mathbf{r}^T\mathbf{K}\mathbf{r}
   $$
 
 * $$S(\theta)$$ can be defined in terms of $$\mathbf{r}$$ (params have been eliminated).
@@ -146,10 +146,10 @@
 
 * Here, a *single* param $$\gamma$$ controls coefficients of basis functions.
 
-* In kernel methods, we do not need to postulate input-output model (e.g., $$Y=\theta^T\phi(X))$$ and estimate its params $$\theta$$).
+* In kernel methods, we do not need to postulate input-output model (e.g., $$Y=\theta^T\phi(X)$$) and estimate its params $$\theta$$).
 * Instead, we postulate kernel model and estimate its params $$\gamma$$.
 * Kernel can be interpreted as a generating function of basis functions and requires few params (typically a handful).
-* This is key advantage over standard estimation because overparam is avoided.
+* This is key advantage over standard estimation because overparameterization is avoided.
 * Kernels can capture highly complex nonlinear behavior.
 
 ## Example: Kernel Estimation for Hougen-Watson

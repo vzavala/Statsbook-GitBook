@@ -1,7 +1,7 @@
 # 1D Fourier Transforms
 
 * Convolution can be performed using Fourier transforms (FT) of signal and filter.
-* FT also provide important insights into feature content of signals and filters.
+* FTs also provide important insights into feature content of signals and filters.
 * Recall that FT of function $$f:\mathbb{R}\to \mathbb{R}$$ is:
 
   $$
@@ -31,7 +31,7 @@
   $$
 
 * Discrete FT is expressed as $$\hat{f}=\mathcal{F}\{f\}$$ and inverse FT is $${f}=\mathcal{F}^{-1}\{\hat{f}\}$$.
-* FT returns complex numbers $$\hat{f}_{k},\,k=0,...,N-1$$ (each correspond to freq $$\omega_k$$).
+* FT returns complex numbers $$\hat{f}_{k},\,k=0,...,N-1$$ (each corresponds to frequency $$\omega_k$$).
 * Magnitude of each freq is $$|\hat{f}_k|$$ (captures how strong its presence in the signal is).
 * *Any* signal $$f(t)$$ can be obtained by combining sinusoidal functions of different freqs.
 * One often visualizes frequency content by using a plot of $$\omega_k$$ vs. $$|\hat{f}_k|$$.

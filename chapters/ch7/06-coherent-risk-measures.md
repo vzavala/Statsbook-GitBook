@@ -2,8 +2,8 @@
 
 * There are a number of properties that a proper (a.k.a. coherent) risk measure should satisfy.
 * These properties have been proposed based on usefulness in *practical applications* and based on mathematical consistency.
-* Interestingly and, as we we will see shortly, these properties are analogous to properties of vector norms.
-* One can think of the following properties as a set of rules (a.k.a. mathematical axioms) that give us guidance into how to select a suitable risk measure.
+* Interestingly and, as we will see shortly, these properties are analogous to properties of vector norms.
+* One can think of the following properties as a set of rules (a.k.a. mathematical axioms) that give us guidance on how to select a suitable risk measure.
 * Similar types of axioms exist for defining proper measures of fairness.
 
 We say that the risk measure $$\rho$$ is *proper* if it satisfies the properties:
@@ -49,10 +49,10 @@ We can now formally analyze if risk measures are proper or not.
 * Symmetric penalization is often undesirable (only interested in  right tail).
 * Variance is *not proper*; it does not satisfy monotonicity (not consistent with SD).
 
-## Properties of Risk Measures: Expected Loss
+## Properties of Risk Measures: Expected Shortfall
 
-* Expected loss (CVaR) overcomes deficiencies of variance and has become widely used in finance.
-* Expected loss of $$Y$$ at a given probability $$\alpha$$ is:
+* Expected shortfall (CVaR) overcomes deficiencies of variance and has become widely used in finance.
+* Expected shortfall of $$Y$$ at a given probability $$\alpha$$ is:
 
   $$
   \mathbb{E}[Y|Y\geq \mathbb{Q}_Y(\alpha)]
@@ -64,8 +64,8 @@ We can now formally analyze if risk measures are proper or not.
   \mathbb{P}(Y\leq \bar{y})=\alpha
   $$
 
-* Expected loss is expected value of costs above $$\bar{y}=\mathbb{Q}_Y(\alpha)$$.
-* Expected loss can also be written as:
+* Expected shortfall is expected value of costs above $$\bar{y}=\mathbb{Q}_Y(\alpha)$$.
+* Expected shortfall can also be written as:
 
   $$
   \mathbb{Q}_Y(\alpha)+\frac{1}{1-\alpha}\mathbb{E}[(Y-\mathbb{Q}_Y(\alpha))_+]
@@ -82,14 +82,14 @@ We can now formally analyze if risk measures are proper or not.
 ## Properties of Risk Measures: Probability of Loss
 
 * The probability of loss is one of most widely used measures of risk.
-* The meaning of probability of loss is intuitive in many applications and is a widely used of notion of risk.
+* The meaning of probability of loss is intuitive in many applications and is a widely used notion of risk.
 * This measure does not take into consideration the actual magnitude of the losses.
 * Probability of loss is *not coherent*;  it does not satisfy translation invariance.
 * However, probability of loss is directly compatible with SD (compares probabilities).
 
 ## Risk Measures as Norms
 
-* Coherency of risk measures resemble coherency of *vector norms* (e.g., triangle inequality is subadditivity).
+* Coherency of risk measures resembles coherency of *vector norms* (e.g., triangle inequality is subadditivity).
 * Norms allow us to measure and compare vectors.
 
    How can we tell if vector $$\mathbf{y}=(y_1,y_2,...,y_S)$$ is better than $$\mathbf{y}'=(y_1',y_2',...,y_S')$$?
@@ -116,9 +116,9 @@ We can now formally analyze if risk measures are proper or not.
   y_i\leq y_i'\; \textrm{for all} \; i=1,...,S.
   $$
 
-   Analogous to say that RV $$Y$$ is *always better* than the RV $$Y'$$.
+   Analogous to saying that RV $$Y$$ is *always better* than the RV $$Y'$$.
 
-* This comparison is *not consistent* because te vector entries of $$\mathbf{y}$$ and $$\mathbf{y}'$$ are not arranged in order.
+* This comparison is *not consistent* because the vector entries of $$\mathbf{y}$$ and $$\mathbf{y}'$$ are not arranged in order.
 * More consistent approach would first  arrange entries in decreasing order and then compare entries.
 * This is *precisely analogous* to SD; we establish a threshold on entries and count how many entries are below that threshold value.
 * Another possibility is to arrange entries in increasing order and sum the largest $$k$$ entries. This is *directly analogous to CVaR*.
@@ -133,7 +133,7 @@ Consider the vector $$y=(100,70,50,20,10)$$
 
 * Worst-Case is: $$100$$
 
-The CVaR values for vector is:
+The CVaR values for the vector are:
 
 * If $$\alpha=0$$ then CVaR is:
 

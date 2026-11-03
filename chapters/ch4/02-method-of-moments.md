@@ -45,8 +45,6 @@
 * From definition of second central moment we have $$\mathbb{CMO}_2(\theta)=\mathbb{V}_X=\sigma^2$$.
 * Thus $$\mathbb{CMO}_2(\theta)=\hat{\mathbb{CMO}}_2$$ indicates that $$\hat{\sigma}^2=\hat{\mathbb{V}}_X$$.
 
-## Example: Method Moments for Gaussian
-
 * We used moment matching with $$S=10$$ and $$S=100$$ data points to estimate parameters. If we use $$S=10$$, the estimates are $$\hat{\mu}=0.45$$ and $$\hat{\sigma}=1.43$$;  if we use $$S=100$$, the estimates are $$\hat{\mu}=0.9$$ and $$\hat{\sigma}=2$$. The true parameters are $$\mu=1$$ and $$\sigma=2$$; we can thus see that we get closer as we increase $$S$$.
 
   <figure><img src="../../.gitbook/assets/slides/ch4_gaussian_moments_example.png" alt="" width="420"><figcaption><p>Empirical pdf/cdf for Gaussian RV obtained from data and model predictions obtained with estimated parameters. Results for 𝑆 = 10 (top row) and for 𝑆 = 100 (bottom row).</p></figcaption></figure>
@@ -112,7 +110,7 @@ Now want to postulate $$\textrm{Weibull}(\xi,\beta)$$ and see if this matches da
 
 * We are given observations $$x_\omega,\; \omega \in \mathcal{S}$$.
 * Sample mean is $$\hat{\mathbb{E}}_X=\frac{1}{S}\sum_{\omega\in\mathcal{S}}x_\omega$$ and variance $$\hat{\mathbb{V}}_X=\frac{1}{S}\sum_{\omega\in\mathcal{S}}(x_\omega-\hat{\mathbb{E}}_X)^2$$.
-* We find $$\beta,\xi$$ that matches moments $$\mathbb{CMO}_1(\theta)$$ and $$\mathbb{CMO}_2(\theta)$$ (expected value and variance) to empirical counterparts.
+* We find $$\beta,\xi$$ that match the moments $$\mathbb{CMO}_1(\theta)$$ and $$\mathbb{CMO}_2(\theta)$$ (expected value and variance) to empirical counterparts.
 * This is done by solving the matching equations for $$\beta$$ and $$\xi$$:
 
   $$

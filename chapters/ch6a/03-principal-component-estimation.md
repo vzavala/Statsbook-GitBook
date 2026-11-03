@@ -1,7 +1,7 @@
 # Principal Component Estimation
 
 * Previously explored strategies to estimate params for models $$\mathbf{y}=\mathbf{X}\theta$$.
-* Discussed how data redundancy leads to rows or columns in $$\mathbf{X}$$ that are linear dependent and how this can lead to high param variance (low precision).
+* Discussed how data redundancy leads to rows or columns in $$\mathbf{X}$$ that are linearly dependent and how this can lead to high param variance (low precision).
 * We can use PCA to identify and eliminate data redundancies.
 * Kernel $$\mathbf{X}^T\mathbf{X}$$ is related to covariance of estimates $$\hat{\theta}$$ as:
 
@@ -38,7 +38,7 @@
 
 * We project (reduce) input data into information space as $$\mathbf{T}_1=\mathbf{X}\mathbf{W}_1$$.
 * Build a reduced model of form $$\mathbf{y}=\mathbf{T}_1\gamma$$ where $$\gamma \in \mathbb{R}^{n_1}$$ are the parameters.
-* Projection reduces number of params (from $$n$$ in $$\theta$$ to $$n_1$$ in $$\gamma$$) .
+* Projection reduces number of params (from $$n$$ in $$\theta$$ to $$n_1$$ in $$\gamma$$).
 
 * Estimate params $$\gamma$$ by solving:
 

@@ -24,7 +24,7 @@
    with frequencies $$\omega_1=20$$ and $$\omega_2=60$$.
 
 * Below we plot this function in 3D and we can see that this forms a wavy field (sheet) and show two waves that form function.
-* We also visualize function as 2D projection. This is is what you would see if you observed wavy sheet from the top.
+* We also visualize function as 2D projection. This is what you would see if you observed wavy sheet from the top.
 
 <figure><img src="../../.gitbook/assets/slides/ch6_2dsinetotal.png" alt="" width="489"><figcaption><p>2D function 𝑓(𝑥₁, 𝑥₂) shown in 3D and as a projection in 2D (top panels). Low-frequency component (middle panels) and high-frequency component (bottom panels).</p></figcaption></figure>
 
@@ -65,7 +65,7 @@ plt.show()
 
 ## Example: 2D FT Applied to Filtering
 
-* We analyze frequency content of a 2D uniform average filter (defined by a 2D step function) and of a 2D Gaussian filter (defined a by 2D Gaussian kernel).
+* We analyze frequency content of a 2D uniform average filter (defined by a 2D step function) and of a 2D Gaussian filter (defined by a 2D Gaussian kernel).
 
   <figure><img src="../../.gitbook/assets/slides/ch6_2dfourierfilter.png" alt="" width="489"><figcaption><p>Left panels: Uniform filter, Fourier transform in 2D, and Fourier transform in 3D. Right panels: Gaussian filter, Fourier transform in 2D, and Fourier transform in 3D.</p></figcaption></figure>
 

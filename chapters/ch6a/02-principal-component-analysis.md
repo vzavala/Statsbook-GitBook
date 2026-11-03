@@ -7,7 +7,7 @@
    * How can I reduce (compress) data to facilitate analysis, visualization, storage, and use?
 * We analyze data that is stationary (as opposed to time-dependent).
 * Stationary data involves obs that are independent over  time.
-* Time-dependent involves obs that are correlated over time (more difficult).
+* Time-dependent data involves observations that are correlated over time (more difficult).
 
 ## Principal Component Analysis
 
@@ -50,7 +50,7 @@
   \frac{1}{S}\sum_{\omega=1}^S\mathbf{X}_{\omega,j}=0,\;\; j=1,...,n
   $$
 
-   (e.g., by substracting means of each variable).
+   (e.g., by subtracting means of each variable).
 
 * One can show that sample covariance matrix of $$X$$ is:
 
@@ -85,7 +85,7 @@
 * This guarantees that $$T_2$$ and $$T_1$$ provide complementary (non-redundant) info.
 * Can continue procedure to obtain all eigenvecs $$w_k,\, k=1,...,n$$ of $$\boldsymbol{\Sigma}$$.
 * Each eigenvec $$w_k$$ has mixture $$T_k=w^T_kX$$ with info content $$\lambda_k=w^T_k\Sigma w_k$$.
-* Mixtures are ranked in order of info content $$\lambda_1\geq \lambda_2\geq \dots \lambda_n$$.
+* Mixtures are ranked in order of info content $$\lambda_1\geq \lambda_2\geq \dots \geq \lambda_n$$.
 
 * Set of eigenvecs and eigenv can be used to decompose kernel as:
 
@@ -107,7 +107,6 @@
   $$
 
 * Matrix $$\boldsymbol{\Lambda}\in \mathbb{R}^{n\times n}$$ is diagonal with entries $$\boldsymbol{\Lambda}_{k,k}=\lambda_k$$.
-* Eigenvalues are usually visualized using spectrum, which summarizes information content.
 
 * Eigenvalues are usually visualized using spectrum, which summarizes % of total information content.
 
@@ -119,7 +118,7 @@
 
   <figure><img src="../../.gitbook/assets/slides/spectrum.png" alt="" width="210"><figcaption><p>Illustration of spectrum of a couple of covariance matrices with high redundancy (solid) and low redundancy (dashed).</p></figcaption></figure>
 
-* Mixtures $$T_1,T_2,...T_n$$ (a.k.a. principal components) contain all info about $$X$$.
+* Mixtures $$T_1,T_2,...,T_n$$ (a.k.a. principal components) contain all info about $$X$$.
 * Eigenvec matrix $$\mathbf{W}$$ *projects* data $$\mathbf{X}$$ into space of PCs as:
 
   $$
@@ -129,7 +128,7 @@
    where $$\mathbf{T}\in \mathbb{R}^{S\times n}$$ is matrix with entries $$\mathbf{T}_{i,j},\,i=1,...,S,\, j=1,...,n$$.
 
 * Here, $$\mathbf{T}_{i,j}$$ is the $$i$$-th observation of PC $$T_j$$.
-* PCA can be seen as a projection of the data from a physical space to an information space (a.k.a. as latent space).
+* PCA can be seen as a projection of the data from a physical space to an information space (a.k.a. latent space).
 * Can project back from latent space to physical space using $$\mathbf{X}=\mathbf{T}\mathbf{W}^T$$.
 
 <figure><img src="../../.gitbook/assets/slides/projection.png" alt="" width="420"><figcaption><p>Projection of data from physical space  to information/latent space (and back) using the eigenvectors 𝐖.</p></figcaption></figure>
@@ -147,14 +146,14 @@
 
 * Here, we use property that $$\mathbf{W}^T\mathbf{W}=\mathbf{I}$$ (eigenvecs are orthogonal).
 * PCs are thus uncorrelated and all info of $$T$$ (variance) is contained in eigenvalues.
-* Projection $$\mathbf{T}=\mathbf{X}\mathbf{W}$$ transforms data from physical space (under which $$\mathbf{X}$$ lives) into an information space (under which $$\mathbf{T}$$ lives).
+* Projection $$\mathbf{T}=\mathbf{X}\mathbf{W}$$ transforms data from physical space (in which $$\mathbf{X}$$ lives) into an information space (in which $$\mathbf{T}$$ lives).
 * **Note:** it is not necessary to normalize data to apply PCA.
 * Normalization is required if one seeks to interpret $$\mathbf{X}^T\mathbf{X}$$ as covariance of $$X$$.
 
 ## Example: PCA Analysis for Gibbs Reactor Data
 
 * Dataset with measurements of pressure, temperature, and conversion $$(P,T,C)$$.
-* If visualize data in 3D $$(P,T,C)$$ space, separates in clusters (failure/normal mode).
+* If we visualize the data in 3D $$(P,T,C)$$ space, they separate into clusters (failure/normal mode).
 * Humans can only visualize data in a small number of dimensions (typically 2D plots).
 * Imagine we visualize our data in 2D by ignoring temperature ($$P,C$$).
 * Visualizing data in this reduced space hides clusters in the data.

@@ -16,12 +16,12 @@
 * $$\mathbf{y}\in \mathbb{R}^S$$ contains obs $$y_\omega$$ and $$\mathbf{m}\in \mathbb{R}^{S}$$ contains model obs $$m(x_\omega)$$.
 * In kriging we treat $$\mathbf{m}$$ as a random *function* that has no params.
 * Motivated by fact that kernel methods do not require params $$\theta$$ to make predictions.
-* This is key difference over parametric models $$\mathbf{m}(\theta,x_\omega)$$.
+* This is key difference from parametric models $$\mathbf{m}(\theta,x_\omega)$$.
 
 * Model $$\mathbf{m}$$ is assumed to be RV $$\mathcal{N}(0,\mathbf{K}(\gamma))$$.
 * Here, $$\mathbf{K}(\gamma)=\textrm{Cov}(\mathbf{m})\in \mathbb{R}^{S\times S}$$ is model covariance and $$\gamma$$ are its params.
-* $$\mathbf{K}(\gamma)$$ as a matrix function that generates samples of model $$\mathbf{m}$$.
-* In parametric models we  generate alternatives by tuning parameters, kriging generates alternatives via sampling.
+* $$\mathbf{K}(\gamma)$$ acts as a matrix function that generates samples of model $$\mathbf{m}$$.
+* In parametric models we  generate alternatives by tuning parameters; kriging generates alternatives via sampling.
 
   <figure><img src="../../.gitbook/assets/slides/gp.png" alt="" width="350"><figcaption><p>Generation of alternative models for parametric model 𝐦(θ) using θ (left). Generation of alternative models for GP using realizations of 𝐦 ∼ 𝒩(0, 𝐊(γ)) (right).</p></figcaption></figure>
 
@@ -86,7 +86,7 @@
   $$
 
 * Mean prediction is $$\mathbb{E}[y]=m(x)$$ and variance is $$\mathbb{V}[y]=\sigma^2(x)$$.
-* One use kriging to mix physics and data-driven models.
+* One can use kriging to mix physics and data-driven models.
 * Done by defining $$f(\mathbf{y}|\mathbf{m},\theta)$$ as $$\mathcal{N}(h(\mathbf{x},\theta)+\mathbf{m},\sigma^2 \mathbf{I})$$ where $$h(\mathbf{x},\theta)$$ is physics model.
 
 ## Example: Kriging Model for Gibbs Reactor
@@ -185,7 +185,7 @@ plt.show()
 * In this example we illustrate how the uncertainty quantification capabilities of GP can be used to guide the collection of experiments.
 * Imagine that you have a system in which you can manipulate an input $$x$$ (e.g., temperature) to optimize the performance of an output $$y$$ (e.g., cost).
 * You start with 3 experimental data points that you use to train your GP. Note how the model prediction has no uncertainty at the location of the experimental points, but it has significant uncertainty in the unexplored regions of the input.
-* Note how the uncertainty information provides guidance on where to sample next and provide an indication when the model has been approximated well.
+* Note how the uncertainty information provides guidance on where to sample next and provides an indication when the model has been approximated well.
 
 <figure><img src="../../.gitbook/assets/slides/ch6_kriging_uq.png" alt="" width="489"><figcaption><p>Evolution of model prediction uncertainty for GP with 3 data points (top-left), 4 data points (top-right), 5 data points (bottom-left) and 6 data points (bottom-right).</p></figcaption></figure>
 

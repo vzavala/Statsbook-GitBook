@@ -31,7 +31,7 @@
   y_\omega=\varphi(x_\omega,u_D^*),\; \omega \in \mathcal{S}.
   $$
 
-* This provides a complete picture of how *vulnerable (or robust)* is decision $$u_D^*$$.
+* This provides a complete picture of how *vulnerable (or robust)* decision $$u_D^*$$ is.
 
 ## Monte Carlo Simulations
 
@@ -63,7 +63,7 @@
 * To simplify decision, DM  uses representative value of load $$r=\displaystyle \max_{\omega \in\mathcal{S}}r_\omega$$ (peak).
 * Cost in this case is deterministic: $$y(u)=\alpha_R\cdot r^2 + \alpha_u\cdot u^2$$.
 
-* DM has possibility of selecting generators of capacities $$\mathcal{U}=\{0,1,2,....,10\}$$.
+* DM has possibility of selecting generators of capacities $$\mathcal{U}=\{0,1,2,...,10\}$$.
 * Case for $$u=0$$ is “do-nothing” case (current system) and $$u=10$$ is max capacity.
 * Deterministic generator design problem is:
 
@@ -74,7 +74,7 @@
 * We can see that cost is minimized with a generator of capacity $$u_D^*=6$$.
 * We conduct MC simulations to determine how generator performs under different load outcomes.
 * Simulations generate costs $$y_\omega(u)=\alpha_R\cdot {r_\omega(u^*_D)}^2 + \alpha_u\cdot (u_D^*)^2$$ for $$\omega \in \mathcal{S}$$.
-* Average cost of new system $$67.4$$ and average cost of current system is $$50.1$$.
+* Average cost of new system is $$67.4$$ and average cost of current system is $$50.1$$.
 * However, new system avoids extreme/peak costs (helps with budgeting).
 
 <figure><img src="../../.gitbook/assets/slides/ch7_generator_det.png" alt="" width="560"></figure>

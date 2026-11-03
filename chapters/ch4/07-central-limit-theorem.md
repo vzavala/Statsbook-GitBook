@@ -4,7 +4,7 @@
 * Because MC approx is an RV, accuracy is measured in terms of its uncertainty.
 * If we want uncertainty of an RV, we need to know its underlying pdf.
 * Obtaining pdf of $$\hat{\mathbb{E}}_X^S$$ can be achieved by using a powerful result in statistics known as the central limit theorem (CLT).
-* Consider a sample sequence $$X_1,X_2,...,X_S$$ that is i.i.d and that has *known* expected value $$e=\mathbb{E}[X]$$ and variance $$v^2=\mathbb{V}[X]$$.
+* Consider a sample sequence $$X_1,X_2,...,X_S$$ that is i.i.d. and that has *known* expected value $$e=\mathbb{E}[X]$$ and variance $$v^2=\mathbb{V}[X]$$.
 * CLT states that:
 
   $$
@@ -14,7 +14,7 @@
 * CLT states that, *regardless* of the nature of $$X$$ (e.g., Weibull, Poisson), sample approximation $$\hat{\mathbb{E}}_X^S$$ will *always* behave as a Gaussian RV as $$S$$ increases.
 
 * CLT states that expected value of $$\hat{\mathbb{E}}_X^S$$ is true value $$e$$.  In other words, $$\hat{\mathbb{E}}_X^S$$ is an unbiased estimate of $$e$$.
-* CLT states that variance of $$\mathbb{V}[\hat{\mathbb{E}}_X^S]$$ is given by $$v^2/S$$ (std dev is $$v/\sqrt{S}$$) and that this shrinks with $$S$$. In other words, $$\hat{\mathbb{E}}_X^S$$ becomes more accurate as $$S$$ increases.
+* CLT states that the variance $$\mathbb{V}[\hat{\mathbb{E}}_X^S]$$ is given by $$v^2/S$$ (std dev is $$v/\sqrt{S}$$) and that this shrinks with $$S$$. In other words, $$\hat{\mathbb{E}}_X^S$$ becomes more accurate as $$S$$ increases.
 * Since we know that $$\hat{\mathbb{E}}_X^S\sim \mathcal{N}(e,v^2/S)$$ then we have pdf for $$\hat{\mathbb{E}}_X^S$$ and thus we can compute quantities of interest for it.
 * For example, we can compute  $$1-\alpha$$ confidence intervals:
 
@@ -23,7 +23,7 @@
   $$
 
 * Note that this interval shrinks as $$S$$ increases.
-* CLT assumes that we know variance of $$X$$; as a result, we need to know these quantities to compute confidence interval.
+* CLT assumes that we know variance of $$X$$; as a result, we need to know this quantity to compute confidence interval.
 * In practice, one often replaces this quantity with its MC approx (sample variance):
 
   $$
@@ -32,7 +32,7 @@
 
 ## Example: Verifying the Central Limit Theorem
 
-* We i.i.d. samples $$X_1,...,,X_S$$ from $$X\sim \textrm{Weibull}(1,2)$$ and compute $$\hat{\mathbb{E}}_X^S=\frac{1}{S}\sum_{\omega=1}X_\omega$$.
+* We draw i.i.d. samples $$X_1,...,X_S$$ from $$X\sim \textrm{Weibull}(1,2)$$ and compute $$\hat{\mathbb{E}}_X^S=\frac{1}{S}\sum_{\omega=1}^S X_\omega$$.
 * We repeat procedure for different sets of samples and visualize pdf of $$\bar{X}=\hat{\mathbb{E}}_X^S$$.
 
   <figure><img src="../../.gitbook/assets/slides/ch4_clt_weibull.png" alt="" width="350"><figcaption><p>Pdf for 𝑋 ∼ Weibull(1, 2) (top-left) and sample average 𝑋̄ with 𝑆 = 10 (top-right), 𝑆 = 100 (bottom-left) and 𝑆 = 1000 (bottom-right).</p></figcaption></figure>

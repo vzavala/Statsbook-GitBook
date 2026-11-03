@@ -4,7 +4,7 @@
 
 * PCA relies on eigendecomp $$\boldsymbol{\Sigma}=\mathbf{W}\boldsymbol{\Lambda} \mathbf{W}^T$$.
 * SVD is a generalization of eigendecomp.
-* Eigendecomp can only be applied to square matrices (e.g., $$\boldsymbol{\Sigma}$$) while SVD can be applied to rectangular matrices (e.g.,$$\mathbf{X}$$).
+* Eigendecomp can only be applied to square matrices (e.g., $$\boldsymbol{\Sigma}$$) while SVD can be applied to rectangular matrices (e.g., $$\mathbf{X}$$).
 * SVD is broadly applicable for reduction of different forms of data (e.g., images).
 
 * To explain how SVD works, it is convenient to think about this in context of PCA.
@@ -14,7 +14,7 @@
   \mathbf{X}=\mathbf{U}\mathbf{S}\mathbf{V}^T
   $$
 
-* $$\mathbf{U}\in \mathbb{R}^{S\times n}$$ is left eigenvec matrix, $$\mathbf{V}\in \mathbb{R}^{n\times n}$$ is right eigenvec matrix.
+* $$\mathbf{U}\in \mathbb{R}^{S\times n}$$ is the left eigenvector matrix, $$\mathbf{V}\in \mathbb{R}^{n\times n}$$ is the right eigenvector matrix.
 * $$\mathbf{S}\in \mathbb{R}^{S\times n}$$ is singular value (SV) matrix.
 * Matrix $$\mathbf{S}$$ contains SVs $$s_j\in  \mathbb{R},\; j=1,...,n$$ in diagonal.
 * Singular values are ordered in magnitude $$s_1\geq s_2\geq \cdots \geq s_n$$.
@@ -22,8 +22,8 @@
 * Number of non-zero singular values reveals *rank* of $$\mathbf{X}$$.
 * Rank is max number of linearly independent rows (same as number of linearly independent columns).
 * Since we have assumed that $$n\leq S$$ (most common case in applications), $$\mathbf{X}$$ is regular if rank is $$n$$.
-* If matrix is non-regular it means that there are redundant rows or columns.
-* In PCA, a non-regular $$\mathbf{X}$$ means that there are redundant observations or variables.
+* If the matrix is not regular, it means that there are redundant rows or columns.
+* In PCA, an $$\mathbf{X}$$ that is not regular means that there are redundant observations or variables.
 * SVs can thus help us detect and eliminate data redundancies.
 
 * Matrices $$\mathbf{U},\mathbf{V}$$ are orthogonal and thus satisfy $$\mathbf{U}^T\mathbf{U}=\mathbf{I}$$ and $$\mathbf{V}^T\mathbf{V}=\mathbf{I}$$.
@@ -56,7 +56,7 @@
   \textrm{diag}(\mathbf{S})=(12059.49 ,486.03,         44.43,          0.00,         0.00,          0.00).
   $$
 
-* Matrix has a rank of 3 (there are 3 non-zero singular values), matrix is irregular.
+* Matrix has a rank of 3 (there are 3 non-zero singular values), so the matrix is not regular.
 * By inspecting data matrix (few rows):
 
   $$
@@ -76,7 +76,6 @@
 
 * 1st and 6th columns are linearly dependent but rest of dependencies are less obvious.
 
-* 1st and 6th columns are linearly dependent but rest of dependencies are less obvious.
 * Redundancies are identified as:
 
   $$

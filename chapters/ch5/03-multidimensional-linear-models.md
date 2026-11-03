@@ -38,7 +38,7 @@
 * Assume random noise is $$S$$-dimensional RV $$\mathbf{e}\sim \mathcal{N}(0,\Sigma)$$.
 * Here, $$\Sigma \in \mathbb{R}^{S\times S}$$ is noise covariance.
 * Noise covariance captures variance and correlations in sensor errors.
-* As in scalar case, assume$$\mathbf{X}$$, $$\theta$$, and $$\Sigma$$ are deterministic variables.
+* As in scalar case, assume $$\mathbf{X}$$, $$\theta$$, and $$\Sigma$$ are deterministic variables.
 * Output is thus $$\mathbf{y}\sim \mathcal{N}(\mathbf{X}\theta,\Sigma)$$ with joint density $$f(\mathbf{y}|\mathbf{X},\theta,\Sigma)$$.
 * Estimates $$\hat{\theta}$$ and $$\hat{\Sigma}$$ are found by maximizing log likelihood
 
@@ -47,7 +47,7 @@
   \log f(\mathbf{y}|\mathbf{X},\theta,\Sigma)=-\log\left((2\pi)^{S/2}|\Sigma|^{1/2}\right) -\frac{1}{2}(\mathbf{y}-\mathbf{X}\theta)^T\Sigma^{-1}(\mathbf{y}-\mathbf{X}\theta).
   $$
 
-* This is most general form of MLE problem.
+* This is the most general form of MLE problem.
 
 * If we assume noise covariance $$\Sigma$$ is given, MLE problem reduces to:
 
@@ -117,7 +117,7 @@
   \hat{\theta}=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}.
   $$
 
-* Recall that this estimate is only guaranteed to be a stationarity point for $$SSE(\theta)$$.
+* Recall that this estimate is only guaranteed to be a stationary point for $$SSE(\theta)$$.
 * A stationary point can be a min or max; moreover, such point might be non-unique.
 * Non-uniqueness indicates that multiple values of $$\theta$$ give same min value of SSE.
 
@@ -140,7 +140,7 @@
   $$
 
 * Hessian is given by $$\nabla_\theta^2 SSE(\theta)=\mathbf{X}^T\mathbf{X}$$.
-* Recall that suff condition for scalar case requires second derivative to be positive.
+* Recall that sufficient condition for scalar case requires second derivative to be positive.
 * Suff condition in multivariate case requires that the Hessian is positive definite (all its eigenvalues are strictly positive).
 
 ## Example: Estimating Heat Capacity
@@ -334,7 +334,7 @@ Cov[theta_hat] =
   $$
 
 * FI is Hessian matrix of log likelihood function.
-* Use FI to generalize Cramer-Rao bound:
+* Use FI to generalize Cram\'er–Rao bound:
 
   $$
   \textrm{Cov}[\hat{\theta}]\succeq \mathcal{I}(\theta)^{-1}.

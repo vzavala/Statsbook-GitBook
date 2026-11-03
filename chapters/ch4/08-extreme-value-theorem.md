@@ -24,9 +24,9 @@
   \end{aligned}
   $$
 
-   where $$s=(x-a)/b$$ is a standarized variable.
+   where $$s=(x-a)/b$$ is a standardized variable.
 
-* GEV is reverse Weibull (for $$c<0$$), Frechet (for $$c>0$$), and Gumbel (for $$c=0$$).
+* GEV is reverse Weibull (for $$c<0$$), Fr\'echet (for $$c>0$$), and Gumbel (for $$c=0$$).
 * Reverse Weibull is a variant of the two-parameter Weibull (explored before).
 * GEV RV is used in failure analysis because sample max characterizes *extreme events*.
 * This is relevant because such events often have small probabilities (are *rare* events).
@@ -34,7 +34,7 @@
 
 ## Example: Verifying Extreme Value Theorem
 
-* Collect i.i.d. samples $$X_1,...,,X_S$$ form $$X\sim \mathcal{N}(2,1)$$ and compute  $$X_{max}^S=\max\{X_1,\cdots, X_S\}$$.
+* Collect i.i.d. samples $$X_1,...,X_S$$ from $$X\sim \mathcal{N}(2,1)$$ and compute  $$X_{max}^S=\max\{X_1,\cdots, X_S\}$$.
 * Repeat procedure for different sets of samples and visualize pdf of $$X_{max}^S$$.
 * We do this for different $$S$$ to verify that pdf follows that of a GEV as we increase $$S$$.
 

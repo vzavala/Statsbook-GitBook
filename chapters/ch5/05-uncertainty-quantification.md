@@ -4,7 +4,7 @@
 How much can we trust our parameter estimate and model predictions?
 {% endhint %}
 
-* For linear model the estimate is gaussian $$\hat{\theta}\sim\mathcal{N}(\theta,\textrm{Cov}[\hat{\theta}])$$ with:
+* For linear model the estimate is Gaussian $$\hat{\theta}\sim\mathcal{N}(\theta,\textrm{Cov}[\hat{\theta}])$$ with:
 
   $$
   \textrm{Cov}[\hat{\theta}]=(\mathbf{X}^T\Sigma ^{-1}\mathbf{X})^{-1}.
@@ -19,8 +19,8 @@ How much can we trust our parameter estimate and model predictions?
 
 * Here, $$q_{n+1}$$ is the $$(1-\alpha)$$-quantile of $$\chi^2(n+1)$$.
 * Size of CIs ($$m_i$$) is a measure of their *precision*.
-* Precision affected by number of parameters $$n+1$$ ($$q_{n+1}$$ increases with $$n$$)
-* Precision affected by variances of estimated parameters $$\mathbb{V}[\hat{\theta}_i]=\textrm{Cov}[\hat{\theta}]_{ii}$$.
+* Precision is affected by number of parameters $$n+1$$ ($$q_{n+1}$$ increases with $$n$$)
+* Precision is affected by variances of estimated parameters $$\mathbb{V}[\hat{\theta}_i]=\textrm{Cov}[\hat{\theta}]_{ii}$$.
 
 * Can construct CIs for model predictions by noticing that the output $$\hat{\mathbf{y}}=\mathbf{X}\hat{\theta}$$ is a linear transformation of the Gaussian $$\hat{\theta}$$ and thus:
 
@@ -85,7 +85,7 @@ How much can we trust our parameter estimate and model predictions?
   $$
 
 * Compute CIs for predicted heat capacities.
-* Compute $$q_S=43.77$$,  this is 0.95 quantile of $$\chi^2(S)$$ with $$S=30$$.
+* Compute $$q_S=43.77$$; this is the 0.95 quantile of $$\chi^2(S)$$ with $$S=30$$.
 * Compute $$\textrm{Cov}[\hat{\mathbf{y}}]=\mathbf{X}\textrm{Cov}[\hat{\theta}]\mathbf{X}^T$$ (a 30$$\times$$ 30 matrix).
 * Confidence intervals for outputs, observations, and true values are shown below.
 
