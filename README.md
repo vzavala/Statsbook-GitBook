@@ -2,14 +2,27 @@
 
 **Victor M. Zavala** · Department of Chemical and Biological Engineering, University of Wisconsin-Madison
 
-This online companion follows the [lecture slides](https://github.com/vzavala/StatsBook/tree/master/Slides) of the course and places the
-[Python implementation](https://github.com/vzavala/StatsBook/tree/master/Python) of every example right next to the concepts and equations it implements. Read a concept, see its
+This online companion follows the lecture slides of the course and places the Python implementation
+of every example right next to the concepts and equations it implements. Read a concept, see its
 equations, then see the code that computes them, with its output, in the same notation.
 
 {% hint style="info" %}
 This material supports the textbook [*Statistics for Chemical Engineers*](https://www.cambridge.org/highereducation/product/A8DB49C10B02BADA637D13FC02CD62A7)
 by Victor M. Zavala (Cambridge University Press, © 2025).
 {% endhint %}
+
+## Slides, notebooks, and code on GitHub
+
+All course materials are in the book's GitHub repository, [vzavala/StatsBook](https://github.com/vzavala/StatsBook):
+
+* [Slides](https://github.com/vzavala/StatsBook/tree/master/Slides) (PDF, one deck per chapter) and
+  [4-up handouts](https://github.com/vzavala/StatsBook/tree/master/Slides/handouts)
+* [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) for every example (the ones shown in this book)
+* [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab) for the examples
+* [Data for the exercises](https://github.com/vzavala/StatsBook/tree/master/DataExercises)
+* [Errata](https://github.com/vzavala/StatsBook/blob/master/Errata/errata.pdf) for the printed book
+
+The first page of each chapter links to its slides and handout.
 
 ## How the pages are organized
 
@@ -25,19 +38,6 @@ Notebooks that go beyond the slides are marked **Additional example**.
 
 Every implementation is also a Jupyter notebook that you can open in Google Colab or run locally
 (see [How to use this book](how-to-use.md)).
-
-## Slides, notebooks, and code on GitHub
-
-All course materials are in the book's GitHub repository, [vzavala/StatsBook](https://github.com/vzavala/StatsBook):
-
-* [Slides](https://github.com/vzavala/StatsBook/tree/master/Slides) (PDF, one deck per chapter) and
-  [4-up handouts](https://github.com/vzavala/StatsBook/tree/master/Slides/handouts)
-* [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) for every example (the ones shown in this book)
-* [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab) for the examples
-* [Data for the exercises](https://github.com/vzavala/StatsBook/tree/master/DataExercises)
-* [Errata](https://github.com/vzavala/StatsBook/blob/master/Errata/errata.pdf) for the printed book
-
-The first page of each chapter links to its slides and handout.
 
 ## Chapters
 
