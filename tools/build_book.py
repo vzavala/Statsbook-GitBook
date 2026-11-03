@@ -182,6 +182,11 @@ def parse_tex(path):
         title = ""
         if j < len(body) and body[j] == "{":
             title, i = T.read_group(body, j)
+            j = T.skip_ws(body, i)
+            # subtitle holding the script links: \begin{frame}{Title}{\scriptlinks{name}}
+            if j < len(body) and body[j] == "{" and body.startswith("{\\scriptlinks", j):
+                sub, i = T.read_group(body, j)
+                title += " " + sub
         end = body.find("\\end{frame}", i)
         content = body[i:end]
         if "\\titlepage" in content:
@@ -192,6 +197,8 @@ def parse_tex(path):
 
 def frame_title(title_tex, ctx, macros):
     store = T.Store()
+    # \scriptlinks{name} -> "`name.m`", picked up below as the frame's script
+    title_tex = re.sub(r"\\scriptlinks\{(\w+)\}", r"`\1.m`", title_tex)
     s = T.extract_math(T.expand_macros(title_tex, macros), store)
     s = T.text_cmds(s, ctx)
     s = store.restore(s)

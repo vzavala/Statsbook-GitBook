@@ -20,6 +20,47 @@
 * Pdf becomes concentrated (dense) in center (indicating a higher pdf value).
 * Density forms ellipsoidal regions (diffuses as moving from center).
 
+* For $$n=2$$, joint pdf can be written as:
+
+  $$
+  \begin{aligned}
+  f(x_1,x_2)&=c\cdot \exp\left(-\frac{1}{2}\left[\begin{array}{c}x_1-\mu_1\\ x_2-\mu_2\end{array}\right]^T\left[\begin{array}{cc}\Sigma_{11}&\Sigma_{12}\\ \Sigma_{21}&\Sigma_{22}\end{array}\right]^{-1}\left[\begin{array}{c}x_1-\mu_1\\ x_2-\mu_2\end{array}\right]\right)
+  \end{aligned}
+  $$
+
+   where:
+
+  $$
+  \begin{aligned}
+  c=\frac{1}{2\pi\left|\begin{array}{cc}\Sigma_{11}&\Sigma_{12}\\ \Sigma_{21}&\Sigma_{22}\end{array}\right|^{1/2}}.
+  \end{aligned}
+  $$
+
+* Recall $$\mathbb{E}[X]=\mu$$ and $$\textrm{Cov}[X]=\Sigma$$.
+* If $$(X_1,X_2)$$ are independent, we have $$\Sigma_{12}=\Sigma_{21}=0$$ and thus:
+
+  $$
+  \begin{aligned}
+  f(x_1,x_2)&=\frac{1}{\sqrt{2\pi\Sigma_{11}}}\exp \left(\frac{-(x_1-\mu_1)^2}{2\Sigma_{11}}\right)\cdot \frac{1}{\sqrt{2\pi\Sigma_{22}}}\exp \left(\frac{-(x_2-\mu_2)^2}{2\Sigma_{22}}\right)
+  \end{aligned}
+  $$
+
+* Marginals of Gaussian $$X=(X_1,X_2)$$ are:
+
+  $$
+  \begin{aligned}
+  f_1(x_1)&=\frac{1}{\sqrt{2\pi\Sigma_{11}}}\exp \left({\frac{-(x_1-\mu_1)^2}{2\Sigma_{11}}}\right)\\
+  f_2(x_2)&=\frac{1}{\sqrt{2\pi\Sigma_{22}}}\exp \left({\frac{-(x_2-\mu_2)^2}{2\Sigma_{22}}}\right).
+  \end{aligned}
+  $$
+
+* These correspond to pdfs of $$X_1\sim\mathcal{N}(\mu_1,\Sigma_{11})$$ and $$X_2\sim \mathcal{N}(\mu_2,\Sigma_{22})$$.
+* Here are marginal pdfs for Gaussian with $$\mu=(0,1)$$ and $$\Sigma=\left[\begin{array}{cc}1 &-1/2\\ -1/2 & 1\end{array}\right]$$.
+
+  <figure><img src="../../.gitbook/assets/slides/ch3_marginalgaussian.png" alt="" width="350"></figure>
+
+* These correspond to pdfs of $$X_1\sim\mathcal{N}(0,1)$$ and $$X_2\sim \mathcal{N}(1,1)$$.
+
 <details>
 
 <summary>Python: reproduce this figure (ch3_compare_multigaussians.ipynb)</summary>
@@ -100,47 +141,6 @@ X1 | x2=1 ~ N(0.00, 0.75),   X2 | x1=1 ~ N(0.50, 0.75)
 Open in Colab: [`ch3_compare_multigaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook-GitBook/blob/main/notebooks/ch3_compare_multigaussians.ipynb)
 
 </details>
-
-* For $$n=2$$, joint pdf can be written as:
-
-  $$
-  \begin{aligned}
-  f(x_1,x_2)&=c\cdot \exp\left(-\frac{1}{2}\left[\begin{array}{c}x_1-\mu_1\\ x_2-\mu_2\end{array}\right]^T\left[\begin{array}{cc}\Sigma_{11}&\Sigma_{12}\\ \Sigma_{21}&\Sigma_{22}\end{array}\right]^{-1}\left[\begin{array}{c}x_1-\mu_1\\ x_2-\mu_2\end{array}\right]\right)
-  \end{aligned}
-  $$
-
-   where:
-
-  $$
-  \begin{aligned}
-  c=\frac{1}{2\pi\left|\begin{array}{cc}\Sigma_{11}&\Sigma_{12}\\ \Sigma_{21}&\Sigma_{22}\end{array}\right|^{1/2}}.
-  \end{aligned}
-  $$
-
-* Recall $$\mathbb{E}[X]=\mu$$ and $$\textrm{Cov}[X]=\Sigma$$.
-* If $$(X_1,X_2)$$ are independent, we have $$\Sigma_{12}=\Sigma_{21}=0$$ and thus:
-
-  $$
-  \begin{aligned}
-  f(x_1,x_2)&=\frac{1}{\sqrt{2\pi\Sigma_{11}}}\exp \left(\frac{-(x_1-\mu_1)^2}{2\Sigma_{11}}\right)\cdot \frac{1}{\sqrt{2\pi\Sigma_{22}}}\exp \left(\frac{-(x_2-\mu_2)^2}{2\Sigma_{22}}\right)
-  \end{aligned}
-  $$
-
-* Marginals of Gaussian $$X=(X_1,X_2)$$ are:
-
-  $$
-  \begin{aligned}
-  f_1(x_1)&=\frac{1}{\sqrt{2\pi\Sigma_{11}}}\exp \left({\frac{-(x_1-\mu_1)^2}{2\Sigma_{11}}}\right)\\
-  f_2(x_2)&=\frac{1}{\sqrt{2\pi\Sigma_{22}}}\exp \left({\frac{-(x_2-\mu_2)^2}{2\Sigma_{22}}}\right).
-  \end{aligned}
-  $$
-
-* These correspond to pdfs of $$X_1\sim\mathcal{N}(\mu_1,\Sigma_{11})$$ and $$X_2\sim \mathcal{N}(\mu_2,\Sigma_{22})$$.
-* Here are marginal pdfs for Gaussian with $$\mu=(0,1)$$ and $$\Sigma=\left[\begin{array}{cc}1 &-1/2\\ -1/2 & 1\end{array}\right]$$.
-
-  <figure><img src="../../.gitbook/assets/slides/ch3_marginalgaussian.png" alt="" width="350"></figure>
-
-* These correspond to pdfs of $$X_1\sim\mathcal{N}(0,1)$$ and $$X_2\sim \mathcal{N}(1,1)$$.
 
 * Conditional pdfs of Gaussian $$X=(X_1,X_2)$$ are:
 

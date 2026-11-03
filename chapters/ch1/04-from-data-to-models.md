@@ -29,7 +29,7 @@
    where $$\mu\in\mathbb{R}$$ and $$\sigma\in \mathbb{R}_+$$ are parameters of the model.
 
 * Parameters define behavior of the RV and can be “tuned" to match our data.
-* The cdf associated to the Gaussian model is:
+* The cdf associated with the Gaussian model is:
 
   $$
   F(x)=\frac{1}{2}\left(1+\textrm{erf}\left(\frac{(x-\mu)/\sigma}{\sqrt{2}}\right)\right),\quad x\in \mathcal{D},
@@ -38,8 +38,8 @@
 * **What other theoretical models do you know?**
 
 * Our goal is to investigate whether the available observations $$x_\omega,\; \omega \in \mathcal{S}$$ follow the pdf and cdf of a theoretical model that we postulate.
-* To verify hypothesis, we use the data to  construct *empirical* approximations for the pdf $$f(x)$$ and cdf $$F(x)$$ of the theoretical model and verify if these match.
-* Empirical approximations (a.k.a data-driven or sample-based approximations) are denoted as $$\hat{f}(x)$$ and $$\hat{F}(x)$$ and these are used to *estimate*  $$f(x)$$ and $$F(x)$$.
+* To verify this hypothesis, we use the data to  construct *empirical* approximations for the pdf $$f(x)$$ and cdf $$F(x)$$ of the theoretical model and verify if these match.
+* Empirical approximations (a.k.a. data-driven or sample-based approximations) are denoted as $$\hat{f}(x)$$ and $$\hat{F}(x)$$ and these are used to *estimate*  $$f(x)$$ and $$F(x)$$.
 
 The approach to construct $$\hat{f}(x)$$ and $$\hat{F}(x)$$ from data (for a continuous RV) can be summarized as follows:
 
@@ -50,7 +50,7 @@ The approach to construct $$\hat{f}(x)$$ and $$\hat{F}(x)$$ from data (for a con
    \hat{F}(x)=\frac{1}{S}\sum_{\omega \in \mathcal{S}}\mathbf{1}[x_\omega\leq x],\quad x\in \hat{\mathcal{D}}
    $$
 
-   This is the number of observations $$x_\omega$$ that take a value below $$x$$ (normalized by $$S$$).
+   This is the fraction of observations $$x_\omega$$ that take a value below $$x$$ (number normalized by $$S$$).
 
    The number of  observations is known as the *cumulative frequency* and is given by:
 
@@ -252,7 +252,7 @@ However, if we have data $$x_\omega,\,\omega \in \mathcal{S}$$, we can approxima
   $$
 {% endhint %}
 
-Intuition tells us that approx improve as we accumulate data  (as $$S$$ becomes large).  We will see later that this is indeed the case.
+Intuition tells us that approximations improve as we accumulate data  (as $$S$$ becomes large).  We will see later that this is indeed the case.
 
 Statistics can be related to model parameters (e.g., for a Gaussian: $$\mathbb{E}_X=\mu$$ and $$\mathbb{V}_X=\sigma^2$$). As such, empirical estimates of statistics can be used to obtain parameters.
 
@@ -331,9 +331,9 @@ An important family of summarizing statistics are the quantiles (a.k.a. percenti
 
 Some important observations about quantiles:
 
-* Since cdf can have a “staircase" form, there might be multiple values of $$x$$ satisfying $$F_X(x)=\alpha$$. Consequently, $$\alpha$$-quantile might be not be unique.
+* Since cdf can have a “staircase" form, there might be multiple values of $$x$$ satisfying $$F_X(x)=\alpha$$. Consequently, $$\alpha$$-quantile might not be unique.
 * Typically,  the definition of the quantile is refined by looking for the smallest or center values of $$x$$ satisfying $$F_X(x)\geq \alpha$$.
-* Quantiles are related to other summarizing statistics for interest. For instance:
+* Quantiles are related to other summarizing statistics of interest. For instance:
    * $$\mathbb{Q}_{X}(0.5)$$ is the *center value* of $$X$$ (a.k.a. the median and denoted as $$\mathbb{M}_X$$)
    * $$\mathbb{Q}_X(1)=\displaystyle\max_{x\in \mathcal{D}_X }x$$ is the maximum value of $$X$$
    * $$\mathbb{Q}_{X}(0)=\displaystyle \min_{x\in \mathcal{D}_X }x$$ is the minimum value of $$X$$
@@ -364,7 +364,7 @@ Some important observations about quantiles:
      \mathbb{SMO}_k[X]=\frac{\mathbb{E}[(X-\mathbb{E}[X])^k]}{\mathbb{SD}[X]^k}, \qquad k=1,2,3,4,...,
      $$
 
-      The third ($$k=3$$) standardized moment is known as *skewness* and the fourth ($$k=4$$) is known as *kurtosis*.  Skewness is a measure of symmetry of the pdf is while kurtosis is a measure of the nature of the tails of the pdf.
+      The third ($$k=3$$) standardized moment is known as *skewness* and the fourth ($$k=4$$) is known as *kurtosis*.  Skewness is a measure of the asymmetry of the pdf, while kurtosis is a measure of the nature of the tails of the pdf.
 
 <figure><img src="../../.gitbook/assets/slides/shape_pdf.png" alt="" width="420"><figcaption><p>Features of the probability density function that different summarizing statistics capture.</p></figcaption></figure>
 

@@ -2,8 +2,8 @@
 
 * In statistics, we use random variables (RVs) to *model* unknown (random) behavior.
 * An RV does not have a known value and exhibits variability.
-* Statistical view of the
-   world is significant departure from traditional deterministic
+* The statistical view of the
+   world is a significant departure from the traditional deterministic
    viewpoint (commonly used in engineering).
 
 * Under a deterministic view of the world, we *assume* that variables
@@ -30,7 +30,7 @@ Some observations:
 * Think of $$\omega$$ as being a pinball that carries data $$x_\omega$$
 * When you drop a pinball, this will “fall” in different locations of the domain $$\mathcal{D}_X$$
 * pdf/cdf tell us how “densely” pinballs accumulate in certain locations of the domain.
-* Where in the domain the pinball falls is an event and probability tell us how likely are specific event.
+* Where in the domain the pinball falls is an event and probabilities tell us how likely specific events are.
 * An event is a subdomain $$\mathcal{A}\subseteq \mathcal{D}_X$$ (location or set of locations in domain).
 * Probabilities are related to how densely pinballs accumulate in parts of domain.
 {% endhint %}

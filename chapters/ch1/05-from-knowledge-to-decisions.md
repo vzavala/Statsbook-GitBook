@@ -2,7 +2,7 @@
 
 We now have a characterization of a given random phenomenon (our RV model $$X$$) affecting a system of interest and we would like to exploit this to make decisions.
 
-In this context, it is important to make a couple of important observations:
+In this context, it is important to make a couple of observations:
 
 {% hint style="info" %}
 * Uncertainty *propagates* through systems in complex ways.
@@ -27,7 +27,7 @@ In this context, it is important to make a couple of important observations:
 * Nature of $$Y$$ depends on action $$u$$.  Can use action to mitigate/manipulate uncertainty of $$Y$$.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/slides/uncertainty_propagation.png" alt="" width="630"><figcaption><p>Illustration of propagation of a random variable 𝑋 through a system. The propagation results in a  random output 𝑌 that has different characteristics (e.g., higher variability/uncertainty.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/uncertainty_propagation.png" alt="" width="630"><figcaption><p>Illustration of propagation of a random variable 𝑋 through a system. The propagation results in a  random output 𝑌 that has different characteristics (e.g., higher variability/uncertainty).</p></figcaption></figure>
 
 Having data $$x_\omega,\; \omega \in \mathcal{S}$$ and a system model $$\varphi$$, we can characterize cdf, pdf, domain, and summarizing statistics of $$Y$$ using the following simulation procedure:
 
@@ -100,27 +100,23 @@ We would like now to find a decision $$u$$ that manipulates $$Y(u)=\varphi(X,u)$
 Consider the questions:
 
 {% hint style="info" %}
-* If we have a couple of competing decisions $$u$$ and $$u'$$ giving rise to random outputs $$Y(u)$$ and $$Y(u')$$. How can we tell which one is better?
+* If we have a couple of competing decisions $$u$$ and $$u'$$ giving rise to random outputs $$Y(u)$$ and $$Y(u')$$, how can we tell which one is better?
 * How can we find the best possible decision $$u$$? What do we mean by the “best"?
 {% endhint %}
 
-## Decision-Making Under Uncertainty
-
 <figure><img src="../../.gitbook/assets/slides/decision-making.png" alt="" width="489"><figcaption><p>Paradigms for decision-making under uncertainty. Comparison between decisions 𝑢, 𝑢' and associated outputs 𝑌(𝑢), 𝑌(𝑢') (top). Find best decision 𝑢* that shapes 𝑌(𝑢*) in a desirable way (bottom).</p></figcaption></figure>
 
-## Decision-Making under Uncertainty
-
-* If we assume *deterministic setting*  (no uncertainty), then $$Y(u)$$ and $$Y(u')$$ will each take a single value $$y(u)$$ and $$y(u')$$ and one would select, *unambigously*,  the one with smaller (or larger) value. For instance, one would select $$u$$ over $$u'$$ if $$y(u)\leq y(u')$$.
-* In a *setting under uncertainty* this is no longer possible because $$Y(u)$$ and $$Y'(u)$$ have multiple possible outcomes ($$Y(u)$$ and $$Y'(u)$$ are RV models)
+* If we assume *deterministic setting*  (no uncertainty), then $$Y(u)$$ and $$Y(u')$$ will each take a single value $$y(u)$$ and $$y(u')$$ and one would select, *unambiguously*,  the one with smaller (or larger) value. For instance, one would select $$u$$ over $$u'$$ if $$y(u)\leq y(u')$$.
+* In a *setting under uncertainty* this is no longer possible because $$Y(u)$$ and $$Y(u')$$ have multiple possible outcomes ($$Y(u)$$ and $$Y(u')$$ are RV models)
 * Concept of “better" under uncertainty is ambiguous and the mathematical statement $$Y(u)\leq Y(u')$$ does not even make sense.
-* Does $$Y(u)\leq Y(u')$$ mean that all outcomes of $$Y(u)$$ are lower than those $$Y(u')$$? Does it mean that a subset of outcomes are lower?
-* When making a decision under uncertainty, need to capture information embedded in $$Y(u)$$ and $$Y(u')$$.
+* Does $$Y(u)\leq Y(u')$$ mean that all outcomes of $$Y(u)$$ are lower than those of $$Y(u')$$? Does it mean that a subset of outcomes are lower?
+* When making a decision under uncertainty, we need to capture information embedded in $$Y(u)$$ and $$Y(u')$$.
 * This requires comparing RVs consistently; e.g., by using their cdfs or by using *risk measures* (summarizing statistics).
 
 ## Example: Gibbs Reactor
 
-* Can counteract variability in pressure $$X$$ by operating at modifying temperature ($$u$$).
-* We compare empirical pdf and cdf for conversion at low $$Y(u)$$ and high $$Y(u')$$ temp
+* Can counteract variability in pressure $$X$$ by modifying the operating temperature ($$u$$).
+* We compare empirical pdf and cdf for conversion at low ($$Y(u)$$) and high ($$Y(u')$$) temperature
 * Should we operate at low or high temp?
 * By comparing cdfs, we can see that operating at low temp is *consistently* more likely to achieve higher yields.
 

@@ -5,7 +5,7 @@ As engineers, we often use *fundamental laws* to make *decisions*:
 {% hint style="info" %}
 * Discovery of fundamental laws has been the result of extensive collection and analysis of observations (data)
 * Fundamental law is often expressed in the form of a mechanistic model
-* Mechanistic model provides a concise summary of observations (knowledge) that allow us to predict and generalize
+* Mechanistic model provides a concise summary of observations (knowledge) that allows us to predict and generalize
 {% endhint %}
 
 {% hint style="info" %}
@@ -31,9 +31,9 @@ However:
 
 {% hint style="info" %}
 * Model predictions will *always* face a certain degree of *uncertainty* (due to limited knowledge/understanding/data or due to *random* phenomena affecting systems).
-* Despite these limitations, we still need to be able to *make decisions*. In fact, we (as humans), make predictions and decisions in our daily lives.
+* Despite these limitations, we still need to be able to *make decisions*. In fact, we (as humans) make predictions and decisions in our daily lives.
 * The human brain naturally gathers knowledge (learns) from observations by building empirical models and has the ability to blend such empirical knowledge with mechanistic knowledge.
-* The human brain has a natural ability to hedge against uncertainty and adapts decisions based on new knowledge.
+* The human brain has a natural ability to hedge against uncertainty and to adapt decisions based on new knowledge.
 {% endhint %}
 
 {% hint style="info" %}
@@ -41,12 +41,12 @@ However:
 {% endhint %}
 
 {% hint style="info" %}
-**Example of brain learning:** riding a bicycle, cooking.
+**Examples of brain learning:** riding a bicycle, cooking.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/phen_mech_rand.png" alt="" width="630"></figure>
 
-Decision-making relies on ability to characterize of what is known (predictable) and not known (not predictable).
+Decision-making relies on the ability to characterize what is known (predictable) and not known (not predictable).
 
 *Statistics* is the branch of mathematics that offers tools to:
 
@@ -55,7 +55,7 @@ Decision-making relies on ability to characterize of what is known (predictable)
 * Systematically make decisions in the face of uncertainty
 
 {% hint style="info" %}
-For an engineering perspective, *statistics* aids the discovery of fundamental laws and the development of mechanistic and empirical models as well as the characterization of random phenomena.
+From an engineering perspective, *statistics* aids the discovery of fundamental laws and the development of mechanistic and empirical models as well as the characterization of random phenomena.
 {% endhint %}
 
 {% hint style="info" %}
@@ -72,7 +72,7 @@ From a scientific perspective, *statistics* provides a framework for thinking ab
 
 {% hint style="info" %}
 * What is known and unknown about this system?
-* What is source of uncertainty?
+* What is the source of uncertainty?
 {% endhint %}
 
 Collect  100 observations and monitor mismatch  $$\epsilon(\omega)=f_3(\omega)-f_1(\omega)-f_2(\omega)$$
@@ -144,13 +144,13 @@ plt.show()
 
 ## Example: Gibbs Reactor
 
-* Consider a reactor under which the reaction $$CO+2H_2\leftrightarrow CH_3OH$$ takes place
+* Consider a reactor in which the reaction $$CO+2H_2\leftrightarrow CH_3OH$$ takes place
 
   <figure><img src="../../.gitbook/assets/slides/gibbs_diagram.png" alt="" width="210"></figure>
 
   <figure><img src="../../.gitbook/assets/slides/ch1_gibbs_data.png" alt="" width="350"></figure>
 
-* Data seems to indicate that reaction favored (achieves higher conversion $$\xi$$) at high pressure ($$P$$) and low temperature ($$T$$) but this is blurred by variability.
+* Data seem to indicate that the reaction is favored (achieves higher conversion $$\xi$$) at high pressure ($$P$$) and low temperature ($$T$$) but this is blurred by variability.
 
 {% hint style="info" %}
 * What is known and unknown about this system?
@@ -219,7 +219,7 @@ K_{eq}&=\frac{(\mu_{CH_3OH}+\xi\cdot \mu_{CO})}{(\mu_{CO}-\xi\mu_{CO})(\mu_{H_2}
 \end{aligned}
 $$
 
-* We know fundamental conservation and thermodynamic laws hold and mechanistic model allow us to predict $$\xi$$ from $$P$$ and $$T$$.
+* We know fundamental conservation and thermodynamic laws hold and the mechanistic model allows us to predict $$\xi$$ from $$P$$ and $$T$$.
 * This knowledge, however, is limited (e.g., makes assumptions, cannot explain random behavior).
 * How to predict $$\xi$$ as a function of $$P$$ and $$T$$ without any mechanistic knowledge?
 * What are trade-offs between mechanistic and empirical knowledge?

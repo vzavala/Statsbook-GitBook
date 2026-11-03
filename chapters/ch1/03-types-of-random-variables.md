@@ -4,7 +4,7 @@ RVs are categorized as multivariate vs. univariate:
 
 {% hint style="info" %}
 * A *multivariate* RV $$X=(X_{1},X_{2},...,X_n)$$ has realizations that generate vector values $$x_{\omega}=(x_{\omega,1},x_{\omega,2},...,x_{\omega,n})\in \mathbb{R}^n$$.
-* A *univariate* RV $$X$$ is a multivariate with $$n=1$$ and has realizations generate scalar values $$x_\omega\in \mathbb{R}$$.
+* A *univariate* RV $$X$$ is a multivariate RV with $$n=1$$ whose realizations are scalar values $$x_\omega\in \mathbb{R}$$.
 {% endhint %}
 
 {% hint style="info" %}
@@ -12,13 +12,13 @@ RVs are categorized as multivariate vs. univariate:
 * For a multivariate RV, a pinball $$\omega$$ carries a set of numbers $$x_{\omega}=(x_{\omega,1},x_{\omega,2},...,x_{\omega,n})$$ (e.g., temperature, pressure, conversion)
 {% endhint %}
 
-For now, we will focus discussion on univariate RVs.
+For now, we will focus our discussion on univariate RVs.
 
 RVs are categorized as continuous vs. discrete:
 
 {% hint style="info" %}
-* A *continuous* RV $$X$$ is that in which the domain $$\mathcal{D}_X$$ is continuous; e.g., $$X$$ has realizations satisfying $$0\leq x_{\omega}\leq 1$$.
-* A *discrete* RV $$X$$ is that in which the domain $$\mathcal{D}_X$$ is discrete; e.g., $$X$$ has realizations satisfying $$x_{\omega}\in \{0,1\}$$.
+* A *continuous* RV $$X$$ is one in which the domain $$\mathcal{D}_X$$ is continuous; e.g., $$X$$ has realizations satisfying $$0\leq x_{\omega}\leq 1$$.
+* A *discrete* RV $$X$$ is one in which the domain $$\mathcal{D}_X$$ is discrete; e.g., $$X$$ has realizations satisfying $$x_{\omega}\in \{0,1\}$$.
 {% endhint %}
 
 Many RV models are available that apply to different categories.
@@ -85,7 +85,7 @@ A discrete RV is easy to handle computationally (simple summations and counting)
 
   $$
   \begin{aligned}
-  f(0)&=P(X=0)=\frac{1}{10}\sum_{\omega \in \Omega }\mathbf{1}[x_\omega=0]=0.4
+  f(0)&=\mathbb{P}(X=0)=\frac{1}{10}\sum_{\omega \in \Omega }\mathbf{1}[x_\omega=0]=0.4
   \end{aligned}
   $$
 
@@ -204,10 +204,10 @@ The pdf and cdf have the following properties:
   \end{aligned}
   $$
 
-   We thus have that pdf tell us the probability that $$X$$ is in a *neighborhood* of $$x$$.
+   We thus have that the pdf tells us the probability that $$X$$ is in a *neighborhood* of $$x$$.
 
-* Not that setting $$\Delta x\to 0$$ implies that $$\mathbb{P}(X=x)=0$$.
-* The 3rd,4th, 5th properties are analogous to the discrete case but we see that summation are replaced with  integration operations.
+* Note that setting $$\Delta x\to 0$$ implies that $$\mathbb{P}(X=x)=0$$.
+* The 3rd, 4th, and 5th properties are analogous to the discrete case, but summations are replaced with integrals.
 
 A continuous RV is more difficult to handle computationally since it involves integrals instead of summations (this prevents the use of simple counting operations).
 
