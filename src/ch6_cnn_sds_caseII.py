@@ -17,7 +17,7 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # %% [markdown]
 # **Additional example: CNN classification of liquid-crystal droplet images (case II).**
 # Same CNN idea as the endotoxin examples, applied to RGB micrographs of droplets with and without
-# SDS surfactant (0.05 nM SDS). The convolutional layer has one $3\times 3\times 3$ filter (3 color channels)
+# SDS surfactant (0.05 nM SDS). As in the book, the convolutional layer has two $3\times 3\times 3$ filters (3 color channels)
 # followed by ReLU and a fully connected layer. (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024.)
 
 
@@ -81,9 +81,9 @@ valid_loader = DataLoader(valid_dataset, batch_size=10, shuffle=False)
 class SimpleCNN(nn.Module):
     def __init__(self):
         super(SimpleCNN, self).__init__()
-        self.conv1 = nn.Conv2d(3, 1, kernel_size=3, padding=1)
+        self.conv1 = nn.Conv2d(3, 2, kernel_size=3, padding=1)   # two 3x3 filters
         self.relu = nn.ReLU()
-        self.fc1 = nn.Linear(256*256*1, 2)  # Assuming input image size is 50x50 and 2 classes
+        self.fc1 = nn.Linear(256*256*2, 2)  # 256x256 images, 2 activation maps, 2 classes
 
     def forward(self, x):
         x = self.conv1(x)

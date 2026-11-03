@@ -781,7 +781,7 @@ Notebook [`ch6_cnn_sds_caseII.ipynb`](https://colab.research.google.com/github/v
 
 **Additional example: CNN classification of liquid-crystal droplet images (case II).**
 Same CNN idea as the endotoxin examples, applied to RGB micrographs of droplets with and without
-SDS surfactant (0.05 nM SDS). The convolutional layer has one $$3\times 3\times 3$$ filter (3 color channels)
+SDS surfactant (0.05 nM SDS). As in the book, the convolutional layer has two $$3\times 3\times 3$$ filters (3 color channels)
 followed by ReLU and a fully connected layer. (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024.)
 
 ```python
@@ -859,9 +859,9 @@ valid_loader = DataLoader(valid_dataset, batch_size=10, shuffle=False)
 class SimpleCNN(nn.Module):
     def __init__(self):
         super(SimpleCNN, self).__init__()
-        self.conv1 = nn.Conv2d(3, 1, kernel_size=3, padding=1)
+        self.conv1 = nn.Conv2d(3, 2, kernel_size=3, padding=1)   # two 3x3 filters
         self.relu = nn.ReLU()
-        self.fc1 = nn.Linear(256*256*1, 2)  # Assuming input image size is 50x50 and 2 classes
+        self.fc1 = nn.Linear(256*256*2, 2)  # 256x256 images, 2 activation maps, 2 classes
 
     def forward(self, x):
         x = self.conv1(x)
@@ -924,67 +924,85 @@ for epoch in range(num_epochs):
 ```
 
 ```
-Epoch [1/40], Loss: 3.4174, Train Accuracy: 46.25%, Validation Accuracy: 65.00%
-Epoch [2/40], Loss: 1.0402, Train Accuracy: 57.50%, Validation Accuracy: 50.00%
-Epoch [3/40], Loss: 1.0508, Train Accuracy: 43.75%, Validation Accuracy: 60.00%
-Epoch [4/40], Loss: 0.7722, Train Accuracy: 52.50%, Validation Accuracy: 70.00%
-Epoch [5/40], Loss: 0.5081, Train Accuracy: 70.00%, Validation Accuracy: 65.00%
-Epoch [6/40], Loss: 0.4463, Train Accuracy: 78.75%, Validation Accuracy: 85.00%
+Epoch [1/40], Loss: 0.8659, Train Accuracy: 50.00%, Validation Accuracy: 55.00%
+Epoch [2/40], Loss: 0.4998, Train Accuracy: 76.25%, Validation Accuracy: 75.00%
+Epoch [3/40], Loss: 0.3524, Train Accuracy: 95.00%, Validation Accuracy: 80.00%
 ```
 
 ```
-Epoch [7/40], Loss: 0.4289, Train Accuracy: 83.75%, Validation Accuracy: 80.00%
-Epoch [8/40], Loss: 0.3897, Train Accuracy: 86.25%, Validation Accuracy: 85.00%
-Epoch [9/40], Loss: 0.3858, Train Accuracy: 91.25%, Validation Accuracy: 65.00%
-Epoch [10/40], Loss: 0.3341, Train Accuracy: 87.50%, Validation Accuracy: 65.00%
-Epoch [11/40], Loss: 0.4578, Train Accuracy: 76.25%, Validation Accuracy: 85.00%
-Epoch [12/40], Loss: 0.3614, Train Accuracy: 87.50%, Validation Accuracy: 70.00%
+Epoch [4/40], Loss: 0.2010, Train Accuracy: 98.75%, Validation Accuracy: 60.00%
+Epoch [5/40], Loss: 0.1884, Train Accuracy: 88.75%, Validation Accuracy: 60.00%
+Epoch [6/40], Loss: 0.1086, Train Accuracy: 100.00%, Validation Accuracy: 80.00%
 ```
 
 ```
-Epoch [13/40], Loss: 0.3069, Train Accuracy: 85.00%, Validation Accuracy: 50.00%
-Epoch [14/40], Loss: 0.4344, Train Accuracy: 76.25%, Validation Accuracy: 50.00%
-Epoch [15/40], Loss: 0.3015, Train Accuracy: 86.25%, Validation Accuracy: 90.00%
-Epoch [16/40], Loss: 0.2287, Train Accuracy: 96.25%, Validation Accuracy: 90.00%
-Epoch [17/40], Loss: 0.2038, Train Accuracy: 96.25%, Validation Accuracy: 90.00%
+Epoch [7/40], Loss: 0.0758, Train Accuracy: 100.00%, Validation Accuracy: 70.00%
+Epoch [8/40], Loss: 0.0508, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [9/40], Loss: 0.0312, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
 ```
 
 ```
-Epoch [18/40], Loss: 0.1900, Train Accuracy: 97.50%, Validation Accuracy: 80.00%
-Epoch [19/40], Loss: 0.1962, Train Accuracy: 96.25%, Validation Accuracy: 80.00%
-Epoch [20/40], Loss: 0.1513, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
-Epoch [21/40], Loss: 0.1350, Train Accuracy: 98.75%, Validation Accuracy: 85.00%
-Epoch [22/40], Loss: 0.1213, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
+Epoch [10/40], Loss: 0.0235, Train Accuracy: 100.00%, Validation Accuracy: 70.00%
+Epoch [11/40], Loss: 0.0194, Train Accuracy: 100.00%, Validation Accuracy: 60.00%
+Epoch [12/40], Loss: 0.0154, Train Accuracy: 100.00%, Validation Accuracy: 70.00%
 ```
 
 ```
-Epoch [23/40], Loss: 0.1139, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
-Epoch [24/40], Loss: 0.1069, Train Accuracy: 100.00%, Validation Accuracy: 80.00%
-Epoch [25/40], Loss: 0.1074, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
-Epoch [26/40], Loss: 0.1040, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
-Epoch [27/40], Loss: 0.0886, Train Accuracy: 100.00%, Validation Accuracy: 80.00%
-Epoch [28/40], Loss: 0.0886, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
+Epoch [13/40], Loss: 0.0130, Train Accuracy: 100.00%, Validation Accuracy: 60.00%
+Epoch [14/40], Loss: 0.0109, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [15/40], Loss: 0.0096, Train Accuracy: 100.00%, Validation Accuracy: 60.00%
 ```
 
 ```
-Epoch [29/40], Loss: 0.0818, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
-Epoch [30/40], Loss: 0.0825, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
-Epoch [31/40], Loss: 0.0849, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
-Epoch [32/40], Loss: 0.0620, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
-Epoch [33/40], Loss: 0.0602, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
+Epoch [16/40], Loss: 0.0083, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [17/40], Loss: 0.0075, Train Accuracy: 100.00%, Validation Accuracy: 70.00%
+Epoch [18/40], Loss: 0.0070, Train Accuracy: 100.00%, Validation Accuracy: 65.00%
 ```
 
 ```
-Epoch [34/40], Loss: 0.0589, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
-Epoch [35/40], Loss: 0.0535, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
-Epoch [36/40], Loss: 0.0504, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
-Epoch [37/40], Loss: 0.0473, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
-Epoch [38/40], Loss: 0.0454, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
+Epoch [19/40], Loss: 0.0061, Train Accuracy: 100.00%, Validation Accuracy: 70.00%
+Epoch [20/40], Loss: 0.0055, Train Accuracy: 100.00%, Validation Accuracy: 70.00%
+Epoch [21/40], Loss: 0.0051, Train Accuracy: 100.00%, Validation Accuracy: 70.00%
 ```
 
 ```
-Epoch [39/40], Loss: 0.0482, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [40/40], Loss: 0.0455, Train Accuracy: 100.00%, Validation Accuracy: 80.00%
+Epoch [22/40], Loss: 0.0049, Train Accuracy: 100.00%, Validation Accuracy: 70.00%
+Epoch [23/40], Loss: 0.0043, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [24/40], Loss: 0.0040, Train Accuracy: 100.00%, Validation Accuracy: 65.00%
+```
+
+```
+Epoch [25/40], Loss: 0.0037, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [26/40], Loss: 0.0033, Train Accuracy: 100.00%, Validation Accuracy: 65.00%
+Epoch [27/40], Loss: 0.0031, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+```
+
+```
+Epoch [28/40], Loss: 0.0030, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [29/40], Loss: 0.0028, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [30/40], Loss: 0.0026, Train Accuracy: 100.00%, Validation Accuracy: 70.00%
+```
+
+```
+Epoch [31/40], Loss: 0.0025, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [32/40], Loss: 0.0024, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [33/40], Loss: 0.0022, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+```
+
+```
+Epoch [34/40], Loss: 0.0021, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [35/40], Loss: 0.0021, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [36/40], Loss: 0.0019, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+```
+
+```
+Epoch [37/40], Loss: 0.0018, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [38/40], Loss: 0.0018, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [39/40], Loss: 0.0017, Train Accuracy: 100.00%, Validation Accuracy: 70.00%
+```
+
+```
+Epoch [40/40], Loss: 0.0015, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
 ```
 
 ```python
@@ -1113,17 +1131,17 @@ filter_weight
 ```
 
 ```
-array([[[-0.01799203,  0.09792089,  0.15351167],
-        [-0.17779666, -0.15874638, -0.08697973],
-        [-0.14132099,  0.01536683, -0.03535086]],
+array([[[ 0.00793303,  0.12363274,  0.17832562],
+        [-0.15106712, -0.13235271, -0.0615238 ],
+        [-0.11441698,  0.04188084, -0.00967149]],
 
-       [[ 0.0841165 , -0.14572681,  0.01278806],
-        [-0.13791113,  0.06674125,  0.15274496],
-        [-0.04853722, -0.08729775,  0.14521158]],
+       [[ 0.09639436, -0.13328643,  0.0248347 ],
+        [-0.12532292,  0.07928412,  0.16485187],
+        [-0.03588149, -0.07479373,  0.15736443]],
 
-       [[ 0.10944358,  0.05032229,  0.15887131],
-        [ 0.1647208 ,  0.07114934,  0.07664915],
-        [-0.09845033,  0.0082792 , -0.10234494]]], dtype=float32)
+       [[ 0.1072153 ,  0.04824487,  0.1565435 ],
+        [ 0.16303168,  0.06938703,  0.07461521],
+        [-0.099718  ,  0.00680665, -0.10399233]]], dtype=float32)
 ```
 
 ```python
