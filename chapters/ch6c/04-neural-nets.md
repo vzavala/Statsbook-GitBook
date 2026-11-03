@@ -15,7 +15,7 @@
 * Fully connected NNs are parametric models of form:
 
   $$
-  Y=g(X,\theta)+\epsilon.
+  Y=m(X,\theta)+\epsilon.
   $$
 
 * Model $$m(X,\theta)$$ is built by using basis functions that are mixed *hierarchically*.

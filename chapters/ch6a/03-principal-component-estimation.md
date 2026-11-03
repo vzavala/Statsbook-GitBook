@@ -24,7 +24,7 @@
   $$
   \begin{aligned}
   \mathbf{W}&=[\mathbf{W}_1|\mathbf{W}_2]\\
-  &=[\underbrace{w_1,w_2,...,w_{n_1}}_{\textrm{low information}}|\underbrace{w_{n_1+1},w_{n_1+2},...,w_n}_{\textrm{high information}}].
+  &=[\underbrace{w_1,w_2,...,w_{n_1}}_{\textrm{high information}}|\underbrace{w_{n_1+1},w_{n_1+2},...,w_n}_{\textrm{low information}}].
   \end{aligned}
   $$
 
@@ -86,7 +86,7 @@
 * This is because the eigs of kernel matrix $$\mathbf{X}^T\mathbf{X}$$ are:
 
   $$
-  \lambda=(1.45\times 10^{8},2.36\times 10^{5},1.97\times 10^{3}, -2.99\times 10^{-8},1.47\times 10^{-10},-1.72\times 10^{-11}).
+  \lambda=(1.45\times 10^{8},2.36\times 10^{5},1.97\times 10^{3}, -5.65\times 10^{-8},-1.23\times 10^{-9},2.18\times 10^{-12}).
   $$
 
 * Three parameters cannot be estimated reliably.

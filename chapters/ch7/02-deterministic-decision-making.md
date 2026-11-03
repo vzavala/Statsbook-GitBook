@@ -73,7 +73,7 @@
 
 * We can see that cost is minimized with a generator of capacity $$u_D^*=6$$.
 * We conduct MC simulations to determine how generator performs under different load outcomes.
-* Simulations generate costs $$y_\omega(u)=\alpha_R\cdot r_\omega^2 + \alpha_u\cdot (u_D^*)^2$$ for $$\omega \in \mathcal{S}$$.
+* Simulations generate costs $$y_\omega(u)=\alpha_R\cdot {r_\omega(u^*_D)}^2 + \alpha_u\cdot (u_D^*)^2$$ for $$\omega \in \mathcal{S}$$.
 * Average cost of new system $$67.4$$ and average cost of current system is $$50.1$$.
 * However, new system avoids extreme/peak costs (helps with budgeting).
 

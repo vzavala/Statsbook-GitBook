@@ -87,7 +87,7 @@
 
 * Mean prediction is $$\mathbb{E}[y]=m(x)$$ and variance is $$\mathbb{V}[y]=\sigma^2(x)$$.
 * One use kriging to mix physics and data-driven models.
-* Done by defining $$f(\mathbf{y}|\mathbf{m},\theta)$$ as $$\mathcal{N}(h(\mathbf{x},\theta)+\mathbf{m},\sigma \mathbf{I})$$ where $$h(\mathbf{x},\theta)$$ is physics model.
+* Done by defining $$f(\mathbf{y}|\mathbf{m},\theta)$$ as $$\mathcal{N}(h(\mathbf{x},\theta)+\mathbf{m},\sigma^2 \mathbf{I})$$ where $$h(\mathbf{x},\theta)$$ is physics model.
 
 ## Example: Kriging Model for Gibbs Reactor
 

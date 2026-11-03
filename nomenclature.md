@@ -382,7 +382,7 @@ of every notebook in the book.
 | Slides | Python | Meaning |
 |---|---|---|
 | $$\mathbf{W}$$ | `W` | eigenvectors of $$\mathbf{X}^T\mathbf{X}$$ (rows: 1, $$X_1,\dots,X_5$$) |
-| $$\tilde{\mathbf{W}}$$, $$\kappa$$ | `W_sparse`, `kappa` | sparsified eigenvectors and sparsity weight |
+| $$\tilde{\mathbf{W}}$$ | `W_sparse` | sparse eigenvectors with one nonzero entry each |
 
 #### [`ch6_gibbs_pca_estimation_svd`](chapters/ch6a/05-singular-value-decomposition.md)
 

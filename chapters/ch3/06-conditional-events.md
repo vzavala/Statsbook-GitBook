@@ -65,8 +65,8 @@ Compute probability that sensor or processor last more than a year.
 
   $$
   \begin{aligned}
-  \int_{x\in \mathcal{A}_1}f(x)dx&=\int_{1}^{\infty}\int_{0}^{\infty}f(x_1,x_2)dx_1dx_2=0.37\\
-  \int_{x\in \mathcal{A}_2}f(x)dx&=\int_{0}^{\infty}\int_{1}^{\infty}f(x_1,x_2)dx_1dx_2=0.90\\
+  \int_{x\in \mathcal{A}_1}f(x)dx&=\int_{0}^{\infty}\int_{1}^{\infty}f(x_1,x_2)dx_1dx_2=0.37\\
+  \int_{x\in \mathcal{A}_2}f(x)dx&=\int_{1}^{\infty}\int_{0}^{\infty}f(x_1,x_2)dx_1dx_2=0.90\\
   \int_{x\in \mathcal{A}_1\cap\mathcal{A}_2}f(x)dx&=\int_{1}^{\infty}\int_{1}^{\infty}f(x_1,x_2)dx_1dx_2=0.33.
   \end{aligned}
   $$

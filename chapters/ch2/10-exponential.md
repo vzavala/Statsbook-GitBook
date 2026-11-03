@@ -102,15 +102,15 @@ For how long will a tracer particle reside in the system?  What factors influenc
 * Material balance reveals that:
 
   $$
-  f_T(t)=\frac{C(t)}{C_0}= \frac{1}{\tau}e^{-t/\tau}\;\; \textrm{with}\;\; \tau=V/F
+  f_T(t)=\frac{C(t)}{C_0}= \frac{1}{\tau}e^{-t/\tau}\;\; \textrm{with}\;\; \tau=V/Q
   $$
 
 * Interpret $$T$$ as random time required for a particle to exit system (residence time)
 * Pdf of $$T$$ is $$f_T(t)$$ is interpreted as fraction of injected particles exiting at time $$T=t$$
 * Balance suggests that $$T\sim\textrm{Exp}(\tau)$$
 
-* Mean residence time is $$\mathbb{E}[T]=\tau=V/F$$ and variance is $$\mathbb{V}[T]=(V/F)^2$$.
-* What is effect of $$V$$ and $$F$$ on uncertainty?
+* Mean residence time is $$\mathbb{E}[T]=\tau=V/Q$$ and variance is $$\mathbb{V}[T]=(V/Q)^2$$.
+* What is effect of $$V$$ and $$Q$$ on uncertainty?
 * Fraction of particles that have exited up to time $$t$$ is $$\mathbb{P}(T\leq t)=F_T(t)$$.
 * $$F_T(t)=\displaystyle\int_{0}^tf_T(t')dt'=(1-e^{-t/\tau})$$ and thus $$F(0)=0$$ and $$F(\infty)=1$$.
 * Fraction of particles that remain in system at time $$t$$  is $$\mathbb{P}(T>t)=1-F_T(t)=e^{-t/\tau}$$

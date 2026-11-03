@@ -193,12 +193,12 @@ $$
   $$
   \begin{aligned}
   \Sigma_{2|1}&=\Sigma_{22}-\Sigma_{21}\Sigma_{11}^{-1}\Sigma_{12}\\
-  &=0.02-0.53\cdot (776.94)^{-1}\cdot 0.53\\
-  &=0.019
+  &=0.02-1.83\cdot (776.94)^{-1}\cdot 1.83\\
+  &=0.015
   \end{aligned}
   $$
 
-   This is a relative reduction of *5%*.
+   This is a relative reduction of *25%*.
 
 * To quantify how knowledge of conversion affects uncertainty in pressure, we obtain variance of $$X_1|X_2$$:
 
@@ -210,7 +210,7 @@ $$
   \end{aligned}
   $$
 
-   This is a relative reduction of *21%*. Knowledge of conversion has a larger effect.
+   This is a relative reduction of *21%*. Knowledge of conversion has a similar effect.
 
 #### Python implementation: Conditional variance of pressure and conversion
 

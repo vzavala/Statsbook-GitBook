@@ -117,7 +117,7 @@
 
 * Spectrum that decays rapidly indicates that matrix has a high degree of redundancy (can be compressed more easily).
 
-  <figure><img src="../../.gitbook/assets/slides/spectrum.png" alt="" width="210"><figcaption><p>Illustration of spectrum of a couple of covariance matrices small amount of redundancy (solid) and high amount of redundancy (dashed).</p></figcaption></figure>
+  <figure><img src="../../.gitbook/assets/slides/spectrum.png" alt="" width="210"><figcaption><p>Illustration of spectrum of a couple of covariance matrices with high redundancy (solid) and low redundancy (dashed).</p></figcaption></figure>
 
 * Mixtures $$T_1,T_2,...T_n$$ (a.k.a. principal components) contain all info about $$X$$.
 * Eigenvec matrix $$\mathbf{W}$$ *projects* data $$\mathbf{X}$$ into space of PCs as:

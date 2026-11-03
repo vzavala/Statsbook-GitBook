@@ -8,7 +8,7 @@
 * We postulate relationship between $$X$$ and $$Y$$:
 
   $$
-  Y=g(X,\theta)+\epsilon
+  Y=m(X,\theta)+\epsilon
   $$
 
    where $$\theta \in \mathbb{R}^n$$ are params, $$g(X,\theta)$$ is model, and $$\epsilon$$ is a noise RV.
@@ -16,7 +16,7 @@
 * Goal is to find params that best explains our obs (data):
 
   $$
-  y_\omega=g(x_\omega,\theta)+\epsilon_\omega,\; \omega \in \mathcal{S}
+  y_\omega=m(x_\omega,\theta)+\epsilon_\omega,\; \omega \in \mathcal{S}
   $$
 
 * Estimation problem is known as a *classification* problem.

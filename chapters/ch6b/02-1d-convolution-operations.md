@@ -61,8 +61,8 @@
 
   $$
   \begin{aligned}
-  \varphi_k&=w_{-1}\cdot f_{k-1}+w_{0}\cdot f_{k}+ w_{+1}\cdot f_{k+1}\\
-  &=\sum_{j=-1}^{+1}w_jf_{k+j}.
+  \varphi_k&=w_{+1}\cdot f_{k-1}+w_{0}\cdot f_{k}+ w_{-1}\cdot f_{k+1}\\
+  &=\sum_{j=-1}^{+1}w_j\cdot f_{k-j}.
   \end{aligned}
   $$
 
@@ -75,8 +75,8 @@
 
   $$
   \begin{aligned}
-  \varphi_k&=\sum_{j=-(N-1)/2}^{(N-1)/2}w_j\cdot f_{k+j}\\
-  &=\sum_{j=-\infty}^{\infty} g_j\cdot f_{k+j}
+  \varphi_k&=\sum_{j=-(N-1)/2}^{(N-1)/2}w_j\cdot f_{k-j}\\
+  &=\sum_{j=-\infty}^{\infty} f_{k-j}\cdot g_j
   \end{aligned}
   $$
 
@@ -252,7 +252,7 @@ plt.show()
 * Derivative can be written as weighted sum:
 
   $$
-  \varphi_k=g_{-1}f_{k-1}+g_0f_k+g_1f_{k+1}.
+  \varphi_k=g_{+1}\cdot f_{k-1}+g_0\cdot f_k+g_{-1}\cdot f_{k+1}.
   $$
 
 * This is a convolution with filter $$g=(-1,0,1)$$.

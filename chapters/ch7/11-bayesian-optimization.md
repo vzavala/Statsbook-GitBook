@@ -23,14 +23,14 @@
 * Popular modeling approach used in BO is *kriging*, as it captures nonlinear behavior and quantifies uncertainty.
 
 * Imagine we have a kriging model built using data $$(u_\omega,y_\omega),\; \omega\in \mathcal{S}$$.
-* Kriging provides mean prediction model $$m_\ell(x)$$ and uncertainty model $$\sigma_\ell(u)$$.
-* Define initial dataset as $$\mathcal{D}_\ell$$ and initial model as $$(m_\ell(u),\sigma_\ell(u))$$.
+* Kriging provides mean prediction model $$\mu_\ell(u)$$ and uncertainty model $$\sigma_\ell(u)$$.
+* Define initial dataset as $$\mathcal{D}_\ell$$ and initial model as $$(\mu_\ell(u),\sigma_\ell(u))$$.
 * Here, $$\ell$$ is an iteration counter.
 * We can use prediction/uncertainty model for a couple of tasks:
    * Compute decision $$u_{\ell+1}$$ that maximizes the expected performance:
 
      $$
-     \mathop{\max}_{u\in \mathcal{U}}\;m_\ell(u).
+     \mathop{\max}_{u\in \mathcal{U}}\;\mu_\ell(u).
      $$
 
    * Compute decision $$u_{\ell+1}$$ that maximizes information:
@@ -39,16 +39,16 @@
      \mathop{\max}_{u\in \mathcal{U}}\;\sigma_\ell(u).
      $$
 
-* 1st task is *exploitation*, as it exploits knowledge ($$m_\ell(u)$$) to max performance.
+* 1st task is *exploitation*, as it exploits knowledge ($$\mu_\ell(u)$$) to max performance.
 * 2nd task is *exploration*, as it explores input space to max info ($$\sigma_\ell(u)$$).
 
 * Select new decision $$u'$$ that balances exploration/exploitation by solving:
 
   $$
-  \max_{u\in \mathcal{U}}\; m_\ell(u) + \kappa \sigma_\ell(u).
+  \max_{u\in \mathcal{U}}\; \mu_\ell(u) + \kappa \sigma_\ell(u).
   $$
 
-* Objective  is known as the *acquisition function* $$AF_{\ell}(u)=m_\ell(u) + \kappa\cdot \sigma_\ell(x)$$.
+* Objective  is known as the *acquisition function* $$AF_{\ell}(u)=\mu_\ell(u) + \kappa\cdot \sigma_\ell(u)$$.
 * $$\kappa\in \mathbb{R}_+$$ is parameter that balances exploration/exploitation.
 * Run experiment $$u'$$ in the system to obtain new data point $$(u',y')$$ and augment dataset $$\mathcal{D}_{\ell+1}\leftarrow \mathcal{D}_\ell\cup (u',y')$$.
 * Use new dataset to re-train kriging model $$\mu_{\ell+1}(u),\sigma_{\ell+1}(u)$$ and use this to obtain new input that maximizes $$AF_{\ell+1}(u)$$.

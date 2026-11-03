@@ -181,14 +181,14 @@ plt.show()
 * Consider you want to compute derivative:
 
   $$
-  \nabla^2 f(x,u)=\frac{\partial^2 f(x,y)}{\partial x^2}+ \frac{\partial^2 f(x,y)}{\partial y^2}.
+  \nabla^2 f(x,y)=\frac{\partial^2 f(x,y)}{\partial x^2}+ \frac{\partial^2 f(x,y)}{\partial y^2}.
   $$
 
 * This derivative is known as Laplace operator and can be approx as:
 
   $$
   \begin{aligned}
-  \nabla^2 f(x,u)&=\frac{f(x-\Delta,y)-2f(x,y)+f(x+\Delta,y)}{\Delta^2}+
+  \nabla^2 f(x,y)&=\frac{f(x-\Delta,y)-2f(x,y)+f(x+\Delta,y)}{\Delta^2}+
   \frac{f(x,y-\Delta)-2f(x,y)+f(x,y+\Delta)}{\Delta^2}\\
   &=\frac{f(x-\Delta,y)+f(x+\Delta ,y)-4f(x,y)+f(x,y-\Delta)+f(x,y+\Delta)}{\Delta^2}
   \end{aligned}

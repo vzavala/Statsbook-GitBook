@@ -47,7 +47,7 @@
    The cost function of system is:
 
   $$
-  Y(u,W(X))=\alpha_R\cdot R^2 + \alpha_u\cdot u^2.
+  \varphi(X,u,W(X))=\alpha_R\cdot R^2 + \alpha_u\cdot u^2.
   $$
 
 * Assume we can only select between a couple of capacities $$\mathcal{U}=\{1,10\}$$.
@@ -63,7 +63,7 @@
 
   $$
   \begin{aligned}
-  \mathop{\textrm{min}}_{u\in \mathcal{U}, W(X)\in \mathcal{W}(u)}\;&\;  \textrm{CVaR}_{\alpha}\left[Y(u,W(X))\right].
+  \mathop{\textrm{min}}_{u\in \mathcal{U}, W(X)\in \mathcal{W}(u)}\;&\;  \textrm{CVaR}_{\alpha}\left[\varphi(X,u,W(X))\right].
   \end{aligned}
   $$
 

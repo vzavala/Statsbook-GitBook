@@ -277,7 +277,7 @@ plt.show()
 * Estimate variances are:
 
   $$
-  \mathbb{V}[\hat{\theta}]= (7.63\times 10^{-1}, 1.92\times 10^{-3}, 9.69\times 10^{-4}, 5.73\times 10^{-3},7.10\times 10^{-1}).
+  \mathbb{V}[\hat{\theta}]= (5.01\times 10^{-1}, 1.26\times 10^{-3}, 6.36\times 10^{-4}, 3.76\times 10^{-3},4.66\times 10^{-1}).
   $$
 
 #### Python implementation

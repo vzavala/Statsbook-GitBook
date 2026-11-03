@@ -95,7 +95,7 @@ plt.show()
 * For *discrete* $$X$$, $$\mathcal{D}_1$$ and $$\mathcal{D}_2$$ are discrete. If $$\mathcal{D}_1=\{l_1,u_1\}$$ and $$\mathcal{D}_2=\{l_2,u_2\}$$, then:
 
   $$
-  \mathcal{D}=\mathcal{D}_{1}\times \mathcal{D}_{2}=\{(l_1,l_2),(l_1,u_2),(u_1,l_2),(u_2,l_2)\}.
+  \mathcal{D}=\mathcal{D}_{1}\times \mathcal{D}_{2}=\{(l_1,l_2),(l_1,u_2),(u_1,l_2),(u_1,u_2)\}.
   $$
 
 * For *continuous* $$X$$, $$\mathcal{D}_1$$ and $$\mathcal{D}_2$$ are continuous.   If $$\mathcal{D}_1=[l_1,u_1]$$ and $$\mathcal{D}_2=[l_2,u_2]$$:
@@ -122,7 +122,7 @@ plt.show()
   $$
   \begin{aligned}
   \mathcal{A}&=\mathcal{R}\cap\mathcal{D}\\
-  &=\left\{\{X_1\geq 0\,\&\,x_2\geq 0\}\;\&\;\{l_1 \leq X_1 \leq u_1\;\&\; l_2 \leq X_2 \leq u_2\}\right\}\\
+  &=\left\{\{X_1\geq 0\,\&\,X_2\geq 0\}\;\&\;\{l_1 \leq X_1 \leq u_1\;\&\; l_2 \leq X_2 \leq u_2\}\right\}\\
   &=\{X_1\geq 0\;\&\;X_2\geq 0\;\&\; l_1 \leq X_1 \leq u_1\;\&\; l_2 \leq X_2 \leq u_2\}.
   \end{aligned}
   $$

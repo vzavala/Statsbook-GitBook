@@ -15,7 +15,7 @@ $$
   $$
   \begin{aligned}
   \mathbb{E}_X&=\beta\Gamma(1+1/\xi)\\
-  \mathbb{V}_X&=\beta^2\left(\Gamma(1+2/\xi)+\Gamma(1+1/\xi)^2\right)
+  \mathbb{V}_X&=\beta^2\left(\Gamma(1+2/\xi)-\Gamma(1+1/\xi)^2\right)
   \end{aligned}
   $$
 
@@ -99,7 +99,7 @@ Use the pdf and cdf to determine the following:
 
   $$
   \begin{aligned}
-  \log\,5&=\log(\beta) + (1/\xi)\log(\log\,2)
+  \log\,5&=\log(6) + (1/\xi)\log(\log\,2)
   \end{aligned}
   $$
 

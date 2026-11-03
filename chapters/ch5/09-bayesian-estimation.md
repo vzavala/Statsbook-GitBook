@@ -39,8 +39,8 @@
 
   $$
   \begin{aligned}
-  \log f(\theta)&=\log\left((2\pi)^{n/2}|\Sigma_\theta|^{1/2}\right)+\frac{1}{2}(\theta-\bar{\theta})^T\Sigma_\theta^{-1}(\theta-\bar{\theta})\\
-  \log f(\mathbf{y}|\theta)&=\log\left((2\pi)^{S/2}|\Sigma|^{1/2}\right) +\frac{1}{2}(\mathbf{y}-\mathbf{m}(\theta))^T\Sigma^{-1}(\mathbf{y}-\mathbf{m}(\theta)).
+  \log f(\theta)&=-\log\left((2\pi)^{n/2}|\Sigma_\theta|^{1/2}\right)-\frac{1}{2}(\theta-\bar{\theta})^T\Sigma_\theta^{-1}(\theta-\bar{\theta})\\
+  \log f(\mathbf{y}|\theta)&=-\log\left((2\pi)^{S/2}|\Sigma|^{1/2}\right) -\frac{1}{2}(\mathbf{y}-\mathbf{m}(\theta))^T\Sigma^{-1}(\mathbf{y}-\mathbf{m}(\theta)).
   \end{aligned}
   $$
 

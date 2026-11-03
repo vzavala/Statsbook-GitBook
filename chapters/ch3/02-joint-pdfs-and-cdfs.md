@@ -37,8 +37,8 @@
 
   $$
   \begin{aligned}
-  \mathcal{A}&=\{a_1 \leq x_1\leq b_1\; \& \;  a_2 \leq x_2\leq b_2\}\\
-  &=\{x_1\in[a_1,b_1]\; \& \; x_2\in [a_2,b_2]\}.
+  \mathcal{A}&=\{a_1 \leq X_1\leq b_1\; \& \;  a_2 \leq X_2\leq b_2\}\\
+  &=\{X_1\in[a_1,b_1]\; \& \; X_2\in [a_2,b_2]\}.
   \end{aligned}
   $$
 
@@ -408,7 +408,7 @@ f_hat(x2 | x1):
   \begin{aligned}
   f(x_1,x_2)\approx \frac{1}{\Delta x_1\Delta x_2}
   &\left[\;\;{F}(x_1+\Delta x_1,x_2+\Delta x_2)-{F}(x_1,x_2+\Delta x_2)\right.\\
-  &\;\left.\;\; {F}(x_1,x_2)-{F}(x_1+\Delta x_1,x_2)\right].
+  &\;\left.\;\; +{F}(x_1,x_2)-{F}(x_1+\Delta x_1,x_2)\right].
   \end{aligned}
   $$
 
@@ -434,7 +434,7 @@ Determine cdf for thermostat and prob that lifetime of sensor *and* processor  i
 
   $$
   \begin{aligned}
-  F(t_1,t_2)&=\int_{0}^{t_1}\int_{0}^{t_2}f(x_1,x_2)dx_1dx_2\\
+  F(t_1,t_2)&=\int_{0}^{t_2}\int_{0}^{t_1}f(x_1,x_2)dx_1dx_2\\
   &=\left(e^{-0/\mu_1}-e^{-t_1/\mu_1}\right)\left(e^{-0/\mu_2}-e^{-t_2/\mu_2}\right)\\
   &=\left(1-e^{-t_1/\mu_1}\right)\left(1-e^{-t_2/\mu_2}\right).
   \end{aligned}

@@ -1,4 +1,4 @@
-"""Convert the beamer slide sources (Slides/Slides-New/*.tex) to GitBook markdown.
+"""Convert the beamer slide sources (Slides/*.tex) to GitBook markdown.
 
 Only the LaTeX subset used by the slides is handled: frames, sections, itemize /
 enumerate, blocks, figures, columns, tabular, inline and display math.

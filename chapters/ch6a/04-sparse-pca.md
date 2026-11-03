@@ -66,12 +66,17 @@ Sparse eigenvectors to find redundant variables in the Gibbs reactor data
 | Slides | Python | Meaning |
 |---|---|---|
 | $$\mathbf{W}$$ | `W` | eigenvectors of $$\mathbf{X}^T\mathbf{X}$$ (rows: 1, $$X_1,\dots,X_5$$) |
-| $$\tilde{\mathbf{W}}$$, $$\kappa$$ | `W_sparse`, `kappa` | sparsified eigenvectors and sparsity weight |
+| $$\tilde{\mathbf{W}}$$ | `W_sparse` | sparse eigenvectors with one nonzero entry each |
 
-Here each eigenvector is sparsified by solving
-$$\tilde{w}_j=\arg\min_w \frac{1}{2}\lVert w_j-w\rVert_2^2+\kappa\lVert w\rVert_1$$ (soft thresholding),
-with $$\kappa$$ large enough to keep one entry. (For eigenvectors with zero eigenvalue
-$$\mathbf{X}w_j=0$$, so the data-space version on the slide returns $$\tilde{w}_j=0$$.)
+The sparse eigenvectors are computed with the same method used in the book (the sparse PCA
+method of Hein and Bühler, used in the MATLAB script with one nonzero entry per component):
+each component selects the input column with the largest norm, and the data are then
+deflated along that component before computing the next one.
+
+Note that $$\mathbf{X}$$ has rank 3, so the last three eigenvalues of $$\mathbf{X}^T\mathbf{X}$$ are zero
+(up to round-off). Any rotation of the corresponding eigenvectors is also a valid set of
+eigenvectors, so the last three columns of `W` (and of `W_sparse`) can differ from those
+reported in the book, and can change with the numerical library used.
 
 ```python
 import numpy as np
@@ -90,22 +95,29 @@ lam, W = np.linalg.eigh(X.T @ X)
 order = np.argsort(lam)[::-1]
 lam, W = lam[order], W[:, order]
 np.set_printoptions(precision=2, suppress=True)
+print("rank of X =", np.linalg.matrix_rank(X))
 print("W =\n", W)
 
-def soft_threshold(w, kappa):
-    return np.sign(w) * np.maximum(np.abs(w) - kappa, 0)
+def sparse_pca_card1(X, num_comp):
+    # sparse PCA with one nonzero entry per component and deflation of the data
+    X_cur = X.copy()
+    F = np.zeros((X.shape[1], num_comp))
+    for l in range(num_comp):
+        i = np.argmax(np.linalg.norm(X_cur, axis=0))   # best one-entry component
+        F[i, l] = 1.0
+        z = X_cur[:, i] / np.linalg.norm(X_cur[:, i])
+        X_cur = X_cur - np.outer(z, z @ X_cur)        # deflate along the component
+    return F
 
-W_sparse = np.zeros_like(W)
-for j in range(W.shape[1]):
-    kappa = np.sort(np.abs(W[:, j]))[-2]          # keeps only the largest entry
-    w = soft_threshold(W[:, j], kappa)
-    W_sparse[:, j] = w / np.linalg.norm(w)
-print("W_sparse =\n", np.abs(W_sparse))
-for j in range(3, 6):
-    print(f"eigenvector {j+1} (lambda = {lam[j]:.1e}) is driven by {names[np.argmax(np.abs(W_sparse[:, j]))]}")
+with np.errstate(all='ignore'):
+    W_sparse = sparse_pca_card1(X, 6)
+print("W_sparse =\n", W_sparse)
+for j in range(3):
+    print(f"component {j+1} selects {names[np.argmax(W_sparse[:, j])]}")
 ```
 
 ```
+rank of X = 3
 W =
  [[-0.    0.    0.   -0.   -0.   -1.  ]
  [-0.19  0.84 -0.5  -0.    0.    0.  ]
@@ -114,20 +126,22 @@ W =
  [-0.09  0.25  0.45  0.58  0.62  0.  ]
  [-0.76  0.09  0.45 -0.02 -0.45  0.  ]]
 W_sparse =
- [[0. 0. 0. 0. 0. 1.]
- [0. 1. 1. 0. 0. 0.]
- [0. 0. 0. 1. 0. 0.]
+ [[0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 1. 0.]
  [0. 0. 0. 0. 0. 0.]
- [0. 0. 0. 0. 1. 0.]
- [1. 0. 0. 0. 0. 0.]]
-eigenvector 4 (lambda = 2.4e-11) is driven by X2 (CO)
-eigenvector 5 (lambda = -3.0e-09) is driven by X4 (CH3OH)
-eigenvector 6 (lambda = -1.5e-08) is driven by 1
+ [0. 0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1.]
+ [1. 0. 0. 1. 0. 0.]]
+component 1 selects X5 (T)
+component 2 selects X1 (P)
+component 3 selects X3 (H2)
 ```
 
-The three non-informative eigenvectors point to CO, CH$$_3$$OH and to the constant column
-(the intercept and $$X_5=T$$ are identical up to scale because $$T$$ is constant). Dropping
-$$X_2$$, $$X_4$$, $$X_5$$ keeps the fit and gives precise estimates.
+The first three (informative) sparse components select $$X_5=T$$, $$X_1=P$$ and $$X_3=H_2$$, which
+reproduces the first columns of $$\tilde{\mathbf{W}}$$ in the book. The input data matrix only contains three
+independent columns: $$T$$ is constant in this dataset (so its column is a multiple of the intercept
+column), and the flows of CO, H$$_2$$, and CH$$_3$$OH are linked by the mass balances. We thus keep the
+intercept, $$X_1$$, and $$X_3$$ and drop $$X_2$$, $$X_4$$, $$X_5$$; this keeps the fit and gives precise estimates.
 
 ```python
 keep = [0, 1, 3]                                  # intercept, P, H2
@@ -153,5 +167,3 @@ theta_hat = [2.922e+00 2.127e-04 -4.900e-03]
 V(theta_hat) = [2.893e-01 3.321e-07 9.643e-07]
 SSE = 2.549e-03
 ```
-
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca_estimation_sparse-05-1.png" alt="" width="520"></figure>

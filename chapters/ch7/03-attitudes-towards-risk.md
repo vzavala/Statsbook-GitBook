@@ -132,8 +132,8 @@ Option II: E = 4.00,  P(Y <= 5) = 0.977,  VaR = 4.64,  CVaR = 4.88 (4.88)
 ## Example: Comparing Investment Options
 
 * Have a couple of investment opportunities:
-   * Capital $$c_I=\$25,000$$ with annual rate of return $$R_I\sim \mathcal{N}(0.5,0.1)$$.
-   * Capital $$c_{II}=\$50,000$$ with annual rate of return $$R_{II}\sim \mathcal{N}(0.4,0.2)$$.
+   * Capital $$c_I=25,000$$ USD with annual rate of return $$R_I\sim \mathcal{N}(0.5,0.1)$$.
+   * Capital $$c_{II}=50,000$$ USD with annual rate of return $$R_{II}\sim \mathcal{N}(0.4,0.2)$$.
 * Net present value for options (10 yr, interest rate of 5%) are:
 
   $$
@@ -149,7 +149,7 @@ Option II: E = 4.00,  P(Y <= 5) = 0.977,  VaR = 4.64,  CVaR = 4.88 (4.88)
 
 * Option I has high mean but is always negative (always makes money and is “safer”).
 * Moreover,  Option I has a low variance (low uncertainty).
-* Option II has high variance and loses money 10% of time; in some instances it can lose more than $150,000.
+* Option II has high variance and loses money 10% of time; in some instances it can lose more than 150,000 USD.
 * However, with Option II, we make money 90% of the time and it is possible to make a lot of money (at levels that Option I cannot reach).
 * If you are risk-averse (do not want to lose money), I seems better.
 * If you are a risk-taker (you might be willing to take a chance of losing money some times in exchange of large gains), II is better.

@@ -6,7 +6,7 @@ notebooks that the slides do not cite by name are placed."""
 GITHUB_REPO = "vzavala/StatsBook-GitBook"
 GITHUB_BRANCH = "main"
 
-SLIDES_DIR = "../Slides/Slides-New"
+SLIDES_DIR = "../Slides"
 
 # Each page starts at the first frame (at or after the previous page start)
 # whose title begins with the given string.

@@ -3,7 +3,7 @@
 * Now turn our attention to assessing accuracy of sample approx $$\hat{\mathbb{E}}_X^S$$.
 * Because MC approx is an RV, accuracy is measured in terms of its uncertainty.
 * If we want uncertainty of an RV, we need to know its underlying pdf.
-* Obtaining pdf of $$\hat{\mathbb{E}}_X^S$$ can achieved by using a powerful result in statistics known as the central limit theorem (CLT).
+* Obtaining pdf of $$\hat{\mathbb{E}}_X^S$$ can be achieved by using a powerful result in statistics known as the central limit theorem (CLT).
 * Consider a sample sequence $$X_1,X_2,...,X_S$$ that is i.i.d and that has *known* expected value $$e=\mathbb{E}[X]$$ and variance $$v^2=\mathbb{V}[X]$$.
 * CLT states that:
 

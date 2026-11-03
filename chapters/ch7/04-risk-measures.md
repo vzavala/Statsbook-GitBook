@@ -70,11 +70,11 @@ We compute risk measures for investment example.
 
 * Expected Value:
 
-   $$\mathbb{E}[Y(u)]=-\$70,891$$ and $$\mathbb{E}[Y(u')]=-\$109,048$$
+   $$\mathbb{E}[Y(u)]=-70,891$$ USD and $$\mathbb{E}[Y(u')]=-109,048$$ USD
 
 * Standard Deviation:
 
-   $$\mathbb{SD}[Y(u)]=\$19,284$$ and $$\mathbb{V}[Y(u')]=\$79,288$$
+   $$\mathbb{SD}[Y(u)]=19,284$$ USD and $$\mathbb{SD}[Y(u')]=79,288$$ USD
 
 * Probability of Loss:
 
@@ -82,23 +82,23 @@ We compute risk measures for investment example.
 
 * Probability of Gain:
 
-   $$\mathbb{P}(Y(u)\leq \bar{y})=6.4\%$$ and $$\mathbb{P}(Y(u')\leq\bar{y})=55.90\%$$ for $$\bar{y}=-\$100,000$$.
+   $$\mathbb{P}(Y(u)\leq \bar{y})=6.4\%$$ and $$\mathbb{P}(Y(u')\leq\bar{y})=55.90\%$$ for $$\bar{y}=-100,000$$ USD.
 
 * Value-at-Risk:
 
-   $$\mathbb{Q}_{Y(u)}(\alpha)=-\$46,699$$ and $$\mathbb{Q}_{Y(u')}(\alpha)=-\$4,935$$ for $$\alpha=0.9$$.
+   $$\mathbb{Q}_{Y(u)}(\alpha)=-46,699$$ USD and $$\mathbb{Q}_{Y(u')}(\alpha)=-4,935$$ USD for $$\alpha=0.9$$.
 
 * Conditional Value-at-Risk:
 
-   $$\textrm{CVaR}_\alpha[Y(u)]=-\$37,530$$ and $$\textrm{CVaR}_\alpha[Y(u')]=\$34,810$$  for $$\alpha=0.9$$
+   $$\textrm{CVaR}_\alpha[Y(u)]=-37,530$$ USD and $$\textrm{CVaR}_\alpha[Y(u')]=34,810$$ USD  for $$\alpha=0.9$$
 
 * Worst-Case:
 
-   $$\max Y(u)=-\$9,129$$ and $$\max Y(u')=\$181,413$$.
+   $$\max Y(u)=-9,129$$ USD and $$\max Y(u')=181,413$$ USD.
 
 * Best-Case:
 
-   $$\min Y(u)=-\$140,609$$ and $$\min Y(u')=-\$363,708$$.
+   $$\min Y(u)=-140,609$$ USD and $$\min Y(u')=-363,708$$ USD.
 
 #### Python implementation: Risk measures for the two options
 

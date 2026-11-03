@@ -113,14 +113,14 @@ S = 100:  mu_hat = 1.12,  sigma_hat = 1.77
 Now want to postulate $$\textrm{Weibull}(\xi,\beta)$$ and see if this matches data.
 
 * We are given observations $$x_\omega,\; \omega \in \mathcal{S}$$.
-* Sample mean is $$\hat{\mathbb{E}}_X=\frac{1}{S}\sum_{s\in\mathcal{S}}x_\omega$$ and variance $$\hat{\mathbb{V}}_X=\frac{1}{S}\sum_{s\in\mathcal{S}}(x_\omega-\hat{\mathbb{E}}_X)^2$$.
+* Sample mean is $$\hat{\mathbb{E}}_X=\frac{1}{S}\sum_{\omega\in\mathcal{S}}x_\omega$$ and variance $$\hat{\mathbb{V}}_X=\frac{1}{S}\sum_{\omega\in\mathcal{S}}(x_\omega-\hat{\mathbb{E}}_X)^2$$.
 * We find $$\beta,\xi$$ that matches moments $$\mathbb{CMO}_1(\theta)$$ and $$\mathbb{CMO}_2(\theta)$$ (expected value and variance) to empirical counterparts.
 * This is done by solving the matching equations for $$\beta$$ and $$\xi$$:
 
   $$
   \begin{aligned}
   \hat{\mathbb{E}}_X&=\beta\Gamma(1+1/\xi)\\
-  \hat{\mathbb{V}}_X&=\beta^2\left(\Gamma(1+2/\xi)+\Gamma(1+1/\xi)^2\right)
+  \hat{\mathbb{V}}_X&=\beta^2\left(\Gamma(1+2/\xi)-\Gamma(1+1/\xi)^2\right)
   \end{aligned}
   $$
 
