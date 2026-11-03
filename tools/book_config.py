@@ -125,6 +125,7 @@ EXTRA = {
     "ch3_gibbs_conditional": ("ch3", "Empirical Event Probabilities", -1),
     "ch3_thermostat_lifetime": ("ch3", "Example: Lifetime of Thermostat", 1),
     "ch4_weibull_moments_example": ("ch4", "Example: Method of Moments for Weibull", -1),
+    "ch4_example_hypothesis": ("ch4", "Example: Verifying Extreme Value Theorem", -1),
     "ch5_linear_est_example_wrong": ("ch5", "Residual Analysis", -1),
     "ch5_examples_surfaces": ("ch5", "Data Sufficiency and Overfitting", -1),
     "ch5_heat_capacity_benchmark": ("ch5", "Data Sufficiency and Overfitting", -1),
