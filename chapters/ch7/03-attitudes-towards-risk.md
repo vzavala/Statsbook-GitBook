@@ -138,8 +138,8 @@ Option II: E = 4.00,  P(Y <= 5) = 0.977,  VaR = 4.64,  CVaR = 4.88 (4.88)
 
   $$
   \begin{aligned}
-  NPV_I&=c_{I} - R_{I}\cdot c_{I}\cdot \frac{(1-(1+0.05)^{-10})}{i}\\
-  NPV_{II}&=c_{II} - R_{II}\cdot c_{II}\cdot \frac{(1-(1+0.05)^{-10})}{i}.
+  NPV_I&=c_{I} - R_{I}\cdot c_{I}\cdot \frac{(1-(1+i)^{-10})}{i}\\
+  NPV_{II}&=c_{II} - R_{II}\cdot c_{II}\cdot \frac{(1-(1+i)^{-10})}{i}.
   \end{aligned}
   $$
 
@@ -149,7 +149,7 @@ Option II: E = 4.00,  P(Y <= 5) = 0.977,  VaR = 4.64,  CVaR = 4.88 (4.88)
 
 * Option I has high mean but is always negative (always makes money and is “safer”).
 * Moreover,  Option I has a low variance (low uncertainty).
-* Option II has high variance and loses money 10% of time; in some instances it can lose more than 150,000 USD.
+* Option II has high variance and loses money 9% of time; in some instances it can lose more than 150,000 USD.
 * However, with Option II, we make money 90% of the time and it is possible to make a lot of money (at levels that Option I cannot reach).
 * If you are risk-averse (do not want to lose money), I seems better.
 * If you are a risk-taker (you might be willing to take a chance of losing money some times in exchange of large gains), II is better.

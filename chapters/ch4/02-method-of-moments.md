@@ -31,7 +31,7 @@
 
 ## Example: Method of Moments for Gaussian
 
-* Want $$\theta=(\mu,\sigma^2)$$ for model $$X\sim \mathcal{N}(\mu,\sigma)$$ to see if  this matches data $$x_\omega,\; \omega \in \mathcal{S}$$.
+* Want $$\theta=(\mu,\sigma^2)$$ for model $$X\sim \mathcal{N}(\mu,\sigma^2)$$ to see if  this matches data $$x_\omega,\; \omega \in \mathcal{S}$$.
 * Gaussian model has property that $$\mu=\mathbb{E}_X$$ and $$\sigma^2=\mathbb{V}_X$$.
 * Use data to obtain $$\hat{\mathbb{E}}_X=\frac{1}{S}\sum_{\omega\in\mathcal{S}}x_\omega$$ and $$\hat{\mathbb{V}}_X=\frac{1}{S}\sum_{\omega\in\mathcal{S}}(x_\omega-\hat{\mathbb{E}}_X)^2$$.
 * From definition of first raw moment we have:

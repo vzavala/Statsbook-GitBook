@@ -109,7 +109,7 @@ Open in Colab: [`ch2_compare_uniformd.ipynb`](https://colab.research.google.com/
 ## Example Discrete Uniform
 
 * Have machine that appears to fail randomly and you have collected weekly data for over 3 years (156 weeks).
-* You have not identified any pattern but you have noticed that the machine has not failed 79 out of 156 weeks.
+* You have not identified any pattern but you have noticed that the machine has failed 79 out of 156 weeks.
    * Is it suitable to model machine status as a uniform RV?
    * If so, what would be parameters?
 

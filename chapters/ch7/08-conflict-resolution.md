@@ -24,7 +24,7 @@
 
 ## Example: Conflict Resolution in Sizing
 
-* DM is now interested in exploring trade-off between expected cost and variance:
+* DM is now interested in exploring trade-off between expected cost and standard deviation:
 
   $$
   \min_{u\in \mathcal{U}}\;  \mathbb{E}[Y(u)] + \kappa \cdot \mathbb{SD}[Y(u)].

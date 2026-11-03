@@ -4,7 +4,7 @@
 * In fact, these are captured by generalized Gamma model with pdf:
 
   $$
-  F_X(x)=\frac{1}{\beta^{\alpha\xi}\Gamma(\alpha)}\exp\left[-\left(\frac{x-\delta}{\beta}\right)^\xi\right]\xi(x-\delta)^{\alpha\xi-1},\quad x\in [0,\infty).
+  f_X(x)=\frac{1}{\beta^{\alpha\xi}\Gamma(\alpha)}\exp\left[-\left(\frac{x-\delta}{\beta}\right)^\xi\right]\xi(x-\delta)^{\alpha\xi-1},\quad x\in [\delta,\infty).
   $$
 
 * These RVs are known as the Gamma family.

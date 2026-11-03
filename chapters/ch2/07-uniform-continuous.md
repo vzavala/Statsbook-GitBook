@@ -95,7 +95,7 @@ Open in Colab: [`ch2_compare_uniformc.ipynb`](https://colab.research.google.com/
   \mathbb{V}[X]=\frac{1}{b-a}\int_{a}^b\left(x-\frac{1}{2}(a+b)\right)^2dx=\frac{1}{12}(b-a)^2.
   $$
 
-   When range $$[b,a]$$ is wide we have that  variance (uncertainty) is large.
+   When range $$[a,b]$$ is wide we have that  variance (uncertainty) is large.
 
 ## Example: Setting up an Alarm
 

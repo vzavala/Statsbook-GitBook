@@ -274,7 +274,7 @@ eigenvalues of X^T X: [5.263e-01 6.980e+05 7.938e+12]
   \begin{aligned}
   \hat{\theta}&=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}\\
   &=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T(\mathbf{X}\theta+\mathbf{e})\\
-  &=\theta+(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}\mathbf{e}.
+  &=\theta+(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{e}.
   \end{aligned}
   $$
 

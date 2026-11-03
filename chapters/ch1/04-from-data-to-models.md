@@ -26,7 +26,7 @@
   f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}},\quad x\in \mathcal{D},
   $$
 
-   where $$\mu,\sigma\in \mathbb{R}_+$$ are parameters of the model.
+   where $$\mu\in\mathbb{R}$$ and $$\sigma\in \mathbb{R}_+$$ are parameters of the model.
 
 * Parameters define behavior of the RV and can be “tuned" to match our data.
 * The cdf associated to the Gaussian model is:

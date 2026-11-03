@@ -215,7 +215,7 @@ $$
 \mu^{out}_k&=\mu_k+\gamma_k\cdot \xi\cdot \mu_{CO},\;k\in K\\
 \xi&=1-\frac{\mu^{out}_{CO}}{\mu_{CO}}\\
 K_{eq}&=\frac{(\mu_{CH_3OH}+\xi\cdot \mu_{CO})}{(\mu_{CO}-\xi\mu_{CO})(\mu_{H_2}-2\cdot \xi\cdot \mu_{CO})^2}\left(\frac{\mu_{out}}{P}\right)^2\\
-\frac{\partial \log K_{eq} }{\partial T}&=-\frac{\Delta H_0}{R\cdot T}
+\frac{\partial \log K_{eq} }{\partial T}&=\frac{\Delta H_0}{R\cdot T^2}
 \end{aligned}
 $$
 

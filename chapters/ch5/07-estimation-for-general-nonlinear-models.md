@@ -9,7 +9,7 @@
    where $$m:\mathbb{R}^{n}\times \mathbb{R}^S\to \mathbb{R}$$ is the model (a function of parameters and inputs).
 
 * Model captures structural relationships between inputs, params, and outputs.
-* For instance, this can be a reactor model and $$\theta$$ are kinetic constraints.
+* For instance, this can be a reactor model and $$\theta$$ are kinetic constants.
 * Model also captures advanced empirical models such as neural nets (more later).
 
 * We express model in compact form $$\mathbf{y}=\mathbf{m}(\theta,\mathbf{X})+\mathbf{e}$$ and assume $$\mathbf{e}\sim \mathcal{N}(0,\Sigma)$$.
@@ -17,7 +17,7 @@
 * We use MLE framework to estimate $$\theta$$ by minimizing $$-\log f(\mathbf{y}|\theta)$$:
 
   $$
-  \min_\theta -\log\left((2\pi)^{S/2}|\Sigma|^{1/2}\right) -\frac{1}{2}(\mathbf{y}-\mathbf{m}(\theta))^T\Sigma^{-1}(\mathbf{y}-\mathbf{m}(\theta)).
+  \min_\theta \log\left((2\pi)^{S/2}|\Sigma|^{1/2}\right) +\frac{1}{2}(\mathbf{y}-\mathbf{m}(\theta))^T\Sigma^{-1}(\mathbf{y}-\mathbf{m}(\theta)).
   $$
 
 * As in linear case, if $$\Sigma$$ is diagonal with entries $$\Sigma_{\omega,\omega}=\sigma^2$$, MLE problem reduces to: SSE minimization problem.
@@ -45,7 +45,7 @@
 * Hessian is matrix of second derivatives of log-likelihood function:
 
   $$
-  \mathcal{H}({\theta})_{j,j}=-\frac{\partial^2 \log f(\mathbf{y}|\theta)}{\partial \theta_i\partial \theta_j},\; i=1,...,n,\; j=1,...,n.
+  \mathcal{H}({\theta})_{i,j}=-\frac{\partial^2 \log f(\mathbf{y}|\theta)}{\partial \theta_i\partial \theta_j},\; i=1,...,n,\; j=1,...,n.
   $$
 
 * Hessian is a complex quantity that requires numerical techniques to be computed.

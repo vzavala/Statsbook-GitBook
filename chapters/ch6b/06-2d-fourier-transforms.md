@@ -4,7 +4,7 @@
 * Discrete FT of 2D field is:
 
   $$
-  \hat{f}_{k_1,k_2}=\frac{1}{N}\sum_{j_1=0}^{N-1}\sum_{j_2=0}^{N-1}f_{j_1,j_2}e^{-i2\pi\left(\frac{j_1k_1}{N}+\frac{j_2k_2}{N}\right)},\; k_1=k_2=0,...,N-1.
+  \hat{f}_{k_1,k_2}=\frac{1}{N}\sum_{j_1=0}^{N-1}\sum_{j_2=0}^{N-1}f_{j_1,j_2}e^{-i2\pi\left(\frac{j_1k_1}{N}+\frac{j_2k_2}{N}\right)},\; k_1,k_2=0,...,N-1.
   $$
 
 * 2D FT returns a 2D field in the frequency domain.

@@ -31,8 +31,8 @@
   $$
   \begin{aligned}
   \varphi_{k_1,k_2}&=\; f_{k_1-1,k_2+1}\cdot g_{-1,1}+f_{k_1,k_2+1}\cdot g_{0,1}+f_{k_1+1,k_2+1}\cdot g_{1,1}\\
-  &\;\;\;\;\; f_{k_1-1,k_2} \cdot g_{-1,0}+f_{k_1,k_2}\cdot g_{0,0}+f_{k_1+1,k_2} \cdot g_{1,0}\\
-  &\;\;\;\;\; f_{k_1-1,k_2-1} \cdot g_{-1,-1}+f_{k_1,k_2-1} \cdot g_{0,-1}+f_{k_1+1,k_2-1} \cdot g_{1,-1}.
+  &\;\;\;\;\; +f_{k_1-1,k_2} \cdot g_{-1,0}+f_{k_1,k_2}\cdot g_{0,0}+f_{k_1+1,k_2} \cdot g_{1,0}\\
+  &\;\;\;\;\; +f_{k_1-1,k_2-1} \cdot g_{-1,-1}+f_{k_1,k_2-1} \cdot g_{0,-1}+f_{k_1+1,k_2-1} \cdot g_{1,-1}.
   \end{aligned}
   $$
 
@@ -118,7 +118,7 @@ phi = f*g (same):
 * Define 2D kernel functions to generate filters; e.g., kernel of 2D Gaussian filter is:
 
   $$
-  g(x,y)=\frac{1}{\sqrt{2\pi \sigma^2}}e^{-\frac{x^2+y^2}{2\sigma^2}}.
+  g(x,y)=\frac{1}{2\pi \sigma^2}e^{-\frac{x^2+y^2}{2\sigma^2}}.
   $$
 
 * This is pdf of $$\mathcal{N}(0,\Sigma)$$ with $$\Sigma_{1,1}=\Sigma_{2,2}=\sigma^2$$ and $$\Sigma_{1,2}=\Sigma_{2,1}=0$$.

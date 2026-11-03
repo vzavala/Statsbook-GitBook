@@ -8,7 +8,7 @@
 * Poisson setting is limiting case of $$\Delta z\to 0$$ ($$n\to \infty$$); specifically, we seek to understand probability of occurrences over infinitesimally small sampling intervals.
 * Understanding behavior over small intervals is important because we might miss occurrences if sampling interval $$\Delta z$$ is long.
 * Poisson RV gives number of occurrences of type $$Y$$ in interval of length $$z$$.
-* Domain is $$\mathcal{D}=\{0,1,2,...,\infty\}$$ and pdf:
+* Domain is $$\mathcal{D}=\{0,1,2,...\}$$ and pdf:
 
   $$
   f(x)=\frac{\lambda^x e^{-\lambda }}{x!},\quad x\in \mathcal{D}.

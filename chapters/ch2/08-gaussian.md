@@ -24,7 +24,7 @@
 
 ## Gaussian RV
 
-* Here are the pdfs for $$\mathcal{N}(\mu,\sigma)$$ for different values of $$\mu$$ and $$\sigma$$.
+* Here are the pdfs for $$\mathcal{N}(\mu,\sigma^2)$$ for different values of $$\mu$$ and $$\sigma$$.
 * What do you observe?
 * What happens when $$\sigma^2\to 0$$?
 
@@ -52,7 +52,7 @@
 * Solution is:
 
   $$
-  f(x,t)=\frac{1}{\sqrt{2 \pi \sigma^2}}e^{-\frac{x^2}{2\sigma(t)^2}},\quad  x\in (-\infty,\infty)
+  f(x,t)=\frac{1}{\sqrt{2 \pi \sigma(t)^2}}e^{-\frac{x^2}{2\sigma(t)^2}},\quad  x\in (-\infty,\infty)
   $$
 
    with$$\sigma^2=2Dt$$.
@@ -75,7 +75,7 @@ Think about implications from an estimation and uncertainty propagation perspect
 
 {% hint style="info" %}
 * We can estimate  $$\mu$$ and $$\sigma$$ from data as $$\mu =\hat{\mathbb{E}}_X$$ and $$\sigma^2= \hat{\mathbb{V}}_X$$. This is sufficient to estimate Gaussian model.
-* Any linear propagation $$Y=\varphi(X)=a+bX$$ will generate a Gaussian output. Moreover, system will shrink variability of $$X$$ if $$b<1$$ and will magnify it if $$b>1$$.
+* Any linear propagation $$Y=\varphi(X)=a+bX$$ will generate a Gaussian output. Moreover, system will shrink variability of $$X$$ if $$|b|<1$$ and will magnify it if $$|b|>1$$.
 {% endhint %}
 
 ## Example: Gaussian Mixing Problem

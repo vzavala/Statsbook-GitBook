@@ -51,7 +51,7 @@
 * Entries of covariance  matrix are:
 
   $$
-  \mathbf{C}_{\omega,\omega'}(\gamma)=\mathbf{K}_{\omega,\omega'}(\gamma)+\sigma^2\cdot  \delta_{i,j},\quad \omega,\omega'\in \mathcal{S}.
+  \mathbf{C}_{\omega,\omega'}(\gamma)=\mathbf{K}_{\omega,\omega'}(\gamma)+\sigma^2\cdot  \delta_{\omega,\omega'},\quad \omega,\omega'\in \mathcal{S}.
   $$
 
    Here, $$\delta_{\omega,\omega'}=1$$ if $$x_\omega=x_{\omega'}$$ and zero otherwise.
@@ -59,7 +59,7 @@
 * One can estimate $$\hat{\gamma}$$ by using MLE with likelihood $$f(\mathbf{y}|\gamma)$$:
 
   $$
-  \max_\gamma \; -\frac{1}{2}\log|\mathbf{C}(\gamma)|-\frac{1}{2}\mathbf{y}^T\mathbf{C}(\gamma)\mathbf{y}-\frac{S}{2}\log 2\pi
+  \max_\gamma \; -\frac{1}{2}\log|\mathbf{C}(\gamma)|-\frac{1}{2}\mathbf{y}^T\mathbf{C}(\gamma)^{-1}\mathbf{y}-\frac{S}{2}\log 2\pi
   $$
 
 * One needs to use advanced numerical solvers to tackle this problem.
@@ -72,7 +72,7 @@
   $$
   \begin{aligned}
   m(x)&=\mathbf{k}(x,\hat{\gamma})^T\mathbf{C}(\hat{\gamma})^{-1}\mathbf{y}\\
-  \sigma^2(x)&=c(x,\hat{\gamma})-\mathbf{k}(x,\hat{\gamma})^T\mathbf{C}(\hat{\gamma})\mathbf{k}(x,\hat{\gamma})
+  \sigma^2(x)&=c(x,\hat{\gamma})-\mathbf{k}(x,\hat{\gamma})^T\mathbf{C}(\hat{\gamma})^{-1}\mathbf{k}(x,\hat{\gamma})
   \end{aligned}
   $$
 

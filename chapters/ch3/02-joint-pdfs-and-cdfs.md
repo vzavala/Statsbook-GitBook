@@ -47,7 +47,7 @@
   $$
   \begin{aligned}
   \mathbb{P}(X\in \mathcal{A})&=\int_{(x_1,x_2)\in \mathcal{A}}f(x_1,x_2)dx_1dx_2\\
-  &=\int_{a_1}^{b_1}\int_{a_2}^{b_2}f(x_1,x_2)dx_1dx_2.
+  &=\int_{a_2}^{b_2}\int_{a_1}^{b_1}f(x_1,x_2)dx_1dx_2.
   \end{aligned}
   $$
 
@@ -163,7 +163,7 @@ Bayes' rule check: P(A2|A1) P(A1) / P(A2) = 0.600
   $$
   \begin{aligned}
   \mathbb{P}(X\in \mathcal{A})&=\int_{0}^{1}\int_{0}^{1}f(x_1,x_2)dx_1dx_2\\
-  &=0.064
+  &=0.060
   \end{aligned}
   $$
 

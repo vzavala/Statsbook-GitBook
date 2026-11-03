@@ -106,7 +106,7 @@ For how long will a tracer particle reside in the system?  What factors influenc
   $$
 
 * Interpret $$T$$ as random time required for a particle to exit system (residence time)
-* Pdf of $$T$$ is $$f_T(t)$$ is interpreted as fraction of injected particles exiting at time $$T=t$$
+* Pdf of $$T$$, $$f_T(t)$$, is interpreted as fraction of injected particles exiting at time $$T=t$$
 * Balance suggests that $$T\sim\textrm{Exp}(\tau)$$
 
 * Mean residence time is $$\mathbb{E}[T]=\tau=V/Q$$ and variance is $$\mathbb{V}[T]=(V/Q)^2$$.

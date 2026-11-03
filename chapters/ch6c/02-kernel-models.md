@@ -38,12 +38,12 @@
   \min_{\theta}\; \frac{1}{2}(\mathbf{y}-\mathbf{\boldsymbol{\Phi}}\theta)^T(\mathbf{y}-\boldsymbol{\Phi}\theta)+\lambda\theta^T\theta
   $$
 
-   where $$\boldsymbol{\Phi}\in \mathbb{R}^{S\times n}$$ is data matrix with entries $$\boldsymbol{\Phi}_{\omega,j}=\phi_{j}(x_\omega)$$ and $$\mathbf{y}$$ is output vector.
+   where $$\boldsymbol{\Phi}\in \mathbb{R}^{S\times m}$$ is data matrix with entries $$\boldsymbol{\Phi}_{\omega,j}=\phi_{j}(x_\omega)$$ and $$\mathbf{y}$$ is output vector.
 
 * Data matrix $$\boldsymbol{\Phi}$$ is transformation of original input data.
 * If basis functions are linear then $$\boldsymbol{\Phi}=\mathbf{X}$$ (get a standard linear estimation prob).
 
-* We define objective as $$S(\theta)$$; optimal estimate must satisfy $$\nabla_\theta S(\theta)$$:
+* We define objective as $$S(\theta)$$; optimal estimate must satisfy $$\nabla_\theta S(\theta)=0$$:
 
   $$
   \theta=\frac{1}{\lambda}\boldsymbol{\Phi}^T(\mathbf{y}-\boldsymbol{\Phi}\theta).
@@ -141,7 +141,7 @@
 * Where $$\phi(x)$$ is an *infinite* collection of polynomial basis functions:
 
   $$
-  \phi(x)=e^{-\gamma x}(1,\; x\sqrt{2\gamma/1\,!},\; x^2\sqrt{(2\gamma)^2/2\,!},\; x^3\sqrt{(2\gamma)^3/3\,!},...).
+  \phi(x)=e^{-\gamma x^2}(1,\; x\sqrt{2\gamma/1\,!},\; x^2\sqrt{(2\gamma)^2/2\,!},\; x^3\sqrt{(2\gamma)^3/3\,!},...).
   $$
 
 * Here, a *single* param $$\gamma$$ controls coefficients of basis functions.

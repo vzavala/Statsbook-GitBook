@@ -104,7 +104,7 @@ plt.show()
 
 <figure><img src="../../.gitbook/assets/slides/ch6_gibbs_logistic_data.png" alt="" width="420"><figcaption><p>Gibbs reactor data showing separation between normal and failure operating modes.</p></figcaption></figure>
 
-* Model correctly predicts failures 85% of time (214 out of 250 obs).
+* Model correctly predicts the class 85% of time (214 out of 250 obs).
 * Logistic class also gives estimate of prob that predictions are in a given class.
 
   <figure><img src="../../.gitbook/assets/slides/ch6_gibbs_logistic_confusion.png" alt="" width="489"><figcaption><p>Confusion matrix (left) and classification probabilities (right) for Gibbs reactor data.</p></figcaption></figure>

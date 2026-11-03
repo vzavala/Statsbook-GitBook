@@ -130,7 +130,7 @@ Open in Colab: [`ch2_compare_hypergeometric.ipynb`](https://colab.research.googl
 * Variance of the hypergeometric RV is given by:
 
   $$
-  \mathbb{V}_X=n\cdot p\cdot (1-p)\cdot \frac{N_t-n}{n-1}
+  \mathbb{V}_X=n\cdot p\cdot (1-p)\cdot \frac{N_t-n}{N_t-1}
   $$
 
 * Note that variance is zero if $$n=N_t$$, why?
@@ -147,11 +147,11 @@ Cannot afford to monitor machine status every week for 3 years (time-consuming)
 
 We inspect at random, it is thus appropriate to model number of failures as $$X\sim \mathcal{H}(N_y,N_t,p,n)$$.
 
-* We define $$N_t=176$$, $$N_y=79$$, $$p=N_y/N_t\approx 0.50$$, and $$n=5$$.
+* We define $$N_t=156$$, $$N_y=79$$, $$p=N_y/N_t\approx 0.50$$, and $$n=5$$.
 * Probability that machine is in failure mode 5 out of 5 times inspected is:
 
   $$
-  \mathbb{P}(X=5)=f(5)=0.1312.
+  \mathbb{P}(X=5)=f(5)=0.0312.
   $$
 
 * Probability of observing 10 out of 10 failures is:

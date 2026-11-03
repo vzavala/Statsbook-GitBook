@@ -97,7 +97,7 @@ Open in Colab: [`ch2_compare_bernoulli.ipynb`](https://colab.research.google.com
    * If so, what would be its parameters?
    * What makes this different than a uniform RV?
 * Define status as $$X=0$$ when fails and $$X=1$$ when works (domain is $$\mathcal{D}=\{0,1\}$$).
-* For a Bernoulli RV, we must have that $$\mathbb{P}(X=0)=p$$ and $$\mathbb{P}(X=1)=1-p$$.
+* For a Bernoulli RV, we must have that $$\mathbb{P}(X=0)=1-p$$ and $$\mathbb{P}(X=1)=p$$.
 * From our data we have:
 
   $$
@@ -109,7 +109,7 @@ Open in Colab: [`ch2_compare_bernoulli.ipynb`](https://colab.research.google.com
 
 * Machine status thus seems to behave as a Bernoulli RV $$\mathcal{B}(0.5)$$.
 * In this example, uniform and Bernoulli models are identical.
-* Uniform model is a generalization of Berrnoulli model.
+* Uniform model is a generalization of Bernoulli model.
 
 #### Python implementation: Machine status as a Bernoulli RV
 

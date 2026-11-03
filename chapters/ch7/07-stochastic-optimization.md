@@ -26,7 +26,7 @@
    * Probability of loss:
 
      $$
-     u^*=\mathop{\textrm{argmin}}_{u\in \mathcal{U}}\; \mathbb{P}(\varphi(X,u)>y)
+     u^*=\mathop{\textrm{argmin}}_{u\in \mathcal{U}}\; \mathbb{P}(\varphi(X,u)>\bar{y})
      $$
 
    * Expected shortfall:

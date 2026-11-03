@@ -202,7 +202,7 @@ NN parameters: 9;  MSE NN = 9.29e-04,  MSE kriging = 8.71e-04
 * To see this, construct simple NN with $$N$$ perceptrons:
 
   $$
-  h_j(a)=\frac{1}{1+e^{-a_j}},\; k=1,...,N
+  h_j(a)=\frac{1}{1+e^{-a_j}},\; j=1,...,N
   $$
 
    where $$a_j=\theta_{j,1}^I\cdot x + \theta_{j,0}^I$$  (NN only has one input).

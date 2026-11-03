@@ -87,7 +87,7 @@ Open in Colab: [`ch2_compare_chisq.ipynb`](https://colab.research.google.com/git
 * Instead of using $$Z\sim \mathcal{N}(0,1)$$, here we compute $$z_{\alpha/2}$$ using $$Y\sim \chi^2(1)$$ as:
 
   $$
-  \mathbb{Q}_{Z}(1-\frac{1}{2})=z_{\alpha/2}=\sqrt{\mathbb{Q}_Y(1-\alpha)}
+  \mathbb{Q}_{Z}(1-\frac{\alpha}{2})=z_{\alpha/2}=\sqrt{\mathbb{Q}_Y(1-\alpha)}
   $$
 
 * We use numerical package to compute $$\mathbb{Q}_Y(1-0.1)=2.71$$ and thus $$z_{\alpha/2}=\sqrt{2.71}=1.64$$.

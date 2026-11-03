@@ -5,7 +5,7 @@
 * Assume $$X$$ takes *representative* value, such as *historical average*:
 
   $$
-  x=\frac{1}{S}\sum_{\omega \in \Omega}x_{\omega}.
+  x=\frac{1}{S}\sum_{\omega \in \mathcal{S}}x_{\omega}.
   $$
 
 * Input $$X$$ is thus assumed to be deterministic with value $$x$$.

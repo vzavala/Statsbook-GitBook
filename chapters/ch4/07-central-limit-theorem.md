@@ -15,7 +15,7 @@
 
 * CLT states that expected value of $$\hat{\mathbb{E}}_X^S$$ is true value $$e$$.  In other words, $$\hat{\mathbb{E}}_X^S$$ is an unbiased estimate of $$e$$.
 * CLT states that variance of $$\mathbb{V}[\hat{\mathbb{E}}_X^S]$$ is given by $$v^2/S$$ (std dev is $$v/\sqrt{S}$$) and that this shrinks with $$S$$. In other words, $$\hat{\mathbb{E}}_X^S$$ becomes more accurate as $$S$$ increases.
-* Since we know that $$\hat{\mathbb{E}}_X^S\sim \mathcal{N}(e,v/\sqrt{S})$$ then we have pdf for $$\hat{\mathbb{E}}_X^S$$ and thus we can compute quantities of interest for it.
+* Since we know that $$\hat{\mathbb{E}}_X^S\sim \mathcal{N}(e,v^2/S)$$ then we have pdf for $$\hat{\mathbb{E}}_X^S$$ and thus we can compute quantities of interest for it.
 * For example, we can compute  $$1-\alpha$$ confidence intervals:
 
   $$

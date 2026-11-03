@@ -40,7 +40,7 @@
   \end{aligned}
   $$
 
-* Here, $$w(t)=1/(b-a),\, t\in [a,b]$$ is weight function that satisfies $$\int_{a}^bw(t)=1$$.
+* Here, $$w(t)=1/(b-a),\, t\in [a,b]$$ is weight function that satisfies $$\int_{a}^bw(t)dt=1$$.
 * Moving average filter is pdf of uniform RV.
 
 * Consider discrete version of moving average filter:
@@ -176,7 +176,7 @@ N=5, alpha=2: [0.14 0.61 1.   0.61 0.14]
 * With this, we construct discrete Gaussian filter:
 
   $$
-  g_j=e^{-j^2/\sigma^2},\; j=-(N-1)/2,...,(N-1)/2.
+  g_j=e^{-j^2/(2\sigma^2)},\; j=-(N-1)/2,...,(N-1)/2.
   $$
 
    with $$\sigma=(N-1)/(2\alpha)$$.
@@ -195,7 +195,7 @@ N=5, alpha=2: [0.14 0.61 1.   0.61 0.14]
 ## Example: Gaussian Filter for Noisy Signal
 
 * Show signal $$f$$ and convolution $$\phi=f*g$$ using Gaussian filter $$g=(0.60,    0.94, 0.94, 0.60)$$.
-* We also perform convolution using Gaussian filter $$g=(0.0003, 0.41, 0.41, 0.003)$$. Smoothing is not as effective; why?
+* We also perform convolution using Gaussian filter $$g=(0.0003, 0.41, 0.41, 0.0003)$$. Smoothing is not as effective; why?
 
   <figure><img src="../../.gitbook/assets/slides/ch6_noise_gauss_filter.png" alt="" width="350"><figcaption><p>Signal (top), convolution with Gaussian filter with σ = 1.5 (middle), and convolution with Gaussian filter with σ = 0.37 (bottom).</p></figcaption></figure>
 
@@ -244,7 +244,7 @@ plt.show()
 * e.g., imagine you want to extract derivative (gradient) of $$f(t)$$:
 
   $$
-  \frac{d f(t)}{d t}=\frac{f(t+\Delta t)-f(t-\Delta t)}{2\cdot \Delta t}.
+  \frac{d f(t)}{d t}\approx\frac{f(t+\Delta t)-f(t-\Delta t)}{2\cdot \Delta t}.
   $$
 
 * Define $$\frac{d f(t)}{d t}=\varphi_k$$, $$f(t)=f_k$$, $$f(t+\Delta t)=f_{k+1}$$, and $$f(t-\Delta t)=f_{k-1}$$.
@@ -255,7 +255,7 @@ plt.show()
   \varphi_k=g_{+1}\cdot f_{k-1}+g_0\cdot f_k+g_{-1}\cdot f_{k+1}.
   $$
 
-* This is a convolution with filter $$g=(-1,0,1)$$.
+* This is a convolution with filter $$g=(1,0,-1)$$ (up to the factor $$1/(2\Delta t)$$).
 * Known as gradient filter and helps identify  location of min/max/flat points of signal.
 
 * Weight has positive/negative values (Gaussian and uniform have positive).

@@ -77,7 +77,7 @@
   \min_\theta \frac{1}{2}\sum_{\omega \in \mathcal{S}} (y_\omega-\theta x_\omega)^2
   $$
 
-* This is a least-squares problem that estimates $${\theta}$$ by minimizing discrepancy between  observed output $$y_\omega$$ and deterministic model prediction $${\theta} x_\theta$$.
+* This is a least-squares problem that estimates $${\theta}$$ by minimizing discrepancy between  observed output $$y_\omega$$ and deterministic model prediction $${\theta} x_\omega$$.
 * Function to be minimized in this problem is known as the sum of squared errors (SSE) and will be denoted as $$SSE(\theta)$$.
 * Value of $$\theta$$ that solves the problem is known as *maximum likelihood estimate* $$\hat{\theta}$$.
 * Because observations used to estimate $$\hat{\theta}$$ are random, estimate is an RV.

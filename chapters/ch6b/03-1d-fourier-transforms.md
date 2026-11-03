@@ -16,7 +16,7 @@
 * Inverse FT recovers function $$f(t)$$ from $$\hat{f}(\omega)$$:
 
   $$
-  {f}(t)=\int_{-\infty}^{\infty}\hat{f}(\omega)e^{i(2\pi\omega\tau)}d\omega\;\; t \in (-\infty,\infty).
+  {f}(t)=\int_{-\infty}^{\infty}\hat{f}(\omega)e^{i(2\pi\omega t)}d\omega,\;\; t \in (-\infty,\infty).
   $$
 
 * Inverse FT is expressed as $$f=\mathcal{F}^{-1}\{\hat{f}\}$$.
@@ -32,7 +32,7 @@
 
 * Discrete FT is expressed as $$\hat{f}=\mathcal{F}\{f\}$$ and inverse FT is $${f}=\mathcal{F}^{-1}\{\hat{f}\}$$.
 * FT returns complex numbers $$\hat{f}_{k},\,k=0,...,N-1$$ (each correspond to freq $$\omega_k$$).
-* Power of each freq is $$|\hat{f}_k|$$ (captures how strong its presence in the signal is).
+* Magnitude of each freq is $$|\hat{f}_k|$$ (captures how strong its presence in the signal is).
 * *Any* signal $$f(t)$$ can be obtained by combining sinusoidal functions of different freqs.
 * One often visualizes frequency content by using a plot of $$\omega_k$$ vs. $$|\hat{f}_k|$$.
 * Freq components are symmetric and thus $$|\hat{f}_k|=|\hat{f}_{-k}|$$ (only consider nonnegative $$k$$).

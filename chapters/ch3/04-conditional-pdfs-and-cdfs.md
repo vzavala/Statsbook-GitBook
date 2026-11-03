@@ -31,7 +31,7 @@
   \end{aligned}
   $$
 
-* Joint pdfs have associated marginal cdfs $$F(x_1|x_2)$$ and $$F(x_2|x_1)$$.
+* Conditional pdfs have associated conditional cdfs $$F(x_1|x_2)$$ and $$F(x_2|x_1)$$.
 
 ## Example: Lifetime of Thermostat
 

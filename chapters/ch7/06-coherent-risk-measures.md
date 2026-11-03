@@ -18,13 +18,13 @@ We say that the risk measure $$\rho$$ is *proper* if it satisfies the properties
 
    $$\rho(Y+c)=\rho(Y)+c$$ for $$c\in \mathbb{R}$$.
 
-   Adding a constant should not affect risk.
+   Adding a constant shifts the risk by the same constant.
 
 * Positive Homogeneity:
 
    $$\rho(c\cdot Y)=c\cdot \rho(Y)$$ for $$c\in \mathbb{R}_+$$.
 
-   Scaling an RV by a constant should not affect risk (e.g., risk of a cost expressed in USD or Euros should be the same up to a factor).
+   Scaling an RV by a positive constant scales its risk by the same factor (e.g., risk of a cost expressed in USD or Euros should be the same up to a factor).
 
 * Subadditivity:
 
@@ -68,7 +68,7 @@ We can now formally analyze if risk measures are proper or not.
 * Expected loss can also be written as:
 
   $$
-  \mathbb{E}[(Y-\mathbb{Q}_Y(\alpha))_+]
+  \mathbb{Q}_Y(\alpha)+\frac{1}{1-\alpha}\mathbb{E}[(Y-\mathbb{Q}_Y(\alpha))_+]
   $$
 
 * CVaR captures magnitude of outcomes of high value, while ignoring those of small magnitude (asymmetric measure).
@@ -135,19 +135,19 @@ Consider the vector $$y=(100,70,50,20,10)$$
 
 The CVaR values for vector is:
 
-* If $$\alpha=5/5$$ then CVaR is:
+* If $$\alpha=0$$ then CVaR is:
 
    $$(1/5)\cdot (100+70+50+20+10)=50$$
 
-* If $$\alpha=4/5$$ then CVaR is:
+* If $$\alpha=1/5$$ then CVaR is:
 
    $$(1/4)\cdot (100+70+50+20)=60$$
 
-* If $$\alpha=3/5$$ then CVaR is:
+* If $$\alpha=2/5$$ then CVaR is:
 
    $$(1/3)\cdot (100+70+50)=73$$
 
-* If $$\alpha=1/5$$ then CVaR is:
+* If $$\alpha=4/5$$ then CVaR is:
 
    $$(1/1)\cdot (100)=100$$
 

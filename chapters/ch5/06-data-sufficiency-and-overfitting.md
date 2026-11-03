@@ -24,7 +24,7 @@ Did we use enough data to estimate model parameters?
 * Can improve precision by controlling  $$\mathbf{X}$$ and with this control FI $$\mathcal{I}(\theta)=\mathbf{X}^T\Sigma^{-1}\mathbf{X}$$.
 * Can be done by increasing amount of data; however, we also require *quality* of data.
 * Data points that are *redundant* do not provide new information.
-* Redundancy results in $$\mathbf{X}$$ that has dependent rows and to FI  that has small eigs.
+* Redundancy results in $$\mathbf{X}$$ that has (nearly) dependent columns and in an FI that has small eigs.
 * If input vars $$X$$ are weakly related to output $$Y$$, estimates $$\hat{\theta}$$ will be imprecise.
 * Knowledge of application to select appropriate input vars is extremely important.
 * Lack of data results in overfitting (need to validate that model predicts well for data not used for estimation). This procedure is known as *cross-validation*.

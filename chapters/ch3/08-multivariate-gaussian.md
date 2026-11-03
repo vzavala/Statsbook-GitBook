@@ -194,11 +194,11 @@ $$
   \begin{aligned}
   \Sigma_{2|1}&=\Sigma_{22}-\Sigma_{21}\Sigma_{11}^{-1}\Sigma_{12}\\
   &=0.02-1.83\cdot (776.94)^{-1}\cdot 1.83\\
-  &=0.015
+  &=0.016
   \end{aligned}
   $$
 
-   This is a relative reduction of *25%*.
+   This is a relative reduction of *22%*.
 
 * To quantify how knowledge of conversion affects uncertainty in pressure, we obtain variance of $$X_1|X_2$$:
 
@@ -210,7 +210,7 @@ $$
   \end{aligned}
   $$
 
-   This is a relative reduction of *21%*. Knowledge of conversion has a similar effect.
+   This is a relative reduction of *22%*. Knowledge of conversion has the same relative effect.
 
 #### Python implementation: Conditional variance of pressure and conversion
 
@@ -273,7 +273,7 @@ V[conversion] = 0.0158,  V[conversion | other 4 variables] = 0.0111
 * With this, joint pdf can be expressed as:
 
   $$
-  f(x_1,x_2)=\frac{1}{2\pi\sqrt{\Sigma_{11}\Sigma_{22}}}\exp\left(-E(x_1,x_2)\right)
+  f(x_1,x_2)=\frac{1}{2\pi\sqrt{(1-\rho^2)\Sigma_{11}\Sigma_{22}}}\exp\left(-E(x_1,x_2)\right)
   $$
 
    where:
@@ -451,7 +451,7 @@ We now present 95% ellipsoidal region and 1000 realizations from  Gaussian.
 
 <figure><img src="../../.gitbook/assets/slides/ch3_gaussian_ellipsoid_points.png" alt="" width="350"></figure>
 
-* We have that 942 out of $$\mathcal{S}=$$1000 realizations (94.2%)  lie inside ellipsoid
+* We have that 942 out of $$S=1000$$ realizations (94.2%)  lie inside ellipsoid
 * Realizations inside ellipse satisfy constraint $$(x_\omega-\mu)^T\Sigma^{-1}(x_\omega-\mu)\leq \mathbb{Q}(1-\alpha)$$
 * Fraction of realizations that are inside ellipsoid is not exactly 95%. Why?
 

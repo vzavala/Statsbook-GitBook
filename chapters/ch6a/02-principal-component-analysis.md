@@ -55,7 +55,7 @@
 * One can show that sample covariance matrix of $$X$$ is:
 
   $$
-  \hat{\textrm{Cov}}(X)= \mathbf{X}^T\mathbf{X}.
+  \hat{\textrm{Cov}}(X)= \frac{1}{S}\mathbf{X}^T\mathbf{X}.
   $$
 
 * Matrix $$\mathbf{X}^T\mathbf{X}$$ is known as *kernel* matrix and we denote this as $$\boldsymbol{\Sigma}$$.
@@ -84,7 +84,7 @@
 * Constraint $$w^T_2w_1=0$$ (a.k.a. orthogonality constraint) ensures that mixture $$T_2=w_2^TX$$ is not correlated to mixture $$T_1=w_1^TX$$.
 * This guarantees that $$T_2$$ and $$T_1$$ provide complementary (non-redundant) info.
 * Can continue procedure to obtain all eigenvecs $$w_k,\, k=1,...,n$$ of $$\boldsymbol{\Sigma}$$.
-* Each eigenvec $$w_k$$ has mixture $$T_k=w^T_kX$$ with info content $$\lambda_k=w^T\Sigma w$$.
+* Each eigenvec $$w_k$$ has mixture $$T_k=w^T_kX$$ with info content $$\lambda_k=w^T_k\Sigma w_k$$.
 * Mixtures are ranked in order of info content $$\lambda_1\geq \lambda_2\geq \dots \lambda_n$$.
 
 * Set of eigenvecs and eigenv can be used to decompose kernel as:
@@ -140,7 +140,7 @@
   \begin{aligned}
   \hat{\textrm{Cov}}(T)&=\mathbf{T}^T\mathbf{T}\\
   &=\mathbf{W}^T\mathbf{X}^T\mathbf{X}\mathbf{W}\\
-  &=\mathbf{W}^T\mathbf{W}\boldsymbol{\Lambda} \mathbf{W}\mathbf{W}\\
+  &=\mathbf{W}^T\mathbf{W}\boldsymbol{\Lambda} \mathbf{W}^T\mathbf{W}\\
   &=\boldsymbol{\Lambda},
   \end{aligned}
   $$
