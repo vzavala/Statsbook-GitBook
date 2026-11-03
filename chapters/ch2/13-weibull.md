@@ -6,7 +6,7 @@ $$
 f(x)=\frac{\xi}{\beta}\left(\frac{x}{\beta}\right)^{\xi-1}\exp\left[{-\left(\frac{x}{\beta}\right)^\xi}\right],\; x\in \mathcal{D}.
 $$
 
-* Pdf has parameters $$\beta,\xi\in \mathbb{R}_+$$ (a.k.a scale and shape).
+* Pdf has parameters $$\beta,\xi\in \mathbb{R}_+$$ (a.k.a. scale and shape).
 * We express fact that $$X$$ is a Weibull RV as $$X\sim \textrm{Weibull}(\xi,\beta)$$.
 * One recovers an exponential RV when $$\xi=1$$.
 
@@ -20,7 +20,7 @@ $$
   $$
 
 * Cdf has nice form $$F(x)=1-e^{-(x/\beta)^\xi}$$ ($$\xi,\beta$$ are often inferred from cdf).
-* Note also that $$\mathbb{P}(X\leq \beta)=1-e^{-1}=0.63$$ *for any* $$\xi$$. This property is useful for estimating $$\beta$$ from the empiricial cdf.
+* Note also that $$\mathbb{P}(X\leq \beta)=1-e^{-1}=0.63$$ *for any* $$\xi$$. This property is useful for estimating $$\beta$$ from the empirical cdf.
 * Because cdf has a nice exponential form, quantile function is explicit:
 
   $$
@@ -31,7 +31,7 @@ $$
 
 * Weibull is *de facto* model used in failure analysis and many phenomena have Weibull-like RVs as limiting case.
 
-* Pdfs and cdfs for $$\textrm{Weibull}(\beta,\xi)$$ for different values of $$\beta,\xi$$.
+* Pdfs and cdfs for $$\textrm{Weibull}(\xi,\beta)$$ for different values of $$\beta,\xi$$.
 
   <figure><img src="../../.gitbook/assets/slides/ch2_compareweibull.png" alt="" width="630"></figure>
 
@@ -81,7 +81,7 @@ Open in Colab: [`ch2_compare_weibull.ipynb`](https://colab.research.google.com/g
 ## Example: Modeling Wind Conditions
 
 * Wind is rather unpredictable but it is known that the 10-min wind speed (time average over 10 minutes) follows a Weibull distribution (see Figure).
-* Information on wind speed distribution is used in planning studies to determine how much wind power can be extracted using wind turbines at a given location. .
+* Information on wind speed distribution is used in planning studies to determine how much wind power can be extracted using wind turbines at a given location.
 
   <figure><img src="../../.gitbook/assets/slides/ch2_windspeed.png" alt="" width="420"></figure>
 
@@ -89,7 +89,7 @@ Use the pdf and cdf to determine the following:
 
 {% hint style="info" %}
 * Scale and shape parameters for 10-min wind speed.
-* Average and most likely wind speed at this location. Which of these statistics would you use to recommend?
+* Average and most likely wind speed at this location. Which of these statistics would you recommend using?
 * Wind turbines extract high power when wind speed is [10-20 m/s]. Over what fraction of the time will the turbine operate in this high-power range at this location?
 {% endhint %}
 

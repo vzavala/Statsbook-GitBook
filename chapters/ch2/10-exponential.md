@@ -6,7 +6,7 @@
   f(x)=\frac{1}{\beta}e^{-x/\beta},\quad x\in \mathcal{D}.
   $$
 
-* Only parameter is $$\beta \in \mathbb{R}_+$$ (a.k.a. scale value).
+* Only parameter is $$\beta \in \mathbb{R}_+$$ (a.k.a. scale parameter).
 * Reciprocal $$\eta=1/\beta$$ is known as intensity and thus pdf can also be written as $$f(x)=\eta e^{-\eta\cdot x}$$.
 * Express fact that $$X$$ is exponential as $$X\sim \textrm{Exp}(\beta)$$.
 
@@ -112,7 +112,7 @@ For how long will a tracer particle reside in the system?  What factors influenc
 * Mean residence time is $$\mathbb{E}[T]=\tau=V/Q$$ and variance is $$\mathbb{V}[T]=(V/Q)^2$$.
 * What is effect of $$V$$ and $$Q$$ on uncertainty?
 * Fraction of particles that have exited up to time $$t$$ is $$\mathbb{P}(T\leq t)=F_T(t)$$.
-* $$F_T(t)=\displaystyle\int_{0}^tf_T(t')dt'=(1-e^{-t/\tau})$$ and thus $$F(0)=0$$ and $$F(\infty)=1$$.
+* $$F_T(t)=\displaystyle\int_{0}^tf_T(t')dt'=(1-e^{-t/\tau})$$ and thus $$F_T(0)=0$$ and $$F_T(\infty)=1$$.
 * Fraction of particles that remain in system at time $$t$$  is $$\mathbb{P}(T>t)=1-F_T(t)=e^{-t/\tau}$$
 * Function $$\mathbb{P}(T>t)$$ is known as the “survival function".
 

@@ -33,7 +33,7 @@
 * In hypergeometric setting, we choose $$n$$ items at once while in binomial setting we choose $$n$$ items by choosing one item at a time (resetting system each time).
 * Intuitively, when population $$N_t$$ is large, size of the sample does not matter as much and picking $$n$$ items at once or as an independent sequence is equivalent.
 
-<figure><img src="../../.gitbook/assets/slides/ch2_pdfcdfbinomial.png" alt="" width="489"><figcaption><p>Pdf and cdf for binomial RV with 𝑛 = 10 and 𝑝 = 0.3 (top). Binomial pdf for different 𝑝 (bottom-left). Convergence of hypergeometric pdf to binomial pdf for 𝑁 = 1000 (bottom-right).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch2_pdfcdfbinomial.png" alt="" width="489"><figcaption><p>Pdf and cdf for binomial RV with 𝑛 = 10 and 𝑝 = 0.3 (top). Binomial pdf for different 𝑝 (bottom-left). Convergence of hypergeometric pdf to binomial pdf for 𝑁ₜ = 1000 (bottom-right).</p></figcaption></figure>
 
 <details>
 
@@ -111,7 +111,7 @@ Consider machine status problem; recall we have established that status is $$\ma
 
   <figure><img src="../../.gitbook/assets/slides/ch2_unifprocess.png" alt="" width="489"><figcaption><p>Failures (dark dots) recorded over three years.</p></figcaption></figure>
 
-Status is a Benoulli RV with $$p=0.5$$ and thus number of failures $$n$$-sequence is $$\textrm{Bi}(n,p)$$.
+Status is a Bernoulli RV with $$p=0.5$$ and thus the number of failures in an $$n$$-sequence is $$\textrm{Bi}(n,p)$$.
 
 * Probability of finding 2 failures in a sequence of $$n=10$$ times is:
 

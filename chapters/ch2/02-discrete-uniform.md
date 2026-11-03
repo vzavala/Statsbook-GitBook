@@ -1,6 +1,6 @@
 # Discrete Uniform
 
-The (discrete) uniform RV is simplest model that one can think of to model phenomena.
+The (discrete) uniform RV is the simplest model that one can think of to model phenomena.
 
 Model inspired by the fact that, in many applications, we often have limited data to characterize phenomenon.
 

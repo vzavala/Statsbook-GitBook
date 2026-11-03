@@ -7,9 +7,9 @@
   f(x)=\frac{1}{x\sqrt{2\pi\sigma^2}}\exp\left[{-\frac{(\log(x)-\mu)^2}{2\sigma^2}}\right],\; x\in \mathcal{D}.
   $$
 
-   with hyperprameters $$\mu\in \mathbb{R}$$ and $$\sigma\in \mathbb{R}_+$$.
+   with parameters $$\mu\in \mathbb{R}$$ and $$\sigma\in \mathbb{R}_+$$.
 
-* Domainis $$\mathcal{D}=(0,\infty)$$ (cannot take negative values)
+* Domain is $$\mathcal{D}=(0,\infty)$$ (cannot take negative values)
 * Median and quantiles are:
 
   $$

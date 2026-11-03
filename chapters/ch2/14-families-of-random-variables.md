@@ -9,7 +9,7 @@
 
 * These RVs are known as the Gamma family.
 * There are three major families of continuous RVs:
-   * Gaussian family (includes Gaussian, LogNormal, and Raleigh)
+   * Gaussian family (includes Gaussian, LogNormal, and Rayleigh)
    * Gamma family (includes exponential, Gamma, Chi-Squared, and Weibull)
    * Ratio family (includes Cauchy, Uniform, Beta, Fisher, Student)
 

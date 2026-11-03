@@ -95,8 +95,8 @@ Open in Colab: [`ch2_compare_bernoulli.ipynb`](https://colab.research.google.com
 * Consider the previous machine status problem and the following questions:
    * Is it suitable to model the machine status as a Bernoulli RV?
    * If so, what would be its parameters?
-   * What makes this different than a uniform RV?
-* Define status as $$X=0$$ when fails and $$X=1$$ when works (domain is $$\mathcal{D}=\{0,1\}$$).
+   * What makes this different from a uniform RV?
+* Define status as $$X=0$$ when it fails and $$X=1$$ when it works (domain is $$\mathcal{D}=\{0,1\}$$).
 * For a Bernoulli RV, we must have that $$\mathbb{P}(X=0)=1-p$$ and $$\mathbb{P}(X=1)=p$$.
 * From our data we have:
 

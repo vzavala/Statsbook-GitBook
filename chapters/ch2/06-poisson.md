@@ -100,14 +100,14 @@ Open in Colab: [`ch2_compare_poisson.ipynb`](https://colab.research.google.com/g
 
      <figure><img src="../../.gitbook/assets/slides/ch2_poissprocess.png" alt="" width="489"><figcaption><p>Pump failures (dark dots) recorded over three months.</p></figcaption></figure>
 
-* From data, number of failures per month are $$x_{Jan}=8$$,$$x_{Feb}=12$$, $$x_{Mar}=14$$.
+* From data, number of failures per month are $$x_{Jan}=8$$, $$x_{Feb}=12$$, $$x_{Mar}=14$$.
 * From these values we obtain empirical mean:
 
   $$
   \hat{\mathbb{E}}_X=\frac{1}{3}(8+12+14)=11.3
   $$
 
-* For Poisson RV, we know that $$\mathbb{E}_X=\lambda$$ and we thus we estimate $$\hat{\lambda}=11.3$$.
+* For Poisson RV, we know that $$\mathbb{E}_X=\lambda$$ and thus we estimate $$\hat{\lambda}=11.3$$.
 * Use Poisson RV model to determine that:
 
   $$

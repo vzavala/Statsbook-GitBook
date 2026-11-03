@@ -1,6 +1,6 @@
 # Uniform (Continuous)
 
-* A continuous uniform RV was a pdf of the form:
+* A continuous uniform RV has a pdf of the form:
 
   $$
   f(x)=\frac{1}{b-a}, \; x\in \mathcal{D}
@@ -103,7 +103,7 @@ Consider Gibbs reactor and consider situation in which there is no pressure data
 
 * Is it adequate to model pressure as a uniform RV?
 * Thermodynamics tells us that we will have unacceptably low conversions at pressures below 100 bar. What is  probability that reactor will exhibit low conversions?
-* Reactor vessel is 30-yr old and you are unsure if it can tolerate high pressures for much longer. To be safe, you want to design an alarm system; you want to set a threshold that triggers alarm only 1% of the time. What is such threshold value?
+* Reactor vessel is 30-yr-old and you are unsure if it can tolerate high pressures for much longer. To be safe, you want to design an alarm system; you want to set a threshold that triggers alarm only 1% of the time. What is such threshold value?
 
 * We only know that pressure is in continuous range $$[63,234]$$ bar, we thus have no reason to doubt that it is equally likely to find pressure anywhere in the range. Consequently, uniform RV is an adequate model with $$b=234$$ and $$a=63$$.
 * Probability that reactor exhibits low conversion is:
@@ -112,7 +112,7 @@ Consider Gibbs reactor and consider situation in which there is no pressure data
   \mathbb{P}(X\leq 100)=\frac{100-63}{234-63}= 0.21.
   $$
 
-* Want to find value $$x$$ such that $$\mathbb{P}(X>x)=0.01$$. This is equivalent to find $$x$$ such that $$\mathbb{P}(X\leq x)=0.99$$ (find $$x$$ such that $$F(x)=0.99$$):
+* Want to find value $$x$$ such that $$\mathbb{P}(X>x)=0.01$$. This is equivalent to finding $$x$$ such that $$\mathbb{P}(X\leq x)=0.99$$ (find $$x$$ such that $$F(x)=0.99$$):
 
   $$
   0.99=\frac{x-63}{234-63}

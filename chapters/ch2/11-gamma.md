@@ -95,17 +95,17 @@ You are interested in addressing the following questions:
 * This is the prob that the charging of the 2 trucks in the queue *cannot* be completed in the next 3 hours.
 * $$X$$ is thus time to wait until we observe 2 Poisson events (two charge completions)
 
-* Average waiting time is  $$\beta=1/0.25=4$$ hr. We use:
+* Average waiting time per event is $$\beta=1/0.25=4$$ hr. We use:
 
   $$
-  P(X>x)=1-F(x)=\sum_{k=0}^{\alpha-1}\frac{1}{k!}\left(\frac{x}{\beta}\right)^ke^{-x/\beta}
+  \mathbb{P}(X>x)=1-F(x)=\sum_{k=0}^{\alpha-1}\frac{1}{k!}\left(\frac{x}{\beta}\right)^ke^{-x/\beta}
   $$
 
-   with $$x=3$$ (hr) that $$\alpha=2$$ and $$\beta=4$$ (hr) and thus:
+   with $$x=3$$ (hr), $$\alpha=2$$, and $$\beta=4$$ (hr) and thus:
 
   $$
   \begin{aligned}
-  P(X>3)&=\sum_{k=0}^{1}\frac{1}{k!}\left(\frac{3}{4}\right)^ke^{-3/4}\\
+  \mathbb{P}(X>3)&=\sum_{k=0}^{1}\frac{1}{k!}\left(\frac{3}{4}\right)^ke^{-3/4}\\
   &=\frac{1}{0!}\left(\frac{3}{4}\right)^0e^{-3/4}+\frac{1}{1!}\left(\frac{3}{4}\right)^1e^{-3/4}=e^{-3/4}+(3/4)e^{-3/4}\\
   &=0.826.
   \end{aligned}
@@ -115,7 +115,7 @@ You are interested in addressing the following questions:
 
   $$
   \begin{aligned}
-  P(X>3)&=\sum_{k=0}^{2}\frac{1}{k!}\left(\frac{3}{4}\right)^ke^{-3/4}=0.959.
+  \mathbb{P}(X>3)&=\sum_{k=0}^{2}\frac{1}{k!}\left(\frac{3}{4}\right)^ke^{-3/4}=0.959.
   \end{aligned}
   $$
 

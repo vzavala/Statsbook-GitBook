@@ -1,6 +1,6 @@
 # Chi-Squared
 
-Chi-Square RV has pdf of the form:
+Chi-Squared RV has pdf of the form:
 
 $$
 f(x)=\frac{1}{2^{r/2}\Gamma(r/2)}e^{-x/2}x^{r/2-1},\; x\in \mathcal{D}.
@@ -8,7 +8,7 @@ $$
 
 with domain $$\mathcal{D}=[0,\infty)$$.
 
-* Pdf has only one parameter $$r\in \mathbb{Z}_+$$ (a.k.a degrees of freedom).
+* Pdf has only one parameter $$r\in \mathbb{Z}_+$$ (a.k.a. degrees of freedom).
 * We express fact that $$X$$ is a chi-squared RV as $$X\sim \chi^2(r)$$
 * This is a Gamma RV with $$\beta=2$$ and $$\alpha=r/2$$ (for a positive integer $$r$$).
 

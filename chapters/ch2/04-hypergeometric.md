@@ -1,9 +1,9 @@
 # Hypergeometric
 
 * Arises in applications in which one draws random samples from a population.
-* For instance, in a manufacturing, we choose a set of products to inspect for quality control.
+* For instance, in manufacturing, we choose a set of products to inspect for quality control.
 * Main issue is that population can be large and we cannot afford to inspect all.
-* We want to select a subset and infer from this behavior of general population.
+* We want to select a subset and infer from it the behavior of the general population.
 * Assume population is composed of mutually exclusive groups $$Y$$ or $$N$$.
 * Total units in population is $$N_t$$ and define total number of units of type $$Y$$ as $$N_y$$. We thus have that $$(N_t-N_y)$$ are of type $$N$$.
 * The fraction of $$Y$$ items is thus $$p=N_y/N_t$$.
@@ -118,9 +118,9 @@ Open in Colab: [`ch2_compare_hypergeometric.ipynb`](https://colab.research.googl
   \mathbb{E}_X=n\cdot p.
   $$
 
-* Value $$n$$ is known (we control this) but $$p$$ is usually not known  (need to sample the entire population to determine $$N_y$$, this would be expensive).
+* Value $$n$$ is known (we control this) but $$p$$ is usually not known  (need to sample the entire population to determine $$N_y$$; this would be expensive).
 * Parameter $$p$$ can be estimated from empirical estimates of $$\mathbb{E}_X$$.
-* For instance, assume you pick different samples $$S$$ (each of size $$n$$) and record the number of items of type $$Y$$ in each sample (given by $$x_\omega,\,\omega \in \mathcal{S}$$).
+* For instance, assume you pick $$S$$ different samples (each of size $$n$$) and record the number of items of type $$Y$$ in each sample (given by $$x_\omega,\,\omega \in \mathcal{S}$$).
 * Empirical mean is $$\hat{\mathbb{E}}_X=\frac{1}{S}\sum_{\omega \in \mathcal{S}}x_\omega$$ and thus we can estimate $$p$$ as:
 
   $$
@@ -143,9 +143,9 @@ Open in Colab: [`ch2_compare_hypergeometric.ipynb`](https://colab.research.googl
 Cannot afford to monitor machine status every week for 3 years (time-consuming)
 
 * If you inspect the machine 5 times (selected at random)... What is the probability that the machine will be in failure mode 5 out of 5 times that you inspected?
-* if you inspect the machine 10 times (selected at random)... What is the probability that the machine will be in failure mode 10 out of 10 times that you inspected?
+* If you inspect the machine 10 times (selected at random)... What is the probability that the machine will be in failure mode 10 out of 10 times that you inspected?
 
-We inspect at random, it is thus appropriate to model number of failures as $$X\sim \mathcal{H}(N_y,N_t,p,n)$$.
+We inspect at random, it is thus appropriate to model number of failures as $$X\sim \mathcal{H}(N_y,N_t,n,p)$$.
 
 * We define $$N_t=156$$, $$N_y=79$$, $$p=N_y/N_t\approx 0.50$$, and $$n=5$$.
 * Probability that machine is in failure mode 5 out of 5 times inspected is:

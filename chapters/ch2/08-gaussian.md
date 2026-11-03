@@ -55,9 +55,9 @@
   f(x,t)=\frac{1}{\sqrt{2 \pi \sigma(t)^2}}e^{-\frac{x^2}{2\sigma(t)^2}},\quad  x\in (-\infty,\infty)
   $$
 
-   with$$\sigma^2=2Dt$$.
+   with $$\sigma^2=2Dt$$.
 
-* Particles position at any time is random and given by $$X(t)\sim\mathcal{N}(0,\sigma^2)$$
+* Particle position at any time is random and given by $$X(t)\sim\mathcal{N}(0,\sigma^2)$$
 * How does uncertainty change with diffusivity $$D$$ and time $$t$$?
 
 ## Gaussian
@@ -65,7 +65,7 @@
 Gaussian RV $$X\sim \mathcal{N}(\mu,\sigma^2)$$ has many useful properties. For instance:
 
 {% hint style="info" %}
-* It expected value and variance are $$\mathbb{E}_X=\mu$$ and $$\mathbb{V}_X=\sigma^2$$.
+* Its expected value and variance are $$\mathbb{E}_X=\mu$$ and $$\mathbb{V}_X=\sigma^2$$.
 * Any linear transformation $$Y=a+bX$$ yields a Gaussian $$Y\sim \mathcal{N}(a+b\mu,b^2\sigma^2)$$.
 * This implies that $$\mathbb{E}_Y=a+b\mathbb{E}_X$$ and $$\mathbb{V}_Y=b^2\mathbb{V}_X$$.
 * Cdf of $$Y=a+bX$$ satisfies $$F_Y(y)=F_X(x)$$ for all $$y=a+bx$$.
@@ -88,10 +88,10 @@ Think about implications from an estimation and uncertainty propagation perspect
 
 {% hint style="info" %}
 * What type of RV is output flow $$F_3=f_1+\kappa\cdot F_2$$? What is its mean and std dev?
-* How does uncertainty in $$F_3$$ change $$\kappa\to 0$$ and $$\kappa\to 1$$? Why?
+* How does uncertainty in $$F_3$$ change as $$\kappa\to 0$$ and as $$\kappa\to 1$$? Why?
 {% endhint %}
 
-* We have that $$F_3=10+\kappa F_2$$ and is thus $$F_3$$ a linear transformation of $$F_2$$
+* We have that $$F_3=10+\kappa F_2$$ and thus $$F_3$$ is a linear transformation of $$F_2$$
 * We thus have that $$F_3\sim\mathcal{N}(10+\kappa\cdot 20,\kappa^2\cdot 1)$$
 
 ## Gaussian
@@ -128,7 +128,7 @@ Computing cdf involves evaluating an integral that depends on $$\mu$$ and $$\sig
 
 * $$Z$$ is known as the standard normal RV $$\mathcal{N}(0,1)$$.
 
-* From linear transformation we have that $$F_X(x)=F_Z(z)$$ holds for any $$z=(x-\mu)/\sigma$$ and we can thus evaluate $$F_X(x)$$ at $$x$$ by transforming $$x$$ into $$z$$ and then evaluate $$F_Z(z)$$.
+* From linear transformation we have that $$F_X(x)=F_Z(z)$$ holds for any $$z=(x-\mu)/\sigma$$ and we can thus evaluate $$F_X(x)$$ at $$x$$ by transforming $$x$$ into $$z$$ and then evaluating $$F_Z(z)$$.
 * Since $$F_Z(z)$$ does not depend on any parameters, it can be precomputed (values of $$F_Z(z)$$ are available in software packages).
 * We can compute $$\mathbb{Q}_X(\alpha)$$ by using pre-computed quantiles of $$Z$$, $$z_\alpha:=\mathbb{Q}_Z(\alpha)$$.
 * Relationship between quantiles of $$X$$ and $$Z$$ is obtained directly from the linear transformation $$x=\mu+\sigma z$$:
@@ -234,7 +234,7 @@ z_alpha = 1.995,  Q_F3(alpha) = 31.995  (direct: 31.995)
 
   <figure><img src="../../.gitbook/assets/slides/ch2_gausslevels.png" alt="" width="350"></figure>
 
-* Standarization allows us to easily determine probability that $$X$$ is in specific ranges.
+* Standardization allows us to easily determine probability that $$X$$ is in specific ranges.
 
 <details>
 
@@ -324,7 +324,7 @@ Open in Colab: [`ch2_compare_gaussians.ipynb`](https://colab.research.google.com
 
 </details>
 
-* Standarization also allows us to determine *confidence regions* for $$X$$.
+* Standardization also allows us to determine *confidence regions* for $$X$$.
 * Assume probability level $$\alpha \in [0,1]$$; we can show that critical value $$z$$ satisfying
 
   $$
@@ -345,7 +345,7 @@ Open in Colab: [`ch2_compare_gaussians.ipynb`](https://colab.research.google.com
   \mathbb{P}(\mu-z_{\frac{\alpha}{2}}\cdot \sigma\leq X\leq \mu+z_{\frac{\alpha}{2}}\cdot\sigma)=1-\alpha.
   $$
 
-* i.e.; probability of finding $$X\sim\mathcal{N}(\mu,\sigma^2)$$ in region $$[\mu\pm z_{\frac{\alpha}{2}}\cdot \sigma]$$ is $$1-\alpha$$.
+* i.e., probability of finding $$X\sim\mathcal{N}(\mu,\sigma^2)$$ in region $$[\mu\pm z_{\frac{\alpha}{2}}\cdot \sigma]$$ is $$1-\alpha$$.
 * This gives idea of how confident we are of finding $$X$$ in a region around mean.
 * Confidence region is important in many topics (e.g., hypothesis testing).
 
@@ -355,7 +355,7 @@ Open in Colab: [`ch2_compare_gaussians.ipynb`](https://colab.research.google.com
 
   <figure><img src="../../.gitbook/assets/slides/ch2_conf_mixing.png" alt="" width="420"></figure>
 
-* We have $$1-\alpha=0.9$$ and thus $$\alpha=0.1$$ and $$\mathbb{Q}_Z(1-\frac{\alpha}{2})=1.644$$.
+* We have $$1-\alpha=0.9$$ and thus $$\alpha=0.1$$ and $$\mathbb{Q}_Z(1-\frac{\alpha}{2})=1.645$$.
 * We thus have $$F_3\in [30-1.64\cdot 1,30+1.64\cdot 1]=[28.36,31.64]$$ with 90% prob.
 
 #### Python implementation: 90% confidence region
