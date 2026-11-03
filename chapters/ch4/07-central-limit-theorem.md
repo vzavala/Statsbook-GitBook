@@ -32,10 +32,10 @@
 
 ## Example: Verifying the Central Limit Theorem
 
-* We i.i.d. samples $$X_1,...,,X_S$$ from $$X\sim \textrm{Weibull}(2,1)$$ and compute $$\hat{\mathbb{E}}_X^S=\frac{1}{S}\sum_{\omega=1}X_\omega$$.
+* We i.i.d. samples $$X_1,...,,X_S$$ from $$X\sim \textrm{Weibull}(1,2)$$ and compute $$\hat{\mathbb{E}}_X^S=\frac{1}{S}\sum_{\omega=1}X_\omega$$.
 * We repeat procedure for different sets of samples and visualize pdf of $$\bar{X}=\hat{\mathbb{E}}_X^S$$.
 
-  <figure><img src="../../.gitbook/assets/slides/ch4_clt_weibull.png" alt="" width="350"><figcaption><p>Pdf for 𝑋 ∼ Weibull(2, 1) (top-left) and sample average 𝑋̄ with 𝑆 = 10 (top-right), 𝑆 = 100 (bottom-left) and 𝑆 = 1000 (bottom-right).</p></figcaption></figure>
+  <figure><img src="../../.gitbook/assets/slides/ch4_clt_weibull.png" alt="" width="350"><figcaption><p>Pdf for 𝑋 ∼ Weibull(1, 2) (top-left) and sample average 𝑋̄ with 𝑆 = 10 (top-right), 𝑆 = 100 (bottom-left) and 𝑆 = 1000 (bottom-right).</p></figcaption></figure>
 
 #### Python implementation
 

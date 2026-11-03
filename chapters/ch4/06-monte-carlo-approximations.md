@@ -63,7 +63,7 @@
 
 ## Example: Monte Carlo Approximations
 
-* We generate random samples $$X_\omega,\; \omega \in \mathcal{S}$$ from $$X\sim \textrm{Weibull}(2,1)$$.
+* We generate random samples $$X_\omega,\; \omega \in \mathcal{S}$$ from $$X\sim \textrm{Weibull}(1,2)$$.
 * Compute MC approxs for $$\mathbb{E}[X],\mathbb{E}[\log(X)]$$ and $$\mathbb{V}[\exp(X)+X^2]$$, and $$\mathbb{P}(X>\geq 1)$$  for different $$S$$.
 
   <figure><img src="../../.gitbook/assets/slides/ch4_convergence_mc.png" alt="" width="420"></figure>
