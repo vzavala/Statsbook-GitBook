@@ -64,6 +64,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_uniformc-02-0.png" alt="" width="520"></figure>
+
 Open in Colab: [`ch2_compare_uniformc.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_uniformc.ipynb)
 
 </details>

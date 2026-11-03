@@ -68,3 +68,5 @@ plt.show()
 bias (random)     = +0.060
 bias (non-random) = -0.214
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch4_random_sample-02-1.png" alt="" width="520"></figure>

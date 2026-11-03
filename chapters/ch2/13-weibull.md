@@ -72,6 +72,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_weibull-02-0.png" alt="" width="520"></figure>
+
 Open in Colab: [`ch2_compare_weibull.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_weibull.ipynb)
 
 </details>
@@ -198,6 +200,8 @@ for ax in (ax1, ax2, ax3):
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch2_example_weibull-05-0.png" alt="" width="520"></figure>
 
 $$\mathbb{E}_X=\beta\,\Gamma(1+1/\xi)$$, $$\mathbb{MO}_X=\beta\left(\frac{\xi-1}{\xi}\right)^{1/\xi}$$, and
 $$\mathbb{P}(10\leq X\leq 20)=F(20)-F(10)$$.

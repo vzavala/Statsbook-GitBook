@@ -193,3 +193,5 @@ plt.show()
 SSE (PCA) = 2.549e-03
 V(theta_hat) with PCA: [7.63e-13 3.32e-07 1.84e-07 2.59e-07 2.67e-07 2.60e-07]
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca_estimation-08-2.png" alt="" width="520"></figure>

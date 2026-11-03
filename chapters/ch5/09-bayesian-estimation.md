@@ -119,6 +119,8 @@ for vals, name in ((log_f_theta, 'prior'), (log_f_y_theta, 'likelihood (MLE)'), 
     print(f"{name:18s} is maximized at theta = {theta[np.argmax(vals)]:.2f}")
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch5_bayes_estimation-02-0.png" alt="" width="520"></figure>
+
 ```
 prior              is maximized at theta = -0.01
 likelihood (MLE)   is maximized at theta = 1.99

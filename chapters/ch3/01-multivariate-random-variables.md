@@ -59,6 +59,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch3_examples_multidatasets-02-0.png" alt="" width="520"></figure>
+
 ```python
 x1, x2 = np.meshgrid(np.arange(0, 11, 0.5), np.arange(0, 11, 0.5))
 x3 = 2 * x1**2 + 2 * x2**2 + 20 * np.random.normal(0, 1, x1.shape)
@@ -69,6 +71,8 @@ ax.set_ylabel('$x_2$', fontsize=14)
 ax.set_zlabel('$x_3$', fontsize=14)
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch3_examples_multidatasets-03-0.png" alt="" width="520"></figure>
 
 ## Domains and Subdomains
 
@@ -222,3 +226,5 @@ for ax, (title, boxes) in zip(axs.ravel(), events):
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch3_gibbs_subdomains-04-0.png" alt="" width="520"></figure>

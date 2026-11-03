@@ -281,6 +281,8 @@ plt.ylabel(r'$\theta_2$', fontsize=14)
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson-07-1.png" alt="" width="520"></figure>
+
 #### Python implementation: Good and bad initial guesses
 
 Solve $$\min_\theta \frac{1}{2}\lVert\mathbf{y}-\mathbf{m}(\theta)\rVert^2$$ with a Levenberg-Marquardt
@@ -311,3 +313,5 @@ plt.show()
 theta0 = (1,...,1):  theta_hat = [1.25 0.06 0.04 0.11 1.19],  SSE = 0.2989
 theta0 = (-1,...,-1):  theta_hat = [-2887567.23  -183298.6    -58849.71  -652886.96    37012.98],  SSE = 11.3903
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson-10-1.png" alt="" width="520"></figure>

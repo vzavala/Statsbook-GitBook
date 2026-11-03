@@ -155,3 +155,5 @@ plt.show()
 average cost: u_D* -> 844.6,  do nothing -> 501.8
 maximum cost: u_D* -> 3212.4,  do nothing -> 4280.5
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch7_generator_det-06-1.png" alt="" width="520"></figure>

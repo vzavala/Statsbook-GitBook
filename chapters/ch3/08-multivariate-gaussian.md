@@ -101,6 +101,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch3_compare_multigaussians-02-0.png" alt="" width="520"></figure>
+
 Marginals $$X_1\sim\mathcal{N}(\mu_1,\Sigma_{11})$$, $$X_2\sim\mathcal{N}(\mu_2,\Sigma_{22})$$ and conditionals with
 $$\mu_{1|2}=\mu_1+\Sigma_{12}\Sigma_{22}^{-1}(x_2-\mu_2)$$, $$\Sigma_{1|2}=\Sigma_{11}-\Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}$$
 (and symmetrically for $$2|1$$), evaluated at $$x_2=1$$ and $$x_1=1$$.
@@ -129,6 +131,8 @@ plt.tight_layout()
 plt.show()
 print(f"X1 | x2=1 ~ N({mu_1g2:.2f}, {Sigma_1g2:.2f}),   X2 | x1=1 ~ N({mu_2g1:.2f}, {Sigma_2g1:.2f})")
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch3_compare_multigaussians-04-0.png" alt="" width="520"></figure>
 
 ```
 X1 | x2=1 ~ N(0.00, 0.75),   X2 | x1=1 ~ N(0.50, 0.75)
@@ -437,6 +441,8 @@ plt.show()
 print(f"chi2(2) quantile Q_n = {Q_n:.2f},  chi2(1) quantile Q_1 = {Q_1:.2f}")
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch3_gaussian_geometry-05-0.png" alt="" width="520"></figure>
+
 ```
 chi2(2) quantile Q_n = 5.99,  chi2(1) quantile Q_1 = 3.84
 ```
@@ -494,3 +500,5 @@ plt.show()
 ```
 954 of S = 1000 realizations (95.4%) lie inside the ellipse
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch3_gaussian_samples_ellipse-04-1.png" alt="" width="520"></figure>

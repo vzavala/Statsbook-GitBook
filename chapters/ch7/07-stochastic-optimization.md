@@ -134,6 +134,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch7_generator_stoch-03-0.png" alt="" width="520"></figure>
+
 #### Python implementation
 
 {% hint style="success" %}
@@ -178,3 +180,5 @@ for ax, m, h, ref, label in ((axs[0], E_mean, E_half, sigma**2, r'$\hat{\mathbb{
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch7_example_SAA-02-0.png" alt="" width="520"></figure>

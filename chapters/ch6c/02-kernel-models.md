@@ -205,3 +205,5 @@ for ax, gamma in zip(axs, (0.1, 0.001, 0.0001)):
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_hougen_watson_kernel-04-0.png" alt="" width="520"></figure>

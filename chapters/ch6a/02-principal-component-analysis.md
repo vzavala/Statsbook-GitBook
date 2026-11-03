@@ -237,3 +237,5 @@ for a in fig.axes[1:]:
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca-07-0.png" alt="" width="520"></figure>

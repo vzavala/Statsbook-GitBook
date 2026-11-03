@@ -241,6 +241,8 @@ nonzero singular values of X: [41.8629  1.5625  0.8498  0.5757]
 rank(X) = 4   rank(X_eps) = 10
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_svd_image_field-02-1.png" alt="" width="520"></figure>
+
 ## Example: Image Compression using SVD
 
 * Decompose complex image $$\mathbf{X}=\sum_{k=1}^ns_k\mathbf{u}_k\mathbf{v}_k^T$$.
@@ -302,3 +304,5 @@ plt.show()
 ```
 image size: (199, 199)   rank: 199
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_svd_reconstruction-04-2.png" alt="" width="520"></figure>

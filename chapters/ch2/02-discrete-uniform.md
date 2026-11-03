@@ -100,6 +100,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_uniformd-02-0.png" alt="" width="520"></figure>
+
 Open in Colab: [`ch2_compare_uniformd.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_uniformd.ipynb)
 
 </details>
@@ -167,6 +169,8 @@ plt.grid(True)
 plt.axis([-1, 52, 0, 4])
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch2_example_uniform-05-0.png" alt="" width="520"></figure>
 
 Uniform model with $$\mathcal{D}=\{0,1\}$$: $$a=0$$, $$b=1$$, $$n=2$$, so $$\mathbb{P}(X=x)=1/n=1/2$$.
 Compare with the empirical pdf $$\hat{\mathbb{P}}(X=x)=\frac{1}{S}\sum_{\omega}\mathbf{1}[x_\omega=x]$$.

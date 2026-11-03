@@ -118,3 +118,5 @@ for ax in axs:
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch4_leastsquares_example-07-0.png" alt="" width="520"></figure>

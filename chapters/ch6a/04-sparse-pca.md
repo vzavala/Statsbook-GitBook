@@ -167,3 +167,5 @@ theta_hat = [2.922e+00 2.127e-04 -4.900e-03]
 V(theta_hat) = [2.893e-01 3.321e-07 9.643e-07]
 SSE = 2.549e-03
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca_estimation_sparse-06-1.png" alt="" width="520"></figure>

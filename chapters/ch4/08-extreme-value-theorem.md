@@ -26,7 +26,7 @@
 
    where $$s=(x-a)/b$$ is a standardized variable.
 
-* GEV is reverse Weibull (for $$c<0$$), Fr\'echet (for $$c>0$$), and Gumbel (for $$c=0$$).
+* GEV is reverse Weibull (for $$c<0$$), Fréchet (for $$c>0$$), and Gumbel (for $$c=0$$).
 * Reverse Weibull is a variant of the two-parameter Weibull (explored before).
 * GEV RV is used in failure analysis because sample max characterizes *extreme events*.
 * This is relevant because such events often have small probabilities (are *rare* events).
@@ -85,6 +85,8 @@ for ax in axs.ravel():
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch4_evt_example-02-0.png" alt="" width="520"></figure>
 
 Probabilities of rare events from the GEV fit for $$S=1000$$.
 

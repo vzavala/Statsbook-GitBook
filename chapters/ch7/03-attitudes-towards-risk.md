@@ -58,6 +58,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch7_mean_var_comparison-03-0.png" alt="" width="520"></figure>
+
 ## Attitudes Towards Risk
 
 The following are typical attitudes towards risk and associated risk measures:
@@ -193,3 +195,5 @@ for ax in axs:
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch7_npv_comparison-03-0.png" alt="" width="520"></figure>

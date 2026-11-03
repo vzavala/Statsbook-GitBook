@@ -157,6 +157,8 @@ plt.show()
 fitted kernel: Matern(length_scale=97, nu=1.5) + WhiteKernel(noise_level=0.0462)
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-06-2.png" alt="" width="520"></figure>
+
 Compare the residuals through the empirical cdf of $$|\epsilon|$$.
 
 ```python
@@ -169,6 +171,8 @@ plt.legend(loc='lower right'); plt.grid(True)
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-08-0.png" alt="" width="520"></figure>
+
 95% confidence intervals $$m(x_\omega)\pm 1.96\,\sigma(x_\omega)$$ for the first 50 observations.
 
 ```python
@@ -179,6 +183,8 @@ plt.xlabel(r'Observation $\omega$'); plt.ylabel('$y$')
 plt.legend(); plt.grid(True)
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-10-0.png" alt="" width="520"></figure>
 
 ## Example: Experimental Design using GP Models
 
@@ -228,3 +234,5 @@ for ax, design in zip(axs.ravel(), designs):
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_kriging_uq-02-1.png" alt="" width="520"></figure>

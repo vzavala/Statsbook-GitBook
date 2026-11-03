@@ -106,6 +106,8 @@ plt.show()
 mode = 5,  E_X = n p = 5.0
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_hypergeometric-02-1.png" alt="" width="520"></figure>
+
 Open in Colab: [`ch2_compare_hypergeometric.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_hypergeometric.ipynb)
 
 </details>

@@ -74,6 +74,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_logistic_function-02-0.png" alt="" width="520"></figure>
+
 * Function $$m(x,\theta)$$ is used to model conditional probs: $$\mathbb{P}(Y=1\,|\,x,\theta)$$ and $$\mathbb{P}(Y=0\,|\,x,\theta)=1-\mathbb{P}(Y=1\,|\,x,\theta)$$.
 * Specifically, want to capture logic:
    * If evidence $$\theta^Tx$$ is large, there is a high prob that $$Y=1$$
@@ -146,6 +148,8 @@ plt.xlabel('$P$'); plt.ylabel('$C$'); plt.legend(loc='lower right'); plt.grid(Tr
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_logistic-04-0.png" alt="" width="520"></figure>
+
 MLE: $$\max_\theta \sum_\omega y_\omega\log m(x_\omega,\theta)+(1-y_\omega)\log(1-m(x_\omega,\theta))$$.
 (`penalty=None` gives plain MLE; scikit-learn regularizes by default.)
 
@@ -179,6 +183,8 @@ theta_hat = [-2.229 -0.071 21.873]
 accuracy = 87.80%  (439 of 500)
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_logistic-06-1.png" alt="" width="520"></figure>
+
 Train/test split (60/40) to check that the classifier generalizes.
 
 ```python
@@ -190,3 +196,5 @@ plot_confusion(axs[1], confusion_matrix(y_te, model_tr.predict(X_te)), 'test')
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_logistic-08-0.png" alt="" width="520"></figure>

@@ -115,6 +115,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch3_gibbs_conditional-04-0.png" alt="" width="520"></figure>
+
 $$\hat{\mathbb{P}}(X\in\mathcal{A})=\frac{1}{S}\sum_\omega\mathbf{1}[x_\omega\in\mathcal{A}]$$ and
 $$\hat{\mathbb{P}}(X\in\mathcal{A}_1|X\in\mathcal{A}_2)=\hat{\mathbb{P}}(X\in\mathcal{A}_1\cap\mathcal{A}_2)/\hat{\mathbb{P}}(X\in\mathcal{A}_2)$$.
 
@@ -330,6 +332,8 @@ f_hat(x1, x2)  (rows SSC = H, M, L; columns FSC = L, M, H)
 sum = 1.0
 Most likely category: (FSC, SSC) = (L, M),  f_hat = 0.5996
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_discrete-06-1.png" alt="" width="520"></figure>
 
 Marginals add the joint pdf over the other variable; conditionals divide the joint pdf by a marginal:
 $$\hat{f}(x_1|x_2)=\hat{f}(x_1,x_2)/\hat{f}_2(x_2)$$.
@@ -559,6 +563,8 @@ plt.show()
 37 x 45 bins;  integral of f_hat = 1.000
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_empirical-06-2.png" alt="" width="520"></figure>
+
 Empirical marginal pdfs $$\hat{f}_1(x_1)$$ and $$\hat{f}_2(x_2)$$.
 
 ```python
@@ -572,3 +578,5 @@ axs[1].set_ylabel(r'$\hat{f}_2(x_2)$')
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_empirical-08-0.png" alt="" width="520"></figure>

@@ -208,6 +208,8 @@ plt.show()
 print(f"training accuracy = {history[-1, 0]:.0%},  validation accuracy = {history[-1, 1]:.0%}")
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseI-05-0.png" alt="" width="520"></figure>
+
 ```
 training accuracy = 100%,  validation accuracy = 100%
 ```
@@ -227,6 +229,8 @@ for ax, ids, title in ((axs[0], train, 'training'), (axs[1], valid, 'validation'
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseI-06-0.png" alt="" width="520"></figure>
 
 The learned filter $$\Theta$$ and the activated images $$\mathbf{Z}=h(\mathbf{X}*\Theta+\theta)$$ for nine
 validation images.
@@ -251,6 +255,8 @@ Theta =
  [-0.711 -0.499 -0.039]
  [-0.235  0.313  0.159]]
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseI-08-1.png" alt="" width="520"></figure>
 
 * Now train CNN to distinguish bacterial species that generate endotoxin.
 * Collect 84 obs; 24 for *Escherichia coli* (EC), 28 for *Pseudomonas aeruginosa* (PA), and 32 for *Salmonella* Minnesota (SM).
@@ -341,6 +347,8 @@ plt.show()
 print(f"training accuracy = {history[-1, 0]:.0%},  validation accuracy = {history[-1, 1]:.0%}")
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseII-05-0.png" alt="" width="520"></figure>
+
 ```
 training accuracy = 93%,  validation accuracy = 74%
 ```
@@ -360,6 +368,8 @@ for ax, ids, title in ((axs[0], train, 'training'), (axs[1], valid, 'validation'
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseII-06-0.png" alt="" width="520"></figure>
 
 The learned filters $$\Theta_j$$ and the activated images (first filter) for nine validation images.
 
@@ -388,6 +398,8 @@ Theta_2 =
  [-1.693 -1.734 -0.832]
  [-0.999 -0.573  0.168]]
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseII-08-1.png" alt="" width="520"></figure>
 
 #### Python implementation
 
@@ -545,41 +557,38 @@ Epoch [2/40], Loss: 0.8795, Train Accuracy: 70.00%, Validation Accuracy: 80.00%
 Epoch [3/40], Loss: 0.3028, Train Accuracy: 86.25%, Validation Accuracy: 100.00%
 Epoch [4/40], Loss: 0.1494, Train Accuracy: 93.75%, Validation Accuracy: 80.00%
 Epoch [5/40], Loss: 0.1917, Train Accuracy: 92.50%, Validation Accuracy: 100.00%
+Epoch [6/40], Loss: 0.1480, Train Accuracy: 96.25%, Validation Accuracy: 80.00%
 ```
 
 ```
-Epoch [6/40], Loss: 0.1480, Train Accuracy: 96.25%, Validation Accuracy: 80.00%
 Epoch [7/40], Loss: 0.0584, Train Accuracy: 98.75%, Validation Accuracy: 100.00%
 Epoch [8/40], Loss: 0.0536, Train Accuracy: 97.50%, Validation Accuracy: 100.00%
 Epoch [9/40], Loss: 0.0287, Train Accuracy: 98.75%, Validation Accuracy: 100.00%
 Epoch [10/40], Loss: 0.0258, Train Accuracy: 98.75%, Validation Accuracy: 100.00%
+Epoch [11/40], Loss: 0.0229, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+Epoch [12/40], Loss: 0.0180, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
-Epoch [11/40], Loss: 0.0229, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [12/40], Loss: 0.0180, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [13/40], Loss: 0.0170, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [14/40], Loss: 0.0098, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [15/40], Loss: 0.0075, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-```
-
-```
 Epoch [16/40], Loss: 0.0063, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [17/40], Loss: 0.0052, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [18/40], Loss: 0.0058, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [19/40], Loss: 0.0042, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [20/40], Loss: 0.0040, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
+Epoch [19/40], Loss: 0.0042, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+Epoch [20/40], Loss: 0.0040, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [21/40], Loss: 0.0037, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [22/40], Loss: 0.0034, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [23/40], Loss: 0.0032, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [24/40], Loss: 0.0030, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [25/40], Loss: 0.0027, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
+Epoch [25/40], Loss: 0.0027, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [26/40], Loss: 0.0026, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [27/40], Loss: 0.0024, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [28/40], Loss: 0.0023, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
@@ -593,10 +602,10 @@ Epoch [32/40], Loss: 0.0020, Train Accuracy: 100.00%, Validation Accuracy: 100.0
 Epoch [33/40], Loss: 0.0017, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [34/40], Loss: 0.0017, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [35/40], Loss: 0.0016, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+Epoch [36/40], Loss: 0.0015, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
-Epoch [36/40], Loss: 0.0015, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [37/40], Loss: 0.0014, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [38/40], Loss: 0.0014, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [39/40], Loss: 0.0013, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
@@ -656,6 +665,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-17-0.png" alt="" width="520"></figure>
+
 ```python
 # Display some images from the validation set
 def imshow(img, title):
@@ -673,6 +684,8 @@ for i in range(9):
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-18-0.png" alt="" width="520"></figure>
 
 ```python
 # Display some images from the validation set
@@ -694,6 +707,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-19-0.png" alt="" width="520"></figure>
+
 ```python
 # Display activations
 model.eval()
@@ -714,6 +729,8 @@ for i in range(9):
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-21-0.png" alt="" width="520"></figure>
 
 ```python
 filter_weight = model.conv1.weight.data.cpu().numpy()[0]
@@ -753,6 +770,8 @@ cbar_ax = fig.add_axes([0.92, 0.15, 0.02, 0.7])
 fig.colorbar(plot, cax=cbar_ax)
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-24-0.png" alt="" width="520"></figure>
 
 #### Python implementation
 
@@ -910,60 +929,60 @@ Epoch [2/40], Loss: 1.0402, Train Accuracy: 57.50%, Validation Accuracy: 50.00%
 Epoch [3/40], Loss: 1.0508, Train Accuracy: 43.75%, Validation Accuracy: 60.00%
 Epoch [4/40], Loss: 0.7722, Train Accuracy: 52.50%, Validation Accuracy: 70.00%
 Epoch [5/40], Loss: 0.5081, Train Accuracy: 70.00%, Validation Accuracy: 65.00%
+Epoch [6/40], Loss: 0.4463, Train Accuracy: 78.75%, Validation Accuracy: 85.00%
 ```
 
 ```
-Epoch [6/40], Loss: 0.4463, Train Accuracy: 78.75%, Validation Accuracy: 85.00%
 Epoch [7/40], Loss: 0.4289, Train Accuracy: 83.75%, Validation Accuracy: 80.00%
 Epoch [8/40], Loss: 0.3897, Train Accuracy: 86.25%, Validation Accuracy: 85.00%
 Epoch [9/40], Loss: 0.3858, Train Accuracy: 91.25%, Validation Accuracy: 65.00%
 Epoch [10/40], Loss: 0.3341, Train Accuracy: 87.50%, Validation Accuracy: 65.00%
+Epoch [11/40], Loss: 0.4578, Train Accuracy: 76.25%, Validation Accuracy: 85.00%
+Epoch [12/40], Loss: 0.3614, Train Accuracy: 87.50%, Validation Accuracy: 70.00%
 ```
 
 ```
-Epoch [11/40], Loss: 0.4578, Train Accuracy: 76.25%, Validation Accuracy: 85.00%
-Epoch [12/40], Loss: 0.3614, Train Accuracy: 87.50%, Validation Accuracy: 70.00%
 Epoch [13/40], Loss: 0.3069, Train Accuracy: 85.00%, Validation Accuracy: 50.00%
 Epoch [14/40], Loss: 0.4344, Train Accuracy: 76.25%, Validation Accuracy: 50.00%
 Epoch [15/40], Loss: 0.3015, Train Accuracy: 86.25%, Validation Accuracy: 90.00%
+Epoch [16/40], Loss: 0.2287, Train Accuracy: 96.25%, Validation Accuracy: 90.00%
+Epoch [17/40], Loss: 0.2038, Train Accuracy: 96.25%, Validation Accuracy: 90.00%
 ```
 
 ```
-Epoch [16/40], Loss: 0.2287, Train Accuracy: 96.25%, Validation Accuracy: 90.00%
-Epoch [17/40], Loss: 0.2038, Train Accuracy: 96.25%, Validation Accuracy: 90.00%
 Epoch [18/40], Loss: 0.1900, Train Accuracy: 97.50%, Validation Accuracy: 80.00%
 Epoch [19/40], Loss: 0.1962, Train Accuracy: 96.25%, Validation Accuracy: 80.00%
 Epoch [20/40], Loss: 0.1513, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
+Epoch [21/40], Loss: 0.1350, Train Accuracy: 98.75%, Validation Accuracy: 85.00%
+Epoch [22/40], Loss: 0.1213, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
 ```
 
 ```
-Epoch [21/40], Loss: 0.1350, Train Accuracy: 98.75%, Validation Accuracy: 85.00%
-Epoch [22/40], Loss: 0.1213, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
 Epoch [23/40], Loss: 0.1139, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
 Epoch [24/40], Loss: 0.1069, Train Accuracy: 100.00%, Validation Accuracy: 80.00%
 Epoch [25/40], Loss: 0.1074, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
-```
-
-```
 Epoch [26/40], Loss: 0.1040, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
 Epoch [27/40], Loss: 0.0886, Train Accuracy: 100.00%, Validation Accuracy: 80.00%
 Epoch [28/40], Loss: 0.0886, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
-Epoch [29/40], Loss: 0.0818, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
-Epoch [30/40], Loss: 0.0825, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
 ```
 
 ```
+Epoch [29/40], Loss: 0.0818, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
+Epoch [30/40], Loss: 0.0825, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
 Epoch [31/40], Loss: 0.0849, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
 Epoch [32/40], Loss: 0.0620, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
 Epoch [33/40], Loss: 0.0602, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
-Epoch [34/40], Loss: 0.0589, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
-Epoch [35/40], Loss: 0.0535, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
 ```
 
 ```
+Epoch [34/40], Loss: 0.0589, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
+Epoch [35/40], Loss: 0.0535, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
 Epoch [36/40], Loss: 0.0504, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
 Epoch [37/40], Loss: 0.0473, Train Accuracy: 100.00%, Validation Accuracy: 95.00%
 Epoch [38/40], Loss: 0.0454, Train Accuracy: 100.00%, Validation Accuracy: 90.00%
+```
+
+```
 Epoch [39/40], Loss: 0.0482, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [40/40], Loss: 0.0455, Train Accuracy: 100.00%, Validation Accuracy: 80.00%
 ```
@@ -1021,6 +1040,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-17-0.png" alt="" width="520"></figure>
+
 ```python
 # Display some images from the validation set
 def imshow(img, title):
@@ -1038,6 +1059,8 @@ for i in range(9):
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-18-0.png" alt="" width="520"></figure>
 
 ```python
 # Display some images from the validation set
@@ -1059,6 +1082,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-19-0.png" alt="" width="520"></figure>
+
 ```python
 # Display activations
 model.eval()
@@ -1079,6 +1104,8 @@ for i in range(9):
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-21-0.png" alt="" width="520"></figure>
 
 ```python
 filter_weight = model.conv1.weight.data.cpu().numpy()[0]
@@ -1117,3 +1144,5 @@ cbar_ax = fig.add_axes([0.92, 0.15, 0.02, 0.7])
 fig.colorbar(plot, cax=cbar_ax)
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-24-0.png" alt="" width="520"></figure>

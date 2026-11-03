@@ -188,6 +188,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example-03-0.png" alt="" width="520"></figure>
+
 $$SSE(\theta)=\frac{1}{2}\sum_\omega(y_\omega-\theta x_\omega)^2$$ (scaled by $$1/S$$) becomes sharper as $$S$$ grows.
 
 ```python
@@ -203,6 +205,8 @@ plt.ylabel(r'$SSE(\theta)/S$', fontsize=14)
 plt.legend()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example-05-0.png" alt="" width="520"></figure>
 
 ## Bias, Precision, and Information
 
@@ -249,7 +253,7 @@ plt.show()
   \mathbb{V}[\hat{\theta}]\geq \frac{1}{\mathcal{I}(\theta)}.
   $$
 
-* This is known as Cram\'er–Rao bound.
+* This is known as Cramér–Rao bound.
 
 * FI in general cannot be computed ($$\theta$$ is not known and requires expectation wrt $$\mathbf{y}$$).
 * In some special situations, however, FI can be computed.

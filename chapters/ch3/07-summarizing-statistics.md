@@ -324,6 +324,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch3_gibbs_covariance-05-0.png" alt="" width="520"></figure>
+
 $$\hat{\mathrm{Cov}}[X]_{ij}=\frac{1}{S}\sum_{\omega}(x_{\omega,i}-\hat{m}_i)(x_{\omega,j}-\hat{m}_j)$$.
 (`np.cov` divides by $$S-1$$ unless `bias=True`.)
 

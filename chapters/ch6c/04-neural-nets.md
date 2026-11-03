@@ -193,6 +193,8 @@ plt.show()
 NN parameters: 9;  MSE NN = 9.29e-04,  MSE kriging = 8.71e-04
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_neuralnet-04-2.png" alt="" width="520"></figure>
+
 ## Example: Perceptrons as Basis Functions
 
 * Why are NNs so effective at capturing such behavior?
@@ -274,6 +276,8 @@ plt.show()
 number of parameters = 18
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_neuralnet_basis-02-1.png" alt="" width="520"></figure>
+
 The sigmoids $$h(a_j)$$ are the basis functions mixed by the output layer:
 
 ```python
@@ -286,6 +290,8 @@ for j, ax in enumerate(axs.ravel()):
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_neuralnet_basis-04-0.png" alt="" width="520"></figure>
 
 Several eigenvalues of the Gauss-Newton Hessian are close to zero: the model is very flexible
 and the 20 data points are overfit.

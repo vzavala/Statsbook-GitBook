@@ -119,6 +119,8 @@ plt.axis([50, 250, 0, 0.02])
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-17-0.png" alt="" width="520"></figure>
+
 ```python
 plt.step(x_grid, F_hat, color='black', where='mid')
 plt.plot(x_plot, norm.cdf(x_plot, mu, sigma), 'black', linewidth=1.5)
@@ -128,6 +130,8 @@ plt.grid(True)
 plt.axis([50, 250, 0, 1.01])
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-18-0.png" alt="" width="520"></figure>
 
 ## Summarizing Statistics (Basic)
 
@@ -214,8 +218,15 @@ for E_X, SD_X in ((6, 1), (9, 2)):
     print(f"E_hat = {E_hat:.2f},  V_hat = {V_hat:.2f},  SD_hat = {SD_hat:.2f}")
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch1_mean_var_descriptors-04-0.png" alt="" width="520"></figure>
+
 ```
 E_hat = 5.95,  V_hat = 0.97,  SD_hat = 0.99
+```
+
+<figure><img src="../../.gitbook/assets/nb/ch1_mean_var_descriptors-04-2.png" alt="" width="520"></figure>
+
+```
 E_hat = 9.03,  V_hat = 3.75,  SD_hat = 1.94
 ```
 
@@ -293,6 +304,8 @@ plt.tight_layout()
 plt.show()
 print(f"E_X = mu = {mu:.1f} bar,  SD_X = sigma = {sigma:.1f} bar")
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-21-0.png" alt="" width="520"></figure>
 
 ```
 E_X = mu = 147.9 bar,  SD_X = sigma = 25.3 bar
@@ -381,6 +394,8 @@ plt.ylabel(r'$\alpha$', fontsize=14)
 plt.show()
 print(f"Q_hat(0.5) = {Q_hat_50:.1f} bar,  Q_hat(0.9) = {Q_hat_90:.1f} bar")
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-24-0.png" alt="" width="520"></figure>
 
 ```
 Q_hat(0.5) = 147.9 bar,  Q_hat(0.9) = 180.6 bar

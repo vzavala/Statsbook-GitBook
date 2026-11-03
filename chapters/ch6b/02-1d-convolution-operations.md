@@ -147,6 +147,8 @@ show(t, f, np.concatenate([np.zeros(pad), g, np.zeros(pad)]), phi)
 N=5, alpha=2: [0.14 0.61 1.   0.61 0.14]
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-03-1.png" alt="" width="520"></figure>
+
 ## 1D Convolution Operations
 
 * Another popular filter is the Gaussian filter:
@@ -206,6 +208,8 @@ show(t, f, np.concatenate([np.zeros(pad), g, np.zeros(pad)]), phi)
 sigma = 2.38
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-05-1.png" alt="" width="520"></figure>
+
 #### Python implementation: Gaussian filters for a noisy signal
 
 ```python
@@ -227,6 +231,8 @@ axs[2].set_xlabel('$t$')
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-07-0.png" alt="" width="520"></figure>
 
 ## 1D Convolution Operations
 
@@ -305,6 +311,8 @@ plt.tight_layout()
 plt.show()
 print(f"max |f*g - pdf| = {np.max(np.abs(phi - norm.pdf(t[1:-1]))):.4f}")
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_derivative_filter-02-0.png" alt="" width="520"></figure>
 
 ```
 max |f*g - pdf| = 0.0027

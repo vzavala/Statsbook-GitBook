@@ -66,6 +66,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_lognormals-02-0.png" alt="" width="520"></figure>
+
 Open in Colab: [`ch2_compare_lognormals.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_lognormals.ipynb)
 
 </details>
@@ -172,6 +174,8 @@ for ax in axs:
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch2_example_lognormal-05-0.png" alt="" width="520"></figure>
 
 Acceptable fraction $$\mathbb{P}(250\leq X\leq 400)=F(400)-F(250)$$ of a 1000 kg batch.
 

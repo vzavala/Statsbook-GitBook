@@ -63,6 +63,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_2D-02-1.png" alt="" width="520"></figure>
+
 ## Example: 2D FT Applied to Filtering
 
 * We analyze frequency content of a 2D uniform average filter (defined by a 2D step function) and of a 2D Gaussian filter (defined by a 2D Gaussian kernel).
@@ -109,6 +111,8 @@ for col, (g, title) in enumerate(((g_box, 'uniform filter'), (g_gauss, 'Gaussian
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters_2D-02-1.png" alt="" width="520"></figure>
 
 * We now illustrate how to use FTs to perform convolutions.
 * We take original image $$f$$ and obtain its 2D FT $$\hat{f}$$.
@@ -174,6 +178,8 @@ for ax in axs.ravel():
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_image_filters_2D-04-0.png" alt="" width="520"></figure>
 
 Check: the result equals a direct (spatial) Gaussian convolution.
 

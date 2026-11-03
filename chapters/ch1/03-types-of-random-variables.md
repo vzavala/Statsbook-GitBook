@@ -180,6 +180,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_discrete-08-0.png" alt="" width="520"></figure>
+
 ## Probability Density of Discrete and Continuous RVs
 
 Continuous $$X$$ has continuous domain $$\mathcal{D}$$ and pdf/cdf are continuous functions.
@@ -297,6 +299,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_continuous-04-0.png" alt="" width="520"></figure>
+
 Discrete approximations with $$\Delta x=0.5$$ built from $$S=1000$$ realizations $$x_\omega$$:
 $$\hat{f}(x)\approx\frac{\hat{F}(x+\Delta x)-\hat{F}(x)}{\Delta x}$$ (histogram) and
 $$\hat{F}(t)=\frac{1}{S}\sum_{\omega}\mathbf{1}[x_\omega\leq t]$$.
@@ -330,3 +334,5 @@ axs[1].grid(True)
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_continuous-06-0.png" alt="" width="520"></figure>

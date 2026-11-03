@@ -108,6 +108,8 @@ plt.grid(True)
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-08-0.png" alt="" width="520"></figure>
+
 The *frequency* counts the observations in each bin $$[x, x+\Delta x]$$:
 
 $$
@@ -132,6 +134,8 @@ plt.grid(True)
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-10-0.png" alt="" width="520"></figure>
+
 The same frequency plot can be produced directly with a histogram:
 
 ```python
@@ -141,6 +145,8 @@ plt.ylabel('Frequency', fontsize=14)
 plt.axis([60, 240, 0, 180])
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-12-0.png" alt="" width="520"></figure>
 
 The *cumulative frequency* counts the observations below $$x$$:
 
@@ -162,3 +168,5 @@ plt.axis([60, 240, 0, 1000])
 plt.grid(True)
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-14-0.png" alt="" width="520"></figure>

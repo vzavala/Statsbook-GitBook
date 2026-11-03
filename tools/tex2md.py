@@ -5,6 +5,7 @@ enumerate, blocks, figures, columns, tabular, inline and display math.
 Math is emitted in GitBook/KaTeX form: inline `$$...$$`, display on own lines.
 """
 import re
+import unicodedata
 
 # ---------------------------------------------------------------- helpers
 
@@ -212,7 +213,17 @@ def extract_math(s, store):
 # ---------------------------------------------------------------- text
 
 
+# accents in text: \'e, \'{e}, \"o, \`a, \^o, \~n  ->  é, ë, à, ô, ñ
+ACCENTS = {"'": "\u0301", '"': "\u0308", "`": "\u0300", "^": "\u0302", "~": "\u0303"}
+
+
+def text_accents(s):
+    return re.sub(r"\\(['\"`^~])\{?([A-Za-z])\}?",
+                  lambda m: unicodedata.normalize("NFC", m.group(2) + ACCENTS[m.group(1)]), s)
+
+
 def text_cmds(s, ctx):
+    s = text_accents(s)
     s = replace_cmd(s, "href", lambda url, txt: ctx.href(url, txt), 2)
     s = replace_cmd(s, "url", lambda url: f"<{url}>")
     s = replace_group_cmd(s, "em", lambda t: f"*{t.strip()}*")

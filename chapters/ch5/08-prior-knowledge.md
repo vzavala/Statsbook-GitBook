@@ -154,6 +154,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch5_gibbs_tradeoff-05-1.png" alt="" width="520"></figure>
+
 ## Example: Hougen-Watson Regularized
 
 * We augment SSE using a ridge regularizer:
@@ -221,6 +223,8 @@ for ax, (title, Z) in zip(axs, maps.items()):
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson_regularized-04-1.png" alt="" width="520"></figure>
 
 ## Example: Hougen-Watson Constrained
 
@@ -340,6 +344,8 @@ plt.show()
 ```
 constrained theta_hat = [1.25 0.06 0.04 0.11 1.19]
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson_constraints-08-1.png" alt="" width="520"></figure>
 
 Gauss-Newton Hessian, its eigenvalues, and $$\mathrm{Cov}[\hat{\theta}]=\mathcal{H}(\hat{\theta})^{-1}\hat{\sigma}^2$$.
 

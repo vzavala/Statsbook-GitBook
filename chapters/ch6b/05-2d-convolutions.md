@@ -173,6 +173,8 @@ plt.show()
  [0 0 0 1 1 1 1 0 0 0]]
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_gauss_filter_2D-02-1.png" alt="" width="520"></figure>
+
 ## 2D Convolutional Filters
 
 * Deriv filters are used in image analysis to extract gradients and detect boundaries.
@@ -259,3 +261,5 @@ for ax, img, title in ((axs[0], f, '$f$'), (axs[1], np.abs(f_1), r'$|f*g|$ (Sobe
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_micrograph_filters_2D-04-0.png" alt="" width="520"></figure>

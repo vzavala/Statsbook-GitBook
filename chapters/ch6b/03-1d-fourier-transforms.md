@@ -98,6 +98,8 @@ plt.show()
 print("dominant frequencies:", omega[np.argsort(power(f_hat))[-2:]])
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform-02-0.png" alt="" width="520"></figure>
+
 ```
 dominant frequencies: [60. 30.]
 ```
@@ -121,6 +123,8 @@ for ax in axs.ravel():
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform-04-0.png" alt="" width="520"></figure>
 
 ## Example: FT of Pulse and Gaussian
 
@@ -174,6 +178,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters-02-0.png" alt="" width="520"></figure>
+
 #### Python implementation
 
 {% hint style="success" %}
@@ -219,6 +225,8 @@ axs[2, 0].set_xlabel('$t$'); axs[2, 1].set_xlabel(r'$\omega$')
 plt.tight_layout()
 plt.show()
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_convolution_filters-02-0.png" alt="" width="520"></figure>
 
 #### Python implementation
 
@@ -278,6 +286,8 @@ plt.show()
 ```
 K = 11.105,  tau = 9.92 min
 ```
+
+<figure><img src="../../.gitbook/assets/nb/ch6_sysid_co2_est-04-2.png" alt="" width="520"></figure>
 
 Physical parameters for a building of volume $$V$$: air flow $$Q=V/\tau$$ and generation $$G=KQ$$.
 
