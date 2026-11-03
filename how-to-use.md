@@ -22,15 +22,23 @@ To keep your own edits, use **File → Save a copy in Drive**.
 
 ### On your computer
 
+Download the notebooks from the book's GitHub repository, [vzavala/StatsBook](https://github.com/vzavala/StatsBook),
+install the packages they use, and open the `Python/` folder:
+
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/vzavala/StatsBook.git
 ```
 
 ```bash
-cd notebooks && jupyter lab
+pip install -r https://raw.githubusercontent.com/vzavala/Statsbook-GitBook/main/requirements.txt
 ```
 
-The notebooks are set up to run from the `notebooks/` folder, where they find `Data/` and `Support/`. The CNN notebooks of
-Chapter 6 also need PyTorch (`torch`).
+```bash
+cd StatsBook/Python && jupyter lab
+```
+
+The notebooks are set up to run from the `Python/` folder, where they find `Data/` and `Support/`. The CNN notebooks of
+Chapter 6 also need PyTorch (`torch`). The same repository has the [slides](https://github.com/vzavala/StatsBook/tree/master/Slides)
+and the [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab).
 
 

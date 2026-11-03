@@ -1,5 +1,9 @@
 # Multivariate Random Variables
 
+{% hint style="success" %}
+**Slides:** [stats_ch3_multiRV.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch3_multiRV.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch3_multiRV_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab)
+{% endhint %}
+
 * We have assumed $$X$$ is univ and thus realization $$\omega\in \Omega$$ generates a scalar observation $$x_\omega \in \mathbb{R}$$.  This implies $$\mathcal{D}$$ is unidim.
 * Consider multiv $$X=(X_1,X_2,...,X_n)$$, in which realization $$\omega\in \Omega$$ generates an observation vector $$x_\omega=(x_{\omega,1},x_{\omega,2},...,x_{\omega,n})\in \mathbb{R}^n$$. This implies $$\mathcal{D}$$ is multidim.
 

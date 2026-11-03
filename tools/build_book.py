@@ -213,6 +213,17 @@ def frame_title(title_tex, ctx, macros):
 # ---------------------------------------------------------------- notebooks
 
 
+def chapter_links(ch):
+    """Box at the top of a chapter's first page: its slides and handout, and the code folders."""
+    base = f"https://github.com/{cfg.GITHUB_REPO}/blob/{cfg.GITHUB_BRANCH}"
+    tree = f"https://github.com/{cfg.GITHUB_REPO}/tree/{cfg.GITHUB_BRANCH}"
+    deck = ch["tex"].removesuffix(".tex")
+    return (f"\n{{% hint style=\"success\" %}}\n**Slides:** [{deck}.pdf]({base}/Slides/{deck}.pdf) · "
+            f"[4-up handout]({base}/Slides/handouts/{deck}_4up.pdf) · **Code:** "
+            f"[Python notebooks]({tree}/{cfg.NOTEBOOK_DIR}) · [MATLAB scripts]({tree}/Matlab)\n"
+            f"{{% endhint %}}\n")
+
+
 def colab_url(nb):
     return (f"https://colab.research.google.com/github/{cfg.GITHUB_REPO}/blob/"
             f"{cfg.GITHUB_BRANCH}/{cfg.NOTEBOOK_DIR}/{nb}.ipynb")
@@ -422,6 +433,8 @@ def build_chapter(ch):
         end = starts[n + 1][1] if n + 1 < len(starts) else len(frames)
         ctx = Ctx(folder)
         md = [f"# {title}\n"]
+        if n == 0:
+            md.append(chapter_links(ch))
         prev = None
         for i in range(k, end):
             f = frames[i]

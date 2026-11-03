@@ -23,8 +23,21 @@ Each chapter follows the slides. Wherever a slide works through an example, the 
 Notebooks that reproduce a slide figure are collapsed under **"Python: reproduce this figure"**.
 Notebooks that go beyond the slides are marked **Additional example**.
 
-Every implementation is also a Jupyter notebook (folder `notebooks/` of the repository) that you can open in
-Google Colab or run locally (see [How to use this book](how-to-use.md)).
+Every implementation is also a Jupyter notebook that you can open in Google Colab or run locally
+(see [How to use this book](how-to-use.md)).
+
+## Slides, notebooks, and code on GitHub
+
+All course materials are in the book's GitHub repository, [vzavala/StatsBook](https://github.com/vzavala/StatsBook):
+
+* [Slides](https://github.com/vzavala/StatsBook/tree/master/Slides) (PDF, one deck per chapter) and
+  [4-up handouts](https://github.com/vzavala/StatsBook/tree/master/Slides/handouts)
+* [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) for every example (the ones shown in this book)
+* [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab) for the examples
+* [Data for the exercises](https://github.com/vzavala/StatsBook/tree/master/DataExercises)
+* [Errata](https://github.com/vzavala/StatsBook/blob/master/Errata/errata.pdf) for the printed book
+
+The first page of each chapter links to its slides and handout.
 
 ## Chapters
 

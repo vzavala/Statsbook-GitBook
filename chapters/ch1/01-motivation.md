@@ -1,5 +1,9 @@
 # Motivation
 
+{% hint style="success" %}
+**Slides:** [stats_ch1_intro.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch1_intro.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch1_intro_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab)
+{% endhint %}
+
 As engineers, we often use *fundamental laws* to make *decisions*:
 
 {% hint style="info" %}

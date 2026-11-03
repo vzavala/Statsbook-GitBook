@@ -1,5 +1,9 @@
 # Estimation Techniques for Structural Models
 
+{% hint style="success" %}
+**Slides:** [stats_ch5_estimationstruct.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch5_estimationstruct.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch5_estimationstruct_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab)
+{% endhint %}
+
 * Our discussion so far has centered on using data to characterize random phenomena.
 * Our approach has been to determine an RV model that best explains the data and we have used estimation techniques to determine the parameters for such models.
 * From discussion on multivariate RVs we observed that correlations between RVs uncover connections between variables (e.g., pressure and conversion).

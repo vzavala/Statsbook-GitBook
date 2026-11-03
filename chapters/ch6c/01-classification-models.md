@@ -1,5 +1,9 @@
 # Classification Models
 
+{% hint style="success" %}
+**Slides:** [stats_ch6_partIII.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch6_partIII.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch6_partIII_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab)
+{% endhint %}
+
 * Statistical learning provides powerful tools to construct predictive models from data.
 * Models explored here are generalizations of models that we have analyzed.
 * We begin discussion with *classification* models.

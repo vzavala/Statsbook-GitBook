@@ -1,5 +1,9 @@
 # Signal Processing
 
+{% hint style="success" %}
+**Slides:** [stats_ch6_partII.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch6_partII.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch6_partII_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab)
+{% endhint %}
+
 * Signal processing (SP) is a field of mathematics that provides tools for analyzing, modifying, and synthesizing data.
 * Data often appears as temporal signals (e.g., temperature, vibration, sound) or spatial signals (e.g., images, tomography, micrographs).
 * We look into an SP task known as filtering (removes unwanted features from data) with goal of extracting dominant features (patterns).
