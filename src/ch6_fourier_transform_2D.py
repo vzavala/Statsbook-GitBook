@@ -15,14 +15,14 @@ f2 = np.sin(2*np.pi*omega_2*(X1 + X2))
 f = f1 - f2
 
 fig = plt.figure(figsize=(11, 13))
+fig.subplots_adjust(left=0.03, right=0.97, bottom=0.04, top=0.97, wspace=0.15, hspace=0.3)  # fixed spacing (3D axes)
 for row, (Z, lab) in enumerate(((f, 'f'), (f1, 'f_1'), (f2, 'f_2'))):
     ax = fig.add_subplot(3, 2, 2*row + 1, projection='3d')
     ax.plot_surface(X1, X2, Z, cmap='gray', linewidth=0)
     ax.view_init(elev=30., azim=10)
-    ax.set_xlabel('$x_1$'); ax.set_ylabel('$x_2$'); ax.set_zlabel(f'${lab}(x_1,x_2)$')
+    ax.set_xlabel('$x_1$'); ax.set_ylabel('$x_2$'); ax.set_title(f'${lab}(x_1,x_2)$')
     ax.set_xticklabels([]); ax.set_yticklabels([]); ax.set_zticklabels([])
     ax2 = fig.add_subplot(3, 2, 2*row + 2)
     ax2.imshow(Z, cmap='gray', origin='lower', extent=[0, 0.25, 0, 0.25])
     ax2.set_xlabel('$x_1$'); ax2.set_ylabel('$x_2$')
-plt.tight_layout()
 plt.show()

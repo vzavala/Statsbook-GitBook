@@ -132,7 +132,7 @@ first rows of X:
  [  1.   164.67  26.08 452.16  73.92 583.15]
  [  1.   157.43  27.79 455.59  72.21 583.15]]
 diag(S) = [12059.49   486.03    44.43     0.       0.       0.  ]
-lambda = s^2 = [1.454e+08 2.362e+05 1.974e+03 3.269e-24 4.921e-27 5.291e-32]
+lambda = s^2 = [1.454e+08 2.362e+05 1.974e+03 2.429e-25 5.947e-27 2.459e-31]
 rank(X[:, 1..1]) = 1
 rank(X[:, 1..2]) = 2
 rank(X[:, 1..3]) = 3
@@ -305,4 +305,4 @@ plt.show()
 image size: (199, 199)   rank: 199
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_svd_reconstruction-04-2.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_svd_reconstruction-04-1.png" alt="" width="520"></figure>

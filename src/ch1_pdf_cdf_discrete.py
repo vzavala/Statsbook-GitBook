@@ -24,7 +24,7 @@ print("sum f(x) =", f.sum(), "  f(x) >= 0:", np.all(f >= 0))
 # %%
 x_omega = np.array([0, 1, 0, 0, 1, 1, 1, 1, 1, 0])   # realizations, Omega = {1,...,10}
 f_count = np.array([np.mean(x_omega == x) for x in D])
-print("f(x) from counting:", dict(zip(D.tolist(), f_count)))
+print("f(x) from counting:", dict(zip(D.tolist(), np.asarray(f_count).tolist())))
 
 # %% [markdown]
 # Cdf $F(t)=\sum_{x\in\mathcal{D}}\mathbf{1}[x\leq t]\,f(x)$, e.g. $F(0)=f(-1)+f(0)=0.4$.

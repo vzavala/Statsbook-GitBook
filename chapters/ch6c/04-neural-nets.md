@@ -193,7 +193,7 @@ plt.show()
 NN parameters: 9;  MSE NN = 9.29e-04,  MSE kriging = 8.71e-04
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_neuralnet-04-2.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_neuralnet-04-1.png" alt="" width="520"></figure>
 
 ## Example: Perceptrons as Basis Functions
 
@@ -302,7 +302,7 @@ print("eigenvalues of H:", np.array2string(np.sort(np.linalg.eigvalsh(H))[::-1],
 ```
 
 ```
-eigenvalues of H: [ 3.72e+05  9.16e+04  9.44e+03  1.44e+03  2.43e+02  2.52e+01  1.26e+01
-  2.52e+00  1.69e-01  2.92e-02  2.85e-03  6.14e-04  9.31e-06  9.99e-08
-  5.18e-10  8.94e-13  1.46e-13 -1.25e-15]
+eigenvalues of H: [3.71e+05 9.15e+04 9.44e+03 1.44e+03 2.43e+02 2.52e+01 1.26e+01 2.52e+00
+ 1.69e-01 2.93e-02 2.86e-03 6.14e-04 9.31e-06 1.00e-07 5.17e-10 9.81e-13
+ 1.28e-13 2.36e-15]
 ```

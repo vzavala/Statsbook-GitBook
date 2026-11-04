@@ -50,20 +50,20 @@ f2 = np.sin(2*np.pi*omega_2*(X1 + X2))
 f = f1 - f2
 
 fig = plt.figure(figsize=(11, 13))
+fig.subplots_adjust(left=0.03, right=0.97, bottom=0.04, top=0.97, wspace=0.15, hspace=0.3)  # fixed spacing (3D axes)
 for row, (Z, lab) in enumerate(((f, 'f'), (f1, 'f_1'), (f2, 'f_2'))):
     ax = fig.add_subplot(3, 2, 2*row + 1, projection='3d')
     ax.plot_surface(X1, X2, Z, cmap='gray', linewidth=0)
     ax.view_init(elev=30., azim=10)
-    ax.set_xlabel('$x_1$'); ax.set_ylabel('$x_2$'); ax.set_zlabel(f'${lab}(x_1,x_2)$')
+    ax.set_xlabel('$x_1$'); ax.set_ylabel('$x_2$'); ax.set_title(f'${lab}(x_1,x_2)$')
     ax.set_xticklabels([]); ax.set_yticklabels([]); ax.set_zticklabels([])
     ax2 = fig.add_subplot(3, 2, 2*row + 2)
     ax2.imshow(Z, cmap='gray', origin='lower', extent=[0, 0.25, 0, 0.25])
     ax2.set_xlabel('$x_1$'); ax2.set_ylabel('$x_2$')
-plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_2D-02-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_2D-02-0.png" alt="" width="520"></figure>
 
 ## Example: 2D FT Applied to Filtering
 
@@ -95,6 +95,7 @@ g_gauss[L // 2, L // 2] = 1
 g_gauss = gaussian_filter(g_gauss, sigma=1)  # 2D Gaussian filter
 
 fig = plt.figure(figsize=(11, 13))
+fig.subplots_adjust(left=0.03, right=0.97, bottom=0.04, top=0.97, wspace=0.15, hspace=0.3)  # fixed spacing (3D axes)
 for col, (g, title) in enumerate(((g_box, 'uniform filter'), (g_gauss, 'Gaussian filter'))):
     g_hat = fftshift(np.log(1 + np.abs(fft2(g))))
     ax = fig.add_subplot(3, 2, col + 1)
@@ -106,13 +107,12 @@ for col, (g, title) in enumerate(((g_box, 'uniform filter'), (g_gauss, 'Gaussian
     ax = fig.add_subplot(3, 2, col + 5, projection='3d')
     W1, W2 = np.meshgrid(np.arange(L), np.arange(L))
     ax.plot_surface(W1, W2, g_hat, cmap='gray_r', linewidth=0)
-    ax.set_xlabel(r'$\omega_1$'); ax.set_ylabel(r'$\omega_2$'); ax.set_zlabel(r'$|\hat{g}|$')
+    ax.set_xlabel(r'$\omega_1$'); ax.set_ylabel(r'$\omega_2$'); ax.set_title(r'$|\hat{g}|$')
     ax.set_xticklabels([]); ax.set_yticklabels([]); ax.set_zticklabels([])
-plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters_2D-02-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters_2D-02-0.png" alt="" width="520"></figure>
 
 * We now illustrate how to use FTs to perform convolutions.
 * We take original image $$f$$ and obtain its 2D FT $$\hat{f}$$.
@@ -189,5 +189,5 @@ print(f"max |f_1 (FFT) - f_1 (direct)| = {np.max(np.abs(results[0][1] - direct))
 ```
 
 ```
-max |f_1 (FFT) - f_1 (direct)| = 4.55e-13
+max |f_1 (FFT) - f_1 (direct)| = 2.84e-13
 ```

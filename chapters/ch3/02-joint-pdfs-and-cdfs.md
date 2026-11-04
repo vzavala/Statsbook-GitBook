@@ -563,7 +563,7 @@ plt.show()
 37 x 45 bins;  integral of f_hat = 1.000
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_empirical-06-2.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_empirical-06-1.png" alt="" width="520"></figure>
 
 Empirical marginal pdfs $$\hat{f}_1(x_1)$$ and $$\hat{f}_2(x_2)$$.
 

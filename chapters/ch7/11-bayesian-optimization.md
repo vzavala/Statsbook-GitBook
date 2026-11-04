@@ -133,7 +133,8 @@ kappa, n_iter = 0.2, 20
 bounds = Bounds(-np.ones(3), np.ones(3))
 data_u = np.array([[0, 0, 0], [1, 1, 1], [-1, -1, -1]], dtype=float)
 data_y = phi(data_u)
-gp = GaussianProcessRegressor(kernel=RBF(length_scale=np.ones(3)), normalize_y=True)
+# alpha adds a small jitter to the kernel matrix: the yields have no noise, and without it the fit is ill-conditioned
+gp = GaussianProcessRegressor(kernel=RBF(length_scale=np.ones(3)), normalize_y=True, alpha=1e-4)
 
 for ell in range(n_iter):
     gp.fit(data_u, data_y)
@@ -161,8 +162,8 @@ plt.show()
 ```
 
 ```
-best scaled conditions u = [1.    0.436 0.246]   yield = 19.396
-in physical units: [100.      1.718   0.225]
+best scaled conditions u = [1.    0.463 0.249]   yield = 19.395
+in physical units: [100.      1.732   0.225]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_bayesopt_yield-04-2.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_bayesopt_yield-04-1.png" alt="" width="520"></figure>

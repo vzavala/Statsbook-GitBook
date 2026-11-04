@@ -157,7 +157,7 @@ plt.show()
 fitted kernel: Matern(length_scale=97, nu=1.5) + WhiteKernel(noise_level=0.0462)
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-06-2.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-06-1.png" alt="" width="520"></figure>
 
 Compare the residuals through the empirical cdf of $$|\epsilon|$$.
 
@@ -235,4 +235,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_kriging_uq-02-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_kriging_uq-02-0.png" alt="" width="520"></figure>

@@ -45,7 +45,9 @@ def MSE_of(theta):
 def rho(theta):
     return np.sum(np.abs(theta))
 
-theta_ls = np.linalg.solve(X.T @ X, X.T @ y)     # kappa = 0 (least squares)
+# kappa = 0 (least squares). X^T X is singular (redundant data), so the estimate is not unique;
+# lstsq returns the minimum-norm one, which is the same on every computer
+theta_ls = np.linalg.lstsq(X, y, rcond=None)[0]
 print("least-squares theta_hat =", np.round(theta_ls, 4))
 print("eigenvalues of X^T X:", np.round(np.linalg.eigvalsh(X.T @ X), 2))
 

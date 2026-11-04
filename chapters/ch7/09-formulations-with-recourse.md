@@ -127,12 +127,12 @@ rho_stoch = {u: CVaR(cost(u, X1, X2)) for u in U}
 u_star = min(rho_stoch, key=rho_stoch.get)
 rho_det = {u: cost(u, X1.max(), X2.max()) for u in U}      # worst-case loads
 u_D = min(rho_det, key=rho_det.get)
-print("CVaR of cost:", {u: round(v, 1) for u, v in rho_stoch.items()}, "-> u* =", u_star)
+print("CVaR of cost:", {u: round(float(v), 1) for u, v in rho_stoch.items()}, "-> u* =", u_star)
 print("deterministic (worst-case) cost:", {u: round(float(v), 1) for u, v in rho_det.items()}, "-> u_D* =", u_D)
 ```
 
 ```
-CVaR of cost: {1: np.float64(2056.3), 10: np.float64(2157.6)} -> u* = 1
+CVaR of cost: {1: 2056.3, 10: 2157.6} -> u* = 1
 deterministic (worst-case) cost: {1: 5893.9, 10: 4697.8} -> u_D* = 10
 ```
 

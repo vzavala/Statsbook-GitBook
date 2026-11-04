@@ -322,7 +322,7 @@ print("Cov[theta_hat] =\n", np.array2string(Cov_theta, precision=3))
 ```
 
 ```
-mu_hat = 0.00e+00,  sigma_hat = 0.106
+mu_hat = -5.92e-16,  sigma_hat = 0.106
 Cov[theta_hat] =
  [[ 2.127e-02 -7.836e-05  6.219e-08]
  [-7.836e-05  3.047e-07 -2.488e-10]

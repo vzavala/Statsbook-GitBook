@@ -17,6 +17,7 @@ g_gauss[L // 2, L // 2] = 1
 g_gauss = gaussian_filter(g_gauss, sigma=1)  # 2D Gaussian filter
 
 fig = plt.figure(figsize=(11, 13))
+fig.subplots_adjust(left=0.03, right=0.97, bottom=0.04, top=0.97, wspace=0.15, hspace=0.3)  # fixed spacing (3D axes)
 for col, (g, title) in enumerate(((g_box, 'uniform filter'), (g_gauss, 'Gaussian filter'))):
     g_hat = fftshift(np.log(1 + np.abs(fft2(g))))
     ax = fig.add_subplot(3, 2, col + 1)
@@ -28,7 +29,6 @@ for col, (g, title) in enumerate(((g_box, 'uniform filter'), (g_gauss, 'Gaussian
     ax = fig.add_subplot(3, 2, col + 5, projection='3d')
     W1, W2 = np.meshgrid(np.arange(L), np.arange(L))
     ax.plot_surface(W1, W2, g_hat, cmap='gray_r', linewidth=0)
-    ax.set_xlabel(r'$\omega_1$'); ax.set_ylabel(r'$\omega_2$'); ax.set_zlabel(r'$|\hat{g}|$')
+    ax.set_xlabel(r'$\omega_1$'); ax.set_ylabel(r'$\omega_2$'); ax.set_title(r'$|\hat{g}|$')
     ax.set_xticklabels([]); ax.set_yticklabels([]); ax.set_zticklabels([])
-plt.tight_layout()
 plt.show()

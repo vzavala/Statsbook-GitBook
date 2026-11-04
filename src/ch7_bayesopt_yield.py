@@ -33,7 +33,8 @@ kappa, n_iter = 0.2, 20
 bounds = Bounds(-np.ones(3), np.ones(3))
 data_u = np.array([[0, 0, 0], [1, 1, 1], [-1, -1, -1]], dtype=float)
 data_y = phi(data_u)
-gp = GaussianProcessRegressor(kernel=RBF(length_scale=np.ones(3)), normalize_y=True)
+# alpha adds a small jitter to the kernel matrix: the yields have no noise, and without it the fit is ill-conditioned
+gp = GaussianProcessRegressor(kernel=RBF(length_scale=np.ones(3)), normalize_y=True, alpha=1e-4)
 
 for ell in range(n_iter):
     gp.fit(data_u, data_y)

@@ -53,12 +53,16 @@ def SSE(theta):
 theta_ref = np.array([1.0, 0.05, 0.02, 0.1, 2.0])
 grid = np.linspace(-2, 2, 201)
 SSE_map = np.zeros((len(grid), len(grid)))
-for i, t2 in enumerate(grid):
-    for j, t1 in enumerate(grid):
-        th = theta_ref.copy()
-        th[1], th[2] = t1, t2
-        SSE_map[i, j] = SSE(th)
-plt.imshow(np.log10(SSE_map), extent=[-2, 2, -2, 2], origin='lower', cmap='gray_r', aspect='auto')
+# the model has a pole where its denominator is zero; those grid points give SSE = inf (left blank in the plot)
+with np.errstate(divide='ignore', invalid='ignore'):
+    for i, t2 in enumerate(grid):
+        for j, t1 in enumerate(grid):
+            th = theta_ref.copy()
+            th[1], th[2] = t1, t2
+            SSE_map[i, j] = SSE(th)
+with np.errstate(divide='ignore'):
+    log_SSE = np.log10(SSE_map)
+plt.imshow(log_SSE, extent=[-2, 2, -2, 2], origin='lower', cmap='gray_r', aspect='auto')
 plt.colorbar(label=r'$\log_{10} SSE(\theta)$')
 plt.xlabel(r'$\theta_1$', fontsize=14)
 plt.ylabel(r'$\theta_2$', fontsize=14)

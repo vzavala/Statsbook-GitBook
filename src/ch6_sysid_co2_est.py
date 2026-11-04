@@ -32,6 +32,7 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import least_squares
+from scipy.integrate import trapezoid
 
 data = np.loadtxt(path+'Data/data_sysid_co2.dat')
 t, u, x = data[:, 0], data[:, 1], data[:, 2] - 400
@@ -40,7 +41,7 @@ omega = np.logspace(-3, 0, 100)
 
 def spectrum(z):
     """|z_hat(omega)| = |integral z(t) e^{-i omega t} dt| by the trapezoidal rule."""
-    return np.array([np.abs(np.trapz(z * np.exp(-1j * w * t), t)) for w in omega])
+    return np.array([np.abs(trapezoid(z * np.exp(-1j * w * t), t)) for w in omega])
 
 mag_u, mag_x = spectrum(u), spectrum(x)
 AR = mag_x / mag_u

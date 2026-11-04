@@ -158,7 +158,7 @@ print("eigenvalues of X^T X:", np.array2string(lam, precision=2))
 
 ```
 SSE (mean squared error) = 2.549e-03
-eigenvalues of X^T X: [ 1.45e+08  2.36e+05  1.97e+03  2.44e-11 -3.02e-09 -1.54e-08]
+eigenvalues of X^T X: [ 1.45e+08  2.36e+05  1.97e+03 -1.95e-10 -1.53e-08 -2.07e-08]
 ```
 
 Keep the $$n_1=3$$ informative eigenvectors, project $$\mathbf{T}_1=\mathbf{X}\mathbf{W}_1$$, estimate
@@ -194,4 +194,4 @@ SSE (PCA) = 2.549e-03
 V(theta_hat) with PCA: [7.63e-13 3.32e-07 1.84e-07 2.59e-07 2.67e-07 2.60e-07]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca_estimation-08-2.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca_estimation-08-1.png" alt="" width="520"></figure>

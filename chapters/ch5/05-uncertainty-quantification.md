@@ -186,7 +186,7 @@ plt.show()
 q_S = 43.77  (S = 30)
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_uncertainty-10-2.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_uncertainty-10-1.png" alt="" width="520"></figure>
 
 For comparison, `statsmodels` reports the usual $$t$$-based (marginal) 95% intervals, which are
 narrower than the joint $$\chi^2(n+1)$$ intervals above.
