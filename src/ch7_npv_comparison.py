@@ -8,6 +8,9 @@
 # | $i$ | `i` | interest rate (5%, 10 years) |
 # | $NPV$, i.e. $Y(u)$ and $Y(u')$ | `NPV_I`, `NPV_II` | net present value (negative = revenue) |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Examples 7.4 and 7.5 (Section 7.2) of *Statistics for Chemical Engineers*: the net present value (NPV) of two investments with random returns.
+
 # %% [part] Distributions of the NPV
 
 # %%
@@ -53,3 +56,6 @@ print(f"{'measure':10s}{'Option I':>12s}{'Option II':>12s}")
 for k in rm_I:
     fmt = '{:12.1%}' if k.startswith('P') else '{:12.1f}'
     print(f"{k:10s}" + fmt.format(rm_I[k]) + fmt.format(rm_II[k]))
+
+# %% [markdown]
+# **Note:** As in the book, a risk-averse decision-maker prefers the first investment (no chance of losing money), while a risk-taker may accept a 9% chance of loss for the chance of large gains.

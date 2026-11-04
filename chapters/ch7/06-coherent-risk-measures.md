@@ -164,6 +164,8 @@ $$\mathbf{y}=(100,70,50,20,10)$$ the slide's $$\mathrm{CVaR}$$ at $$\alpha=k/S$$
 entries: $$k=S$$ gives the mean ($$\ell_1$$-like) and $$k=1$$ the worst case ($$\ell_\infty$$-like).
 Python names: `y`, `S`, `CVaR(y, k)`.
 
+**Note:** This notebook reproduces Example 7.6 (Section 7.3) of *Statistics for Chemical Engineers*: CVaR of a vector of costs for different probability levels alpha.
+
 ```python
 import numpy as np
 
@@ -187,3 +189,5 @@ alpha = 3/5:  CVaR = 73.3
 alpha = 2/5:  CVaR = 85.0
 alpha = 1/5:  CVaR = 100.0
 ```
+
+**Note:** CVaR moves from the mean (alpha = 1, like the l1 norm) to the worst case (like the l-infinity norm): it spans the attitudes toward risk.

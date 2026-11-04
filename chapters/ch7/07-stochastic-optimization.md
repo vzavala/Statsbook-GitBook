@@ -71,6 +71,8 @@ Same model as `ch7_generator_det`; the stochastic decision solves
 $$\min_{u\in\mathcal{U}}\ \mathrm{CVaR}_\alpha[Y(u)]$$ with $$\alpha=0.9$$, evaluated with the $$S$$ load samples.
 Python names: `rho(u)` (the risk measure), `u_D`, `u_star`; other risk measures are tabulated for comparison.
 
+**Note:** This notebook reproduces Example 7.7 (Section 7.6.1) of *Statistics for Chemical Engineers*: sizing the generator of Example 7.1 by minimizing different risk measures of the random cost.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -134,7 +136,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_generator_stoch-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_generator_stoch-04-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, stochastic optimization lets us shape the pdf/cdf of the cost; CVaR is particularly useful because the probability level alpha tunes the protection against high costs.
 
 #### Python implementation
 
@@ -148,6 +152,8 @@ For $$\varphi(X,u)=(u-X)^2$$ with $$X\sim\mathcal{N}(1,10^2)$$ the exact solutio
 optimal value $$\mathbb{V}[X]=100$$. Repeating the SAA over $$B$$ batches gives the CLT-based 95% intervals
 (Chapter 4) of the optimal value and solution, which shrink as $$S$$ grows.
 Python names: `S_values`, `B`, `u_hat` (SAA solutions), `E_hat` (SAA optimal values).
+
+**Note:** This notebook reproduces Example 7.10 (Section 7.6.6) of *Statistics for Chemical Engineers*: sample average approximation (SAA) with different sample sizes S, with upper and lower bounds.
 
 ```python
 import numpy as np
@@ -181,4 +187,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_example_SAA-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_example_SAA-03-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the gap between the bounds shrinks quickly as S grows (from 318 for S = 1 to about 1 for large S): the SAA solution converges quickly.

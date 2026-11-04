@@ -21,6 +21,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 #
 # Python names: `kappa`, `theta_bar`, `rho(theta)`, `SSE(theta)` (model `m` as in `ch5_hougen_watson`).
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 5.12 (Section 5.4) of *Statistics for Chemical Engineers*: adding a ridge penalty to the SSE of the Hougen-Watson model.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -63,3 +66,6 @@ for ax, (title, Z) in zip(axs, maps.items()):
     ax.set_xlabel(r'$\theta_1$'); ax.set_ylabel(r'$\theta_2$')
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the penalty makes the minimum sharper but does not remove the non-physical regions, so numerical issues may remain.

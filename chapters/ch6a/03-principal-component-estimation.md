@@ -120,6 +120,8 @@ Principal component estimation for the Gibbs reactor (Shiyi (Amy) Qin and Victor
 | $$\mathbf{T}_1=\mathbf{X}\mathbf{W}_1$$ | `T1` | reduced inputs |
 | $$\hat{\gamma}$$, $$\hat{\theta}=\mathbf{W}_1\hat{\gamma}$$ | `gamma_hat`, `theta_hat_pca` | PCA estimate |
 
+**Note:** This notebook reproduces Example 6.2 (Section 6.1.1) of *Statistics for Chemical Engineers*: estimating a linear model of conversion in the space of principal components.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -194,4 +196,6 @@ SSE (PCA) = 2.549e-03
 V(theta_hat) with PCA: [7.63e-13 3.32e-07 1.84e-07 2.59e-07 2.67e-07 2.60e-07]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca_estimation-08-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca_estimation-09-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, estimating in the reduced space removes the redundancy and gives highly precise parameters: cleaning the input data improves the model.

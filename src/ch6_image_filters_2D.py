@@ -24,6 +24,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $\hat{f}_i=\hat{f}\cdot\hat{g}_i$ | `f1_hat`, `f2_hat` | filtered images in the frequency domain |
 # | $f_i=\mathcal{F}^{-1}\{\hat{f}_i\}$ | `f1`, `f2` | filtered images |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Examples 6.19 and 6.21 (Section 6.3.5) of *Statistics for Chemical Engineers*: Sobel and Gaussian filters applied to an image, directly and with the convolution theorem.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -69,3 +72,6 @@ plt.show()
 # %%
 direct = gaussian_filter(f, sigma=1, mode='wrap')
 print(f"max |f_1 (FFT) - f_1 (direct)| = {np.max(np.abs(results[0][1] - direct)):.2e}")
+
+# %% [markdown]
+# **Note:** As in the book, the Sobel filter reveals edges and the Gaussian filter smooths the image; a small part of the spectrum is enough to capture its coarse features.

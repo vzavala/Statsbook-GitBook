@@ -101,6 +101,8 @@ for a range of $$\kappa$$ and drawing the trade-off curve $$MSE(\hat{\theta}(\ka
 Python names: `X` (with intercept column), `y`, `kappa`, `theta_hat`, `MSE`, `rho`, `NNZ`
 (number of nonzero parameters).
 
+**Note:** This notebook reproduces Example 5.14 (Section 5.4) of *Statistics for Chemical Engineers*: a linear model of the Gibbs reactor conversion with a lasso penalty.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -156,7 +158,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_gibbs_tradeoff-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_gibbs_tradeoff-06-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, X^T X has zero eigenvalues (the estimate is not unique), and a model with only three non-zero parameters fits about as well: regularization reduces model complexity.
 
 ## Example: Hougen-Watson Regularized
 
@@ -185,6 +189,8 @@ SSE(\theta)+\kappa\,\rho(\theta),\qquad \rho(\theta)=\frac{1}{2}\lVert\theta-\ba
 $$
 
 Python names: `kappa`, `theta_bar`, `rho(theta)`, `SSE(theta)` (model `m` as in `ch5_hougen_watson`).
+
+**Note:** This notebook reproduces Example 5.12 (Section 5.4) of *Statistics for Chemical Engineers*: adding a ridge penalty to the SSE of the Hougen-Watson model.
 
 ```python
 import numpy as np
@@ -230,7 +236,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson_regularized-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson_regularized-05-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the penalty makes the minimum sharper but does not remove the non-physical regions, so numerical issues may remain.
 
 ## Example: Hougen-Watson Constrained
 
@@ -303,6 +311,8 @@ Hougen-Watson estimation with bounds $$\underline{\theta}\leq\theta\leq\overline
 | $$\lambda$$ | `lam` | eigenvalues of $$\mathcal{H}$$ |
 | $$\mathrm{Cov}[\hat{\theta}]$$, $$\mathbb{V}[\hat{\theta}]$$ | `Cov_theta`, `V_theta` | covariance and variances |
 
+**Note:** This notebook reproduces Example 5.13 (Section 5.4) of *Statistics for Chemical Engineers*: estimating the Hougen-Watson model with physical bounds on the parameters.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -351,7 +361,7 @@ plt.show()
 constrained theta_hat = [1.25 0.06 0.04 0.11 1.19]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson_constraints-08-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson_constraints-09-1.png" alt="" width="520"></figure>
 
 Gauss-Newton Hessian, its eigenvalues, and $$\mathrm{Cov}[\hat{\theta}]=\mathcal{H}(\hat{\theta})^{-1}\hat{\sigma}^2$$.
 
@@ -378,3 +388,5 @@ H =
 eigenvalues of H: [1.064e+05 8.362e+03 9.531e+02 3.534e+01 2.561e-02]
 V[theta_hat] = [0.501 0.001 0.001 0.004 0.466]
 ```
+
+**Note:** As in the book, the constraints keep the estimates physical, the Hessian is well conditioned, and the parameter variances are small.

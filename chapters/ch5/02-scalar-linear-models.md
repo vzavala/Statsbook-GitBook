@@ -137,6 +137,8 @@ Scalar linear estimation with the correct model (Victor Z and Jaron T, UW-Madiso
 | $$\hat{y}_\omega=\hat{\theta}x_\omega$$, $$\hat{\epsilon}_\omega$$ | `y_hat`, `eps_hat` | predictions and residuals |
 | $$SSE(\theta)$$ | `SSE` | sum of squared errors |
 
+**Note:** This notebook reproduces Example 5.1 (Section 5.1.1) of *Statistics for Chemical Engineers*: least-squares estimation of theta in Y = theta*X + noise, with true theta = 2.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -188,7 +190,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example-04-0.png" alt="" width="520"></figure>
 
 $$SSE(\theta)=\frac{1}{2}\sum_\omega(y_\omega-\theta x_\omega)^2$$ (scaled by $$1/S$$) becomes sharper as $$S$$ grows.
 
@@ -206,7 +208,9 @@ plt.legend()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example-06-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, with S = 10 the SSE is minimized at theta of about 2.2, and with S = 100 or 1000 close to 2: more data helps identify the true parameter.
 
 ## Bias, Precision, and Information
 

@@ -4,6 +4,9 @@
 # Python names: `mu`, `sigma`, realizations `x_omega`. Note that `scipy.stats.norm`
 # takes the standard deviation $\sigma$ (not $\sigma^2$) as `scale`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces the figures of the Gaussian RV in Section 2.2.2 of *Statistics for Chemical Engineers*: pdfs and cdfs for different parameters, realizations of N(0,1), and its critical values.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -66,3 +69,6 @@ axs[1].set_xlabel('$x$', fontsize=14)
 for ax in axs:
     ax.grid(True)
 plt.show()
+
+# %% [markdown]
+# **Note:** About 68%, 95%, and 99.7% of the outcomes of a Gaussian lie within 1, 2, and 3 standard deviations of the mean.

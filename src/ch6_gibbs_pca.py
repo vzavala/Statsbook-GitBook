@@ -27,6 +27,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 #
 # (`T_pc` avoids a clash with the temperature `T`.)
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.1 (Section 6.1) of *Statistics for Chemical Engineers*: principal component analysis of the Gibbs reactor data.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -74,3 +77,6 @@ for a in fig.axes[1:]:
     a.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, a small eigenvalue reveals a redundant dimension, caused by the high correlation between pressure and conversion: we can drop one of them and keep most of the information.

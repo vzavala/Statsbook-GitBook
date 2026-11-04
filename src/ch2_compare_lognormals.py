@@ -2,6 +2,9 @@
 # Log-normal RVs for several $(\mu,\sigma)$ (Victor Z and David Cole, UW-Madison, 2024).
 # In `scipy.stats.lognorm`, the shape `s` is $\sigma$ and `scale` is $e^{\mu}$ (the median $\mathbb{M}_X$).
 
+# %% [markdown]
+# **Note:** This notebook reproduces the figure of the lognormal RV in Section 2.2.3 of *Statistics for Chemical Engineers*: realizations in regular and logarithmic scale, and pdfs/cdfs.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -38,3 +41,6 @@ for sub, fun, label in ((3, lognorm.pdf, '$f(x)$'), (4, lognorm.cdf, '$F(x)$')):
 plt.legend(loc='lower right', fontsize=10)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** The lognormal RV takes only positive values and is skewed to the right; in logarithmic scale its realizations look Gaussian.

@@ -8,6 +8,9 @@
 # in batches, the posterior of one batch becomes the prior of the next.
 # Python names: `theta_bar`, `Sigma_theta`, `Sigma` (noise covariance), `theta_hat`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 5.16 (Section 5.5) of *Statistics for Chemical Engineers*: updating the heat-capacity estimates one batch of data at a time.
+
 # %%
 import numpy as np
 
@@ -41,3 +44,6 @@ for k in range(S // batch):
     theta_bar, Sigma_theta = bayes_estimate(X[rows], y[rows], sigma**2 * np.eye(batch), theta_bar, Sigma_theta)
     print(f"after batch {k+1}: theta_hat = {np.array2string(theta_bar, precision=4)},  "
           f"SD = {np.array2string(np.sqrt(np.diag(Sigma_theta)), precision=2)}")
+
+# %% [markdown]
+# **Note:** As in the book, after the 6th update the covariance equals the one obtained with the full data set: the posterior of one step is the prior of the next.

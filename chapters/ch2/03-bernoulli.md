@@ -40,6 +40,8 @@ Pdf and cdf of a Bernoulli RV $$X\sim\mathcal{B}(p)$$ with $$p=0.3$$
 (Victor Z and J E Umaña, UW-Madison, 2024).
 Python names: `p`, domain `D`, pdf `f`, cdf `F`, realizations `x_omega`.
 
+**Note:** This notebook reproduces Example 2.3 (Section 2.1.2) of *Statistics for Chemical Engineers*: the Bernoulli RV B(0.3).
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -84,7 +86,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_bernoulli-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_bernoulli-03-0.png" alt="" width="520"></figure>
+
+**Note:** The domain is {0, 1}, with f(1) = 0.3 and f(0) = 0.7; note how the observations land unevenly across the two values.
 
 Open in Colab: [`ch2_compare_bernoulli.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_bernoulli.ipynb)
 
@@ -126,3 +130,5 @@ print(f"E_X = p = {p_hat:.4f},  V_X = p(1-p) = {p_hat*(1-p_hat):.4f}")
 p_hat = 0.4936  ->  X ~ B(0.49)
 E_X = p = 0.4936,  V_X = p(1-p) = 0.2500
 ```
+
+**Note:** As in the book, the machine failed in 79 of 156 weeks: the empirical probabilities (0.5064 and 0.4936) suggest that its status behaves as a uniform RV U(0,1).

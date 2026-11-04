@@ -9,6 +9,9 @@
 # | $m_\ell(u)$, $\sigma_\ell(u)$ | `gp.predict(u, return_std=True)` | kriging mean and SD |
 # | $AF_\ell(u)=m_\ell(u)+\kappa\sigma_\ell(u)$ | `AF(u)`, `kappa` | acquisition function ($\kappa=0.2$) |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 7.11 (Section 7.7) of *Statistics for Chemical Engineers*: Bayesian optimization (BO) of an extraction system, using a GP model and an acquisition function to choose each new experiment.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -59,3 +62,6 @@ plt.scatter(ell, data_y, color='w', edgecolor='k', label=r'$y_\ell$')
 plt.xlabel(r'Experiment $\ell$'); plt.ylabel(r'Observed yield $y_\ell$')
 plt.legend(); plt.grid(True)
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, BO balances exploration and exploitation, and the experiment history converges to the best extraction conditions in a few experiments.

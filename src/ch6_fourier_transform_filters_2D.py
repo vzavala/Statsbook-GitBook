@@ -3,6 +3,9 @@
 # (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024). We show each filter $g$ (`g`), the magnitude
 # $\log(1+|\hat{g}(\omega_1,\omega_2)|)$ (centered with `fftshift`), and the same as a 3D surface.
 
+# %% [markdown]
+# **Note:** This notebook reproduces the filters of Example 6.21 (Section 6.3.5) of *Statistics for Chemical Engineers*: 2D uniform and Gaussian filters and their Fourier transforms.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -32,3 +35,6 @@ for col, (g, title) in enumerate(((g_box, 'uniform filter'), (g_gauss, 'Gaussian
     ax.set_xlabel(r'$\omega_1$'); ax.set_ylabel(r'$\omega_2$'); ax.set_title(r'$|\hat{g}|$')
     ax.set_xticklabels([]); ax.set_yticklabels([]); ax.set_zticklabels([])
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the Gaussian filter keeps only the low frequencies (the bright region in the middle of its spectrum), which is why it preserves only coarse features.

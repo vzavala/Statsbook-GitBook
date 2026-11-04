@@ -9,6 +9,9 @@
 # | $n$ | `n` | number of inspections |
 # | $f(x)=\mathbb{P}(X=x)$ | `f(x, n)` | hypergeometric pdf |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 2.6 (Section 2.1.3) of *Statistics for Chemical Engineers*: inspecting the machine of Example 2.2 at 5 or 10 weeks chosen at random.
+
 # %%
 import numpy as np
 from scipy.stats import hypergeom
@@ -30,3 +33,6 @@ print(f"p = N_y/N_t = {p:.3f}")
 # %%
 for n in (5, 10):
     print(f"n = {n:2d}:  P(X={n}) = f({n}) = {f(n, n):.4g},   P(X=0) = f(0) = {f(0, n):.4g}")
+
+# %% [markdown]
+# **Note:** As in the book, observing a failure in all 10 inspections has probability 8e-4: it is highly unlikely.

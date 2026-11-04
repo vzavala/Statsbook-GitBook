@@ -63,6 +63,8 @@ $$\min_u\ \mathbb{E}[Y(u)]+\kappa\,\mathbb{SD}[Y(u)]$$ for $$\kappa\in[0,20]$$ a
 $$\min_u\ \mathrm{CVaR}_\alpha[Y(u)]$$ for $$\alpha\in[0,1]$$ (here $$u\in[0,10]$$ is treated as continuous).
 Python names: `kappa`, `alpha`, `E(u)`, `SD(u)`, `CVaR(u, alpha)`, `u_star`.
 
+**Note:** This notebook reproduces Example 7.8 (Section 7.6.2) of *Statistics for Chemical Engineers*: the trade-off between expected cost and cost variability, and CVaR for different alpha.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -106,4 +108,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_generator_conflict-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_generator_conflict-03-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the mean-variance trade-off can give inconsistent or very conservative solutions (a large generator), while CVaR controls large costs directly (alpha = 1 gives the worst case).

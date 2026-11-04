@@ -3,6 +3,9 @@
 # `scipy.stats.expon` uses `scale` $=\beta$ (the intensity is $\eta=1/\beta$).
 # The dashed line marks $F(\beta)=1-e^{-1}=0.63$.
 
+# %% [markdown]
+# **Note:** This notebook reproduces the figure of the exponential RV in Section 2.2.4 of *Statistics for Chemical Engineers*, with realizations of Exp(4).
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -40,3 +43,6 @@ plt.xlabel('$x$', fontsize=14)
 plt.ylabel('$F(x)$', fontsize=14)
 plt.axis([0, 4, 0, 1])
 plt.show()
+
+# %% [markdown]
+# **Note:** The exponential RV models waiting times; its mean is the scale parameter beta.

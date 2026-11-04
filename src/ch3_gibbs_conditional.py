@@ -26,6 +26,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 #
 # Events: $\mathcal{A}_1=\{x_1\leq 170\ \&\ x_2\geq 0.5\}$ and $\mathcal{A}_2=\{x_1\geq 120\ \&\ x_2\geq 0.5\}$.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 3.11 (Section 3.6) of *Statistics for Chemical Engineers*: joint, marginal, and conditional probabilities of two events of the Gibbs reactor.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -67,3 +70,6 @@ print(f"P_hat(A1) = {P_A1:.3f},  P_hat(A2) = {P_A2:.3f}")
 print(f"P_hat(A1 & A2) = {P_A1_and_A2:.3f},  P_hat(A1 or A2) = {P_A1_or_A2:.3f}")
 print(f"P_hat(A1 | A2) = {P_A1_given_A2:.3f},  P_hat(A2 | A1) = {P_A2_given_A1:.3f}")
 print(f"Bayes' rule check: P(A2|A1) P(A1) / P(A2) = {P_A2_given_A1 * P_A1 / P_A2:.3f}")
+
+# %% [markdown]
+# **Note:** As in the book, P(B | A) = 1: every point in A is also in B, so event A carries full information about event B.

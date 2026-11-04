@@ -6,6 +6,9 @@
 #
 # Python names: `alpha`, `beta`, `x`; `P_exceed(x, alpha, beta)` implements the sum above.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 2.17 (Section 2.2.5) of *Statistics for Chemical Engineers*: the waiting time at a charging station modeled as a Gamma RV.
+
 # %%
 from math import exp, factorial
 from scipy.stats import gamma
@@ -23,3 +26,6 @@ cases = [  # (description, x [hr], alpha [trucks], beta [hr])
 for text, x, alpha, beta in cases:
     print(f"{text:52s} P = {P_exceed(x, alpha, beta):.3f}   "
           f"(scipy: {gamma.sf(x, alpha, scale=beta):.3f})")
+
+# %% [markdown]
+# **Note:** The more trucks in the queue, the more likely a long wait; faster charging (smaller beta) reduces it.

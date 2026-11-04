@@ -26,6 +26,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $\hat{f}(x)$, $\hat{F}(x)$ | `f_hat`, `F_hat` | empirical pdf and cdf |
 # | $u$, $u'$ | `u_low`, `u_high` | operating temperature (decision) [K] |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Examples 1.5 to 1.9 (Sections 1.3 and 1.4) of *Statistics for Chemical Engineers*: the reactor pressure is an RV, and we study how its uncertainty affects conversion and decisions.
+
 # %% [part] Realizations, frequency, and cumulative frequency
 
 # %%
@@ -294,3 +297,6 @@ for u, y_u in U.items():
     print(f"u = {u} K:  E_hat[Y] = {np.mean(y_u):.1f} %,  SD_hat[Y] = {np.std(y_u):.1f} %,  CV = {rho(y_u):.3f}")
 u_star = min(U, key=lambda u: rho(U[u]))
 print(f"Optimal decision u* = {u_star} K")
+
+# %% [markdown]
+# **Note:** As in the book, operating at low temperature both increases the mean conversion and reduces its uncertainty. In other problems the choice is less obvious: an action may increase the mean but also the uncertainty.

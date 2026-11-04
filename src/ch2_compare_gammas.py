@@ -2,6 +2,9 @@
 # Gamma RVs $X\sim\mathrm{Gamma}(\alpha,\beta)$ (Victor Z and J E Umaña, UW-Madison, 2024).
 # `scipy.stats.gamma` uses shape `a` $=\alpha$ and `scale` $=\beta$.
 
+# %% [markdown]
+# **Note:** This notebook reproduces the figure of the Gamma RV in Section 2.2.5 of *Statistics for Chemical Engineers*, with realizations of Gamma(1,1) and Gamma(2,1).
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -35,3 +38,6 @@ for sub, fun, label in ((3, gamma.pdf, '$f(x)$'), (4, gamma.cdf, '$F(x)$')):
 plt.legend(loc='lower right', fontsize=9)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** The Gamma RV generalizes the exponential RV (alpha = 1): it models the waiting time until the alpha-th event.

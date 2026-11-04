@@ -101,6 +101,8 @@ For a given $$u$$ the best recourse in every scenario is $$W(X)=\min(u,\,X_1+X_2
 $$0\leq W\leq X_1+X_2$$ and $$W\leq u$$, and it makes $$R$$ (hence each scenario's cost) as small as possible,
 so it also minimizes $$\mathrm{CVaR}_\alpha$$.
 
+**Note:** This notebook reproduces Example 7.9 (Section 7.6.3) of *Statistics for Chemical Engineers*: sizing a flexible generator for two random loads, with deterministic and two-stage stochastic formulations.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -153,4 +155,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_generator_twostage-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_generator_twostage-04-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the deterministic solution depends on how we choose representative values of the loads, which is not obvious when many RVs are present; the stochastic formulation avoids this.

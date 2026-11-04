@@ -91,7 +91,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-29-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-30-0.png" alt="" width="520"></figure>
 
 ## Decision-Making under Uncertainty
 
@@ -155,7 +155,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-32-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-33-0.png" alt="" width="520"></figure>
 
 ## Decision-Making under Uncertainty
 
@@ -194,3 +194,5 @@ u = 583 K:  E_hat[Y] = 71.9 %,  SD_hat[Y] = 7.7 %,  CV = 0.108
 u = 613 K:  E_hat[Y] = 50.9 %,  SD_hat[Y] = 13.3 %,  CV = 0.262
 Optimal decision u* = 583 K
 ```
+
+**Note:** As in the book, operating at low temperature both increases the mean conversion and reduces its uncertainty. In other problems the choice is less obvious: an action may increase the mean but also the uncertainty.

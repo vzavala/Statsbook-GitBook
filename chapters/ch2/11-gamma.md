@@ -34,6 +34,8 @@ $$
 Gamma RVs $$X\sim\mathrm{Gamma}(\alpha,\beta)$$ (Victor Z and J E Umaña, UW-Madison, 2024).
 `scipy.stats.gamma` uses shape `a` $$=\alpha$$ and `scale` $$=\beta$$.
 
+**Note:** This notebook reproduces the figure of the Gamma RV in Section 2.2.5 of *Statistics for Chemical Engineers*, with realizations of Gamma(1,1) and Gamma(2,1).
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -69,7 +71,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_gammas-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_gammas-03-0.png" alt="" width="520"></figure>
+
+**Note:** The Gamma RV generalizes the exponential RV (alpha = 1): it models the waiting time until the alpha-th event.
 
 Open in Colab: [`ch2_compare_gammas.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_gammas.ipynb)
 
@@ -134,6 +138,8 @@ $$
 
 Python names: `alpha`, `beta`, `x`; `P_exceed(x, alpha, beta)` implements the sum above.
 
+**Note:** This notebook reproduces Example 2.17 (Section 2.2.5) of *Statistics for Chemical Engineers*: the waiting time at a charging station modeled as a Gamma RV.
+
 ```python
 from math import exp, factorial
 from scipy.stats import gamma
@@ -159,3 +165,5 @@ for text, x, alpha, beta in cases:
 1 truck in queue,  wait > 4 hr                       P = 0.368   (scipy: 0.368)
 1 truck, new batteries (beta = 2 hr), wait > 3 hr    P = 0.223   (scipy: 0.223)
 ```
+
+**Note:** The more trucks in the queue, the more likely a long wait; faster charging (smaller beta) reduces it.

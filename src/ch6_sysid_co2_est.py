@@ -28,6 +28,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $\lvert\hat{u}(\omega)\rvert$, $\lvert\hat{x}(\omega)\rvert$ | `mag_u`, `mag_x` | spectra |
 # | $K$, $\tau$ | `K`, `tau` | gain and time constant |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.15 (Section 6.3.3) of *Statistics for Chemical Engineers*: estimating a dynamic model from the spectra of the input and output signals.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -72,3 +75,6 @@ V = 10000                 # building volume [cubic feet]
 Q = V / tau
 G = K * Q
 print(f"Q = {Q:.1f},  G = {G:.1f}")
+
+# %% [markdown]
+# **Note:** As in the book, the amplitude ratio of the model matches the empirical one; this Bode plot is widely used in system identification and control.

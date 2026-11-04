@@ -3,6 +3,9 @@
 # `scipy.stats.weibull_min` takes the **shape** $\xi$ first and the **scale** $\beta$ as `scale`.
 # The dashed line marks $F(\beta)=1-e^{-1}=0.63$ for any $\xi$.
 
+# %% [markdown]
+# **Note:** This notebook reproduces the figure of the Weibull RV in Section 2.2.7 of *Statistics for Chemical Engineers*.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -26,3 +29,6 @@ plt.axhline(1 - np.exp(-1), color='k', ls='--')
 plt.legend(fontsize=10, loc='lower right')
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** The shape parameter xi changes the form of the Weibull pdf; xi = 1 gives the exponential RV.

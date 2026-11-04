@@ -29,6 +29,8 @@ Pdf and cdf of a continuous uniform RV $$X\sim\mathcal{U}_c(a,b)$$ with $$a=-1,b
 Python names: `a`, `b`, pdf `f`, cdf `F`, realizations `x_omega`.
 In `scipy.stats.uniform`, `loc` $$=a$$ and `scale` $$=b-a$$.
 
+**Note:** This notebook reproduces the figure of the continuous uniform RV in Section 2.2.1 of *Statistics for Chemical Engineers*, with a = -1 and b = 1.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -64,7 +66,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_uniformc-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_uniformc-03-0.png" alt="" width="520"></figure>
+
+**Note:** The pdf is flat on [a, b] and the cdf grows linearly from 0 to 1.
 
 Open in Colab: [`ch2_compare_uniformc.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_uniformc.ipynb)
 
@@ -136,6 +140,8 @@ Setting up a pressure alarm with a uniform model $$X\sim\mathcal{U}_c(a,b)$$, $$
 (written for the book to accompany the slide example).
 Python names: `a`, `b`, cdf `F(x)`, quantile `Q(alpha)`.
 
+**Note:** This notebook reproduces Example 2.10 (Section 2.2.1) of *Statistics for Chemical Engineers*: setting a pressure alarm when the pressure is modeled as a uniform RV between 63 and 234 bar.
+
 ```python
 from scipy.stats import uniform
 
@@ -158,3 +164,5 @@ print(f"Alarm threshold Q_X(0.99) = {Q(0.99):.1f} bar  (check: a + 0.99(b-a) = {
 P(X <= 100) = F(100) = 0.22
 Alarm threshold Q_X(0.99) = 232.3 bar  (check: a + 0.99(b-a) = 232.3)
 ```
+
+**Note:** The alarm threshold is the quantile Q(0.99): with a uniform model, the pressure exceeds it only 1% of the time.

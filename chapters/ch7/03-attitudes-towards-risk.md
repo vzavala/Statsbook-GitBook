@@ -40,6 +40,8 @@ Comparing two random costs $$Y(u)\sim\mathcal{N}(3,1.5^2)$$ (option I) and $$Y(u
 (option II), in MUSD (Victor Z and Leo Gonzalez, UW-Madison, 2023).
 Python names: `Y_u`, `Y_up` (frozen distributions), `y_bar` (threshold), `alpha`, `VaR`, `CVaR`.
 
+**Note:** This notebook reproduces Examples 7.2 and 7.3 (Section 7.2) of *Statistics for Chemical Engineers*: two options with random costs, one with a lower mean and one with a lower variance.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -58,7 +60,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_mean_var_comparison-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_mean_var_comparison-04-0.png" alt="" width="520"></figure>
 
 ## Attitudes Towards Risk
 
@@ -129,6 +131,8 @@ Option I : E = 3.00,  P(Y <= 5) = 0.909,  VaR = 4.92,  CVaR = 5.64 (5.63)
 Option II: E = 4.00,  P(Y <= 5) = 0.977,  VaR = 4.64,  CVaR = 4.88 (4.88)
 ```
 
+**Note:** As in the book, the mean and the variance lead to contradictory decisions; risk measures that look at the tails of the pdf capture the attitude of the decision-maker toward risk.
+
 ## Example: Comparing Investment Options
 
 * Have a couple of investment opportunities:
@@ -169,6 +173,8 @@ Comparing investment options through their net present value (Victor Z and Leo G
 | $$i$$ | `i` | interest rate (5%, 10 years) |
 | $$NPV$$, i.e. $$Y(u)$$ and $$Y(u')$$ | `NPV_I`, `NPV_II` | net present value (negative = revenue) |
 
+**Note:** This notebook reproduces Examples 7.4 and 7.5 (Section 7.2) of *Statistics for Chemical Engineers*: the net present value (NPV) of two investments with random returns.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -196,4 +202,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_npv_comparison-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_npv_comparison-04-0.png" alt="" width="520"></figure>

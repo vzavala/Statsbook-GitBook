@@ -302,6 +302,8 @@ Covariance and correlation for the Gibbs reactor (Victor Z, UW-Madison, 2024).
 | $$\hat{\mathrm{Cov}}[X]$$ | `Cov_hat` | sample covariance (with $$1/S$$) |
 | $$\hat{\mathrm{PCorr}}[X]=D^{-1}\hat{\mathrm{Cov}}[X]D^{-1}$$ | `PCorr_hat`, `D` | Pearson correlation |
 
+**Note:** This notebook reproduces Examples 3.15 (Section 3.7.2) and 3.17 (Section 3.8.3) of *Statistics for Chemical Engineers*: statistics of pressure, conversion, and flows of the Gibbs reactor.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -324,7 +326,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_gibbs_covariance-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_gibbs_covariance-06-0.png" alt="" width="520"></figure>
 
 $$\hat{\mathrm{Cov}}[X]_{ij}=\frac{1}{S}\sum_{\omega}(x_{\omega,i}-\hat{m}_i)(x_{\omega,j}-\hat{m}_j)$$.
 (`np.cov` divides by $$S-1$$ unless `bias=True`.)

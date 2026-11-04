@@ -50,6 +50,8 @@ Least-squares fit of a Weibull cdf (Victor Z, UW-Madison, 2024).
 | $$\theta=(\xi,\beta)$$ | `theta = (xi, beta)` | Weibull shape and scale |
 | $$F_X(t\mid\theta)$$ | `F_model(t, theta)` | model cdf $$1-e^{-(t/\beta)^\xi}$$ |
 
+**Note:** This notebook reproduces Example 4.3 (Section 4.1.2) of *Statistics for Chemical Engineers*: fitting the Weibull cdf to the empirical cdf.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -119,4 +121,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_leastsquares_example-07-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_leastsquares_example-08-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the estimates (beta of about 1.08, xi of about 1.89) are close to the true values; the numerical and analytical (log-transformed) fits differ slightly.

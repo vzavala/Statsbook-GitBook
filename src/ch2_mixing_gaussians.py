@@ -9,6 +9,9 @@
 # | $F_3=f_1+\kappa F_2$ | `mu_3`, `sigma_3` | output flow, $\mathcal{N}(10+20\kappa,\kappa^2)$ |
 # | $z_\alpha=\mathbb{Q}_Z(\alpha)$ | `z_alpha` | standard-normal quantile |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Examples 2.12 and 2.13 (Section 2.2.2) of *Statistics for Chemical Engineers*: the output flow F3 ~ N(30,1) of a mixer.
+
 # %% [part] Quantiles of the output flow
 
 # %%
@@ -73,3 +76,6 @@ plt.xlabel('$f_3$ [gpm]', fontsize=14)
 plt.ylabel('$f(f_3)$', fontsize=14)
 plt.grid(True)
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, we are 97.7% confident that F3 is below 32 gpm, and F3 lies in [28.36, 31.64] gpm with 90% probability.

@@ -116,6 +116,8 @@ Kriging (Gaussian process) model for the Gibbs reactor (Victor Z and Ugochukwu I
 | $$m(x)$$, $$\sigma(x)$$ | `m_x`, `sigma_x` | predictive mean and SD |
 | $$\epsilon_\omega$$ | `eps_gp`, `eps_lin` | residuals of kriging and linear models |
 
+**Note:** This notebook reproduces Example 6.24 (Section 6.6) of *Statistics for Chemical Engineers*: a Gaussian process (kriging) model of the Gibbs reactor, compared with linear regression.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -157,7 +159,7 @@ plt.show()
 fitted kernel: Matern(length_scale=97, nu=1.5) + WhiteKernel(noise_level=0.0462)
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-06-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-07-1.png" alt="" width="520"></figure>
 
 Compare the residuals through the empirical cdf of $$|\epsilon|$$.
 
@@ -171,7 +173,7 @@ plt.legend(loc='lower right'); plt.grid(True)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-08-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-09-0.png" alt="" width="520"></figure>
 
 95% confidence intervals $$m(x_\omega)\pm 1.96\,\sigma(x_\omega)$$ for the first 50 observations.
 
@@ -184,7 +186,9 @@ plt.legend(); plt.grid(True)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-10-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_kriging-11-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the observed values always lie within the predicted confidence intervals: the GP characterizes its uncertainty consistently.
 
 ## Example: Experimental Design using GP Models
 
@@ -205,6 +209,8 @@ Using the GP uncertainty to choose experiments (Victor Z, UW-Madison, 2024). The
 $$y=x^2$$ (plus small noise). With 3, 4, 5, and 6 experiments $$(x_\omega,y_\omega)$$ (`x_omega`, `y_omega`)
 we plot the mean $$m(x)$$ and the band $$m(x)\pm1.96\,\sigma(x)$$; uncertainty is zero at the
 experiments and large far from them, which tells us where to sample next.
+
+**Note:** This notebook reproduces Example 6.25 (Section 6.6) of *Statistics for Chemical Engineers*: choosing new experiments where the GP prediction is most uncertain.
 
 ```python
 import numpy as np
@@ -235,4 +241,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_kriging_uq-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_kriging_uq-03-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the GP recommends experiments that reduce prediction uncertainty, balancing exploration and exploitation.

@@ -23,6 +23,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $\lambda_i=s_i^2$ | `lam` | eigenvalues of $\mathbf{X}^T\mathbf{X}$ |
 # | $\mathrm{rank}(\mathbf{X}[:,1..k])$ | `np.linalg.matrix_rank` | rank as columns are added |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.4 (Section 6.2) of *Statistics for Chemical Engineers*: the rank of the data matrix and of its column subsets, from the singular value decomposition.
+
 # %%
 import numpy as np
 
@@ -38,3 +41,6 @@ print("diag(S) =", s)
 print("lambda = s^2 =", np.array2string(s**2, precision=3))
 for k in range(1, X.shape[1] + 1):
     print(f"rank(X[:, 1..{k}]) = {np.linalg.matrix_rank(X[:, :k])}")
+
+# %% [markdown]
+# **Note:** As in the book, the ranks of column subsets reveal which combinations of variables are redundant (for example, keeping X2, X4, X5).

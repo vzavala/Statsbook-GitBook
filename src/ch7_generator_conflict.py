@@ -5,6 +5,9 @@
 # $\min_u\ \mathrm{CVaR}_\alpha[Y(u)]$ for $\alpha\in[0,1]$ (here $u\in[0,10]$ is treated as continuous).
 # Python names: `kappa`, `alpha`, `E(u)`, `SD(u)`, `CVaR(u, alpha)`, `u_star`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 7.8 (Section 7.6.2) of *Statistics for Chemical Engineers*: the trade-off between expected cost and cost variability, and CVaR for different alpha.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -46,3 +49,6 @@ for ax in axs.ravel():
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the mean-variance trade-off can give inconsistent or very conservative solutions (a large generator), while CVaR controls large costs directly (alpha = 1 gives the worst case).

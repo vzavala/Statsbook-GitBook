@@ -3,6 +3,9 @@
 # Filters $g$ (`g`) are the pdf of $\mathcal{U}(4,6)$ and of $\mathcal{N}(5,\sigma^2)$ with $\sigma=0.4$ and 1;
 # we plot the one-sided magnitude $|\hat{g}(\omega)|$.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.13 (Section 6.3.2) of *Statistics for Chemical Engineers*: frequency content of a pulse and of Gaussians with different widths.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -34,3 +37,6 @@ for ax in axs.ravel():
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, a wide Gaussian has only low frequencies and a narrow one needs high frequencies: sigma controls the frequency content of the filter.

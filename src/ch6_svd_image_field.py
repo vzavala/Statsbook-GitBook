@@ -3,6 +3,9 @@
 # matrix $\mathbf{X}$ shown on the slide, a noisy version $\mathbf{X}_\epsilon$ (`X_eps`), and the rank-1
 # approximation $s_1\mathbf{u}_1\mathbf{v}_1^T$ from the expansion $\mathbf{X}=\sum_i s_i\mathbf{u}_i\mathbf{v}_i^T$.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.5 (Section 6.2) of *Statistics for Chemical Engineers*: a 2D field seen as a matrix, and its rank-1 approximation with and without noise.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -38,3 +41,6 @@ for ax, A, title in ((axes[0, 0], X, r'$\mathbf{X}$'), (axes[0, 1], X_eps, r'$\m
     ax.set_xticks([]); ax.set_yticks([])
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, eliminating principal components filters out the noise: images can be analyzed as matrices.

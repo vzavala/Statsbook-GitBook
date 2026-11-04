@@ -88,6 +88,8 @@ Empirical event probabilities for the Gibbs reactor (Victor Z, UW-Madison, 2024)
 
 Events: $$\mathcal{A}_1=\{x_1\leq 170\ \&\ x_2\geq 0.5\}$$ and $$\mathcal{A}_2=\{x_1\geq 120\ \&\ x_2\geq 0.5\}$$.
 
+**Note:** This notebook reproduces Example 3.11 (Section 3.6) of *Statistics for Chemical Engineers*: joint, marginal, and conditional probabilities of two events of the Gibbs reactor.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -115,7 +117,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_gibbs_conditional-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_gibbs_conditional-05-0.png" alt="" width="520"></figure>
 
 $$\hat{\mathbb{P}}(X\in\mathcal{A})=\frac{1}{S}\sum_\omega\mathbf{1}[x_\omega\in\mathcal{A}]$$ and
 $$\hat{\mathbb{P}}(X\in\mathcal{A}_1|X\in\mathcal{A}_2)=\hat{\mathbb{P}}(X\in\mathcal{A}_1\cap\mathcal{A}_2)/\hat{\mathbb{P}}(X\in\mathcal{A}_2)$$.
@@ -139,6 +141,8 @@ P_hat(A1 & A2) = 0.252,  P_hat(A1 or A2) = 0.420
 P_hat(A1 | A2) = 0.600,  P_hat(A2 | A1) = 1.000
 Bayes' rule check: P(A2|A1) P(A1) / P(A2) = 0.600
 ```
+
+**Note:** As in the book, P(B | A) = 1: every point in A is also in B, so event A carries full information about event B.
 
 ## Example: Lifetime of Thermostat
 
@@ -194,6 +198,8 @@ $$\mu_1=1$$ and $$\mu_2=10$$ years.
 | $$f_1$$, $$f_2$$, $$F_1$$, $$F_2$$ | `f_1`, `f_2`, `F_1`, `F_2` | marginal pdfs and cdfs |
 | $$f(x_1\mid x_2)$$ | `f_1g2` | conditional pdf ("1 given 2") |
 | $$\mathbb{P}(X\in\mathcal{A})$$ | `P_A` | probability of event $$\mathcal{A}$$ |
+
+**Note:** This notebook reproduces Examples 3.2 to 3.14 (Chapter 3) of *Statistics for Chemical Engineers*: the joint lifetime of the sensor and processor of a thermostat (independent exponential RVs).
 
 ```python
 import numpy as np
@@ -280,6 +286,8 @@ Flow cytometry data treated as a discrete 2D RV (Victor Z, UW-Madison, 2024).
 | $$\hat{f}_1$$, $$\hat{f}_2$$ | `f1_hat`, `f2_hat` | empirical marginal pdfs |
 | $$\hat{f}(x_1\mid x_2)$$, $$\hat{f}(x_2\mid x_1)$$ | `f_hat_1g2`, `f_hat_2g1` | empirical conditional pdfs |
 
+**Note:** This notebook reproduces Examples 3.3 (Section 3.2) and 3.9 (Section 3.4) of *Statistics for Chemical Engineers*: forward (FSC) and side (SSC) scatter of droplets, each grouped in low, medium, and high values.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -333,7 +341,7 @@ sum = 1.0
 Most likely category: (FSC, SSC) = (L, M),  f_hat = 0.5996
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_discrete-06-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_discrete-07-1.png" alt="" width="520"></figure>
 
 Marginals add the joint pdf over the other variable; conditionals divide the joint pdf by a marginal:
 $$\hat{f}(x_1|x_2)=\hat{f}(x_1,x_2)/\hat{f}_2(x_2)$$.
@@ -362,6 +370,8 @@ f_hat(x2 | x1):
  [0.6945 0.8236 0.    ]
  [0.0032 0.1764 1.    ]]
 ```
+
+**Note:** As in the book, 8,635 droplets have a low FSC, and P(FSC = L | SSC = L) = 1: knowing the SSC of a droplet tells us its FSC, so the two values vary together.
 
 ## Joint PDFs and CDFs
 
@@ -513,6 +523,8 @@ Empirical joint pdf of flow cytometry data (Victor Z, UW-Madison, 2024).
 | $$\Delta x_1=\Delta x_2$$ | `dx` | bin size (0.05) |
 | $$\hat{f}(x_1,x_2)$$ | `f_hat` | empirical joint pdf |
 
+**Note:** This notebook reproduces Examples 3.5 (Section 3.2) and 3.7 (Section 3.3) of *Statistics for Chemical Engineers*: empirical joint and marginal pdfs of FSC and SSC.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -563,7 +575,7 @@ plt.show()
 37 x 45 bins;  integral of f_hat = 1.000
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_empirical-06-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_empirical-07-1.png" alt="" width="520"></figure>
 
 Empirical marginal pdfs $$\hat{f}_1(x_1)$$ and $$\hat{f}_2(x_2)$$.
 
@@ -579,4 +591,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_empirical-08-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_flow_cytometer_empirical-09-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the joint pdf has a complex shape; the marginal pdf of FSC is nonsymmetric with a peak in [4.5, 5], while that of SSC is symmetric and Gaussian-like.

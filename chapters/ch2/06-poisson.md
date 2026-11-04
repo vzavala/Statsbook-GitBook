@@ -52,6 +52,8 @@ Pdf and cdf of a Poisson RV $$X\sim\mathcal{P}(\lambda)$$ for several $$\lambda$
 (Victor Z and David Cole, UW-Madison, 2024).
 Python names: `lam` for $$\lambda$$ (`lambda` is reserved in Python), realizations `x_omega`.
 
+**Note:** This notebook reproduces the figure of the Poisson RV in Section 2.1.5 of *Statistics for Chemical Engineers*: pdfs and cdfs for different rates, and realizations of P(1/2).
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -84,7 +86,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_poisson-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_poisson-03-0.png" alt="" width="520"></figure>
+
+**Note:** The Poisson RV counts events in an interval; its pdf shifts to the right and spreads out as the rate lambda grows.
 
 Open in Colab: [`ch2_compare_poisson.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_poisson.ipynb)
 
@@ -144,6 +148,8 @@ Pump failures as a Poisson RV (Victor Z and David Cole, UW-Madison, 2024).
 | $$\hat{\mathbb{E}}_X$$, $$\hat{\lambda}$$ | `E_hat`, `lam_hat` | empirical mean and estimate of $$\lambda$$ |
 | $$f(x)=\lambda^x e^{-\lambda}/x!$$ | `f(x)` | Poisson pdf |
 
+**Note:** This notebook reproduces Example 2.9 (Section 2.1.5) of *Statistics for Chemical Engineers*: number of monthly failures of a control system, modeled as a Poisson RV.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -170,7 +176,7 @@ plt.axis([0, z + 1, 0, 4])
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_example_poisson-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_example_poisson-05-0.png" alt="" width="520"></figure>
 
 Since $$\mathbb{E}_X=\lambda$$, estimate $$\hat{\lambda}=\hat{\mathbb{E}}_X=\frac{1}{3}(8+12+14)$$ and
 evaluate $$\mathbb{P}(X=0)$$, $$\mathbb{P}(X=30)$$, and $$\mathbb{P}(X=11)$$.
@@ -195,3 +201,5 @@ P(X=0)  = 1.2e-05
 P(X=30) = 1.93e-06
 P(X=11) = 0.119
 ```
+
+**Note:** As in the book, the probability of 11 failures in a month is 0.12; the pdf is evaluated at integers only (11, not 11.3), because the domain contains integers.

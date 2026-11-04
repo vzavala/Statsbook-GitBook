@@ -19,6 +19,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # Inputs $x_\omega=(P,T)$ (`X`, scaled), output conversion $y_\omega$ (`y`). The NN has one hidden layer
 # with two perceptrons (logistic activations) and is trained by minimizing the squared loss $L(\theta)$.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.26 (Section 6.7.1) of *Statistics for Chemical Engineers*: a neural network model of the Gibbs reactor conversion.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -52,3 +55,6 @@ for ax, pred, title in ((axs[0], y_gp, 'kriging'), (axs[1], y_nn, 'neural net (2
     ax.axis([0, 1.1, 0, 1.1]); ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, a network with one layer and a few perceptrons fits this highly nonlinear model extremely well.

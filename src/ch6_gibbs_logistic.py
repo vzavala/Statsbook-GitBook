@@ -26,6 +26,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $m(x,\theta)=\mathbb{P}(Y=1\mid x,\theta)$ | `m_hat` | classification probability |
 # | $\hat{y}_\omega$ | `y_hat` | predicted label |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.22 (Section 6.4) of *Statistics for Chemical Engineers*: logistic regression to detect faults of the Gibbs reactor.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -86,3 +89,6 @@ plot_confusion(axs[0], confusion_matrix(y_tr, model_tr.predict(X_tr)), 'training
 plot_confusion(axs[1], confusion_matrix(y_te, model_tr.predict(X_te)), 'test')
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the model separates the classes well; cross-validation should be used to check that it generalizes to new data.

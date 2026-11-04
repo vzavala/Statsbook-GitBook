@@ -3,6 +3,9 @@
 # $x_\omega=(x_{\omega,1},x_{\omega,2})$ (`x_omega[:, 0]`, `x_omega[:, 1]`) that are
 # anticorrelated, uncorrelated, and nonlinearly related, and a 3D data set.
 
+# %% [markdown]
+# **Note:** This notebook reproduces the opening figure of Chapter 3 of *Statistics for Chemical Engineers*: four data sets that show different relationships between two RVs.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -35,3 +38,6 @@ ax.set_xlabel('$x_1$', fontsize=14)
 ax.set_ylabel('$x_2$', fontsize=14)
 ax.set_zlabel('$x_3$', fontsize=14)
 plt.show()
+
+# %% [markdown]
+# **Note:** Multivariate RVs can be independent, linearly related (positively or negatively), or related in nonlinear ways; the joint pdf captures these relationships.

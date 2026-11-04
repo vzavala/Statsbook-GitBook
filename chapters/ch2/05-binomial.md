@@ -44,6 +44,8 @@ $$\mathcal{H}(N_y,N_t,n,p)$$ to $$\mathrm{Bi}(n,p)$$ for large $$N_t$$
 (Victor Z and J E Umaña, UW-Madison, 2024).
 Python names: `n`, `p`, domain `D`, pdf `f`, cdf `F`, population `N_t`, `N_y`.
 
+**Note:** This notebook reproduces Example 2.7 (Section 2.1.4) of *Statistics for Chemical Engineers*: the binomial RV, and its relation to the hypergeometric RV.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -95,7 +97,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_binomial-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_binomial-03-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the hypergeometric pdf for a large population (N_t = 1000) is nearly identical to the binomial pdf: the hypergeometric RV converges to a binomial RV.
 
 Open in Colab: [`ch2_compare_binomial.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_binomial.ipynb)
 
@@ -142,6 +146,8 @@ The weekly status is $$\mathcal{B}(p)$$ with $$p=0.5$$, so the number of failure
 $$n$$ weeks is $$X\sim\mathrm{Bi}(n,p)$$ with pdf $$f(x)=\binom{n}{x}p^x(1-p)^{n-x}$$.
 Python names: `n`, `p`, pdf `f(x)`, `E_X`.
 
+**Note:** This notebook reproduces Example 2.8 (Section 2.1.4) of *Statistics for Chemical Engineers*: number of failures in a sequence of n weeks, with p = 0.5.
+
 ```python
 from scipy.stats import binom
 
@@ -162,3 +168,5 @@ P(X=2)  = f(2)  = 0.0439
 P(X=10) = f(10) = 0.000977
 E_X = n p = 5
 ```
+
+**Note:** As in the book, the machine is equally likely to be in failure or normal mode, so it is unlikely to be in either mode all n times: P(X = 0) = P(X = 10) = 9.76e-4.

@@ -129,3 +129,5 @@ CVaR             -37.4        24.3
 max              -12.7       126.8
 min             -124.8      -349.3
 ```
+
+**Note:** As in the book, a risk-averse decision-maker prefers the first investment (no chance of losing money), while a risk-taker may accept a 9% chance of loss for the chance of large gains.

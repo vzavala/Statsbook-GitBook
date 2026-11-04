@@ -96,6 +96,8 @@ Generator sizing: the deterministic decision (Victor Z and David Cole, UW-Madiso
 | $$r=\max_\omega r_\omega$$ | `L_peak` | representative (peak) load |
 | $$u_D^*$$ | `u_D` | deterministic decision |
 
+**Note:** This notebook reproduces Example 7.1 (Section 7.1) of *Statistics for Chemical Engineers*: sizing an on-site power generator for a random (Weibull) load, using a deterministic approach.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -156,4 +158,6 @@ average cost: u_D* -> 844.6,  do nothing -> 501.8
 maximum cost: u_D* -> 3212.4,  do nothing -> 4280.5
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_generator_det-06-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_generator_det-07-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the deterministic decision ignores the spread of the cost: it can shave peak costs, but its performance under uncertainty must be checked against the alternatives.

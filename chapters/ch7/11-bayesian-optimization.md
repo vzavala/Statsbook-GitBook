@@ -109,6 +109,8 @@ Bayesian optimization of pectin extraction (Victor Z and Leo Gonzalez, UW-Madiso
 | $$m_\ell(u)$$, $$\sigma_\ell(u)$$ | `gp.predict(u, return_std=True)` | kriging mean and SD |
 | $$AF_\ell(u)=m_\ell(u)+\kappa\sigma_\ell(u)$$ | `AF(u)`, `kappa` | acquisition function ($$\kappa=0.2$$) |
 
+**Note:** This notebook reproduces Example 7.11 (Section 7.7) of *Statistics for Chemical Engineers*: Bayesian optimization (BO) of an extraction system, using a GP model and an acquisition function to choose each new experiment.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -166,4 +168,6 @@ best scaled conditions u = [1.    0.463 0.249]   yield = 19.395
 in physical units: [100.      1.732   0.225]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch7_bayesopt_yield-04-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch7_bayesopt_yield-05-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, BO balances exploration and exploitation, and the experiment history converges to the best extraction conditions in a few experiments.

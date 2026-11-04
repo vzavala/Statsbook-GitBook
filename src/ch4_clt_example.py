@@ -11,6 +11,9 @@
 #
 # `R` is the number of repetitions used to draw the histogram of $\bar{X}$.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 4.7 (Section 4.3.3) of *Statistics for Chemical Engineers*: the distribution of the sample average of Weibull(1,2) observations.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -42,3 +45,6 @@ for ax in axs.ravel():
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the sample average is Gaussian even though X is not, and its variance shrinks with S: this is the central limit theorem.

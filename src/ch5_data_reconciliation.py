@@ -8,6 +8,9 @@
 #
 # Python names: `x_omega`, `y_omega`, `sigma2_x`, `sigma2_y`, `x_hat`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 5.17 (Section 5.5) of *Statistics for Chemical Engineers*: Bayesian estimation of an uncertain input flow that must satisfy conservation (data reconciliation).
+
 # %%
 import numpy as np
 from scipy.optimize import minimize_scalar
@@ -23,3 +26,6 @@ for sigma2_x, sigma2_y in ((1.0, 1.0), (1.0, 0.01), (0.01, 1.0)):
     x_num = minimize_scalar(obj).x
     print(f"sigma2_x = {sigma2_x:5.2f}, sigma2_y = {sigma2_y:5.2f}:  "
           f"x_hat = {x_hat_formula(sigma2_x, sigma2_y):7.3f}  (numerical: {x_num:7.3f})")
+
+# %% [markdown]
+# **Note:** The reconciled flow is a weighted average of the two measurements: it moves toward the more precise one (smaller error variance).

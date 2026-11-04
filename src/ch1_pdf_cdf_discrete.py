@@ -8,6 +8,9 @@
 # | $x_\omega,\ \omega\in\Omega$ | `x_omega` | the 10 realizations |
 # | $t$, $F(t)$ | `t`, `F` | cdf evaluated on a grid of $t$ |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 1.3 (Section 1.2.2) of *Statistics for Chemical Engineers*: a discrete RV with domain {-1, 0, 1, 2}.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -54,3 +57,6 @@ axs[1].axis([-1.1, 2.1, -0.02, 1.02])
 axs[1].grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** The cdf values match the fraction of outcomes below each threshold, e.g. F(0) = 0.4 and F(1) = 1.

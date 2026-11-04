@@ -37,6 +37,8 @@ A random sequence $$X_\omega$$ from $$\mathcal{N}(0,1)$$ (`x_random`) and a non-
 discards draws above one (`x_biased`). The bias is the average deviation from
 $$\mathbb{E}[X]=0$$ (`E_X`).
 
+**Note:** This notebook reproduces Example 4.5 (Section 4.3) of *Statistics for Chemical Engineers*: a random sample of N(0,1) and a sample selected with a hidden mechanism.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -69,4 +71,6 @@ bias (random)     = +0.060
 bias (non-random) = -0.214
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_random_sample-02-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_random_sample-03-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, discarding observations above a threshold biases the sample: its mean is shifted toward negative values (bias of about -0.43).

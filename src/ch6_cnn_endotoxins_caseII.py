@@ -30,6 +30,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # As in the Matlab script: two $3\times 3$ filters with "same" padding, ReLU, a fully connected
 # layer, 15 training images per class, the rest for validation, SGD with momentum (100 epochs here; the three classes are harder to separate).
 
+# %% [markdown]
+# **Note:** This notebook complements Example 6.28 (Section 6.7.2) of *Statistics for Chemical Engineers*: the CNN classification for the second case of endotoxin data.
+
 # %%
 import glob
 import os
@@ -115,3 +118,6 @@ for ax in axs.ravel():
     ax.axis('off')
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** Compare the accuracy with Case I: the harder the classes are to tell apart, the lower the accuracy.

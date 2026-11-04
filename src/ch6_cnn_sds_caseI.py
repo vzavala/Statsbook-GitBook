@@ -21,6 +21,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # followed by ReLU and a fully connected layer. (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024.)
 
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.29 (Section 6.7.2) of *Statistics for Chemical Engineers*: a CNN that detects SDS in water from micrographs of liquid-crystal droplets.
+
 # %%
 # Shiyi (Amy) Qin and Victor Z
 # UW-Madison, 2024
@@ -266,3 +269,6 @@ for i in range(3):
 cbar_ax = fig.add_axes([0.92, 0.15, 0.02, 0.7])
 fig.colorbar(plot, cax=cbar_ax)
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the CNN classifies the droplets perfectly (100% validation accuracy): the spatial pattern of the droplets encodes the presence of SDS.

@@ -4,6 +4,9 @@
 # sharp minimum, a zero eigenvalue a flat (non-unique) minimum, negative eigenvalues a maximum,
 # and mixed signs a saddle point.
 
+# %% [markdown]
+# **Note:** This notebook reproduces the figure of SSE functions for different Hessian matrices in Section 5.2 of *Statistics for Chemical Engineers*.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -22,3 +25,6 @@ for k, (title, H, r) in enumerate(cases):
     ax.set_xlabel(r'$\theta_1$'); ax.set_ylabel(r'$\theta_2$'); ax.set_zlabel(r'$SSE(\theta)$')
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** A Hessian with positive eigenvalues defines a unique (sharp) minimum; zero eigenvalues give a flat valley, where the estimate is not unique.

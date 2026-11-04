@@ -39,6 +39,8 @@ Examples of multivariate data sets (Victor Z, UW-Madison, 2024): realizations
 $$x_\omega=(x_{\omega,1},x_{\omega,2})$$ (`x_omega[:, 0]`, `x_omega[:, 1]`) that are
 anticorrelated, uncorrelated, and nonlinearly related, and a 3D data set.
 
+**Note:** This notebook reproduces the opening figure of Chapter 3 of *Statistics for Chemical Engineers*: four data sets that show different relationships between two RVs.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -63,7 +65,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_examples_multidatasets-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_examples_multidatasets-03-0.png" alt="" width="520"></figure>
 
 ```python
 x1, x2 = np.meshgrid(np.arange(0, 11, 0.5), np.arange(0, 11, 0.5))
@@ -76,7 +78,9 @@ ax.set_zlabel('$x_3$', fontsize=14)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_examples_multidatasets-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_examples_multidatasets-04-0.png" alt="" width="520"></figure>
+
+**Note:** Multivariate RVs can be independent, linearly related (positively or negatively), or related in nonlinear ways; the joint pdf captures these relationships.
 
 ## Domains and Subdomains
 
@@ -201,6 +205,8 @@ $$X_2$$ (`x2`). Each panel shades an event $$\mathcal{A}=\mathcal{R}\cap\mathcal
 an "and" event, a narrower "and" event, an "or" event ($$\mathcal{R}_1\cup\mathcal{R}_2$$),
 and an impossible event (empty set).
 
+**Note:** This notebook reproduces Example 3.1 (Section 3.1) of *Statistics for Chemical Engineers*: events of the Gibbs reactor defined by subdomains of pressure and conversion.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -231,4 +237,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_gibbs_subdomains-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_gibbs_subdomains-05-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the probability of each event is the fraction of realizations in its subdomain; the last event has probability zero because its subdomain is empty.

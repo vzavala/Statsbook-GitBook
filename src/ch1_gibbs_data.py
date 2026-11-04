@@ -23,6 +23,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $T$ | `T` | temperature [K] |
 # | $\xi$ | `xi` | conversion [-] |
 
+# %% [markdown]
+# **Note:** This notebook creates the reactor data of Example 1.2 (Section 1.1) of *Statistics for Chemical Engineers*; the Gibbs reactor is used throughout the book.
+
 # %%
 import pandas as pd
 import numpy as np
@@ -55,3 +58,6 @@ axs[1].set_ylabel(r'$\xi$ [-]')
 axs[1].grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As discussed in the book, data reveal trends but cannot explain them alone; a model (thermodynamics) helps, and some aspects of the system remain unknown, so new experiments may still be needed.

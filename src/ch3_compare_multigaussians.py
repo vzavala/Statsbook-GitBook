@@ -4,6 +4,9 @@
 # Python names: `mu`, `Sigma`, joint pdf/cdf `f`, `F`, marginals `f_1`, `f_2`,
 # conditional moments `mu_1g2`, `Sigma_1g2` ($\mu_{1|2}$, $\Sigma_{1|2}$) and `mu_2g1`, `Sigma_2g1`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces the figures of the multivariate Gaussian in Section 3.8 of *Statistics for Chemical Engineers*.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -62,3 +65,6 @@ for ax in axs.ravel():
 plt.tight_layout()
 plt.show()
 print(f"X1 | x2=1 ~ N({mu_1g2:.2f}, {Sigma_1g2:.2f}),   X2 | x1=1 ~ N({mu_2g1:.2f}, {Sigma_2g1:.2f})")
+
+# %% [markdown]
+# **Note:** The marginal and conditional pdfs of a multivariate Gaussian are also Gaussian; conditioning shifts the mean and reduces the variance when the variables are correlated.

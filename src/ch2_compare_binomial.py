@@ -4,6 +4,9 @@
 # (Victor Z and J E Umaña, UW-Madison, 2024).
 # Python names: `n`, `p`, domain `D`, pdf `f`, cdf `F`, population `N_t`, `N_y`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 2.7 (Section 2.1.4) of *Statistics for Chemical Engineers*: the binomial RV, and its relation to the hypergeometric RV.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -53,3 +56,6 @@ plt.axis([0, 10, 0, 0.3])
 plt.legend(loc='upper right', fontsize=10)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the hypergeometric pdf for a large population (N_t = 1000) is nearly identical to the binomial pdf: the hypergeometric RV converges to a binomial RV.

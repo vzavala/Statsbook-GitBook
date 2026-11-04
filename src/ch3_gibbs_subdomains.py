@@ -21,6 +21,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # an "and" event, a narrower "and" event, an "or" event ($\mathcal{R}_1\cup\mathcal{R}_2$),
 # and an impossible event (empty set).
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 3.1 (Section 3.1) of *Statistics for Chemical Engineers*: events of the Gibbs reactor defined by subdomains of pressure and conversion.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -49,3 +52,6 @@ for ax, (title, boxes) in zip(axs.ravel(), events):
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the probability of each event is the fraction of realizations in its subdomain; the last event has probability zero because its subdomain is empty.

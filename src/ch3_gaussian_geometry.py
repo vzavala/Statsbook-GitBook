@@ -27,6 +27,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # The `ellipse` helper (`Support/ellipse.py`) returns the ellipse
 # $\{(x-\mu)^T\Sigma^{-1}(x-\mu)= \mathbb{Q}\}$ and its tightest bounding box.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 3.20 (Section 3.8.5) of *Statistics for Chemical Engineers*: the 95% confidence ellipse of a 2D Gaussian.
+
 # %%
 import sys
 import numpy as np
@@ -75,3 +78,6 @@ axs[1, 1].set_xlabel('$f_2(x_2)$'); axs[1, 1].set_ylabel('$x_2$')
 plt.tight_layout()
 plt.show()
 print(f"chi2(2) quantile Q_n = {Q_n:.2f},  chi2(1) quantile Q_1 = {Q_1:.2f}")
+
+# %% [markdown]
+# **Note:** As in the book, the shape and orientation of the ellipse come from the covariance matrix (its eigenvalues and eigenvectors).

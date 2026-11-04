@@ -66,6 +66,8 @@ Fourier transform of a periodic signal (Shiyi (Amy) Qin and Victor Z, UW-Madison
 | $$\omega_k$$, $$\lvert\hat{f}_k\rvert$$ | `omega`, `power(f_hat)` | frequencies and one-sided magnitude |
 | $$\mathcal{F}\{f*g\}=\mathcal{F}\{f\}\cdot\mathcal{F}\{g\}$$ | `phi_hat = f_hat * g_hat` | convolution theorem |
 
+**Note:** This notebook reproduces Example 6.12 (Section 6.3.2) of *Statistics for Chemical Engineers*: the frequency spectrum of a signal made of two sine waves.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -98,7 +100,7 @@ plt.show()
 print("dominant frequencies:", omega[np.argsort(power(f_hat))[-2:]])
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform-03-0.png" alt="" width="520"></figure>
 
 ```
 dominant frequencies: [60. 30.]
@@ -124,7 +126,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform-05-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the Fourier transform reveals the two dominant frequencies of the signal (30 and 60).
 
 ## Example: FT of Pulse and Gaussian
 
@@ -144,6 +148,8 @@ Notebook [`ch6_fourier_transform_filters.ipynb`](https://colab.research.google.c
 Fourier transforms of a rectangular pulse and of Gaussians (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2020).
 Filters $$g$$ (`g`) are the pdf of $$\mathcal{U}(4,6)$$ and of $$\mathcal{N}(5,\sigma^2)$$ with $$\sigma=0.4$$ and 1;
 we plot the one-sided magnitude $$|\hat{g}(\omega)|$$.
+
+**Note:** This notebook reproduces Example 6.13 (Section 6.3.2) of *Statistics for Chemical Engineers*: frequency content of a pulse and of Gaussians with different widths.
 
 ```python
 import numpy as np
@@ -178,7 +184,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters-03-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, a wide Gaussian has only low frequencies and a narrow one needs high frequencies: sigma controls the frequency content of the filter.
 
 #### Python implementation
 
@@ -190,6 +198,8 @@ Notebook [`ch6_convolution_filters.ipynb`](https://colab.research.google.com/git
 UW-Madison, 2024). The signal $$f$$ mixes 30 Hz and 100 Hz sines. The FT of the Gaussian filter
 $$g$$ (window $$N=100$$, width factor $$\alpha=8$$) is large only at low frequencies, so $$f*g$$ keeps the
 30 Hz component and removes the 100 Hz one. Python names: `f`, `g`, `phi`, `omega`.
+
+**Note:** This notebook reproduces Example 6.14 (Section 6.3.2) of *Statistics for Chemical Engineers*: removing the high-frequency component of a signal with a Gaussian filter.
 
 ```python
 import numpy as np
@@ -226,7 +236,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_convolution_filters-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_convolution_filters-03-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the filter removes the high-frequency component and keeps the low-frequency one, as the convolution theorem predicts.
 
 #### Python implementation
 
@@ -246,6 +258,8 @@ model $$AR(\omega)=K/\sqrt{(\tau\omega)^2+1}$$ by least squares.
 | $$\omega$$ | `omega` | frequency [rad/min] |
 | $$\lvert\hat{u}(\omega)\rvert$$, $$\lvert\hat{x}(\omega)\rvert$$ | `mag_u`, `mag_x` | spectra |
 | $$K$$, $$\tau$$ | `K`, `tau` | gain and time constant |
+
+**Note:** This notebook reproduces Example 6.15 (Section 6.3.3) of *Statistics for Chemical Engineers*: estimating a dynamic model from the spectra of the input and output signals.
 
 ```python
 import numpy as np
@@ -288,7 +302,7 @@ plt.show()
 K = 11.105,  tau = 9.92 min
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_sysid_co2_est-04-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_sysid_co2_est-05-1.png" alt="" width="520"></figure>
 
 Physical parameters for a building of volume $$V$$: air flow $$Q=V/\tau$$ and generation $$G=KQ$$.
 
@@ -302,3 +316,5 @@ print(f"Q = {Q:.1f},  G = {G:.1f}")
 ```
 Q = 1007.9,  G = 11192.6
 ```
+
+**Note:** As in the book, the amplitude ratio of the model matches the empirical one; this Bode plot is widely used in system identification and control.

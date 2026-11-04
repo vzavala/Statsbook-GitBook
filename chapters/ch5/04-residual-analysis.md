@@ -58,7 +58,9 @@ plt.show()
 R^2 = S_m/S_y = 0.9549   (1 - S_e/S_y = 0.9549)
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_lin_est-14-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_lin_est-15-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the model captures the trend, the residuals are Gaussian (purely random), and the parameter variances are small: the Fisher information shows a sharp minimum and precise estimates.
 
 #### Python implementation
 
@@ -71,6 +73,8 @@ Data come from $$Y=\theta X^2+\epsilon$$ but we fit $$Y=\theta X+\epsilon$$. The
 $$\hat{\epsilon}_\omega=y_\omega-\hat{\theta}x_\omega$$ show a systematic trend and are not
 $$\mathcal{N}(0,\sigma^2)$$: part of the structure has leaked into the "noise".
 Python names as in `ch5_linear_est_example`.
+
+**Note:** This notebook reproduces Example 5.2 (Section 5.1.1) of *Statistics for Chemical Engineers*: fitting a linear model to data that do not follow it.
 
 ```python
 import numpy as np
@@ -113,4 +117,6 @@ plt.show()
 theta_hat = 1.544
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example_wrong-02-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example_wrong-03-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the residuals show a trend and are not Gaussian: residual analysis reveals that the postulated model is not appropriate.

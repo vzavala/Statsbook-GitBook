@@ -4,6 +4,9 @@
 # entries: $k=S$ gives the mean ($\ell_1$-like) and $k=1$ the worst case ($\ell_\infty$-like).
 # Python names: `y`, `S`, `CVaR(y, k)`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 7.6 (Section 7.3) of *Statistics for Chemical Engineers*: CVaR of a vector of costs for different probability levels alpha.
+
 # %%
 import numpy as np
 
@@ -17,3 +20,6 @@ def CVaR(y, k):
 print(f"mean = {y.mean():.0f},  worst case = {y.max():.0f}")
 for k in range(S, 0, -1):
     print(f"alpha = {k}/{S}:  CVaR = {CVaR(y, k):.1f}")
+
+# %% [markdown]
+# **Note:** CVaR moves from the mean (alpha = 1, like the l1 norm) to the worst case (like the l-infinity norm): it spans the attitudes toward risk.

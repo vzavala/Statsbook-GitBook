@@ -4,6 +4,9 @@
 # $X_1+X_2+X_3$ is $f*(f*f)$, and so on. We convolve numerically on a grid of step `dx`
 # (`phi = np.convolve(phi, f) * dx`) and compare with the Gaussian that has the same mean and variance.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.16 (Section 6.3.4) of *Statistics for Chemical Engineers*: repeated convolution of a pdf with itself.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -29,3 +32,6 @@ for k, ax in enumerate(axs.ravel(), start=1):
 axs[0, 1].legend()
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, repeated convolution progressively smooths the pdf toward a Gaussian: this is the central limit theorem.

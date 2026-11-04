@@ -154,6 +154,8 @@ Neural net versus kriging for the Gibbs reactor (Victor Z and Ugochukwu Ikegwu, 
 Inputs $$x_\omega=(P,T)$$ (`X`, scaled), output conversion $$y_\omega$$ (`y`). The NN has one hidden layer
 with two perceptrons (logistic activations) and is trained by minimizing the squared loss $$L(\theta)$$.
 
+**Note:** This notebook reproduces Example 6.26 (Section 6.7.1) of *Statistics for Chemical Engineers*: a neural network model of the Gibbs reactor conversion.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -193,7 +195,9 @@ plt.show()
 NN parameters: 9;  MSE NN = 9.29e-04,  MSE kriging = 8.71e-04
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_neuralnet-04-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_neuralnet-05-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, a network with one layer and a few perceptrons fits this highly nonlinear model extremely well.
 
 ## Example: Perceptrons as Basis Functions
 
@@ -234,6 +238,8 @@ Perceptrons as basis functions (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024)
 | $$\hat{y}=\sum_j\theta^O_jh(a_j)$$ | `m(theta, x)` | NN output |
 | $$\theta=(\theta^I_{\cdot,1},\theta^O,\theta^I_{\cdot,0})$$ | `theta` | the 18 parameters ($$N=6$$ perceptrons) |
 | $$\mathcal{H}\approx\mathcal{J}^T\mathcal{J}$$ | `H` | Gauss-Newton Hessian |
+
+**Note:** This notebook reproduces Example 6.27 (Section 6.7.1) of *Statistics for Chemical Engineers*: a small neural network seen as a model built from basis functions.
 
 ```python
 import numpy as np
@@ -276,7 +282,7 @@ plt.show()
 number of parameters = 18
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_neuralnet_basis-02-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_neuralnet_basis-03-1.png" alt="" width="520"></figure>
 
 The sigmoids $$h(a_j)$$ are the basis functions mixed by the output layer:
 
@@ -291,7 +297,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_neuralnet_basis-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_neuralnet_basis-05-0.png" alt="" width="520"></figure>
 
 Several eigenvalues of the Gauss-Newton Hessian are close to zero: the model is very flexible
 and the 20 data points are overfit.
@@ -306,3 +312,5 @@ eigenvalues of H: [3.71e+05 9.15e+04 9.44e+03 1.44e+03 2.43e+02 2.52e+01 1.26e+0
  1.69e-01 2.93e-02 2.86e-03 6.14e-04 9.31e-06 1.00e-07 5.17e-10 9.81e-13
  1.28e-13 2.36e-15]
 ```
+
+**Note:** As in the book, the Hessian has eigenvalues near zero: the parameters are not unique and uncertain, so NNs are flexible but prone to overparameterization and overfitting.

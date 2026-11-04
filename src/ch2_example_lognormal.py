@@ -8,6 +8,9 @@
 # | $\mu$, $\sigma$ | `mu`, `sigma` | log-normal parameters |
 # | $F(x)$, $f(x)$ | `F`, `f` | cdf and pdf |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 2.14 (Section 2.2.3) of *Statistics for Chemical Engineers*: particle sizes of a pharmaceutical product modeled as a lognormal RV.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -52,3 +55,6 @@ plt.show()
 # %%
 P_ok = X.cdf(400) - X.cdf(250)
 print(f"P(250 <= X <= 400) = {P_ok:.2f}  ->  {1000*P_ok:.0f} kg acceptable")
+
+# %% [markdown]
+# **Note:** As in the book, estimating the amount of product in the desired range needs the theoretical model, because the data were not collected at the cdf values needed: models let us make predictions.

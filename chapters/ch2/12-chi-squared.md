@@ -31,6 +31,8 @@ with domain $$\mathcal{D}=[0,\infty)$$.
 Chi-squared RVs $$X\sim\chi^2(r)$$ as Gamma RVs with $$\beta=2$$, $$\alpha=r/2$$
 (Victor Z and J E Umaña, UW-Madison, 2024).
 
+**Note:** This notebook supports Section 2.2.6 of *Statistics for Chemical Engineers*: it compares the quantile functions of chi2(1) and N(0,1).
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -51,7 +53,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_chisq-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_chisq-03-0.png" alt="" width="520"></figure>
 
 $$\mathbb{Q}_Y(1-\alpha)$$ for $$Y\sim\chi^2(1)$$ equals $$\mathbb{Q}_Z(1-\alpha/2)^2$$ for $$Z\sim\mathcal{N}(0,1)$$.
 
@@ -73,7 +75,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_chisq-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_chisq-05-0.png" alt="" width="520"></figure>
+
+**Note:** The square of a N(0,1) RV is a chi2(1) RV, so the quantiles of chi2(1) give the critical values of the Gaussian.
 
 Open in Colab: [`ch2_compare_chisq.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_chisq.ipynb)
 
@@ -107,6 +111,8 @@ Confidence intervals and regions from chi-squared quantiles (Victor Z and J E Um
 | $$\alpha$$ | `alpha` | probability outside the interval |
 | $$Y\sim\chi^2(1)$$, $$\mathbb{Q}_Y(1-\alpha)$$ | `Q_Y` | chi-squared quantile |
 | $$z_{\alpha/2}=\sqrt{\mathbb{Q}_Y(1-\alpha)}$$ | `z_alpha_2` | critical value |
+
+**Note:** This notebook reproduces Example 2.19 (Section 2.2.6) of *Statistics for Chemical Engineers*: confidence regions for two independent Gaussian RVs.
 
 ```python
 import sys
@@ -161,8 +167,10 @@ inside = np.einsum('ij,jk,ik->i', z_omega - mu_vec, np.linalg.inv(Sigma), z_omeg
 print(f"{inside.sum()} of {S} samples fall in the ellipse (expected about {S*(1-alpha):.0f})")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_example_chisquare-08-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_example_chisquare-09-0.png" alt="" width="520"></figure>
 
 ```
 897 of 1000 samples fall in the ellipse (expected about 900)
 ```
+
+**Note:** As in the book, the 90% region for (Z1, Z2) is a circle obtained from the chi-squared RV; the individual 90% regions of Z1 and Z2 are segments along the axes of that circle.

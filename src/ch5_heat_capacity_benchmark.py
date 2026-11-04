@@ -5,6 +5,9 @@
 # 3-fold cross-validation errors on data not used for estimation.
 # Python names: `X_I`, `X_II` (data matrices), `eps2_I`, `eps2_II`, `MSE_cv`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Examples 5.6 (Section 5.2.2) and 5.9 (Section 5.2.5) of *Statistics for Chemical Engineers*: comparing Model I (quadratic) with Model II (linear) for heat capacity.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -48,3 +51,6 @@ for name, X in (("I", X_I), ("II", X_II)):
         theta_k = fit(X[train], y[train])
         MSE_cv.append(np.mean((y[test] - X[test] @ theta_k)**2))
     print(f"Model {name}: sum of test MSE over folds = {np.sum(MSE_cv):.4f}")
+
+# %% [markdown]
+# **Note:** As in the book, the cdf of the errors of Model I lies above that of Model II (smaller errors are more likely), and cross-validation confirms that Model I generalizes better.

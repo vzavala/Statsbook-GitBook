@@ -12,6 +12,9 @@
 #
 # We use $e^{-X}$ instead of $e^{X}$: with this RV, $\mathbb{V}[e^{X}]$ is infinite.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 4.6 (Section 4.3.2) of *Statistics for Chemical Engineers*: Monte Carlo approximations of several quantities as the number of samples S grows.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -45,3 +48,6 @@ for ax, (vals, label, ref) in zip(axs.ravel(), panels):
 plt.tight_layout()
 plt.show()
 print(f"exact E[X] = {exact['E']:.3f},  exact P(X <= 1) = {exact['P']:.3f}")
+
+# %% [markdown]
+# **Note:** As in the book, the approximations are unstable for small samples (S below about 100) and become increasingly accurate as S grows (law of large numbers).

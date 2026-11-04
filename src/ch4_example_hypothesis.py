@@ -13,6 +13,9 @@
 # | $d=\max_x\,\lvert\hat{F}(x)-F(x)\rvert$ | `d` | KS distance between empirical and model cdf |
 # | $h$ | `h1`, `h2`, `h3` | test decision (1 = reject the null hypothesis) |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 4.9 (Section 4.4) of *Statistics for Chemical Engineers*: testing whether a sample of N(2,1) comes from the (wrong) model N(1,1).
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -74,3 +77,6 @@ plt.show()
 # As in the book, the z-test and the KS test reject the null hypothesis that the data come from $\mathcal{N}(1,1)$,
 # while the Lilliefors test fails to reject that the data come from a normal RV. (The sample differs from the one
 # drawn in MATLAB, because the two use different random numbers; the conclusions are the same.)
+
+# %% [markdown]
+# **Note:** As in the book, the z-test and KS test reject that the data come from N(1,1), while the Lilliefors test (which first fits a normal model) does not reject that the data are normal.

@@ -3,6 +3,9 @@
 # (Victor Z and David Cole, UW-Madison, 2024).
 # Python names: `lam` for $\lambda$ (`lambda` is reserved in Python), realizations `x_omega`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces the figure of the Poisson RV in Section 2.1.5 of *Statistics for Chemical Engineers*: pdfs and cdfs for different rates, and realizations of P(1/2).
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -33,3 +36,6 @@ for sub, fun, label in ((3, poisson.pmf, '$f(x)$'), (4, poisson.cdf, '$F(x)$')):
     plt.legend(fontsize=11)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** The Poisson RV counts events in an interval; its pdf shifts to the right and spreads out as the rate lambda grows.

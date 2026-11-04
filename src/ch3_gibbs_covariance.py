@@ -24,6 +24,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $\hat{\mathrm{Cov}}[X]$ | `Cov_hat` | sample covariance (with $1/S$) |
 # | $\hat{\mathrm{PCorr}}[X]=D^{-1}\hat{\mathrm{Cov}}[X]D^{-1}$ | `PCorr_hat`, `D` | Pearson correlation |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Examples 3.15 (Section 3.7.2) and 3.17 (Section 3.8.3) of *Statistics for Chemical Engineers*: statistics of pressure, conversion, and flows of the Gibbs reactor.
+
 # %% [part] Sample covariance and correlation
 
 # %%
@@ -96,3 +99,6 @@ C = Cov_hat[np.ix_(order, order)]
 Sigma_11, Sigma_12, Sigma_22 = C[0, 0], C[0, 1:], C[1:, 1:]
 Sigma_1g2 = Sigma_11 - Sigma_12 @ np.linalg.solve(Sigma_22, Sigma_12)
 print(f"V[conversion] = {Sigma_11:.4f},  V[conversion | other 4 variables] = {Sigma_1g2:.4f}")
+
+# %% [markdown]
+# **Note:** As in the book, the variables are strongly related, and the data cloud concentrates around the sample means; knowing the other variables reduces the variance of the conversion without shifting its mean (Example 3.17).

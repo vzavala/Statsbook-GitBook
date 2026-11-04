@@ -9,6 +9,9 @@
 # | $\theta=(\xi,\beta)$ | `theta = (xi, beta)` | Weibull shape and scale |
 # | $F_X(t\mid\theta)$ | `F_model(t, theta)` | model cdf $1-e^{-(t/\beta)^\xi}$ |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 4.3 (Section 4.1.2) of *Statistics for Chemical Engineers*: fitting the Weibull cdf to the empirical cdf.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -67,3 +70,6 @@ for ax in axs:
     ax.set_xlim(0, 5)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the estimates (beta of about 1.08, xi of about 1.89) are close to the true values; the numerical and analytical (log-transformed) fits differ slightly.

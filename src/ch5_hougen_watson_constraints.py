@@ -26,6 +26,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $\lambda$ | `lam` | eigenvalues of $\mathcal{H}$ |
 # | $\mathrm{Cov}[\hat{\theta}]$, $\mathbb{V}[\hat{\theta}]$ | `Cov_theta`, `V_theta` | covariance and variances |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 5.13 (Section 5.4) of *Statistics for Chemical Engineers*: estimating the Hougen-Watson model with physical bounds on the parameters.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -79,3 +82,6 @@ np.set_printoptions(precision=3)
 print("H =\n", H)
 print("eigenvalues of H:", lam)
 print("V[theta_hat] =", V_theta)
+
+# %% [markdown]
+# **Note:** As in the book, the constraints keep the estimates physical, the Hessian is well conditioned, and the parameter variances are small.

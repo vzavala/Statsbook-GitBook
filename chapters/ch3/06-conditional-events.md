@@ -101,3 +101,5 @@ P(A1) = 0.37, P(A2) = 0.90, P(A1 & A2) = 0.33
 P(A1 or A2) = 0.94
 Empirical estimate P_hat(A1 or A2) = 0.94
 ```
+
+**Note:** The joint pdf answers all questions about the thermostat: joint and marginal probabilities, logic of events, and expected lifetimes; Monte Carlo confirms the analytical results.

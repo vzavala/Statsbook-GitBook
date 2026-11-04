@@ -66,6 +66,8 @@ Method of moments for a Gaussian (Victor Z, UW-Madison, 2024).
 Data are drawn from $$\mathcal{N}(1, 2^2)$$; results differ slightly from the Matlab
 version because the random samples differ.
 
+**Note:** This notebook reproduces Example 4.1 (Section 4.1.1) of *Statistics for Chemical Engineers*: estimating mu and sigma of a Gaussian from S = 10 and S = 100 observations.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -104,7 +106,9 @@ S =  10:  mu_hat = 0.81,  sigma_hat = 2.38
 S = 100:  mu_hat = 1.12,  sigma_hat = 1.77
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_gaussian_moments_example-02-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_gaussian_moments_example-03-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, with S = 10 the model pdf/cdf cannot match the data well, while with S = 100 they match well and the data reveal the Gaussian nature of the phenomenon.
 
 ## Example: Method of Moments for Weibull
 
@@ -140,6 +144,8 @@ $$
 have no closed-form solution, so we solve them numerically for $$\theta=(\xi,\beta)$$.
 Python names: `x_omega`, `E_hat`, `V_hat`, `xi_hat`, `beta_hat`; data come from
 $$\mathrm{Weibull}(\xi=2,\beta=1)$$.
+
+**Note:** This notebook reproduces Example 4.2 (Section 4.1.1) of *Statistics for Chemical Engineers*: estimating the Weibull parameters (true values beta = 1, xi = 2) by matching moments.
 
 ```python
 import numpy as np
@@ -184,4 +190,6 @@ S =  10:  E_hat = 0.588, V_hat = 0.088  ->  xi_hat = 2.08, beta_hat = 0.66
 S = 100:  E_hat = 0.859, V_hat = 0.210  ->  xi_hat = 1.95, beta_hat = 0.97
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_weibull_moments_example-02-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_weibull_moments_example-03-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the estimates vary significantly with few data but improve as S increases: having sufficient data matters.

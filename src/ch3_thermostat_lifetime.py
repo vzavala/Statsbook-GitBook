@@ -12,6 +12,9 @@
 # | $f(x_1\mid x_2)$ | `f_1g2` | conditional pdf ("1 given 2") |
 # | $\mathbb{P}(X\in\mathcal{A})$ | `P_A` | probability of event $\mathcal{A}$ |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Examples 3.2 to 3.14 (Chapter 3) of *Statistics for Chemical Engineers*: the joint lifetime of the sensor and processor of a thermostat (independent exponential RVs).
+
 # %% [part] Probabilities of box events
 
 # %%
@@ -108,3 +111,6 @@ S = 100_000
 x_omega = np.column_stack([np.random.exponential(mu_1, S), np.random.exponential(mu_2, S)])
 P_hat = np.mean((x_omega[:, 0] >= 1) | (x_omega[:, 1] >= 1))
 print(f"Empirical estimate P_hat(A1 or A2) = {P_hat:.2f}")
+
+# %% [markdown]
+# **Note:** The joint pdf answers all questions about the thermostat: joint and marginal probabilities, logic of events, and expected lifetimes; Monte Carlo confirms the analytical results.

@@ -38,6 +38,8 @@ A 2D signal as a superposition of 2D waves (Victor Z and Ugochukwu Ikegwu, UW-Ma
 $$f(x_1,x_2)=\sin 2\pi\omega_1(x_1+x_2)-\sin 2\pi\omega_2(x_1+x_2)$$ with $$\omega_1=20$$, $$\omega_2=60$$
 (`omega_1`, `omega_2`). The grid is fine enough (8 samples per period of the 60 Hz wave) to avoid aliasing.
 
+**Note:** This notebook reproduces Example 6.20 (Section 6.3.5) of *Statistics for Chemical Engineers*: a 2D signal built from a low-frequency and a high-frequency wave.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -63,7 +65,9 @@ for row, (Z, lab) in enumerate(((f, 'f'), (f1, 'f_1'), (f2, 'f_2'))):
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_2D-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_2D-03-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, any image is a superposition of waves of different frequencies; identifying them lets us design filters.
 
 ## Example: 2D FT Applied to Filtering
 
@@ -80,6 +84,8 @@ Notebook [`ch6_fourier_transform_filters_2D.ipynb`](https://colab.research.googl
 2D Fourier transforms of a uniform (box) filter and of a Gaussian filter
 (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024). We show each filter $$g$$ (`g`), the magnitude
 $$\log(1+|\hat{g}(\omega_1,\omega_2)|)$$ (centered with `fftshift`), and the same as a 3D surface.
+
+**Note:** This notebook reproduces the filters of Example 6.21 (Section 6.3.5) of *Statistics for Chemical Engineers*: 2D uniform and Gaussian filters and their Fourier transforms.
 
 ```python
 import numpy as np
@@ -112,7 +118,9 @@ for col, (g, title) in enumerate(((g_box, 'uniform filter'), (g_gauss, 'Gaussian
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters_2D-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters_2D-03-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the Gaussian filter keeps only the low frequencies (the bright region in the middle of its spectrum), which is why it preserves only coarse features.
 
 * We now illustrate how to use FTs to perform convolutions.
 * We take original image $$f$$ and obtain its 2D FT $$\hat{f}$$.
@@ -138,6 +146,8 @@ Filtering an image with the convolution theorem (Victor Z and Ugochukwu Ikegwu, 
 | $$g_1$$, $$g_2$$ ($$\sigma=1$$, $$\sigma=10$$) | `g1`, `g2` | Gaussian filters (same size as the image) |
 | $$\hat{f}_i=\hat{f}\cdot\hat{g}_i$$ | `f1_hat`, `f2_hat` | filtered images in the frequency domain |
 | $$f_i=\mathcal{F}^{-1}\{\hat{f}_i\}$$ | `f1`, `f2` | filtered images |
+
+**Note:** This notebook reproduces Examples 6.19 and 6.21 (Section 6.3.5) of *Statistics for Chemical Engineers*: Sobel and Gaussian filters applied to an image, directly and with the convolution theorem.
 
 ```python
 import numpy as np
@@ -179,7 +189,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_image_filters_2D-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_image_filters_2D-05-0.png" alt="" width="520"></figure>
 
 Check: the result equals a direct (spatial) Gaussian convolution.
 
@@ -191,3 +201,5 @@ print(f"max |f_1 (FFT) - f_1 (direct)| = {np.max(np.abs(results[0][1] - direct))
 ```
 max |f_1 (FFT) - f_1 (direct)| = 2.84e-13
 ```
+
+**Note:** As in the book, the Sobel filter reveals edges and the Gaussian filter smooths the image; a small part of the spectrum is enough to capture its coarse features.

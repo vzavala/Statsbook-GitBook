@@ -113,6 +113,8 @@ Notebook [`ch6_example_convolutions.ipynb`](https://colab.research.google.com/gi
 The Gaussian weights are $$g_j=e^{-j^2/(2\sigma^2)}$$, $$j=-(N-1)/2,\dots,(N-1)/2$$
 (this reproduces the slide values, e.g. $$g=(0.13,0.6,1,0.6,0.13)$$ for $$N=5$$, $$\alpha=2$$).
 
+**Note:** This notebook reproduces Examples 6.7 to 6.10 (Section 6.3.1) of *Statistics for Chemical Engineers*: convolution of a pulse and of a noisy signal with moving-average and Gaussian filters.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -147,7 +149,7 @@ show(t, f, np.concatenate([np.zeros(pad), g, np.zeros(pad)]), phi)
 N=5, alpha=2: [0.14 0.61 1.   0.61 0.14]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-03-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-04-1.png" alt="" width="520"></figure>
 
 ## 1D Convolution Operations
 
@@ -208,7 +210,7 @@ show(t, f, np.concatenate([np.zeros(pad), g, np.zeros(pad)]), phi)
 sigma = 2.38
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-05-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-06-1.png" alt="" width="520"></figure>
 
 #### Python implementation: Gaussian filters for a noisy signal
 
@@ -232,7 +234,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-07-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-08-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, convolution transforms the signal: the filters smooth the pulse and remove noise, and the type and tuning of the filter decide the effect.
 
 ## 1D Convolution Operations
 
@@ -286,6 +290,8 @@ $$\mathcal{N}(0,1)$$ (`f`) and the central-difference filter $$g=(1,0,-1)/(2\Del
 the convolution $$f*g$$ (`phi`) approximates $$df/dt$$, i.e. the pdf.
 (`np.convolve` flips the filter, so `[1, 0, -1]` gives $$f_{k+1}-f_{k-1}$$.)
 
+**Note:** This notebook reproduces Example 6.11 (Section 6.3.1) of *Statistics for Chemical Engineers*: convolution of a cdf with a derivative filter.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -312,8 +318,10 @@ plt.show()
 print(f"max |f*g - pdf| = {np.max(np.abs(phi - norm.pdf(t[1:-1]))):.4f}")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_derivative_filter-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_derivative_filter-03-0.png" alt="" width="520"></figure>
 
 ```
 max |f*g - pdf| = 0.0027
 ```
+
+**Note:** As in the book, the convolution shows where the cdf grows fast, slowly, or not at all: convolution highlights features of a signal.

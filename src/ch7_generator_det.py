@@ -10,6 +10,9 @@
 # | $r=\max_\omega r_\omega$ | `L_peak` | representative (peak) load |
 # | $u_D^*$ | `u_D` | deterministic decision |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 7.1 (Section 7.1) of *Statistics for Chemical Engineers*: sizing an on-site power generator for a random (Weibull) load, using a deterministic approach.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -59,3 +62,6 @@ for ax in axs.ravel():
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the deterministic decision ignores the spread of the cost: it can shave peak costs, but its performance under uncertainty must be checked against the alternatives.

@@ -19,6 +19,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # The image is a 2D signal $f$ (`f`); $f_1=f*g$ with a Sobel filter $g$ reveals intensity gradients and
 # $f_2$ with a Gaussian filter ($\sigma=10$ pixels) keeps the coarse features.
 
+# %% [markdown]
+# **Note:** This notebook complements Example 6.19 (Section 6.3.5) of *Statistics for Chemical Engineers*: Sobel and Gaussian filters applied to a micrograph.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -42,3 +45,6 @@ for ax, img, title in ((axs[0], f, '$f$'), (axs[1], np.abs(f_1), r'$|f*g|$ (Sobe
     ax.axis('off')
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** Filters highlight features of an image (edges) or remove details (smoothing), depending on their design.

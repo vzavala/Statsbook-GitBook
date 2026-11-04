@@ -9,6 +9,9 @@
 # | $\hat{y}_\omega=\hat{\theta}x_\omega$, $\hat{\epsilon}_\omega$ | `y_hat`, `eps_hat` | predictions and residuals |
 # | $SSE(\theta)$ | `SSE` | sum of squared errors |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 5.1 (Section 5.1.1) of *Statistics for Chemical Engineers*: least-squares estimation of theta in Y = theta*X + noise, with true theta = 2.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -69,3 +72,6 @@ plt.xlabel(r'$\theta$', fontsize=14)
 plt.ylabel(r'$SSE(\theta)/S$', fontsize=14)
 plt.legend()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, with S = 10 the SSE is minimized at theta of about 2.2, and with S = 100 or 1000 close to 2: more data helps identify the true parameter.

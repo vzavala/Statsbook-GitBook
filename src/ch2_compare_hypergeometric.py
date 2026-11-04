@@ -9,6 +9,9 @@
 # | $p=N_y/N_t$ | `p` | fraction of type-$Y$ items |
 # | $\mathcal{D}$, $f(x)$, $F(x)$ | `D`, `f`, `F` | domain, pdf, cdf |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 2.5 (Section 2.1.3) of *Statistics for Chemical Engineers*: number of items of a given type in a random sample drawn from a population.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -54,3 +57,6 @@ plt.ylabel('$F(x)$', fontsize=14)
 plt.axis([-1, 20, -0.02, 1.02])
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the probability of finding fewer than 10 items of the type is nearly one; the realizations concentrate around x = 5 and decay quickly, in an asymmetric way.

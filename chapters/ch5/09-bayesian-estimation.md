@@ -90,6 +90,8 @@ Bayesian estimation for $$Y=\theta X+\epsilon$$ with one observation $$(x=1,y=2)
 | $$y\sim\mathcal{N}(\theta x,\sigma^2)$$ | `sigma2` | likelihood noise variance (1) |
 | $$\log f(\theta)$$, $$\log f(y\mid\theta)$$, $$\log f(\theta\mid y)$$ | `log_f_theta`, `log_f_y_theta`, `log_f_theta_y` | log prior, log likelihood, log posterior (up to a constant) |
 
+**Note:** This notebook reproduces Example 5.15 (Section 5.5) of *Statistics for Chemical Engineers*: prior, likelihood, and posterior of a parameter theta.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -119,13 +121,15 @@ for vals, name in ((log_f_theta, 'prior'), (log_f_y_theta, 'likelihood (MLE)'), 
     print(f"{name:18s} is maximized at theta = {theta[np.argmax(vals)]:.2f}")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_bayes_estimation-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_bayes_estimation-03-0.png" alt="" width="520"></figure>
 
 ```
 prior              is maximized at theta = -0.01
 likelihood (MLE)   is maximized at theta = 1.99
 posterior (Bayes)  is maximized at theta = 1.00
 ```
+
+**Note:** As in the book, the posterior blends the prior (old information) and the likelihood (new data): its most likely value, theta = 1, is a trade-off between the two.
 
 #### Python implementation
 
@@ -143,6 +147,8 @@ $$
 and the posterior covariance is $$(\mathbf{X}^T\Sigma^{-1}\mathbf{X}+\Sigma_\theta^{-1})^{-1}$$. Processing the data
 in batches, the posterior of one batch becomes the prior of the next.
 Python names: `theta_bar`, `Sigma_theta`, `Sigma` (noise covariance), `theta_hat`.
+
+**Note:** This notebook reproduces Example 5.16 (Section 5.5) of *Statistics for Chemical Engineers*: updating the heat-capacity estimates one batch of data at a time.
 
 ```python
 import numpy as np
@@ -188,6 +194,8 @@ after batch 1: theta_hat = [ 6.0420e+00  3.7342e-03 -1.4977e-06],  SD = [1.76e-0
 after batch 2: theta_hat = [ 6.1788e+00  3.2053e-03 -1.0496e-06],  SD = [1.22e-01 4.64e-04 3.81e-07]
 after batch 3: theta_hat = [ 6.2546e+00  2.9045e-03 -8.1641e-07],  SD = [9.70e-02 3.67e-04 3.03e-07]
 ```
+
+**Note:** As in the book, after the 6th update the covariance equals the one obtained with the full data set: the posterior of one step is the prior of the next.
 
 ## Bayesian Estimation
 
@@ -276,6 +284,8 @@ $$
 
 Python names: `x_omega`, `y_omega`, `sigma2_x`, `sigma2_y`, `x_hat`.
 
+**Note:** This notebook reproduces Example 5.17 (Section 5.5) of *Statistics for Chemical Engineers*: Bayesian estimation of an uncertain input flow that must satisfy conservation (data reconciliation).
+
 ```python
 import numpy as np
 from scipy.optimize import minimize_scalar
@@ -298,3 +308,5 @@ sigma2_x =  1.00, sigma2_y =  1.00:  x_hat = 102.000  (numerical: 102.000)
 sigma2_x =  1.00, sigma2_y =  0.01:  x_hat = 103.960  (numerical: 103.960)
 sigma2_x =  0.01, sigma2_y =  1.00:  x_hat = 100.040  (numerical: 100.040)
 ```
+
+**Note:** The reconciled flow is a weighted average of the two measurements: it moves toward the more precise one (smaller error variance).

@@ -87,6 +87,8 @@ the slide text writes "Weibull(2,1)" in Matlab's (scale, shape) order).
 
 We use $$e^{-X}$$ instead of $$e^{X}$$: with this RV, $$\mathbb{V}[e^{X}]$$ is infinite.
 
+**Note:** This notebook reproduces Example 4.6 (Section 4.3.2) of *Statistics for Chemical Engineers*: Monte Carlo approximations of several quantities as the number of samples S grows.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -123,8 +125,10 @@ plt.show()
 print(f"exact E[X] = {exact['E']:.3f},  exact P(X <= 1) = {exact['P']:.3f}")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_montecarlo_approx-03-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_montecarlo_approx-04-0.png" alt="" width="520"></figure>
 
 ```
 exact E[X] = 2.000,  exact P(X <= 1) = 0.393
 ```
+
+**Note:** As in the book, the approximations are unstable for small samples (S below about 100) and become increasingly accurate as S grows (law of large numbers).

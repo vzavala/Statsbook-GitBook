@@ -55,6 +55,8 @@ $$X$$ is Weibull with scale $$\beta=2$$ and shape $$\xi=1$$ (as in the slide fig
 
 `R` is the number of repetitions used to draw the histogram of $$\bar{X}$$.
 
+**Note:** This notebook reproduces Example 4.7 (Section 4.3.3) of *Statistics for Chemical Engineers*: the distribution of the sample average of Weibull(1,2) observations.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -94,4 +96,6 @@ S =  100:  mean(x_bar) = 2.004 (e = 2.000),  S * var(x_bar) = 3.909 (v^2 = 4.000
 S = 1000:  mean(x_bar) = 2.003 (e = 2.000),  S * var(x_bar) = 3.929 (v^2 = 4.000)
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_clt_example-02-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_clt_example-03-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the sample average is Gaussian even though X is not, and its variance shrinks with S: this is the central limit theorem.

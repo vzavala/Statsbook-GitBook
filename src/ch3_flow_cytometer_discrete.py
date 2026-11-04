@@ -26,6 +26,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $\hat{f}_1$, $\hat{f}_2$ | `f1_hat`, `f2_hat` | empirical marginal pdfs |
 # | $\hat{f}(x_1\mid x_2)$, $\hat{f}(x_2\mid x_1)$ | `f_hat_1g2`, `f_hat_2g1` | empirical conditional pdfs |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Examples 3.3 (Section 3.2) and 3.9 (Section 3.4) of *Statistics for Chemical Engineers*: forward (FSC) and side (SSC) scatter of droplets, each grouped in low, medium, and high values.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -79,3 +82,6 @@ print("f1_hat (FSC: L, M, H):", np.round(f1_hat, 4))
 print("f2_hat (SSC: L, M, H):", np.round(f2_hat, 4))
 print("f_hat(x1 | x2):\n", np.round(f_hat_1g2, 4))
 print("f_hat(x2 | x1):\n", np.round(f_hat_2g1, 4))
+
+# %% [markdown]
+# **Note:** As in the book, 8,635 droplets have a low FSC, and P(FSC = L | SSC = L) = 1: knowing the SSC of a droplet tells us its FSC, so the two values vary together.

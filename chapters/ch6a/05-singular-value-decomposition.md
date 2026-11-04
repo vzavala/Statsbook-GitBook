@@ -106,6 +106,8 @@ Finding data redundancies with the SVD (Shiyi (Amy) Qin and Victor Z, UW-Madison
 | $$\lambda_i=s_i^2$$ | `lam` | eigenvalues of $$\mathbf{X}^T\mathbf{X}$$ |
 | $$\mathrm{rank}(\mathbf{X}\lbrack :,1..k\rbrack )$$ | `np.linalg.matrix_rank` | rank as columns are added |
 
+**Note:** This notebook reproduces Example 6.4 (Section 6.2) of *Statistics for Chemical Engineers*: the rank of the data matrix and of its column subsets, from the singular value decomposition.
+
 ```python
 import numpy as np
 
@@ -140,6 +142,8 @@ rank(X[:, 1..4]) = 3
 rank(X[:, 1..5]) = 3
 rank(X[:, 1..6]) = 3
 ```
+
+**Note:** As in the book, the ranks of column subsets reveal which combinations of variables are redundant (for example, keeping X2, X4, X5).
 
 ## Example: Images as Matrices
 
@@ -199,6 +203,8 @@ Images as matrices (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2020). We use the 
 matrix $$\mathbf{X}$$ shown on the slide, a noisy version $$\mathbf{X}_\epsilon$$ (`X_eps`), and the rank-1
 approximation $$s_1\mathbf{u}_1\mathbf{v}_1^T$$ from the expansion $$\mathbf{X}=\sum_i s_i\mathbf{u}_i\mathbf{v}_i^T$$.
 
+**Note:** This notebook reproduces Example 6.5 (Section 6.2) of *Statistics for Chemical Engineers*: a 2D field seen as a matrix, and its rank-1 approximation with and without noise.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -241,7 +247,9 @@ nonzero singular values of X: [41.8629  1.5625  0.8498  0.5757]
 rank(X) = 4   rank(X_eps) = 10
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_svd_image_field-02-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_svd_image_field-03-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, eliminating principal components filters out the noise: images can be analyzed as matrices.
 
 ## Example: Image Compression using SVD
 
@@ -273,6 +281,8 @@ Image compression with the SVD (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2020).
 The grayscale image is a matrix $$\mathbf{X}$$ (`X`); we keep the first $$n$$ terms of
 $$\mathbf{X}=\sum_k s_k\mathbf{u}_k\mathbf{v}_k^T$$ for $$n=1,3,10,100$$.
 
+**Note:** This notebook reproduces Example 6.6 (Section 6.2) of *Statistics for Chemical Engineers*: compressing a micrograph by keeping only some of its singular values.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -296,7 +306,7 @@ plt.tight_layout()
 plt.show()
 
 plt.semilogy(n_values, errors, 'ko-')
-plt.xlabel('$n$'); plt.ylabel(r'$\lVert\mathbf{X}-\mathbf{X}_n\rVert_F^2$')
+plt.xlabel('$n$'); plt.ylabel(r'$\Vert\mathbf{X}-\mathbf{X}_n\Vert_F^2$')
 plt.grid(True)
 plt.show()
 ```
@@ -305,4 +315,8 @@ plt.show()
 image size: (199, 199)   rank: 199
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_svd_reconstruction-04-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_svd_reconstruction-05-1.png" alt="" width="520"></figure>
+
+<figure><img src="../../.gitbook/assets/nb/ch6_svd_reconstruction-05-2.png" alt="" width="520"></figure>
+
+**Note:** As in the book, a few singular values reproduce the image well: the remaining ones carry details our eyes cannot perceive.

@@ -117,6 +117,8 @@ $$\hat{\mathrm{Cov}}[\hat{\theta}]=\frac{1}{K-1}\sum_k(\hat{\theta}_k-\hat{\math
 For this linear model we can compare with the exact $$(\mathbf{X}^T\mathbf{X})^{-1}\hat{\sigma}^2$$.
 Python names: `K`, `theta_k` (K x 3), `Cov_mc`, `Cov_exact`.
 
+**Note:** This notebook reproduces Example 5.11 (Section 5.3) of *Statistics for Chemical Engineers*: estimating the covariance of the heat-capacity parameters by perturbing the data.
+
 ```python
 import numpy as np
 
@@ -154,6 +156,8 @@ Monte Carlo estimate:
  [ 5.845e-08 -2.345e-10  1.956e-13]]
 ratio of variances (MC / exact): [0.928 0.94  0.944]
 ```
+
+**Note:** As in the book, the Monte Carlo covariance is close to the exact one: the uncertainty of an estimate is its sensitivity to perturbations in the data.
 
 ## Example: Hougen-Watson
 
@@ -244,6 +248,8 @@ $$
 | $$\theta=(\theta_0,\dots,\theta_4)$$ | `theta[0]`, ..., `theta[4]` | parameters |
 | $$m(\theta)$$, $$SSE(\theta)=\frac{1}{2}\lVert\mathbf{y}-\mathbf{m}(\theta)\rVert^2$$ | `m(theta, X)`, `SSE(theta)` | model and objective |
 
+**Note:** This notebook reproduces Example 5.10 (Section 5.3) of *Statistics for Chemical Engineers*: nonlinear estimation of a Hougen-Watson rate model.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -285,7 +291,7 @@ plt.ylabel(r'$\theta_2$', fontsize=14)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson-07-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson-08-0.png" alt="" width="520"></figure>
 
 #### Python implementation: Good and bad initial guesses
 
@@ -318,4 +324,6 @@ theta0 = (1,...,1):  theta_hat = [1.25 0.06 0.04 0.11 1.19],  SSE = 0.2989
 theta0 = (-1,...,-1):  theta_hat = [-2887567.23  -183298.6    -58849.71  -652886.96    37012.98],  SSE = 11.3903
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson-10-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson-11-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the SSE function is highly nonlinear: a good initial guess helps, but nothing prevents the solver from landing on estimates with no physical meaning.

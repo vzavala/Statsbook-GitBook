@@ -4,6 +4,9 @@
 # Python names: `a`, `b`, pdf `f`, cdf `F`, realizations `x_omega`.
 # In `scipy.stats.uniform`, `loc` $=a$ and `scale` $=b-a$.
 
+# %% [markdown]
+# **Note:** This notebook reproduces the figure of the continuous uniform RV in Section 2.2.1 of *Statistics for Chemical Engineers*, with a = -1 and b = 1.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -37,3 +40,6 @@ plt.xlabel('$x$', fontsize=14)
 plt.ylabel('$F(x)$', fontsize=14)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** The pdf is flat on [a, b] and the cdf grows linearly from 0 to 1.

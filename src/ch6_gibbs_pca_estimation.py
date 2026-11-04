@@ -26,6 +26,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $\mathbf{T}_1=\mathbf{X}\mathbf{W}_1$ | `T1` | reduced inputs |
 # | $\hat{\gamma}$, $\hat{\theta}=\mathbf{W}_1\hat{\gamma}$ | `gamma_hat`, `theta_hat_pca` | PCA estimate |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.2 (Section 6.1.1) of *Statistics for Chemical Engineers*: estimating a linear model of conversion in the space of principal components.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -79,3 +82,6 @@ for ax, th, title in ((axs[0], theta_hat, 'standard'), (axs[1], theta_hat_pca, '
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, estimating in the reduced space removes the redundancy and gives highly precise parameters: cleaning the input data improves the model.

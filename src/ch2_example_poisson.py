@@ -8,6 +8,9 @@
 # | $\hat{\mathbb{E}}_X$, $\hat{\lambda}$ | `E_hat`, `lam_hat` | empirical mean and estimate of $\lambda$ |
 # | $f(x)=\lambda^x e^{-\lambda}/x!$ | `f(x)` | Poisson pdf |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 2.9 (Section 2.1.5) of *Statistics for Chemical Engineers*: number of monthly failures of a control system, modeled as a Poisson RV.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -49,3 +52,6 @@ print(f"lam_hat = E_hat = {lam_hat:.1f}")
 print(f"P(X=0)  = {f(0):.3g}")
 print(f"P(X=30) = {f(30):.3g}")
 print(f"P(X=11) = {f(11):.3f}")
+
+# %% [markdown]
+# **Note:** As in the book, the probability of 11 failures in a month is 0.12; the pdf is evaluated at integers only (11, not 11.3), because the domain contains integers.

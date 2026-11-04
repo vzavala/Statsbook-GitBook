@@ -24,6 +24,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $Y\sim\chi^2(1)$, $\mathbb{Q}_Y(1-\alpha)$ | `Q_Y` | chi-squared quantile |
 # | $z_{\alpha/2}=\sqrt{\mathbb{Q}_Y(1-\alpha)}$ | `z_alpha_2` | critical value |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 2.19 (Section 2.2.6) of *Statistics for Chemical Engineers*: confidence regions for two independent Gaussian RVs.
+
 # %% [part] 90% interval for the mixer output
 
 # %%
@@ -72,3 +75,6 @@ S = 1000
 z_omega = np.random.multivariate_normal(mu_vec, Sigma, S)
 inside = np.einsum('ij,jk,ik->i', z_omega - mu_vec, np.linalg.inv(Sigma), z_omega - mu_vec) <= level
 print(f"{inside.sum()} of {S} samples fall in the ellipse (expected about {S*(1-alpha):.0f})")
+
+# %% [markdown]
+# **Note:** As in the book, the 90% region for (Z1, Z2) is a circle obtained from the chi-squared RV; the individual 90% regions of Z1 and Z2 are segments along the axes of that circle.

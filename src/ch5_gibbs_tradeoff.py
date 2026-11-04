@@ -24,6 +24,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # Python names: `X` (with intercept column), `y`, `kappa`, `theta_hat`, `MSE`, `rho`, `NNZ`
 # (number of nonzero parameters).
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 5.14 (Section 5.4) of *Statistics for Chemical Engineers*: a linear model of the Gibbs reactor conversion with a lasso penalty.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -71,3 +74,6 @@ for ax in axs:
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, X^T X has zero eigenvalues (the estimate is not unique), and a model with only three non-zero parameters fits about as well: regularization reduces model complexity.

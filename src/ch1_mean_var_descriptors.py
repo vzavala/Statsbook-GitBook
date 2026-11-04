@@ -8,6 +8,9 @@
 # | $\hat{\mathbb{E}}_X$, $\hat{\mathbb{V}}_X$, $\hat{\mathbb{SD}}_X$ | `E_hat`, `V_hat`, `SD_hat` | empirical mean, variance, SD |
 # | $\hat{f}(x)$, $\hat{F}(x)$ | `f_hat` (histogram), `F_hat` | empirical pdf and cdf |
 
+# %% [markdown]
+# **Note:** This notebook reproduces the figure on summarizing statistics in Section 1.3.3 of *Statistics for Chemical Engineers*: two data sets with different mean and variance.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -47,3 +50,6 @@ for E_X, SD_X in ((6, 1), (9, 2)):
     plt.tight_layout()
     plt.show()
     print(f"E_hat = {E_hat:.2f},  V_hat = {V_hat:.2f},  SD_hat = {SD_hat:.2f}")
+
+# %% [markdown]
+# **Note:** The mean tells us where the data are located and the variance how spread out they are; together they give a quick summary of a random phenomenon.

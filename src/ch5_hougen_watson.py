@@ -26,6 +26,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $\theta=(\theta_0,\dots,\theta_4)$ | `theta[0]`, ..., `theta[4]` | parameters |
 # | $m(\theta)$, $SSE(\theta)=\frac{1}{2}\lVert\mathbf{y}-\mathbf{m}(\theta)\rVert^2$ | `m(theta, X)`, `SSE(theta)` | model and objective |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 5.10 (Section 5.3) of *Statistics for Chemical Engineers*: nonlinear estimation of a Hougen-Watson rate model.
+
 # %% [part] The SSE function is highly nonlinear
 
 # %%
@@ -93,3 +96,6 @@ for ax, (label, th) in zip(axs, fits.items()):
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the SSE function is highly nonlinear: a good initial guess helps, but nothing prevents the solver from landing on estimates with no physical meaning.

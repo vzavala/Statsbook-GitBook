@@ -4,6 +4,9 @@
 # the convolution $f*g$ (`phi`) approximates $df/dt$, i.e. the pdf.
 # (`np.convolve` flips the filter, so `[1, 0, -1]` gives $f_{k+1}-f_{k-1}$.)
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.11 (Section 6.3.1) of *Statistics for Chemical Engineers*: convolution of a cdf with a derivative filter.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -28,3 +31,6 @@ for ax in axs:
 plt.tight_layout()
 plt.show()
 print(f"max |f*g - pdf| = {np.max(np.abs(phi - norm.pdf(t[1:-1]))):.4f}")
+
+# %% [markdown]
+# **Note:** As in the book, the convolution shows where the cdf grows fast, slowly, or not at all: convolution highlights features of a signal.

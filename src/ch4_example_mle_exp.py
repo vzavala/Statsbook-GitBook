@@ -8,6 +8,9 @@
 # | $\log L(\beta)=-S\log\beta-\frac{1}{\beta}\sum_\omega x_\omega$ | `logL` | log likelihood |
 # | $\hat{\beta}=\hat{\mathbb{E}}_X$ | `beta_hat` | MLE |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 4.4 (Section 4.2) of *Statistics for Chemical Engineers*: maximum likelihood estimation of the parameter of Exp(2).
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -43,3 +46,6 @@ for a in fig.axes:
     a.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the likelihood is a product of many small numbers (about 0.3^1000), which is numerically zero: this is why we maximize the log-likelihood.

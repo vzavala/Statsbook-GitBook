@@ -4,6 +4,9 @@
 # discards draws above one (`x_biased`). The bias is the average deviation from
 # $\mathbb{E}[X]=0$ (`E_X`).
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 4.5 (Section 4.3) of *Statistics for Chemical Engineers*: a random sample of N(0,1) and a sample selected with a hidden mechanism.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -29,3 +32,6 @@ for ax, x_omega, title in ((axs[0], x_random, 'random'), (axs[1], x_biased, 'non
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, discarding observations above a threshold biases the sample: its mean is shifted toward negative values (bias of about -0.43).

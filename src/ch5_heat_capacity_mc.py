@@ -6,6 +6,9 @@
 # For this linear model we can compare with the exact $(\mathbf{X}^T\mathbf{X})^{-1}\hat{\sigma}^2$.
 # Python names: `K`, `theta_k` (K x 3), `Cov_mc`, `Cov_exact`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 5.11 (Section 5.3) of *Statistics for Chemical Engineers*: estimating the covariance of the heat-capacity parameters by perturbing the data.
+
 # %%
 import numpy as np
 
@@ -30,3 +33,6 @@ np.set_printoptions(precision=3)
 print("exact Cov[theta_hat]:\n", Cov_exact)
 print("Monte Carlo estimate:\n", Cov_mc)
 print("ratio of variances (MC / exact):", np.diag(Cov_mc) / np.diag(Cov_exact))
+
+# %% [markdown]
+# **Note:** As in the book, the Monte Carlo covariance is close to the exact one: the uncertainty of an estimate is its sensitivity to perturbations in the data.

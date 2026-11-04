@@ -148,6 +148,8 @@ CNN classification of flow-cytometry scatter fields: is endotoxin present? (Pyth
 As in the Matlab script: one $$3\times 3$$ filter with "same" padding, ReLU, a fully connected
 layer, 15 training images per class, the rest for validation, 40 epochs of SGD with momentum.
 
+**Note:** This notebook reproduces Example 6.28 (Section 6.7.2) of *Statistics for Chemical Engineers*: a CNN that classifies scatter fields of liquid-crystal droplets by endotoxin presence.
+
 ```python
 import glob
 import os
@@ -208,7 +210,7 @@ plt.show()
 print(f"training accuracy = {history[-1, 0]:.0%},  validation accuracy = {history[-1, 1]:.0%}")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseI-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseI-06-0.png" alt="" width="520"></figure>
 
 ```
 training accuracy = 100%,  validation accuracy = 100%
@@ -230,7 +232,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseI-06-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseI-07-0.png" alt="" width="520"></figure>
 
 The learned filter $$\Theta$$ and the activated images $$\mathbf{Z}=h(\mathbf{X}*\Theta+\theta)$$ for nine
 validation images.
@@ -256,7 +258,9 @@ Theta =
  [-0.235  0.313  0.159]]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseI-08-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseI-09-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the CNN filter highlights the shape of the scatter field: fields with a bipolar shape (no endotoxin) occupy a larger volume.
 
 * Now train CNN to distinguish bacterial species that generate endotoxin.
 * Collect 84 obs; 24 for *Escherichia coli* (EC), 28 for *Pseudomonas aeruginosa* (PA), and 32 for *Salmonella* Minnesota (SM).
@@ -286,6 +290,8 @@ endotoxin? (Python version of `ch6_cnn_endotoxins_caseII.m`, Victor Z, UW-Madiso
 
 As in the Matlab script: two $$3\times 3$$ filters with "same" padding, ReLU, a fully connected
 layer, 15 training images per class, the rest for validation, SGD with momentum (100 epochs here; the three classes are harder to separate).
+
+**Note:** This notebook complements Example 6.28 (Section 6.7.2) of *Statistics for Chemical Engineers*: the CNN classification for the second case of endotoxin data.
 
 ```python
 import glob
@@ -347,7 +353,7 @@ plt.show()
 print(f"training accuracy = {history[-1, 0]:.0%},  validation accuracy = {history[-1, 1]:.0%}")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseII-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseII-06-0.png" alt="" width="520"></figure>
 
 ```
 training accuracy = 93%,  validation accuracy = 74%
@@ -369,7 +375,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseII-06-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseII-07-0.png" alt="" width="520"></figure>
 
 The learned filters $$\Theta_j$$ and the activated images (first filter) for nine validation images.
 
@@ -399,7 +405,9 @@ Theta_2 =
  [-0.999 -0.573  0.168]]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseII-08-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseII-09-1.png" alt="" width="520"></figure>
+
+**Note:** Compare the accuracy with Case I: the harder the classes are to tell apart, the lower the accuracy.
 
 #### Python implementation
 
@@ -411,6 +419,8 @@ Notebook [`ch6_cnn_sds_caseI.ipynb`](https://colab.research.google.com/github/vz
 Same CNN idea as the endotoxin examples, applied to RGB micrographs of droplets with and without
 SDS surfactant (1 mM SDS). The convolutional layer has one $$3\times 3\times 3$$ filter (3 color channels)
 followed by ReLU and a fully connected layer. (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024.)
+
+**Note:** This notebook reproduces Example 6.29 (Section 6.7.2) of *Statistics for Chemical Engineers*: a CNN that detects SDS in water from micrographs of liquid-crystal droplets.
 
 ```python
 # Shiyi (Amy) Qin and Victor Z
@@ -604,14 +614,17 @@ Epoch [31/40], Loss: 0.0019, Train Accuracy: 100.00%, Validation Accuracy: 100.0
 Epoch [32/40], Loss: 0.0020, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [33/40], Loss: 0.0017, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [34/40], Loss: 0.0017, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [35/40], Loss: 0.0016, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
-Epoch [36/40], Loss: 0.0015, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
 ```
+Epoch [35/40], Loss: 0.0016, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+Epoch [36/40], Loss: 0.0015, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [37/40], Loss: 0.0014, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [38/40], Loss: 0.0014, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 Epoch [39/40], Loss: 0.0013, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
+```
+
+```
 Epoch [40/40], Loss: 0.0013, Train Accuracy: 100.00%, Validation Accuracy: 100.00%
 ```
 
@@ -668,7 +681,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-17-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-18-0.png" alt="" width="520"></figure>
 
 ```python
 # Display some images from the validation set
@@ -688,7 +701,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-18-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-19-0.png" alt="" width="520"></figure>
 
 ```python
 # Display some images from the validation set
@@ -710,7 +723,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-19-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-20-0.png" alt="" width="520"></figure>
 
 ```python
 # Display activations
@@ -733,7 +746,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-21-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-22-0.png" alt="" width="520"></figure>
 
 ```python
 filter_weight = model.conv1.weight.data.cpu().numpy()[0]
@@ -774,7 +787,9 @@ fig.colorbar(plot, cax=cbar_ax)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-24-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-25-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the CNN classifies the droplets perfectly (100% validation accuracy): the spatial pattern of the droplets encodes the presence of SDS.
 
 #### Python implementation
 
@@ -786,6 +801,8 @@ Notebook [`ch6_cnn_sds_caseII.ipynb`](https://colab.research.google.com/github/v
 Same CNN idea as the endotoxin examples, applied to RGB micrographs of droplets with and without
 SDS surfactant (0.05 nM SDS). As in the book, the convolutional layer has two $$3\times 3\times 3$$ filters (3 color channels)
 followed by ReLU and a fully connected layer. (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024.)
+
+**Note:** This notebook reproduces the second part of Example 6.29 (Section 6.7.2) of *Statistics for Chemical Engineers*: detecting a much lower SDS concentration.
 
 ```python
 # Shiyi (Amy) Qin and Victor Z
@@ -1000,11 +1017,14 @@ Epoch [35/40], Loss: 0.0021, Train Accuracy: 100.00%, Validation Accuracy: 75.00
 ```
 Epoch [36/40], Loss: 0.0019, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
 Epoch [37/40], Loss: 0.0018, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
-Epoch [38/40], Loss: 0.0018, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
 ```
 
 ```
+Epoch [38/40], Loss: 0.0018, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
 Epoch [39/40], Loss: 0.0017, Train Accuracy: 100.00%, Validation Accuracy: 70.00%
+```
+
+```
 Epoch [40/40], Loss: 0.0015, Train Accuracy: 100.00%, Validation Accuracy: 75.00%
 ```
 
@@ -1061,7 +1081,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-17-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-18-0.png" alt="" width="520"></figure>
 
 ```python
 # Display some images from the validation set
@@ -1081,7 +1101,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-18-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-19-0.png" alt="" width="520"></figure>
 
 ```python
 # Display some images from the validation set
@@ -1103,7 +1123,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-19-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-20-0.png" alt="" width="520"></figure>
 
 ```python
 # Display activations
@@ -1126,7 +1146,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-21-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-22-0.png" alt="" width="520"></figure>
 
 ```python
 filter_weight = model.conv1.weight.data.cpu().numpy()[0]
@@ -1166,4 +1186,6 @@ fig.colorbar(plot, cax=cbar_ax)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-24-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseII-25-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the validation accuracy is about 80%: detecting contaminants at lower concentrations is significantly harder, yet the CNN still finds nonobvious patterns.

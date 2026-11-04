@@ -8,6 +8,9 @@
 # Python names: `x_omega`, `E_hat`, `V_hat`, `xi_hat`, `beta_hat`; data come from
 # $\mathrm{Weibull}(\xi=2,\beta=1)$.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 4.2 (Section 4.1.1) of *Statistics for Chemical Engineers*: estimating the Weibull parameters (true values beta = 1, xi = 2) by matching moments.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -44,3 +47,6 @@ for row, S in enumerate((10, 100)):
         ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the estimates vary significantly with few data but improve as S increases: having sufficient data matters.

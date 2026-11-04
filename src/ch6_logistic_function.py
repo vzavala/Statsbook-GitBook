@@ -2,6 +2,9 @@
 # The logistic function $m(x,\theta)=1/(1+e^{-\theta^Tx})$ for a scalar input and
 # $\theta=-1,0,+1$ (written for the book to accompany the slide figure). The evidence is $\theta x$.
 
+# %% [markdown]
+# **Note:** This notebook reproduces the figure of the logistic function in Section 6.4 of *Statistics for Chemical Engineers*.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,3 +22,6 @@ for ax, theta in zip(axs, (-1, 0, 1)):
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** The logistic function maps any input to a probability between 0 and 1; its parameters shift and sharpen the transition.

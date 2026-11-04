@@ -59,6 +59,8 @@ Notebook [`ch6_logistic_function.ipynb`](https://colab.research.google.com/githu
 The logistic function $$m(x,\theta)=1/(1+e^{-\theta^Tx})$$ for a scalar input and
 $$\theta=-1,0,+1$$ (written for the book to accompany the slide figure). The evidence is $$\theta x$$.
 
+**Note:** This notebook reproduces the figure of the logistic function in Section 6.4 of *Statistics for Chemical Engineers*.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -78,7 +80,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_logistic_function-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_logistic_function-03-0.png" alt="" width="520"></figure>
+
+**Note:** The logistic function maps any input to a probability between 0 and 1; its parameters shift and sharpen the transition.
 
 * Function $$m(x,\theta)$$ is used to model conditional probs: $$\mathbb{P}(Y=1\,|\,x,\theta)$$ and $$\mathbb{P}(Y=0\,|\,x,\theta)=1-\mathbb{P}(Y=1\,|\,x,\theta)$$.
 * Specifically, want to capture logic:
@@ -130,6 +134,8 @@ Logistic classification for fault detection in the Gibbs reactor
 | $$m(x,\theta)=\mathbb{P}(Y=1\mid x,\theta)$$ | `m_hat` | classification probability |
 | $$\hat{y}_\omega$$ | `y_hat` | predicted label |
 
+**Note:** This notebook reproduces Example 6.22 (Section 6.4) of *Statistics for Chemical Engineers*: logistic regression to detect faults of the Gibbs reactor.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -152,7 +158,7 @@ plt.xlabel('$P$'); plt.ylabel('$C$'); plt.legend(loc='lower right'); plt.grid(Tr
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_logistic-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_logistic-05-0.png" alt="" width="520"></figure>
 
 MLE: $$\max_\theta \sum_\omega y_\omega\log m(x_\omega,\theta)+(1-y_\omega)\log(1-m(x_\omega,\theta))$$.
 (`penalty=None` gives plain MLE; scikit-learn regularizes by default.)
@@ -187,7 +193,7 @@ theta_hat = [-2.229 -0.071 21.873]
 accuracy = 87.80%  (439 of 500)
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_logistic-06-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_logistic-07-1.png" alt="" width="520"></figure>
 
 Train/test split (60/40) to check that the classifier generalizes.
 
@@ -201,4 +207,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_logistic-08-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_logistic-09-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the model separates the classes well; cross-validation should be used to check that it generalizes to new data.

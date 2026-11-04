@@ -55,6 +55,8 @@ $$N_y=50$$, $$n=50$$ (Victor Z and David Cole, UW-Madison, 2024).
 | $$p=N_y/N_t$$ | `p` | fraction of type-$$Y$$ items |
 | $$\mathcal{D}$$, $$f(x)$$, $$F(x)$$ | `D`, `f`, `F` | domain, pdf, cdf |
 
+**Note:** This notebook reproduces Example 2.5 (Section 2.1.3) of *Statistics for Chemical Engineers*: number of items of a given type in a random sample drawn from a population.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -106,7 +108,9 @@ plt.show()
 mode = 5,  E_X = n p = 5.0
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_hypergeometric-02-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_hypergeometric-03-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the probability of finding fewer than 10 items of the type is nearly one; the realizations concentrate around x = 5 and decay quickly, in an asymmetric way.
 
 Open in Colab: [`ch2_compare_hypergeometric.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_hypergeometric.ipynb)
 
@@ -178,6 +182,8 @@ Inspecting the machine at random (Victor Z and David Cole, UW-Madison, 2024).
 | $$n$$ | `n` | number of inspections |
 | $$f(x)=\mathbb{P}(X=x)$$ | `f(x, n)` | hypergeometric pdf |
 
+**Note:** This notebook reproduces Example 2.6 (Section 2.1.3) of *Statistics for Chemical Engineers*: inspecting the machine of Example 2.2 at 5 or 10 weeks chosen at random.
+
 ```python
 import numpy as np
 from scipy.stats import hypergeom
@@ -209,3 +215,5 @@ for n in (5, 10):
 n =  5:  P(X=5) = f(5) = 0.03123,   P(X=0) = f(0) = 0.02738
 n = 10:  P(X=10) = f(10) = 0.0008222,   P(X=0) = f(0) = 0.0006261
 ```
+
+**Note:** As in the book, observing a failure in all 10 inspections has probability 8e-4: it is highly unlikely.

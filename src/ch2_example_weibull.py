@@ -8,6 +8,9 @@
 # | $\mathbb{E}_X$, $\mathbb{MO}_X$ | `E_X`, `MO_X` | mean and mode |
 # | $x_\omega$ | `x_omega` | simulated 10-min wind speeds |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 2.20 (Section 2.2.7) of *Statistics for Chemical Engineers*: wind speed at a location modeled as a Weibull RV.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -70,3 +73,6 @@ P_high = X.cdf(20) - X.cdf(10)
 print(f"E_X  = {E_X:.1f} m/s  (scipy mean: {X.mean():.1f})")
 print(f"MO_X = {MO_X:.1f} m/s")
 print(f"P(10 <= X <= 20) = {P_high:.2f}")
+
+# %% [markdown]
+# **Note:** As in the book, the wind speed is in the 10-20 m/s range only 6% of the time: the turbine rarely operates in its high-power range at this location.

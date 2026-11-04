@@ -8,6 +8,9 @@
 # | $y\sim\mathcal{N}(\theta x,\sigma^2)$ | `sigma2` | likelihood noise variance (1) |
 # | $\log f(\theta)$, $\log f(y\mid\theta)$, $\log f(\theta\mid y)$ | `log_f_theta`, `log_f_y_theta`, `log_f_theta_y` | log prior, log likelihood, log posterior (up to a constant) |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 5.15 (Section 5.5) of *Statistics for Chemical Engineers*: prior, likelihood, and posterior of a parameter theta.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -35,3 +38,6 @@ plt.show()
 
 for vals, name in ((log_f_theta, 'prior'), (log_f_y_theta, 'likelihood (MLE)'), (log_f_theta_y, 'posterior (Bayes)')):
     print(f"{name:18s} is maximized at theta = {theta[np.argmax(vals)]:.2f}")
+
+# %% [markdown]
+# **Note:** As in the book, the posterior blends the prior (old information) and the likelihood (new data): its most likely value, theta = 1, is a trade-off between the two.

@@ -107,6 +107,8 @@ Uncertainty quantification for the heat-capacity model (Victor Z and Jaron T, UW
 | $$\mathrm{Cov}[\hat{\mathbf{y}}]=\mathbf{X}\mathrm{Cov}[\hat{\theta}]\mathbf{X}^T$$ | `Cov_y` | prediction covariance |
 | $$q_S$$, $$m_\omega$$ | `q_S`, `m_y` | 0.95 quantile of $$\chi^2(S)$$ and prediction CI half-widths |
 
+**Note:** This notebook reproduces Example 5.7 (Section 5.2.3) of *Statistics for Chemical Engineers*: confidence ellipses for the parameters and confidence intervals for the predictions.
+
 ```python
 import sys
 import numpy as np
@@ -158,7 +160,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_uncertainty-07-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_uncertainty-08-0.png" alt="" width="520"></figure>
 
 #### Python implementation: Confidence intervals for the predictions
 
@@ -186,7 +188,7 @@ plt.show()
 q_S = 43.77  (S = 30)
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_uncertainty-10-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_uncertainty-11-1.png" alt="" width="520"></figure>
 
 For comparison, `statsmodels` reports the usual $$t$$-based (marginal) 95% intervals, which are
 narrower than the joint $$\chi^2(n+1)$$ intervals above.
@@ -201,3 +203,5 @@ print(sm.OLS(y, X).fit().conf_int(0.05))
  [ 1.55330619e-03  3.94114441e-03]
  [-1.61957716e-06  3.49878602e-07]]
 ```
+
+**Note:** As in the book, the intervals for the predicted outputs are wide even though those of the parameters are small, because the measurement noise is large.

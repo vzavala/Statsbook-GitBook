@@ -3,6 +3,9 @@
 # (option II), in MUSD (Victor Z and Leo Gonzalez, UW-Madison, 2023).
 # Python names: `Y_u`, `Y_up` (frozen distributions), `y_bar` (threshold), `alpha`, `VaR`, `CVaR`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Examples 7.2 and 7.3 (Section 7.2) of *Statistics for Chemical Engineers*: two options with random costs, one with a lower mean and one with a lower variance.
+
 # %% [part] Pdfs and cdfs of the two options
 
 # %%
@@ -40,3 +43,6 @@ for name, Y in (("Option I ", Y_u), ("Option II", Y_up)):
     CVaR_alt = VaR + np.mean(np.maximum(y_omega - VaR, 0)) / (1 - alpha)   # Rockafellar-Uryasev form
     print(f"{name}: E = {Y.mean():.2f},  P(Y <= {y_bar}) = {Y.cdf(y_bar):.3f},  "
           f"VaR = {VaR:.2f},  CVaR = {CVaR:.2f} ({CVaR_alt:.2f})")
+
+# %% [markdown]
+# **Note:** As in the book, the mean and the variance lead to contradictory decisions; risk measures that look at the tails of the pdf capture the attitude of the decision-maker toward risk.

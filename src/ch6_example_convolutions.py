@@ -11,6 +11,9 @@
 # The Gaussian weights are $g_j=e^{-j^2/(2\sigma^2)}$, $j=-(N-1)/2,\dots,(N-1)/2$
 # (this reproduces the slide values, e.g. $g=(0.13,0.6,1,0.6,0.13)$ for $N=5$, $\alpha=2$).
 
+# %% [markdown]
+# **Note:** This notebook reproduces Examples 6.7 to 6.10 (Section 6.3.1) of *Statistics for Chemical Engineers*: convolution of a pulse and of a noisy signal with moving-average and Gaussian filters.
+
 # %% [part] Moving average filter for a pulse
 
 # %%
@@ -70,3 +73,6 @@ for ax in axs:
 axs[2].set_xlabel('$t$')
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, convolution transforms the signal: the filters smooth the pulse and remove noise, and the type and tuning of the filter decide the effect.

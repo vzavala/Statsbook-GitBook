@@ -57,6 +57,8 @@ Verifying the extreme value theorem (Victor Z, UW-Madison, 2024).
 `scipy.stats.genextreme` uses the opposite sign for the shape: `c_scipy = -c`.
 `R` is the number of repetitions.
 
+**Note:** This notebook reproduces Example 4.8 (Section 4.3.4) of *Statistics for Chemical Engineers*: the distribution of the maximum of S observations of N(2,1).
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -86,7 +88,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_evt_example-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_evt_example-03-0.png" alt="" width="520"></figure>
 
 Probabilities of rare events from the GEV fit for $$S=1000$$.
 
@@ -99,6 +101,8 @@ for x_k in (5, 7):
 P(X_max > 5) = 0.727
 P(X_max > 7) = 0.000273
 ```
+
+**Note:** As in the book, for S = 1000 the peak is likely above 5 but unlikely above 7 (P = 3.6e-4); these probabilities come from the extreme value model, without knowing the nature of X.
 
 #### Python implementation
 
@@ -119,6 +123,8 @@ A test returns `h = 1` when it rejects the null hypothesis and `h = 0` when it f
 | $$z=\frac{\bar{x}-\mu}{\sigma/\sqrt{S}}$$ | `z` | z-score (test statistic of the z-test) |
 | $$d=\max_x\,\lvert\hat{F}(x)-F(x)\rvert$$ | `d` | KS distance between empirical and model cdf |
 | $$h$$ | `h1`, `h2`, `h3` | test decision (1 = reject the null hypothesis) |
+
+**Note:** This notebook reproduces Example 4.9 (Section 4.4) of *Statistics for Chemical Engineers*: testing whether a sample of N(2,1) comes from the (wrong) model N(1,1).
 
 ```python
 import numpy as np
@@ -191,8 +197,10 @@ ax.legend()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch4_example_hypothesis-09-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch4_example_hypothesis-10-0.png" alt="" width="520"></figure>
 
 As in the book, the z-test and the KS test reject the null hypothesis that the data come from $$\mathcal{N}(1,1)$$,
 while the Lilliefors test fails to reject that the data come from a normal RV. (The sample differs from the one
 drawn in MATLAB, because the two use different random numbers; the conclusions are the same.)
+
+**Note:** As in the book, the z-test and KS test reject that the data come from N(1,1), while the Lilliefors test (which first fits a normal model) does not reject that the data are normal.

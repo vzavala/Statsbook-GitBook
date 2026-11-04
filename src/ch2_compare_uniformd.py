@@ -3,6 +3,9 @@
 # (Victor Z and David Cole, UW-Madison, 2024).
 # Python names: `a`, `b`, `n` $=b-a+1$, domain `D`, pdf `f`, cdf `F`, realizations `x_omega`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 2.1 (Section 2.1.1) of *Statistics for Chemical Engineers*: a discrete uniform RV, whose values are all equally likely.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -45,3 +48,6 @@ plt.ylabel('$F(x)$', fontsize=14)
 plt.axis([-1.5, 1.5, -0.02, 1.02])
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the density is the same for all domain values: there is no trend in the realizations, but each value appears with equal probability.

@@ -84,6 +84,8 @@ accompany the slide example). `mode='valid'` keeps the window inside $$f$$ (a $$
 `mode='same'` lets the window stick out and ignores the outside entries (a $$5\times 5$$ result).
 The filter is symmetric, so convolution and correlation coincide.
 
+**Note:** This notebook reproduces Example 6.17 (Section 6.3.5) of *Statistics for Chemical Engineers*: the convolution of a 5 x 5 matrix with a 3 x 3 filter.
+
 ```python
 import numpy as np
 from scipy.signal import convolve2d
@@ -113,6 +115,8 @@ phi = f*g (same):
  [0 2 2 1 1]]
 ```
 
+**Note:** The 'valid' mode keeps the filter inside the matrix (3 x 3 result) and the 'same' mode keeps the size of the matrix (5 x 5 result).
+
 ## 2D Convolutional Filters
 
 * Define 2D kernel functions to generate filters; e.g., kernel of 2D Gaussian filter is:
@@ -141,6 +145,8 @@ Notebook [`ch6_gauss_filter_2D.ipynb`](https://colab.research.google.com/github/
 Weight matrix of a 2D Gaussian filter (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024):
 the kernel $$g(x,y)$$ is the pdf of $$\mathcal{N}(0,\Sigma)$$ with $$\Sigma=\sigma^2 I$$, $$\sigma=\sqrt{2}$$,
 evaluated on a $$10\times 10$$ window (`g`, scaled by 100).
+
+**Note:** This notebook reproduces Example 6.18 (Section 6.3.5) of *Statistics for Chemical Engineers*: a 2D Gaussian filter on a 10 x 10 window with sigma = sqrt(2).
 
 ```python
 import numpy as np
@@ -173,7 +179,9 @@ plt.show()
  [0 0 0 1 1 1 1 0 0 0]]
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gauss_filter_2D-02-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gauss_filter_2D-03-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the filter is symmetric around its center, where it is largest, and decays quickly away from it.
 
 ## 2D Convolutional Filters
 
@@ -237,6 +245,8 @@ Applying 2D filters to a micrograph (Victor Z and Ugochukwu Ikegwu, UW-Madison, 
 The image is a 2D signal $$f$$ (`f`); $$f_1=f*g$$ with a Sobel filter $$g$$ reveals intensity gradients and
 $$f_2$$ with a Gaussian filter ($$\sigma=10$$ pixels) keeps the coarse features.
 
+**Note:** This notebook complements Example 6.19 (Section 6.3.5) of *Statistics for Chemical Engineers*: Sobel and Gaussian filters applied to a micrograph.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -262,4 +272,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_micrograph_filters_2D-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_micrograph_filters_2D-05-0.png" alt="" width="520"></figure>
+
+**Note:** Filters highlight features of an image (edges) or remove details (smoothing), depending on their design.

@@ -30,6 +30,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # As in the Matlab script: one $3\times 3$ filter with "same" padding, ReLU, a fully connected
 # layer, 15 training images per class, the rest for validation, 40 epochs of SGD with momentum.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.28 (Section 6.7.2) of *Statistics for Chemical Engineers*: a CNN that classifies scatter fields of liquid-crystal droplets by endotoxin presence.
+
 # %%
 import glob
 import os
@@ -115,3 +118,6 @@ for ax in axs.ravel():
     ax.axis('off')
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the CNN filter highlights the shape of the scatter field: fields with a bipolar shape (no endotoxin) occupy a larger volume.

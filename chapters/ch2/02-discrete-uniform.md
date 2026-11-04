@@ -56,6 +56,8 @@ Pdf and cdf of a discrete uniform RV $$X\sim\mathcal{U}(a,b)$$ with $$a=-1,b=1$$
 (Victor Z and David Cole, UW-Madison, 2024).
 Python names: `a`, `b`, `n` $$=b-a+1$$, domain `D`, pdf `f`, cdf `F`, realizations `x_omega`.
 
+**Note:** This notebook reproduces Example 2.1 (Section 2.1.1) of *Statistics for Chemical Engineers*: a discrete uniform RV, whose values are all equally likely.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -100,7 +102,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_uniformd-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_uniformd-03-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the density is the same for all domain values: there is no trend in the realizations, but each value appears with equal probability.
 
 Open in Colab: [`ch2_compare_uniformd.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_uniformd.ipynb)
 
@@ -144,6 +148,8 @@ Machine status as a uniform (and Bernoulli) RV (Victor Z and David Cole, UW-Madi
 | $$a$$, $$b$$, $$n$$ | `a`, `b`, `n` | uniform parameters, $$n=b-a+1$$ |
 | $$\hat{\mathbb{P}}(X=x)$$ | `P_hat[x]` | empirical pdf |
 
+**Note:** This notebook reproduces Example 2.2 (Section 2.1.1) of *Statistics for Chemical Engineers*: the weekly status of a machine (failure or normal).
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -170,7 +176,7 @@ plt.axis([-1, 52, 0, 4])
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_example_uniform-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_example_uniform-06-0.png" alt="" width="520"></figure>
 
 Uniform model with $$\mathcal{D}=\{0,1\}$$: $$a=0$$, $$b=1$$, $$n=2$$, so $$\mathbb{P}(X=x)=1/n=1/2$$.
 Compare with the empirical pdf $$\hat{\mathbb{P}}(X=x)=\frac{1}{S}\sum_{\omega}\mathbf{1}[x_\omega=x]$$.

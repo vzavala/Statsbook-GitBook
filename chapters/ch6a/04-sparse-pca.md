@@ -78,6 +78,8 @@ Note that $$\mathbf{X}$$ has rank 3, so the last three eigenvalues of $$\mathbf{
 eigenvectors, so the last three columns of `W` (and of `W_sparse`) can differ from those
 reported in the book, and can change with the numerical library used.
 
+**Note:** This notebook reproduces Example 6.3 (Section 6.1.2) of *Statistics for Chemical Engineers*: sparse PCA to identify which input variables carry redundant information.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -168,4 +170,6 @@ V(theta_hat) = [2.893e-01 3.321e-07 9.643e-07]
 SSE = 2.549e-03
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca_estimation_sparse-06-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca_estimation_sparse-07-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, keeping only X5, X2, and X4 gives a poor fit and a singular kernel matrix: these input variables are the problematic ones.

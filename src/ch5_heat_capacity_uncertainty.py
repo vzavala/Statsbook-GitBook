@@ -25,6 +25,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $\mathrm{Cov}[\hat{\mathbf{y}}]=\mathbf{X}\mathrm{Cov}[\hat{\theta}]\mathbf{X}^T$ | `Cov_y` | prediction covariance |
 # | $q_S$, $m_\omega$ | `q_S`, `m_y` | 0.95 quantile of $\chi^2(S)$ and prediction CI half-widths |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 5.7 (Section 5.2.3) of *Statistics for Chemical Engineers*: confidence ellipses for the parameters and confidence intervals for the predictions.
+
 # %% [part] Confidence intervals for the parameters
 
 # %%
@@ -99,3 +102,6 @@ plt.show()
 # %%
 import statsmodels.api as sm
 print(sm.OLS(y, X).fit().conf_int(0.05))
+
+# %% [markdown]
+# **Note:** As in the book, the intervals for the predicted outputs are wide even though those of the parameters are small, because the measurement noise is large.

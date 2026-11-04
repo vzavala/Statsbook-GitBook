@@ -3,6 +3,9 @@
 # (Victor Z and J E Umaña, UW-Madison, 2024).
 # Python names: `p`, domain `D`, pdf `f`, cdf `F`, realizations `x_omega`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 2.3 (Section 2.1.2) of *Statistics for Chemical Engineers*: the Bernoulli RV B(0.3).
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -45,3 +48,6 @@ plt.ylabel('$F(x)$', fontsize=14)
 plt.axis([-0.5, 1.5, -0.02, 1.02])
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** The domain is {0, 1}, with f(1) = 0.3 and f(0) = 0.7; note how the observations land unevenly across the two values.

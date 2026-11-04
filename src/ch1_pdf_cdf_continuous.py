@@ -8,6 +8,9 @@
 # | $\Delta x$ | `dx` | discretization (bin) size |
 # | $\hat{f}$, $\hat{F}$ | `f_hat`, `F_hat` | discrete (empirical) approximations |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 1.4 (Section 1.2.2) of *Statistics for Chemical Engineers*: a continuous RV with the standard Gaussian pdf.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -70,3 +73,6 @@ axs[1].axis([-5, 5, -0.01, 1.01])
 axs[1].grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the discretized pdf approximates the continuous one well: for bins of width 0.5, its peak is 0.38, close to f(0) = 0.4.

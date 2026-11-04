@@ -8,6 +8,9 @@
 # | $\omega_k$, $\lvert\hat{f}_k\rvert$ | `omega`, `power(f_hat)` | frequencies and one-sided magnitude |
 # | $\mathcal{F}\{f*g\}=\mathcal{F}\{f\}\cdot\mathcal{F}\{g\}$ | `phi_hat = f_hat * g_hat` | convolution theorem |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.12 (Section 6.3.2) of *Statistics for Chemical Engineers*: the frequency spectrum of a signal made of two sine waves.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -58,3 +61,6 @@ for ax in axs.ravel():
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the Fourier transform reveals the two dominant frequencies of the signal (30 and 60).

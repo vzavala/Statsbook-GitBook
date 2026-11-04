@@ -4,6 +4,9 @@
 # $\min_{u\in\mathcal{U}}\ \mathrm{CVaR}_\alpha[Y(u)]$ with $\alpha=0.9$, evaluated with the $S$ load samples.
 # Python names: `rho(u)` (the risk measure), `u_D`, `u_star`; other risk measures are tabulated for comparison.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 7.7 (Section 7.6.1) of *Statistics for Chemical Engineers*: sizing the generator of Example 7.1 by minimizing different risk measures of the random cost.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -48,3 +51,6 @@ for ax in axs:
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, stochastic optimization lets us shape the pdf/cdf of the cost; CVaR is particularly useful because the probability level alpha tunes the protection against high costs.

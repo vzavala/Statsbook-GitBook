@@ -47,6 +47,8 @@ Weibull RVs $$X\sim\mathrm{Weibull}(\xi,\beta)$$ (Victor Z and David Cole, UW-Ma
 `scipy.stats.weibull_min` takes the **shape** $$\xi$$ first and the **scale** $$\beta$$ as `scale`.
 The dashed line marks $$F(\beta)=1-e^{-1}=0.63$$ for any $$\xi$$.
 
+**Note:** This notebook reproduces the figure of the Weibull RV in Section 2.2.7 of *Statistics for Chemical Engineers*.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -72,7 +74,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_weibull-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_weibull-03-0.png" alt="" width="520"></figure>
+
+**Note:** The shape parameter xi changes the form of the Weibull pdf; xi = 1 gives the exponential RV.
 
 Open in Colab: [`ch2_compare_weibull.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_weibull.ipynb)
 
@@ -144,6 +148,8 @@ Notebook [`ch2_example_weibull.ipynb`](https://colab.research.google.com/github/
 | $$\mathbb{E}_X$$, $$\mathbb{MO}_X$$ | `E_X`, `MO_X` | mean and mode |
 | $$x_\omega$$ | `x_omega` | simulated 10-min wind speeds |
 
+**Note:** This notebook reproduces Example 2.20 (Section 2.2.7) of *Statistics for Chemical Engineers*: wind speed at a location modeled as a Weibull RV.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -201,7 +207,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_example_weibull-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_example_weibull-06-0.png" alt="" width="520"></figure>
 
 $$\mathbb{E}_X=\beta\,\Gamma(1+1/\xi)$$, $$\mathbb{MO}_X=\beta\left(\frac{\xi-1}{\xi}\right)^{1/\xi}$$, and
 $$\mathbb{P}(10\leq X\leq 20)=F(20)-F(10)$$.
@@ -220,3 +226,5 @@ E_X  = 5.3 m/s  (scipy mean: 5.3)
 MO_X = 4.2 m/s
 P(10 <= X <= 20) = 0.06
 ```
+
+**Note:** As in the book, the wind speed is in the 10-20 m/s range only 6% of the time: the turbine rarely operates in its high-power range at this location.

@@ -3,6 +3,9 @@
 # $f(x_1,x_2)=\sin 2\pi\omega_1(x_1+x_2)-\sin 2\pi\omega_2(x_1+x_2)$ with $\omega_1=20$, $\omega_2=60$
 # (`omega_1`, `omega_2`). The grid is fine enough (8 samples per period of the 60 Hz wave) to avoid aliasing.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.20 (Section 6.3.5) of *Statistics for Chemical Engineers*: a 2D signal built from a low-frequency and a high-frequency wave.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -26,3 +29,6 @@ for row, (Z, lab) in enumerate(((f, 'f'), (f1, 'f_1'), (f2, 'f_2'))):
     ax2.imshow(Z, cmap='gray', origin='lower', extent=[0, 0.25, 0, 0.25])
     ax2.set_xlabel('$x_1$'); ax2.set_ylabel('$x_2$')
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, any image is a superposition of waves of different frequencies; identifying them lets us design filters.

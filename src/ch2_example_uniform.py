@@ -8,6 +8,9 @@
 # | $a$, $b$, $n$ | `a`, `b`, `n` | uniform parameters, $n=b-a+1$ |
 # | $\hat{\mathbb{P}}(X=x)$ | `P_hat[x]` | empirical pdf |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 2.2 (Section 2.1.1) of *Statistics for Chemical Engineers*: the weekly status of a machine (failure or normal).
+
 # %% [part] Machine status as a uniform RV
 
 # %%
@@ -56,3 +59,6 @@ print(f"Empirical:     P_hat(X=0) = {P_hat[0]:.4f},  P_hat(X=1) = {P_hat[1]:.4f}
 p_hat = np.mean(x_omega)                  # E_hat[X] = p_hat
 print(f"p_hat = {p_hat:.4f}  ->  X ~ B({p_hat:.2f})")
 print(f"E_X = p = {p_hat:.4f},  V_X = p(1-p) = {p_hat*(1-p_hat):.4f}")
+
+# %% [markdown]
+# **Note:** As in the book, the machine failed in 79 of 156 weeks: the empirical probabilities (0.5064 and 0.4936) suggest that its status behaves as a uniform RV U(0,1).

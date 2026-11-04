@@ -8,6 +8,9 @@
 # | $f_1(\omega)$, $f_2(\omega)$, $f_3(\omega)$ | `f1`, `f2`, `f3` | measured flows [gpm] |
 # | $\epsilon(\omega)$ | `epsilon` | conservation mismatch $f_3-f_1-f_2$ |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 1.1 (Section 1.1) of *Statistics for Chemical Engineers*: three flow sensors measure the flows of a mixer, and mass conservation says that f3 = f1 + f2.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -46,3 +49,6 @@ plt.xlabel(r'Observation $\omega$')
 plt.ylabel(r'$\epsilon(\omega)$ [gpm]')
 plt.grid(True)
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the mismatch in mass conservation comes from random sensor errors, not from a flaw in the conservation law. Enough data is needed to see this, and both engineering knowledge (conservation) and data are needed to understand the system.

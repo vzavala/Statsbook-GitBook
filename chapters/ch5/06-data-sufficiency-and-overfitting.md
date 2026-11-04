@@ -42,6 +42,8 @@ $$\mathcal{H}$$ (`H`) (Victor Z and Leo Gonzalez, UW-Madison, 2024): large posit
 sharp minimum, a zero eigenvalue a flat (non-unique) minimum, negative eigenvalues a maximum,
 and mixed signs a saddle point.
 
+**Note:** This notebook reproduces the figure of SSE functions for different Hessian matrices in Section 5.2 of *Statistics for Chemical Engineers*.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -62,7 +64,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_examples_surfaces-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_examples_surfaces-03-0.png" alt="" width="520"></figure>
+
+**Note:** A Hessian with positive eigenvalues defines a unique (sharp) minimum; zero eigenvalues give a flat valley, where the estimate is not unique.
 
 #### Python implementation
 
@@ -75,6 +79,8 @@ UW-Madison, 2020). Model I is $$Y=\theta_0+\theta_1X+\theta_2X^2$$, model II is 
 We compare their squared errors $$\hat{\epsilon}_\omega^2$$ (mean and empirical cdf), and then their
 3-fold cross-validation errors on data not used for estimation.
 Python names: `X_I`, `X_II` (data matrices), `eps2_I`, `eps2_II`, `MSE_cv`.
+
+**Note:** This notebook reproduces Examples 5.6 (Section 5.2.2) and 5.9 (Section 5.2.5) of *Statistics for Chemical Engineers*: comparing Model I (quadratic) with Model II (linear) for heat capacity.
 
 ```python
 import numpy as np
@@ -110,7 +116,7 @@ plt.show()
 MSE I = 0.0112,  MSE II = 0.0119
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_benchmark-02-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_benchmark-03-1.png" alt="" width="520"></figure>
 
 3-fold cross-validation: estimate on two folds, test on the third.
 
@@ -131,6 +137,8 @@ for name, X in (("I", X_I), ("II", X_II)):
 Model I: sum of test MSE over folds = 0.0478
 Model II: sum of test MSE over folds = 0.0499
 ```
+
+**Note:** As in the book, the cdf of the errors of Model I lies above that of Model II (smaller errors are more likely), and cross-validation confirms that Model I generalizes better.
 
 ## Example: Estimating Heat Capacity with Insufficient Data
 

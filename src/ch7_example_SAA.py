@@ -6,6 +6,9 @@
 # (Chapter 4) of the optimal value and solution, which shrink as $S$ grows.
 # Python names: `S_values`, `B`, `u_hat` (SAA solutions), `E_hat` (SAA optimal values).
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 7.10 (Section 7.6.6) of *Statistics for Chemical Engineers*: sample average approximation (SAA) with different sample sizes S, with upper and lower bounds.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -36,3 +39,6 @@ for ax, m, h, ref, label in ((axs[0], E_mean, E_half, sigma**2, r'$\hat{\mathbb{
     ax.set_xlabel('$S$'); ax.set_ylabel(label); ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the gap between the bounds shrinks quickly as S grows (from 318 for S = 1 to about 1 for large S): the SAA solution converges quickly.

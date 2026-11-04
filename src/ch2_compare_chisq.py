@@ -2,6 +2,9 @@
 # Chi-squared RVs $X\sim\chi^2(r)$ as Gamma RVs with $\beta=2$, $\alpha=r/2$
 # (Victor Z and J E Umaña, UW-Madison, 2024).
 
+# %% [markdown]
+# **Note:** This notebook supports Section 2.2.6 of *Statistics for Chemical Engineers*: it compares the quantile functions of chi2(1) and N(0,1).
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -40,3 +43,6 @@ for k in (1, 2):
     plt.axis([0, 1, 0, 8])
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** The square of a N(0,1) RV is a chi2(1) RV, so the quantiles of chi2(1) give the critical values of the Gaussian.

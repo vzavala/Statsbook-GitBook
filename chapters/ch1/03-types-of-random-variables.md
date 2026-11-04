@@ -118,6 +118,8 @@ Pdf and cdf of a simple discrete RV (Victor Z and Ugochukwu Ikegwu, UW-Madison, 
 | $$x_\omega,\ \omega\in\Omega$$ | `x_omega` | the 10 realizations |
 | $$t$$, $$F(t)$$ | `t`, `F` | cdf evaluated on a grid of $$t$$ |
 
+**Note:** This notebook reproduces Example 1.3 (Section 1.2.2) of *Statistics for Chemical Engineers*: a discrete RV with domain {-1, 0, 1, 2}.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -180,7 +182,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_discrete-08-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_discrete-09-0.png" alt="" width="520"></figure>
+
+**Note:** The cdf values match the fraction of outcomes below each threshold, e.g. F(0) = 0.4 and F(1) = 1.
 
 ## Probability Density of Discrete and Continuous RVs
 
@@ -269,6 +273,8 @@ Pdf and cdf of a simple continuous RV (Victor Z and Ugochukwu Ikegwu, UW-Madison
 | $$\Delta x$$ | `dx` | discretization (bin) size |
 | $$\hat{f}$$, $$\hat{F}$$ | `f_hat`, `F_hat` | discrete (empirical) approximations |
 
+**Note:** This notebook reproduces Example 1.4 (Section 1.2.2) of *Statistics for Chemical Engineers*: a continuous RV with the standard Gaussian pdf.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -299,7 +305,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_continuous-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_continuous-05-0.png" alt="" width="520"></figure>
 
 Discrete approximations with $$\Delta x=0.5$$ built from $$S=1000$$ realizations $$x_\omega$$:
 $$\hat{f}(x)\approx\frac{\hat{F}(x+\Delta x)-\hat{F}(x)}{\Delta x}$$ (histogram) and
@@ -335,4 +341,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_continuous-06-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_pdf_cdf_continuous-07-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the discretized pdf approximates the continuous one well: for bins of width 0.5, its peak is 0.38, close to f(0) = 0.4.

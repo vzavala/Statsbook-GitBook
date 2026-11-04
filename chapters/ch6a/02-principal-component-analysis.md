@@ -183,6 +183,8 @@ PCA of the Gibbs reactor data (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024).
 
 (`T_pc` avoids a clash with the temperature `T`.)
 
+**Note:** This notebook reproduces Example 6.1 (Section 6.1) of *Statistics for Chemical Engineers*: principal component analysis of the Gibbs reactor data.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -238,4 +240,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca-07-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_gibbs_pca-08-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, a small eigenvalue reveals a redundant dimension, caused by the high correlation between pressure and conversion: we can drop one of them and keep most of the information.

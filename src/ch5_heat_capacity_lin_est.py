@@ -11,6 +11,9 @@
 # | $\hat{\sigma}$ | `sigma_hat` | estimated noise SD |
 # | $\mathrm{Cov}[\hat{\theta}]$, $\mathcal{I}(\theta)$ | `Cov_theta`, `FI` | parameter covariance and Fisher information |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Examples 5.3 to 5.6 (Section 5.2) of *Statistics for Chemical Engineers*: estimating a quadratic model of heat capacity versus temperature from calorimetry data.
+
 # %% [part] Least-squares estimate
 
 # %%
@@ -106,3 +109,6 @@ plt.xlabel(r'Theoretical $\mathbb{Q}(\alpha)$', fontsize=14)
 plt.ylabel(r'Empirical $\hat{\mathbb{Q}}(\alpha)$', fontsize=14)
 plt.grid(True)
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the model captures the trend, the residuals are Gaussian (purely random), and the parameter variances are small: the Fisher information shows a sharp minimum and precise estimates.

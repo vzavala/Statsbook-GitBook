@@ -24,6 +24,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $m(x)$, $\sigma(x)$ | `m_x`, `sigma_x` | predictive mean and SD |
 # | $\epsilon_\omega$ | `eps_gp`, `eps_lin` | residuals of kriging and linear models |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.24 (Section 6.6) of *Statistics for Chemical Engineers*: a Gaussian process (kriging) model of the Gibbs reactor, compared with linear regression.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -82,3 +85,6 @@ plt.scatter(w, y[:50], color='black', facecolors='none', label=r'$y_\omega$')
 plt.xlabel(r'Observation $\omega$'); plt.ylabel('$y$')
 plt.legend(); plt.grid(True)
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the observed values always lie within the predicted confidence intervals: the GP characterizes its uncertainty consistently.

@@ -166,6 +166,8 @@ Gaussian mixing problem (Victor Z and J E Umaña, UW-Madison, 2024).
 | $$F_3=f_1+\kappa F_2$$ | `mu_3`, `sigma_3` | output flow, $$\mathcal{N}(10+20\kappa,\kappa^2)$$ |
 | $$z_\alpha=\mathbb{Q}_Z(\alpha)$$ | `z_alpha` | standard-normal quantile |
 
+**Note:** This notebook reproduces Examples 2.12 and 2.13 (Section 2.2.2) of *Statistics for Chemical Engineers*: the output flow F3 ~ N(30,1) of a mixer.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -217,7 +219,7 @@ plt.show()
 z_alpha = 1.995,  Q_F3(alpha) = 31.995  (direct: 31.995)
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_mixing_gaussians-05-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_mixing_gaussians-06-1.png" alt="" width="520"></figure>
 
 ## Gaussian
 
@@ -244,6 +246,8 @@ Gaussian RVs $$X\sim\mathcal{N}(\mu,\sigma^2)$$ for different $$\mu,\sigma$$
 (Victor Z and J E Umaña, UW-Madison, 2024).
 Python names: `mu`, `sigma`, realizations `x_omega`. Note that `scipy.stats.norm`
 takes the standard deviation $$\sigma$$ (not $$\sigma^2$$) as `scale`.
+
+**Note:** This notebook reproduces the figures of the Gaussian RV in Section 2.2.2 of *Statistics for Chemical Engineers*: pdfs and cdfs for different parameters, realizations of N(0,1), and its critical values.
 
 ```python
 import numpy as np
@@ -285,7 +289,7 @@ plt.axis([-5, 5, 0, 1.02])
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_gaussians-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_gaussians-03-0.png" alt="" width="520"></figure>
 
 Levels $$\mu+k\sigma$$, $$k=0,1,2,3$$, and their probabilities
 $$\mathbb{P}(X\leq\mu+k\sigma)=F_Z(k)$$ for the standard normal $$Z$$.
@@ -318,7 +322,9 @@ P(Z <= 2) = F_Z(2) = 0.977
 P(Z <= 3) = F_Z(3) = 0.999
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_gaussians-04-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_gaussians-05-1.png" alt="" width="520"></figure>
+
+**Note:** About 68%, 95%, and 99.7% of the outcomes of a Gaussian lie within 1, 2, and 3 standard deviations of the mean.
 
 Open in Colab: [`ch2_compare_gaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_gaussians.ipynb)
 
@@ -383,4 +389,6 @@ plt.show()
 z_alpha/2 = 1.645;  F3 in [28.36, 31.64] with 90% probability
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_mixing_gaussians-08-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_mixing_gaussians-09-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, we are 97.7% confident that F3 is below 32 gpm, and F3 lies in [28.36, 31.64] gpm with 90% probability.

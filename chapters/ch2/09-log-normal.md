@@ -28,6 +28,8 @@
 Log-normal RVs for several $$(\mu,\sigma)$$ (Victor Z and David Cole, UW-Madison, 2024).
 In `scipy.stats.lognorm`, the shape `s` is $$\sigma$$ and `scale` is $$e^{\mu}$$ (the median $$\mathbb{M}_X$$).
 
+**Note:** This notebook reproduces the figure of the lognormal RV in Section 2.2.3 of *Statistics for Chemical Engineers*: realizations in regular and logarithmic scale, and pdfs/cdfs.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -66,7 +68,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_compare_lognormals-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_compare_lognormals-03-0.png" alt="" width="520"></figure>
+
+**Note:** The lognormal RV takes only positive values and is skewed to the right; in logarithmic scale its realizations look Gaussian.
 
 Open in Colab: [`ch2_compare_lognormals.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_lognormals.ipynb)
 
@@ -129,6 +133,8 @@ Particle size distribution as a log-normal RV (Victor Z and David Cole, UW-Madis
 | $$\mu$$, $$\sigma$$ | `mu`, `sigma` | log-normal parameters |
 | $$F(x)$$, $$f(x)$$ | `F`, `f` | cdf and pdf |
 
+**Note:** This notebook reproduces Example 2.14 (Section 2.2.3) of *Statistics for Chemical Engineers*: particle sizes of a pharmaceutical product modeled as a lognormal RV.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -175,7 +181,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch2_example_lognormal-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch2_example_lognormal-06-0.png" alt="" width="520"></figure>
 
 Acceptable fraction $$\mathbb{P}(250\leq X\leq 400)=F(400)-F(250)$$ of a 1000 kg batch.
 
@@ -187,3 +193,5 @@ print(f"P(250 <= X <= 400) = {P_ok:.2f}  ->  {1000*P_ok:.0f} kg acceptable")
 ```
 P(250 <= X <= 400) = 0.24  ->  240 kg acceptable
 ```
+
+**Note:** As in the book, estimating the amount of product in the desired range needs the theoretical model, because the data were not collected at the cdf values needed: models let us make predictions.

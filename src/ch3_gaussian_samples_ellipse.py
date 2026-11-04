@@ -19,6 +19,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # A realization $x_\omega$ (`x_omega[w]`) is inside $\mathcal{E}$ if
 # $(x_\omega-\mu)^T\Sigma^{-1}(x_\omega-\mu)\leq\mathbb{Q}(1-\alpha)$ (`Q`, the $\chi^2(2)$ quantile).
 
+# %% [markdown]
+# **Note:** This notebook completes Example 3.20 (Section 3.8.5) of *Statistics for Chemical Engineers*: it counts how many realizations fall inside the 95% confidence ellipse.
+
 # %%
 import sys
 import numpy as np
@@ -49,3 +52,6 @@ plt.legend(loc='lower left')
 plt.gca().set_aspect('equal')
 plt.grid(True)
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the fraction of realizations inside the ellipse converges to 95% as the number of realizations grows.

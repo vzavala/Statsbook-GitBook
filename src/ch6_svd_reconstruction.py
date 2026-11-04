@@ -19,6 +19,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # The grayscale image is a matrix $\mathbf{X}$ (`X`); we keep the first $n$ terms of
 # $\mathbf{X}=\sum_k s_k\mathbf{u}_k\mathbf{v}_k^T$ for $n=1,3,10,100$.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.6 (Section 6.2) of *Statistics for Chemical Engineers*: compressing a micrograph by keeping only some of its singular values.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -42,6 +45,9 @@ plt.tight_layout()
 plt.show()
 
 plt.semilogy(n_values, errors, 'ko-')
-plt.xlabel('$n$'); plt.ylabel(r'$\lVert\mathbf{X}-\mathbf{X}_n\rVert_F^2$')
+plt.xlabel('$n$'); plt.ylabel(r'$\Vert\mathbf{X}-\mathbf{X}_n\Vert_F^2$')
 plt.grid(True)
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, a few singular values reproduce the image well: the remaining ones carry details our eyes cannot perceive.

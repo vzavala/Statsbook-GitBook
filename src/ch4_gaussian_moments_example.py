@@ -10,6 +10,9 @@
 # Data are drawn from $\mathcal{N}(1, 2^2)$; results differ slightly from the Matlab
 # version because the random samples differ.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 4.1 (Section 4.1.1) of *Statistics for Chemical Engineers*: estimating mu and sigma of a Gaussian from S = 10 and S = 100 observations.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -41,3 +44,6 @@ for row, S in enumerate((10, 100)):
         ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, with S = 10 the model pdf/cdf cannot match the data well, while with S = 100 they match well and the data reveal the Gaussian nature of the phenomenon.

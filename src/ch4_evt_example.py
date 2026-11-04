@@ -10,6 +10,9 @@
 # `scipy.stats.genextreme` uses the opposite sign for the shape: `c_scipy = -c`.
 # `R` is the number of repetitions.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 4.8 (Section 4.3.4) of *Statistics for Chemical Engineers*: the distribution of the maximum of S observations of N(2,1).
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -44,3 +47,6 @@ plt.show()
 # %%
 for x_k in (5, 7):
     print(f"P(X_max > {x_k}) = {genextreme.sf(x_k, c_scipy, loc=a, scale=b):.3g}")
+
+# %% [markdown]
+# **Note:** As in the book, for S = 1000 the peak is likely above 5 but unlikely above 7 (P = 3.6e-4); these probabilities come from the extreme value model, without knowing the nature of X.

@@ -4,6 +4,9 @@
 # we plot the mean $m(x)$ and the band $m(x)\pm1.96\,\sigma(x)$; uncertainty is zero at the
 # experiments and large far from them, which tells us where to sample next.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.25 (Section 6.6) of *Statistics for Chemical Engineers*: choosing new experiments where the GP prediction is most uncertain.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -31,3 +34,6 @@ for ax, design in zip(axs.ravel(), designs):
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the GP recommends experiments that reduce prediction uncertainty, balancing exploration and exploitation.

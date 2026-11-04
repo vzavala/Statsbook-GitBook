@@ -5,6 +5,9 @@
 # $\mathcal{N}(0,\sigma^2)$: part of the structure has leaked into the "noise".
 # Python names as in `ch5_linear_est_example`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 5.2 (Section 5.1.1) of *Statistics for Chemical Engineers*: fitting a linear model to data that do not follow it.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -40,3 +43,6 @@ for ax in axs.ravel():
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the residuals show a trend and are not Gaussian: residual analysis reveals that the postulated model is not appropriate.

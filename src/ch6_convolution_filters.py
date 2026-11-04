@@ -4,6 +4,9 @@
 # $g$ (window $N=100$, width factor $\alpha=8$) is large only at low frequencies, so $f*g$ keeps the
 # 30 Hz component and removes the 100 Hz one. Python names: `f`, `g`, `phi`, `omega`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.14 (Section 6.3.2) of *Statistics for Chemical Engineers*: removing the high-frequency component of a signal with a Gaussian filter.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -37,3 +40,6 @@ for ax in axs.ravel():
 axs[2, 0].set_xlabel('$t$'); axs[2, 1].set_xlabel(r'$\omega$')
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the filter removes the high-frequency component and keeps the low-frequency one, as the convolution theorem predicts.

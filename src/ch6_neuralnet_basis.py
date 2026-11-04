@@ -9,6 +9,9 @@
 # | $\theta=(\theta^I_{\cdot,1},\theta^O,\theta^I_{\cdot,0})$ | `theta` | the 18 parameters ($N=6$ perceptrons) |
 # | $\mathcal{H}\approx\mathcal{J}^T\mathcal{J}$ | `H` | Gauss-Newton Hessian |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.27 (Section 6.7.1) of *Statistics for Chemical Engineers*: a small neural network seen as a model built from basis functions.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -65,3 +68,6 @@ plt.show()
 # %%
 H = sol.jac.T @ sol.jac
 print("eigenvalues of H:", np.array2string(np.sort(np.linalg.eigvalsh(H))[::-1], precision=2))
+
+# %% [markdown]
+# **Note:** As in the book, the Hessian has eigenvalues near zero: the parameters are not unique and uncertain, so NNs are flexible but prone to overparameterization and overfitting.

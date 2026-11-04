@@ -13,6 +13,9 @@
 # $0\leq W\leq X_1+X_2$ and $W\leq u$, and it makes $R$ (hence each scenario's cost) as small as possible,
 # so it also minimizes $\mathrm{CVaR}_\alpha$.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 7.9 (Section 7.6.3) of *Statistics for Chemical Engineers*: sizing a flexible generator for two random loads, with deterministic and two-stage stochastic formulations.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -57,3 +60,6 @@ for ax in axs:
     ax.grid(True)
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the deterministic solution depends on how we choose representative values of the loads, which is not obvious when many RVs are present; the stochastic formulation avoids this.

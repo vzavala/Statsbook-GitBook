@@ -5,6 +5,9 @@
 # $\mathbb{P}(X>12)=1-F(12)=e^{-12/\beta}$.
 # Python names: `beta`, realizations `x_omega`, pdf/cdf from `scipy.stats.expon(scale=beta)`.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 2.16 (Section 2.2.4) of *Statistics for Chemical Engineers*: lifetime of an adhesive with an average of 36 months.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -38,3 +41,6 @@ plt.tight_layout()
 plt.show()
 
 print(f"P(X > 12) = 1 - F(12) = {X.sf(12):.4f}  (e^(-12/beta) = {np.exp(-12/beta):.4f})")
+
+# %% [markdown]
+# **Note:** As in the book, to survive 12 months with probability 0.95 the average lifetime must be 233 months: about 6.5 times longer than now.

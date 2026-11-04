@@ -33,6 +33,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # eigenvectors, so the last three columns of `W` (and of `W_sparse`) can differ from those
 # reported in the book, and can change with the numerical library used.
 
+# %% [markdown]
+# **Note:** This notebook reproduces Example 6.3 (Section 6.1.2) of *Statistics for Chemical Engineers*: sparse PCA to identify which input variables carry redundant information.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -93,3 +96,6 @@ plt.plot([0, 1], [0, 1], 'k')
 plt.xlabel('$y$'); plt.ylabel(r'$\hat{y}$')
 plt.axis([0.2, 1, 0.2, 1]); plt.grid(True)
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, keeping only X5, X2, and X4 gives a poor fit and a singular kernel matrix: these input variables are the problematic ones.

@@ -100,6 +100,8 @@ Flow mixer example (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
 | $$f_1(\omega)$$, $$f_2(\omega)$$, $$f_3(\omega)$$ | `f1`, `f2`, `f3` | measured flows [gpm] |
 | $$\epsilon(\omega)$$ | `epsilon` | conservation mismatch $$f_3-f_1-f_2$$ |
 
+**Note:** This notebook reproduces Example 1.1 (Section 1.1) of *Statistics for Chemical Engineers*: three flow sensors measure the flows of a mixer, and mass conservation says that f3 = f1 + f2.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -133,7 +135,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_mixer_example-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_mixer_example-06-0.png" alt="" width="520"></figure>
 
 ```python
 plt.scatter(omega, epsilon, marker='o', s=20, color='white', edgecolor='black')
@@ -144,7 +146,9 @@ plt.grid(True)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_mixer_example-06-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_mixer_example-07-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the mismatch in mass conservation comes from random sensor errors, not from a flaw in the conservation law. Enough data is needed to see this, and both engineering knowledge (conservation) and data are needed to understand the system.
 
 ## Example: Gibbs Reactor
 
@@ -174,6 +178,8 @@ Data for the Gibbs reactor (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
 | $$P$$ | `P` | pressure [bar] |
 | $$T$$ | `T` | temperature [K] |
 | $$\xi$$ | `xi` | conversion [-] |
+
+**Note:** This notebook creates the reactor data of Example 1.2 (Section 1.1) of *Statistics for Chemical Engineers*; the Gibbs reactor is used throughout the book.
 
 ```python
 import pandas as pd
@@ -210,7 +216,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_data-07-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_data-08-0.png" alt="" width="520"></figure>
+
+**Note:** As discussed in the book, data reveal trends but cannot explain them alone; a model (thermodynamics) helps, and some aspects of the system remain unknown, so new experiments may still be needed.
 
 <figure><img src="../../.gitbook/assets/slides/gibbs_diagram.png" alt="" width="700"></figure>
 

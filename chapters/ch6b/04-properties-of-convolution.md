@@ -30,6 +30,8 @@ For independent $$X_i\sim\mathcal{U}(4,6)$$ with pdf $$f$$, the pdf of $$X_1+X_2
 $$X_1+X_2+X_3$$ is $$f*(f*f)$$, and so on. We convolve numerically on a grid of step `dx`
 (`phi = np.convolve(phi, f) * dx`) and compare with the Gaussian that has the same mean and variance.
 
+**Note:** This notebook reproduces Example 6.16 (Section 6.3.4) of *Statistics for Chemical Engineers*: repeated convolution of a pdf with itself.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -57,4 +59,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_clt_convolution-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_clt_convolution-03-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, repeated convolution progressively smooths the pdf toward a Gaussian: this is the central limit theorem.

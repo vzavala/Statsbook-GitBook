@@ -24,6 +24,9 @@ if 'google.colab' in sys.modules and not os.path.isdir('Data'):
 # | $\Delta x_1=\Delta x_2$ | `dx` | bin size (0.05) |
 # | $\hat{f}(x_1,x_2)$ | `f_hat` | empirical joint pdf |
 
+# %% [markdown]
+# **Note:** This notebook reproduces Examples 3.5 (Section 3.2) and 3.7 (Section 3.3) of *Statistics for Chemical Engineers*: empirical joint and marginal pdfs of FSC and SSC.
+
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
@@ -78,3 +81,6 @@ axs[1].set_xlabel(r'$x_2=\log \mathrm{SSC}$')
 axs[1].set_ylabel(r'$\hat{f}_2(x_2)$')
 plt.tight_layout()
 plt.show()
+
+# %% [markdown]
+# **Note:** As in the book, the joint pdf has a complex shape; the marginal pdf of FSC is nonsymmetric with a peak in [4.5, 5], while that of SSC is symmetric and Gaussian-like.

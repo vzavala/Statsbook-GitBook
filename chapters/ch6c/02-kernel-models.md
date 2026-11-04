@@ -181,6 +181,8 @@ Kernel model for the Hougen-Watson data (Victor Z and Ugochukwu Ikegwu, UW-Madis
 | $$\mathbf{K}$$, $$\lambda$$ | `K`, `lam` | kernel matrix and regularization |
 | $$\hat{\mathbf{y}}=\mathbf{K}(\mathbf{K}+\lambda I)^{-1}\mathbf{y}$$ | `y_hat` | kernel prediction |
 
+**Note:** This notebook reproduces Example 6.23 (Section 6.5) of *Statistics for Chemical Engineers*: a kernel model of the Hougen-Watson reaction rate for different kernel parameters gamma.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -206,4 +208,6 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch6_hougen_watson_kernel-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch6_hougen_watson_kernel-05-0.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the fit is rather insensitive to gamma, but it degrades for gamma = 0.0001: the kernel parameter must be tuned.

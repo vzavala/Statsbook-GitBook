@@ -69,6 +69,8 @@ Gibbs reactor example (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
 | $$\hat{f}(x)$$, $$\hat{F}(x)$$ | `f_hat`, `F_hat` | empirical pdf and cdf |
 | $$u$$, $$u'$$ | `u_low`, `u_high` | operating temperature (decision) [K] |
 
+**Note:** This notebook reproduces Examples 1.5 to 1.9 (Sections 1.3 and 1.4) of *Statistics for Chemical Engineers*: the reactor pressure is an RV, and we study how its uncertainty affects conversion and decisions.
+
 ```python
 import pandas as pd
 import numpy as np
@@ -108,7 +110,7 @@ plt.grid(True)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-08-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-09-0.png" alt="" width="520"></figure>
 
 The *frequency* counts the observations in each bin $$[x, x+\Delta x]$$:
 
@@ -134,7 +136,7 @@ plt.grid(True)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-10-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-11-0.png" alt="" width="520"></figure>
 
 The same frequency plot can be produced directly with a histogram:
 
@@ -146,7 +148,7 @@ plt.axis([60, 240, 0, 180])
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-12-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-13-0.png" alt="" width="520"></figure>
 
 The *cumulative frequency* counts the observations below $$x$$:
 
@@ -169,4 +171,4 @@ plt.grid(True)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-14-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-15-0.png" alt="" width="520"></figure>

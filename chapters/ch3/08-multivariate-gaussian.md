@@ -70,6 +70,8 @@ $$\Sigma=\begin{bmatrix}1&-1/2\\-1/2&1\end{bmatrix}$$ (Victor Z, UW-Madison, 202
 Python names: `mu`, `Sigma`, joint pdf/cdf `f`, `F`, marginals `f_1`, `f_2`,
 conditional moments `mu_1g2`, `Sigma_1g2` ($$\mu_{1|2}$$, $$\Sigma_{1|2}$$) and `mu_2g1`, `Sigma_2g1`.
 
+**Note:** This notebook reproduces the figures of the multivariate Gaussian in Section 3.8 of *Statistics for Chemical Engineers*.
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -101,7 +103,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_compare_multigaussians-02-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_compare_multigaussians-03-0.png" alt="" width="520"></figure>
 
 Marginals $$X_1\sim\mathcal{N}(\mu_1,\Sigma_{11})$$, $$X_2\sim\mathcal{N}(\mu_2,\Sigma_{22})$$ and conditionals with
 $$\mu_{1|2}=\mu_1+\Sigma_{12}\Sigma_{22}^{-1}(x_2-\mu_2)$$, $$\Sigma_{1|2}=\Sigma_{11}-\Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}$$
@@ -132,11 +134,13 @@ plt.show()
 print(f"X1 | x2=1 ~ N({mu_1g2:.2f}, {Sigma_1g2:.2f}),   X2 | x1=1 ~ N({mu_2g1:.2f}, {Sigma_2g1:.2f})")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_compare_multigaussians-04-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_compare_multigaussians-05-0.png" alt="" width="520"></figure>
 
 ```
 X1 | x2=1 ~ N(0.00, 0.75),   X2 | x1=1 ~ N(0.50, 0.75)
 ```
+
+**Note:** The marginal and conditional pdfs of a multivariate Gaussian are also Gaussian; conditioning shifts the mean and reduces the variance when the variables are correlated.
 
 Open in Colab: [`ch3_compare_multigaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_compare_multigaussians.ipynb)
 
@@ -251,6 +255,8 @@ print(f"V[conversion] = {Sigma_11:.4f},  V[conversion | other 4 variables] = {Si
 ```
 V[conversion] = 0.0158,  V[conversion | other 4 variables] = 0.0111
 ```
+
+**Note:** As in the book, the variables are strongly related, and the data cloud concentrates around the sample means; knowing the other variables reduces the variance of the conversion without shifting its mean (Example 3.17).
 
 ## Multivariate Gaussian
 
@@ -390,6 +396,8 @@ Geometry of a 2D Gaussian (Victor Z, UW-Madison, 2024).
 The `ellipse` helper (`Support/ellipse.py`) returns the ellipse
 $$\{(x-\mu)^T\Sigma^{-1}(x-\mu)= \mathbb{Q}\}$$ and its tightest bounding box.
 
+**Note:** This notebook reproduces Example 3.20 (Section 3.8.5) of *Statistics for Chemical Engineers*: the 95% confidence ellipse of a 2D Gaussian.
+
 ```python
 import sys
 import numpy as np
@@ -441,11 +449,13 @@ plt.show()
 print(f"chi2(2) quantile Q_n = {Q_n:.2f},  chi2(1) quantile Q_1 = {Q_1:.2f}")
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_gaussian_geometry-05-0.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_gaussian_geometry-06-0.png" alt="" width="520"></figure>
 
 ```
 chi2(2) quantile Q_n = 5.99,  chi2(1) quantile Q_1 = 3.84
 ```
+
+**Note:** As in the book, the shape and orientation of the ellipse come from the covariance matrix (its eigenvalues and eigenvectors).
 
 We now present 95% ellipsoidal region and 1000 realizations from  Gaussian.
 
@@ -464,6 +474,8 @@ Notebook [`ch3_gaussian_samples_ellipse.ipynb`](https://colab.research.google.co
 Realizations of a 2D Gaussian and the 95% ellipsoidal region (Victor Z, UW-Madison, 2019).
 A realization $$x_\omega$$ (`x_omega[w]`) is inside $$\mathcal{E}$$ if
 $$(x_\omega-\mu)^T\Sigma^{-1}(x_\omega-\mu)\leq\mathbb{Q}(1-\alpha)$$ (`Q`, the $$\chi^2(2)$$ quantile).
+
+**Note:** This notebook completes Example 3.20 (Section 3.8.5) of *Statistics for Chemical Engineers*: it counts how many realizations fall inside the 95% confidence ellipse.
 
 ```python
 import sys
@@ -501,4 +513,6 @@ plt.show()
 954 of S = 1000 realizations (95.4%) lie inside the ellipse
 ```
 
-<figure><img src="../../.gitbook/assets/nb/ch3_gaussian_samples_ellipse-04-1.png" alt="" width="520"></figure>
+<figure><img src="../../.gitbook/assets/nb/ch3_gaussian_samples_ellipse-05-1.png" alt="" width="520"></figure>
+
+**Note:** As in the book, the fraction of realizations inside the ellipse converges to 95% as the number of realizations grows.
