@@ -134,6 +134,7 @@ EXTRA = {
     "ch5_heat_capacity_bayes": ("ch5", "Example: Bayesian Estimation", -1),
     "ch5_data_reconciliation": ("ch5", "Example: Data Reconciliation", -1),
     "ch6_convolution_filters": ("ch6b", "Example: FT of Pulse and Gaussian", -1),
+    "ch6_sysid_co2": ("ch6b", "Example: FT of Pulse and Gaussian", -1),
     "ch6_sysid_co2_est": ("ch6b", "Example: FT of Pulse and Gaussian", -1),
     "ch6_matrix_convolution": ("ch6b", "Example: Convolution of Matrix with Filter", -1),
     "ch6_cnn_sds_caseI": ("ch6c", "Example: Classification of Flow Cytometry", -1),
