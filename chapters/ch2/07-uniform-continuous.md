@@ -70,7 +70,7 @@ plt.show()
 
 **Note:** The pdf is flat on [a, b] and the cdf grows linearly from 0 to 1.
 
-Open in Colab: [`ch2_compare_uniformc.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_uniformc.ipynb)
+Open in Colab: [`ch2_compare_uniformc.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_uniformc.ipynb) · MATLAB live script: [`ch2_compare_uniformc.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_compare_uniformc.mlx)
 
 </details>
 

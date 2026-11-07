@@ -101,6 +101,8 @@
 
 {% hint style="success" %}
 Notebook [`ch6_example_convolutions.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_example_convolutions.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_example_convolutions.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_example_convolutions.mlx)
 {% endhint %}
 
 1D convolutions with moving-average and Gaussian filters (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024).
@@ -299,6 +301,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch6_derivative_filter.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_derivative_filter.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_derivative_filter.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_derivative_filter.mlx)
 {% endhint %}
 
 Derivative filter (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024). With signal $$f$$ = cdf of

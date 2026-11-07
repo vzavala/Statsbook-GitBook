@@ -99,6 +99,8 @@ How much can we trust our parameter estimate and model predictions?
 
 {% hint style="success" %}
 Notebook [`ch5_heat_capacity_uncertainty.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_heat_capacity_uncertainty.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch5_heat_capacity_uncertainty.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch5_heat_capacity_uncertainty.mlx)
 {% endhint %}
 
 Uncertainty quantification for the heat-capacity model (Victor Z and Jaron T, UW-Madison, 2024).

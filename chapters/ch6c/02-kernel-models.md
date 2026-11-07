@@ -172,6 +172,8 @@
 
 {% hint style="success" %}
 Notebook [`ch6_hougen_watson_kernel.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_hougen_watson_kernel.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_hougen_watson_kernel.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_hougen_watson_kernel.mlx)
 {% endhint %}
 
 Kernel model for the Hougen-Watson data (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).

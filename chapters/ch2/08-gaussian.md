@@ -164,6 +164,8 @@ Computing cdf involves evaluating an integral that depends on $$\mu$$ and $$\sig
 
 {% hint style="success" %}
 Notebook [`ch2_mixing_gaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_mixing_gaussians.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch2_mixing_gaussians.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_mixing_gaussians.mlx)
 {% endhint %}
 
 Gaussian mixing problem (Victor Z and J E Umaña, UW-Madison, 2024).
@@ -338,7 +340,7 @@ P(Z <= 3) = F_Z(3) = 0.999
 
 **Note:** About 68%, 95%, and 99.7% of the outcomes of a Gaussian lie within 1, 2, and 3 standard deviations of the mean.
 
-Open in Colab: [`ch2_compare_gaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_gaussians.ipynb)
+Open in Colab: [`ch2_compare_gaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_gaussians.ipynb) · MATLAB live script: [`ch2_compare_gaussians.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_compare_gaussians.mlx)
 
 </details>
 

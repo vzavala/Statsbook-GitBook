@@ -83,6 +83,8 @@
 
 {% hint style="success" %}
 Notebook [`ch5_bayes_estimation.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_bayes_estimation.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch5_bayes_estimation.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch5_bayes_estimation.mlx)
 {% endhint %}
 
 Bayesian estimation for $$Y=\theta X+\epsilon$$ with one observation $$(x=1,y=2)$$
@@ -141,6 +143,8 @@ posterior (Bayes)  is maximized at theta = 1.00
 
 {% hint style="success" %}
 Notebook [`ch5_heat_capacity_bayes.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_heat_capacity_bayes.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch5_heat_capacity_bayes.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch5_heat_capacity_bayes.mlx)
 {% endhint %}
 
 **Additional example: recursive Bayesian estimation of the heat-capacity model.**

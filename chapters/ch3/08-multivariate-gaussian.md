@@ -142,7 +142,7 @@ X1 | x2=1 ~ N(0.00, 0.75),   X2 | x1=1 ~ N(0.50, 0.75)
 
 **Note:** The marginal and conditional pdfs of a multivariate Gaussian are also Gaussian; conditioning shifts the mean and reduces the variance when the variables are correlated.
 
-Open in Colab: [`ch3_compare_multigaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_compare_multigaussians.ipynb)
+Open in Colab: [`ch3_compare_multigaussians.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_compare_multigaussians.ipynb) · MATLAB live script: [`ch3_compare_multigaussians.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch3_compare_multigaussians.mlx)
 
 </details>
 
@@ -392,6 +392,8 @@ We visualize joint pdf and marginal pdfs for $$\mu=(0,0)$$ and $$\Sigma=\left[\b
 
 {% hint style="success" %}
 Notebook [`ch3_gaussian_geometry.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_gaussian_geometry.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch3_gaussian_geometry.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch3_gaussian_geometry.mlx)
 {% endhint %}
 
 Geometry of a 2D Gaussian (Victor Z, UW-Madison, 2024).
@@ -483,6 +485,8 @@ We now present 95% ellipsoidal region and 1000 realizations from  Gaussian.
 
 {% hint style="success" %}
 Notebook [`ch3_gaussian_samples_ellipse.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_gaussian_samples_ellipse.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch3_gaussian_samples_ellipse.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch3_gaussian_samples_ellipse.mlx)
 {% endhint %}
 
 Realizations of a 2D Gaussian and the 95% ellipsoidal region (Victor Z, UW-Madison, 2019).

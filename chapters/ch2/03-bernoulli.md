@@ -90,7 +90,7 @@ plt.show()
 
 **Note:** The domain is {0, 1}, with f(1) = 0.3 and f(0) = 0.7; note how the observations land unevenly across the two values.
 
-Open in Colab: [`ch2_compare_bernoulli.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_bernoulli.ipynb)
+Open in Colab: [`ch2_compare_bernoulli.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_bernoulli.ipynb) · MATLAB live script: [`ch2_compare_bernoulli.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_compare_bernoulli.mlx)
 
 </details>
 

@@ -150,6 +150,8 @@
 
 {% hint style="success" %}
 Notebook [`ch6_gibbs_neuralnet.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gibbs_neuralnet.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_gibbs_neuralnet.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_gibbs_neuralnet.mlx)
 {% endhint %}
 
 Neural net versus kriging for the Gibbs reactor (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
@@ -235,6 +237,8 @@ NN parameters: 9;  MSE NN = 9.29e-04,  MSE kriging = 8.71e-04
 
 {% hint style="success" %}
 Notebook [`ch6_neuralnet_basis.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_neuralnet_basis.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_neuralnet_basis.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_neuralnet_basis.mlx)
 {% endhint %}
 
 Perceptrons as basis functions (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).

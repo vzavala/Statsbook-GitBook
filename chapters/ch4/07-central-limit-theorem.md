@@ -43,6 +43,8 @@
 
 {% hint style="success" %}
 Notebook [`ch4_clt_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_clt_example.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch4_clt_example.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch4_clt_example.mlx)
 {% endhint %}
 
 Verifying the central limit theorem (Victor Z, UW-Madison, 2024).

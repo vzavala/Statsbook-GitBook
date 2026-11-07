@@ -62,6 +62,8 @@
 
 {% hint style="success" %}
 Notebook [`ch6_gibbs_pca_estimation_sparse.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gibbs_pca_estimation_sparse.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_gibbs_pca_estimation_sparse.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_gibbs_pca_estimation_sparse.mlx)
 {% endhint %}
 
 Sparse eigenvectors to find redundant variables in the Gibbs reactor data

@@ -87,7 +87,7 @@ plt.show()
 
 **Note:** The exponential RV models waiting times; its mean is the scale parameter beta.
 
-Open in Colab: [`ch2_compare_exponentials.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_exponentials.ipynb)
+Open in Colab: [`ch2_compare_exponentials.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_exponentials.ipynb) · MATLAB live script: [`ch2_compare_exponentials.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_compare_exponentials.mlx)
 
 </details>
 
@@ -130,6 +130,8 @@ For how long will a tracer particle reside in the system?  What factors influenc
 
 {% hint style="success" %}
 Notebook [`ch2_example_exponential.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_exponential.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch2_example_exponential.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_example_exponential.mlx)
 {% endhint %}
 
 **Additional example: failure time of an adhesive** (Victor Z and J E Umaña, UW-Madison, 2024).

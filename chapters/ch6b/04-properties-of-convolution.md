@@ -25,6 +25,8 @@
 
 {% hint style="success" %}
 Notebook [`ch6_clt_convolution.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_clt_convolution.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_clt_convolution.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_clt_convolution.mlx)
 {% endhint %}
 
 The central limit theorem through convolutions (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).

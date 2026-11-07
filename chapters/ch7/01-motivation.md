@@ -1,7 +1,7 @@
 # Motivation
 
 {% hint style="success" %}
-**Slides:** [stats_ch7_decisionmaking.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch7_decisionmaking.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch7_decisionmaking_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab)
+**Slides:** [stats_ch7_decisionmaking.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch7_decisionmaking.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch7_decisionmaking_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab) · [MATLAB live scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab-Live)
 {% endhint %}
 
 * We have used *statistical techniques* to model known/unknown aspects of a system.

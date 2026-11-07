@@ -74,6 +74,8 @@
 
 {% hint style="success" %}
 Notebook [`ch4_montecarlo_approx.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_montecarlo_approx.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch4_montecarlo_approx.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch4_montecarlo_approx.mlx)
 {% endhint %}
 
 Convergence of Monte Carlo approximations (Victor Z, UW-Madison, 2024).

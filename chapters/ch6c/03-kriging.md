@@ -109,6 +109,8 @@
 
 {% hint style="success" %}
 Notebook [`ch6_gibbs_kriging.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gibbs_kriging.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_gibbs_kriging.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_gibbs_kriging.mlx)
 {% endhint %}
 
 Kriging (Gaussian process) model for the Gibbs reactor (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
@@ -211,6 +213,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch6_kriging_uq.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_kriging_uq.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_kriging_uq.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_kriging_uq.mlx)
 {% endhint %}
 
 Using the GP uncertainty to choose experiments (Victor Z, UW-Madison, 2024). The true response is

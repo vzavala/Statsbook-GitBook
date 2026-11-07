@@ -173,6 +173,8 @@
 
 {% hint style="success" %}
 Notebook [`ch6_gibbs_pca.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gibbs_pca.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_gibbs_pca.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_gibbs_pca.mlx)
 {% endhint %}
 
 PCA of the Gibbs reactor data (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024).

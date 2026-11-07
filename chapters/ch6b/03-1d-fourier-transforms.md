@@ -57,6 +57,8 @@
 
 {% hint style="success" %}
 Notebook [`ch6_fourier_transform.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_fourier_transform.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_fourier_transform.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_fourier_transform.mlx)
 {% endhint %}
 
 Fourier transform of a periodic signal (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024).
@@ -149,6 +151,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch6_fourier_transform_filters.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_fourier_transform_filters.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_fourier_transform_filters.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_fourier_transform_filters.mlx)
 {% endhint %}
 
 Fourier transforms of a rectangular pulse and of Gaussians (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2020).
@@ -200,6 +204,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch6_convolution_filters.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_convolution_filters.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_convolution_filters.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_convolution_filters.mlx)
 {% endhint %}
 
 **Additional example: a Gaussian filter as a low-pass filter** (Shiyi (Amy) Qin and Victor Z,
@@ -254,6 +260,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch6_sysid_co2.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_sysid_co2.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_sysid_co2.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_sysid_co2.mlx)
 {% endhint %}
 
 **Additional example: data for system identification** (Victor M Zavala, UW-Madison, 2024).
@@ -356,6 +364,8 @@ print(data.shape)
 
 {% hint style="success" %}
 Notebook [`ch6_sysid_co2_est.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_sysid_co2_est.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_sysid_co2_est.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_sysid_co2_est.mlx)
 {% endhint %}
 
 **Additional example: system identification with Fourier transforms** (Victor M Zavala, UW-Madison, 2024).

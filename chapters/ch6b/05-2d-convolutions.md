@@ -146,6 +146,8 @@ phi = f*g (same):
 
 {% hint style="success" %}
 Notebook [`ch6_gauss_filter_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gauss_filter_2D.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_gauss_filter_2D.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_gauss_filter_2D.mlx)
 {% endhint %}
 
 Weight matrix of a 2D Gaussian filter (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024):
@@ -249,6 +251,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch6_micrograph_filters_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_micrograph_filters_2D.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_micrograph_filters_2D.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_micrograph_filters_2D.mlx)
 {% endhint %}
 
 Applying 2D filters to a micrograph (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).

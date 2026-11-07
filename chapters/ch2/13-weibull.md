@@ -78,7 +78,7 @@ plt.show()
 
 **Note:** The shape parameter xi changes the form of the Weibull pdf; xi = 1 gives the exponential RV.
 
-Open in Colab: [`ch2_compare_weibull.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_weibull.ipynb)
+Open in Colab: [`ch2_compare_weibull.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_weibull.ipynb) · MATLAB live script: [`ch2_compare_weibull.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_compare_weibull.mlx)
 
 </details>
 
@@ -145,6 +145,8 @@ Use the pdf and cdf to determine the following:
 
 {% hint style="success" %}
 Notebook [`ch2_example_weibull.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_weibull.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch2_example_weibull.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_example_weibull.mlx)
 {% endhint %}
 
 10-min wind speed as a Weibull RV (Victor Z and David Cole, UW-Madison, 2024).

@@ -88,6 +88,8 @@ Common choices for penalty function $$\rho(\theta)$$ are:
 
 {% hint style="success" %}
 Notebook [`ch5_gibbs_tradeoff.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_gibbs_tradeoff.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch5_gibbs_tradeoff.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch5_gibbs_tradeoff.mlx)
 {% endhint %}
 
 **Additional example: lasso trade-off for the Gibbs reactor** (Victor Z and Jaron T, UW-Madison, 2024).
@@ -184,6 +186,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch5_hougen_watson_regularized.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_hougen_watson_regularized.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch5_hougen_watson_regularized.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch5_hougen_watson_regularized.mlx)
 {% endhint %}
 
 Ridge-regularized SSE for the Hougen-Watson model (Victor Z and Leo Gonzalez, UW-Madison, 2024):
@@ -308,6 +312,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch5_hougen_watson_constraints.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_hougen_watson_constraints.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch5_hougen_watson_constraints.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch5_hougen_watson_constraints.mlx)
 {% endhint %}
 
 Hougen-Watson estimation with bounds $$\underline{\theta}\leq\theta\leq\overline{\theta}$$

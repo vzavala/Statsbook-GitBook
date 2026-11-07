@@ -70,6 +70,8 @@
 
 {% hint style="success" %}
 Notebook [`ch4_example_mle_exp.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_example_mle_exp.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch4_example_mle_exp.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch4_example_mle_exp.mlx)
 {% endhint %}
 
 Maximum likelihood estimation for an exponential RV (Victor Z, UW-Madison, 2014).

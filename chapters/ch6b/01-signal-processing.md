@@ -1,7 +1,7 @@
 # Signal Processing
 
 {% hint style="success" %}
-**Slides:** [stats_ch6_partII.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch6_partII.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch6_partII_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab)
+**Slides:** [stats_ch6_partII.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch6_partII.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch6_partII_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab) · [MATLAB live scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab-Live)
 {% endhint %}
 
 * Signal processing (SP) is a field of mathematics that provides tools for analyzing, modifying, and synthesizing data.

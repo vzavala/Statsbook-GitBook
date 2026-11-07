@@ -72,7 +72,7 @@ plt.show()
 
 **Note:** The lognormal RV takes only positive values and is skewed to the right; in logarithmic scale its realizations look Gaussian.
 
-Open in Colab: [`ch2_compare_lognormals.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_lognormals.ipynb)
+Open in Colab: [`ch2_compare_lognormals.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_lognormals.ipynb) · MATLAB live script: [`ch2_compare_lognormals.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_compare_lognormals.mlx)
 
 </details>
 
@@ -130,6 +130,8 @@ Open in Colab: [`ch2_compare_lognormals.ipynb`](https://colab.research.google.co
 
 {% hint style="success" %}
 Notebook [`ch2_example_lognormal.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_lognormal.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch2_example_lognormal.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_example_lognormal.mlx)
 {% endhint %}
 
 Particle size distribution as a log-normal RV (Victor Z and David Cole, UW-Madison, 2024).

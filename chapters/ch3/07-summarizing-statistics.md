@@ -299,6 +299,8 @@ Interdependencies are confirmed visually from data, but trends are partly hidden
 
 {% hint style="success" %}
 Notebook [`ch3_gibbs_covariance.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_gibbs_covariance.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch3_gibbs_covariance.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch3_gibbs_covariance.mlx)
 {% endhint %}
 
 Covariance and correlation for the Gibbs reactor (Victor Z, UW-Madison, 2024).

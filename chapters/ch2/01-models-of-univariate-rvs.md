@@ -1,7 +1,7 @@
 # Models of Univariate RVs
 
 {% hint style="success" %}
-**Slides:** [stats_ch2_univRV.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch2_univRV.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch2_univRV_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab)
+**Slides:** [stats_ch2_univRV.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch2_univRV.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch2_univRV_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab) · [MATLAB live scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab-Live)
 {% endhint %}
 
 * A wide range of RV models can be used to capture trends observed in real-life phenomena (e.g., diffusion, mixing, extreme events, particle sizes, failures).

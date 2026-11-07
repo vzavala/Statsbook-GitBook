@@ -101,7 +101,7 @@ plt.show()
 
 **Note:** As in the book, the hypergeometric pdf for a large population (N_t = 1000) is nearly identical to the binomial pdf: the hypergeometric RV converges to a binomial RV.
 
-Open in Colab: [`ch2_compare_binomial.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_binomial.ipynb)
+Open in Colab: [`ch2_compare_binomial.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_binomial.ipynb) · MATLAB live script: [`ch2_compare_binomial.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_compare_binomial.mlx)
 
 </details>
 
@@ -143,6 +143,8 @@ Status is a Bernoulli RV with $$p=0.5$$ and thus the number of failures in an $$
 
 {% hint style="success" %}
 Notebook [`ch2_example_binomial.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_binomial.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch2_example_binomial.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_example_binomial.mlx)
 {% endhint %}
 
 Failures in a sequence of $$n=10$$ weeks (Victor Z and J E Umaña, UW-Madison, 2024).

@@ -79,7 +79,7 @@ plt.show()
 
 **Note:** The square of a N(0,1) RV is a chi2(1) RV, so the quantiles of chi2(1) give the critical values of the Gaussian.
 
-Open in Colab: [`ch2_compare_chisq.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_chisq.ipynb)
+Open in Colab: [`ch2_compare_chisq.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_chisq.ipynb) · MATLAB live script: [`ch2_compare_chisq.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_compare_chisq.mlx)
 
 </details>
 
@@ -103,6 +103,8 @@ Open in Colab: [`ch2_compare_chisq.ipynb`](https://colab.research.google.com/git
 
 {% hint style="success" %}
 Notebook [`ch2_example_chisquare.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_chisquare.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch2_example_chisquare.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_example_chisquare.mlx)
 {% endhint %}
 
 Confidence intervals and regions from chi-squared quantiles (Victor Z and J E Umaña, UW-Madison, 2024).

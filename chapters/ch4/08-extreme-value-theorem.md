@@ -46,6 +46,8 @@
 
 {% hint style="success" %}
 Notebook [`ch4_evt_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_evt_example.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch4_evt_example.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch4_evt_example.mlx)
 {% endhint %}
 
 Verifying the extreme value theorem (Victor Z, UW-Madison, 2024).
@@ -112,6 +114,8 @@ P(X_max > 7) = 0.000273
 
 {% hint style="success" %}
 Notebook [`ch4_example_hypothesis.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_example_hypothesis.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch4_example_hypothesis.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch4_example_hypothesis.mlx)
 {% endhint %}
 
 Hypothesis testing (Victor Z, UW-Madison, 2024): we draw a random sample from $$\mathcal{N}(2,1)$$ and

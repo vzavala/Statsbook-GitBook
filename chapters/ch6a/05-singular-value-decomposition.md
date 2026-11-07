@@ -100,6 +100,8 @@
 
 {% hint style="success" %}
 Notebook [`ch6_gibbs_pca_estimation_svd.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gibbs_pca_estimation_svd.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_gibbs_pca_estimation_svd.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_gibbs_pca_estimation_svd.mlx)
 {% endhint %}
 
 Finding data redundancies with the SVD (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024).
@@ -209,6 +211,8 @@ rank(X[:, 1..6]) = 3
 
 {% hint style="success" %}
 Notebook [`ch6_svd_image_field.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_svd_image_field.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_svd_image_field.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_svd_image_field.mlx)
 {% endhint %}
 
 Images as matrices (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2020). We use the $$10\times 10$$
@@ -293,6 +297,8 @@ rank(X) = 4   rank(X_eps) = 10
 
 {% hint style="success" %}
 Notebook [`ch6_svd_reconstruction.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_svd_reconstruction.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_svd_reconstruction.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_svd_reconstruction.mlx)
 {% endhint %}
 
 Image compression with the SVD (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2020).

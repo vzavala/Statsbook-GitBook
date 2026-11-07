@@ -1,7 +1,7 @@
 # Estimation Techniques
 
 {% hint style="success" %}
-**Slides:** [stats_ch4_estimationRV.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch4_estimationRV.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch4_estimationRV_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab)
+**Slides:** [stats_ch4_estimationRV.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch4_estimationRV.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch4_estimationRV_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab) · [MATLAB live scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab-Live)
 {% endhint %}
 
 * We have now a basic idea of the types of RV models available to model phenomena.

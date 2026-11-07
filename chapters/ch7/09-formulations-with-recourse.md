@@ -89,6 +89,8 @@
 
 {% hint style="success" %}
 Notebook [`ch7_generator_twostage.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_generator_twostage.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch7_generator_twostage.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch7_generator_twostage.mlx)
 {% endhint %}
 
 Two-stage formulation for generator sizing (Victor Z and David Cole, UW-Madison, 2024).

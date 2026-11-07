@@ -1,7 +1,7 @@
 # Multivariate Random Variables
 
 {% hint style="success" %}
-**Slides:** [stats_ch3_multiRV.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch3_multiRV.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch3_multiRV_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab)
+**Slides:** [stats_ch3_multiRV.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch3_multiRV.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch3_multiRV_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab) · [MATLAB live scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab-Live)
 {% endhint %}
 
 * We have assumed $$X$$ is univ and thus realization $$\omega\in \Omega$$ generates a scalar observation $$x_\omega \in \mathbb{R}$$.  This implies $$\mathcal{D}$$ is unidim.
@@ -33,6 +33,8 @@ Unfortunately, there are extremely few multivariate RV models that are of practi
 
 {% hint style="success" %}
 Notebook [`ch3_examples_multidatasets.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_examples_multidatasets.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch3_examples_multidatasets.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch3_examples_multidatasets.mlx)
 {% endhint %}
 
 Examples of multivariate data sets (Victor Z, UW-Madison, 2024): realizations
@@ -199,6 +201,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch3_gibbs_subdomains.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_gibbs_subdomains.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch3_gibbs_subdomains.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch3_gibbs_subdomains.mlx)
 {% endhint %}
 
 Subdomains (events) for the Gibbs reactor data (Victor Z, UW-Madison, 2024).

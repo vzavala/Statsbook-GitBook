@@ -75,6 +75,8 @@
 
 {% hint style="success" %}
 Notebook [`ch3_gibbs_conditional.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_gibbs_conditional.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch3_gibbs_conditional.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch3_gibbs_conditional.mlx)
 {% endhint %}
 
 Empirical event probabilities for the Gibbs reactor (Victor Z, UW-Madison, 2024).
@@ -285,6 +287,8 @@ P(X1 >= 1 & X2 >= 2) = 0.30
 
 {% hint style="success" %}
 Notebook [`ch3_flow_cytometer_discrete.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_flow_cytometer_discrete.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch3_flow_cytometer_discrete.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch3_flow_cytometer_discrete.mlx)
 {% endhint %}
 
 Flow cytometry data treated as a discrete 2D RV (Victor Z, UW-Madison, 2024).
@@ -532,6 +536,8 @@ F(1, 1) = 0.060   (integral: 0.060)
 
 {% hint style="success" %}
 Notebook [`ch3_flow_cytometer_empirical.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch3_flow_cytometer_empirical.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch3_flow_cytometer_empirical.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch3_flow_cytometer_empirical.mlx)
 {% endhint %}
 
 Empirical joint pdf of flow cytometry data (Victor Z, UW-Madison, 2024).

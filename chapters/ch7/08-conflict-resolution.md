@@ -59,6 +59,8 @@
 
 {% hint style="success" %}
 Notebook [`ch7_generator_conflict.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_generator_conflict.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch7_generator_conflict.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch7_generator_conflict.mlx)
 {% endhint %}
 
 Conflict resolution in generator sizing (Victor Z and David Cole, UW-Madison, 2024). We trace trade-off

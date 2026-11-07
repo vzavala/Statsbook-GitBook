@@ -58,6 +58,8 @@ Some observations:
 
 {% hint style="success" %}
 Notebook [`ch1_gibbs_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch1_gibbs_example.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch1_gibbs_example.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch1_gibbs_example.mlx)
 {% endhint %}
 
 Gibbs reactor example (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).

@@ -113,6 +113,8 @@
 
 {% hint style="success" %}
 Notebook [`ch6_gibbs_pca_estimation.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gibbs_pca_estimation.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_gibbs_pca_estimation.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_gibbs_pca_estimation.mlx)
 {% endhint %}
 
 Principal component estimation for the Gibbs reactor (Shiyi (Amy) Qin and Victor Z, UW-Madison, 2024).

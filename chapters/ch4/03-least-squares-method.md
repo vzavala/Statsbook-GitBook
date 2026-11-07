@@ -42,6 +42,8 @@
 
 {% hint style="success" %}
 Notebook [`ch4_leastsquares_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_leastsquares_example.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch4_leastsquares_example.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch4_leastsquares_example.mlx)
 {% endhint %}
 
 Least-squares fit of a Weibull cdf (Victor Z, UW-Madison, 2024).

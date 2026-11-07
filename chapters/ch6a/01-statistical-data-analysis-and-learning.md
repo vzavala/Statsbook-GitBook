@@ -1,7 +1,7 @@
 # Statistical Data Analysis and Learning
 
 {% hint style="success" %}
-**Slides:** [stats_ch6_partI.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch6_partI.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch6_partI_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab)
+**Slides:** [stats_ch6_partI.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch6_partI.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch6_partI_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab) · [MATLAB live scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab-Live)
 {% endhint %}
 
 * Data science and machine learning (ML) are fields that provide tools for:

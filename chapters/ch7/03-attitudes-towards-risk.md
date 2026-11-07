@@ -38,6 +38,8 @@ Which option is better?
 
 {% hint style="success" %}
 Notebook [`ch7_mean_var_comparison.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_mean_var_comparison.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch7_mean_var_comparison.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch7_mean_var_comparison.mlx)
 {% endhint %}
 
 Comparing two random costs $$Y(u)\sim\mathcal{N}(3,1.5^2)$$ (option I) and $$Y(u')\sim\mathcal{N}(4,0.5^2)$$
@@ -176,6 +178,8 @@ Option II: E = 4.00,  P(Y <= 5) = 0.977,  VaR = 4.64,  CVaR = 4.88 (4.88)
 
 {% hint style="success" %}
 Notebook [`ch7_npv_comparison.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_npv_comparison.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch7_npv_comparison.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch7_npv_comparison.mlx)
 {% endhint %}
 
 Comparing investment options through their net present value (Victor Z and Leo Gonzalez, UW-Madison, 2024).

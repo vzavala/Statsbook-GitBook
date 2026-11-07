@@ -196,6 +196,8 @@
 
 {% hint style="success" %}
 Notebook [`ch5_heat_capacity_lin_est.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_heat_capacity_lin_est.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch5_heat_capacity_lin_est.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch5_heat_capacity_lin_est.mlx)
 {% endhint %}
 
 Estimating heat capacity with a model that is linear in the parameters

@@ -1,7 +1,7 @@
 # Motivation
 
 {% hint style="success" %}
-**Slides:** [stats_ch1_intro.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch1_intro.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch1_intro_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab)
+**Slides:** [stats_ch1_intro.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch1_intro.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch1_intro_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab) · [MATLAB live scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab-Live)
 {% endhint %}
 
 As engineers, we often use *fundamental laws* to make *decisions*:
@@ -93,6 +93,8 @@ Collect  100 observations and monitor mismatch  $$\epsilon(\omega)=f_3(\omega)-f
 
 {% hint style="success" %}
 Notebook [`ch1_mixer_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch1_mixer_example.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch1_mixer_example.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch1_mixer_example.mlx)
 {% endhint %}
 
 Flow mixer example (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
@@ -177,6 +179,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch1_gibbs_data.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch1_gibbs_data.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch1_gibbs_data.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch1_gibbs_data.mlx)
 {% endhint %}
 
 Data for the Gibbs reactor (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).

@@ -172,6 +172,8 @@ For a continuous RV we have:
 
 {% hint style="success" %}
 Notebook [`ch1_mean_var_descriptors.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch1_mean_var_descriptors.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch1_mean_var_descriptors.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch1_mean_var_descriptors.mlx)
 {% endhint %}
 
 Mean and variance as descriptors of magnitude and variability

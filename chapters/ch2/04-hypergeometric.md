@@ -112,7 +112,7 @@ mode = 5,  E_X = n p = 5.0
 
 **Note:** As in the book, the probability of finding fewer than 10 items of the type is nearly one; the realizations concentrate around x = 5 and decay quickly, in an asymmetric way.
 
-Open in Colab: [`ch2_compare_hypergeometric.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_hypergeometric.ipynb)
+Open in Colab: [`ch2_compare_hypergeometric.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_hypergeometric.ipynb) · MATLAB live script: [`ch2_compare_hypergeometric.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_compare_hypergeometric.mlx)
 
 </details>
 
@@ -172,6 +172,8 @@ We inspect at random, it is thus appropriate to model number of failures as $$X\
 
 {% hint style="success" %}
 Notebook [`ch2_example_hypergeometric.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_hypergeometric.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch2_example_hypergeometric.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_example_hypergeometric.mlx)
 {% endhint %}
 
 Inspecting the machine at random (Victor Z and David Cole, UW-Madison, 2024).

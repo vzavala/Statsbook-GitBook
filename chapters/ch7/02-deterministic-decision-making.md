@@ -87,6 +87,8 @@
 
 {% hint style="success" %}
 Notebook [`ch7_generator_det.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_generator_det.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch7_generator_det.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch7_generator_det.mlx)
 {% endhint %}
 
 Generator sizing: the deterministic decision (Victor Z and David Cole, UW-Madison, 2024).

@@ -129,6 +129,8 @@
 
 {% hint style="success" %}
 Notebook [`ch5_linear_est_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_linear_est_example.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch5_linear_est_example.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch5_linear_est_example.mlx)
 {% endhint %}
 
 Scalar linear estimation with the correct model (Victor Z and Jaron T, UW-Madison, 2024).

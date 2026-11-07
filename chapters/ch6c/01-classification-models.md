@@ -1,7 +1,7 @@
 # Classification Models
 
 {% hint style="success" %}
-**Slides:** [stats_ch6_partIII.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch6_partIII.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch6_partIII_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab)
+**Slides:** [stats_ch6_partIII.pdf](https://github.com/vzavala/StatsBook/blob/master/Slides/stats_ch6_partIII.pdf) · [4-up handout](https://github.com/vzavala/StatsBook/blob/master/Slides/handouts/stats_ch6_partIII_4up.pdf) · **Code:** [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) · [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab) · [MATLAB live scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab-Live)
 {% endhint %}
 
 * Statistical learning provides powerful tools to construct predictive models from data.
@@ -54,6 +54,8 @@
 
 {% hint style="success" %}
 Notebook [`ch6_logistic_function.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_logistic_function.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_logistic_function.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_logistic_function.mlx)
 {% endhint %}
 
 The logistic function $$m(x,\theta)=1/(1+e^{-\theta^Tx})$$ for a scalar input and
@@ -127,6 +129,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch6_gibbs_logistic.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_gibbs_logistic.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_gibbs_logistic.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_gibbs_logistic.mlx)
 {% endhint %}
 
 Logistic classification for fault detection in the Gibbs reactor

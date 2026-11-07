@@ -34,6 +34,8 @@
 
 {% hint style="success" %}
 Notebook [`ch6_fourier_transform_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_fourier_transform_2D.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_fourier_transform_2D.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_fourier_transform_2D.mlx)
 {% endhint %}
 
 A 2D signal as a superposition of 2D waves (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024):
@@ -85,6 +87,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch6_fourier_transform_filters_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_fourier_transform_filters_2D.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_fourier_transform_filters_2D.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_fourier_transform_filters_2D.mlx)
 {% endhint %}
 
 2D Fourier transforms of a uniform (box) filter and of a Gaussian filter
@@ -146,6 +150,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch6_image_filters_2D.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_image_filters_2D.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_image_filters_2D.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_image_filters_2D.mlx)
 {% endhint %}
 
 Filtering an image with the convolution theorem (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).

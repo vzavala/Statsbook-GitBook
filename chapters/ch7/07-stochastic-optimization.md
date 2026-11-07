@@ -68,6 +68,8 @@
 
 {% hint style="success" %}
 Notebook [`ch7_generator_stoch.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_generator_stoch.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch7_generator_stoch.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch7_generator_stoch.mlx)
 {% endhint %}
 
 Generator sizing: deterministic versus stochastic decision (Victor Z and David Cole, UW-Madison, 2024).
@@ -150,6 +152,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch7_example_SAA.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_example_SAA.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch7_example_SAA.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch7_example_SAA.mlx)
 {% endhint %}
 
 **Additional example: sample average approximation (SAA)** (Victor Zavala and Leo Gonzalez, UW-Madison, 2024).

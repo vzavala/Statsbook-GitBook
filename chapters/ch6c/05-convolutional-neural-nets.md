@@ -137,6 +137,8 @@
 
 {% hint style="success" %}
 Notebook [`ch6_cnn_endotoxins_caseI.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_cnn_endotoxins_caseI.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_cnn_endotoxins_caseI.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_cnn_endotoxins_caseI.mlx)
 {% endhint %}
 
 CNN classification of flow-cytometry scatter fields: is endotoxin present? (Python version of
@@ -284,6 +286,8 @@ Theta =
 
 {% hint style="success" %}
 Notebook [`ch6_cnn_endotoxins_caseII.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_cnn_endotoxins_caseII.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_cnn_endotoxins_caseII.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_cnn_endotoxins_caseII.mlx)
 {% endhint %}
 
 CNN classification of flow-cytometry scatter fields: which bacterial species produced the
@@ -425,6 +429,8 @@ Theta_2 =
 
 {% hint style="success" %}
 Notebook [`ch6_cnn_sds_caseI.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_cnn_sds_caseI.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_cnn_sds_caseI.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_cnn_sds_caseI.mlx)
 {% endhint %}
 
 **Additional example: CNN classification of liquid-crystal droplet images (case I).**
@@ -809,6 +815,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch6_cnn_sds_caseII.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch6_cnn_sds_caseII.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch6_cnn_sds_caseII.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch6_cnn_sds_caseII.mlx)
 {% endhint %}
 
 **Additional example: CNN classification of liquid-crystal droplet images (case II).**

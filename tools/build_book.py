@@ -34,6 +34,7 @@ FIG_DIRS = {
     "pathtoexefigs": CONTENT / "MatlabExercises",
 }
 SRC, NB = ROOT / "src", ROOT / "notebooks"
+LIVE = CONTENT / "Matlab-Live"  # MATLAB live scripts (.mlx), published in the Matlab-Live folder of the repo
 WARN = []
 
 
@@ -220,13 +221,22 @@ def chapter_links(ch):
     deck = ch["tex"].removesuffix(".tex")
     return (f"\n{{% hint style=\"success\" %}}\n**Slides:** [{deck}.pdf]({base}/Slides/{deck}.pdf) · "
             f"[4-up handout]({base}/Slides/handouts/{deck}_4up.pdf) · **Code:** "
-            f"[Python notebooks]({tree}/{cfg.NOTEBOOK_DIR}) · [MATLAB scripts]({tree}/Matlab)\n"
+            f"[Python notebooks]({tree}/{cfg.NOTEBOOK_DIR}) · [MATLAB scripts]({tree}/Matlab) · "
+            f"[MATLAB live scripts]({tree}/Matlab-Live)\n"
             f"{{% endhint %}}\n")
 
 
 def colab_url(nb):
     return (f"https://colab.research.google.com/github/{cfg.GITHUB_REPO}/blob/"
             f"{cfg.GITHUB_BRANCH}/{cfg.NOTEBOOK_DIR}/{nb}.ipynb")
+
+
+def live_link(nb, sep=" · "):
+    """sep + 'MATLAB live script: [nb.mlx](GitHub)' when the notebook has a live-script version, else ''."""
+    if not (LIVE / f"{nb}.mlx").exists():
+        return ""
+    url = f"https://github.com/{cfg.GITHUB_REPO}/blob/{cfg.GITHUB_BRANCH}/Matlab-Live/{nb}.mlx"
+    return f"{sep}MATLAB live script: [`{nb}.mlx`]({url})"
 
 
 def nb_math(md):
@@ -307,10 +317,10 @@ def render_notebook(name, cells, ctx, first, part_title=None):
     label = f"[`{name}.ipynb`]({colab_url(name)})"
     if collapsed:
         return ("\n<details>\n\n<summary>Python: reproduce this figure (" + name + ".ipynb)</summary>\n\n"
-                + "\n".join(body) + f"\n\nOpen in Colab: {label}\n\n</details>\n\n")
+                + "\n".join(body) + f"\n\nOpen in Colab: {label}{live_link(name)}\n\n</details>\n\n")
     head = "#### Python implementation" + (f": {part_title}" if part_title else "")
     badge = (f"{{% hint style=\"success\" %}}\nNotebook {label} — open it in Colab and run the cells "
-             f"alongside this section.\n{{% endhint %}}\n\n") if first else ""
+             f"alongside this section.{live_link(name, chr(10) * 2)}\n{{% endhint %}}\n\n") if first else ""
     return f"\n{head}\n\n{badge}" + "\n".join(body) + "\n"
 
 

@@ -57,6 +57,8 @@
 
 {% hint style="success" %}
 Notebook [`ch4_gaussian_moments_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_gaussian_moments_example.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch4_gaussian_moments_example.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch4_gaussian_moments_example.mlx)
 {% endhint %}
 
 Method of moments for a Gaussian (Victor Z, UW-Madison, 2024).
@@ -140,6 +142,8 @@ Now want to postulate $$\textrm{Weibull}(\xi,\beta)$$ and see if this matches da
 
 {% hint style="success" %}
 Notebook [`ch4_weibull_moments_example.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch4_weibull_moments_example.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch4_weibull_moments_example.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch4_weibull_moments_example.mlx)
 {% endhint %}
 
 Method of moments for a Weibull RV (Victor Z, UW-Madison, 2023).

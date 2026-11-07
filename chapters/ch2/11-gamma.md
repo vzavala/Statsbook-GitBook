@@ -75,7 +75,7 @@ plt.show()
 
 **Note:** The Gamma RV generalizes the exponential RV (alpha = 1): it models the waiting time until the alpha-th event.
 
-Open in Colab: [`ch2_compare_gammas.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_gammas.ipynb)
+Open in Colab: [`ch2_compare_gammas.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_gammas.ipynb) · MATLAB live script: [`ch2_compare_gammas.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_compare_gammas.mlx)
 
 </details>
 

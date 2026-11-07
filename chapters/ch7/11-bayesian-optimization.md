@@ -103,6 +103,8 @@ $$
 
 {% hint style="success" %}
 Notebook [`ch7_bayesopt_yield.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch7_bayesopt_yield.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch7_bayesopt_yield.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch7_bayesopt_yield.mlx)
 {% endhint %}
 
 Bayesian optimization of pectin extraction (Victor Z and Leo Gonzalez, UW-Madison, 2024).

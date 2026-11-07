@@ -90,7 +90,7 @@ plt.show()
 
 **Note:** The Poisson RV counts events in an interval; its pdf shifts to the right and spreads out as the rate lambda grows.
 
-Open in Colab: [`ch2_compare_poisson.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_poisson.ipynb)
+Open in Colab: [`ch2_compare_poisson.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_poisson.ipynb) · MATLAB live script: [`ch2_compare_poisson.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_compare_poisson.mlx)
 
 </details>
 
@@ -141,6 +141,8 @@ Open in Colab: [`ch2_compare_poisson.ipynb`](https://colab.research.google.com/g
 
 {% hint style="success" %}
 Notebook [`ch2_example_poisson.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_poisson.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch2_example_poisson.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_example_poisson.mlx)
 {% endhint %}
 
 Pump failures as a Poisson RV (Victor Z and David Cole, UW-Madison, 2024).

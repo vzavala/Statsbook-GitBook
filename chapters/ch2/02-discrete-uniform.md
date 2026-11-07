@@ -106,7 +106,7 @@ plt.show()
 
 **Note:** As in the book, the density is the same for all domain values: there is no trend in the realizations, but each value appears with equal probability.
 
-Open in Colab: [`ch2_compare_uniformd.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_uniformd.ipynb)
+Open in Colab: [`ch2_compare_uniformd.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_compare_uniformd.ipynb) · MATLAB live script: [`ch2_compare_uniformd.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_compare_uniformd.mlx)
 
 </details>
 
@@ -141,6 +141,8 @@ Open in Colab: [`ch2_compare_uniformd.ipynb`](https://colab.research.google.com/
 
 {% hint style="success" %}
 Notebook [`ch2_example_uniform.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch2_example_uniform.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch2_example_uniform.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch2_example_uniform.mlx)
 {% endhint %}
 
 Machine status as a uniform (and Bernoulli) RV (Victor Z and David Cole, UW-Madison, 2024).

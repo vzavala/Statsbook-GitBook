@@ -35,6 +35,8 @@ Did we use enough data to estimate model parameters?
 
 {% hint style="success" %}
 Notebook [`ch5_examples_surfaces.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_examples_surfaces.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch5_examples_surfaces.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch5_examples_surfaces.mlx)
 {% endhint %}
 
 Quadratic surfaces $$SSE(\theta)=\theta^T\mathcal{H}\theta$$ and the eigenvalues of the Hessian
@@ -74,6 +76,8 @@ plt.show()
 
 {% hint style="success" %}
 Notebook [`ch5_heat_capacity_benchmark.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_heat_capacity_benchmark.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch5_heat_capacity_benchmark.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch5_heat_capacity_benchmark.mlx)
 {% endhint %}
 
 **Additional example: benchmarking models and cross-validation** (Victor Z and Leo Gonzalez,

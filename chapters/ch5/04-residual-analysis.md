@@ -68,6 +68,8 @@ R^2 = S_m/S_y = 0.9549   (1 - S_e/S_y = 0.9549)
 
 {% hint style="success" %}
 Notebook [`ch5_linear_est_example_wrong.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch5_linear_est_example_wrong.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch5_linear_est_example_wrong.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch5_linear_est_example_wrong.mlx)
 {% endhint %}
 
 **Additional example: residuals of a wrong model** (Victor Z and Leo Gonzalez, UW-Madison, 2024).

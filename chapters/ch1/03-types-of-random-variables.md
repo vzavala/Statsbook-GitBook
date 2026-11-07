@@ -111,6 +111,8 @@ Note discontinuous nature of these functions.
 
 {% hint style="success" %}
 Notebook [`ch1_pdf_cdf_discrete.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch1_pdf_cdf_discrete.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch1_pdf_cdf_discrete.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch1_pdf_cdf_discrete.mlx)
 {% endhint %}
 
 Pdf and cdf of a simple discrete RV (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
@@ -272,6 +274,8 @@ Continuous pdf and cdf are approximated using discretized versions with $$\Delta
 
 {% hint style="success" %}
 Notebook [`ch1_pdf_cdf_continuous.ipynb`](https://colab.research.google.com/github/vzavala/StatsBook/blob/master/Python/ch1_pdf_cdf_continuous.ipynb) — open it in Colab and run the cells alongside this section.
+
+MATLAB live script: [`ch1_pdf_cdf_continuous.mlx`](https://github.com/vzavala/StatsBook/blob/master/Matlab-Live/ch1_pdf_cdf_continuous.mlx)
 {% endhint %}
 
 Pdf and cdf of a simple continuous RV (Victor Z and Ugochukwu Ikegwu, UW-Madison, 2024).
