@@ -56,10 +56,7 @@
 
 ## Example: Lifetime of Thermostat
 
-{% hint style="info" %}
-Compute probability that sensor or processor lasts more than a year.
-{% endhint %}
-
+{% hint style="danger" icon="flask" %}
 * We build events $$\mathcal{A}_1=\{x_1\geq 1\;\&\; x_2\in \mathcal{D}_2\}$$ and $$\mathcal{A}_2=\{x_1\in \mathcal{D}_1\;\& \;x_2\geq 1\}$$, which give $$\mathcal{A}_1\cap\mathcal{A}_2=\{x_1\geq 1\; \& \; x_2\geq 1\}$$, and $$\mathcal{A}_1\cup\mathcal{A}_2=\{x_1\geq 1\; \textrm{or} \; x_2\geq 1\}$$.
 * Computing probabilities we have:
 
@@ -74,6 +71,11 @@ Compute probability that sensor or processor lasts more than a year.
    and thus $$\mathbb{P}(X\in \mathcal{A}_1\cup \mathcal{A}_2)=0.37+0.90-0.33=0.94$$.
 
 * There is a high probability that either one of them  lasts more than a year.
+{% endhint %}
+
+{% hint style="info" %}
+Compute probability that sensor or processor lasts more than a year.
+{% endhint %}
 
 #### Python implementation: Union of events
 

@@ -137,12 +137,14 @@
 
 ## Example: Neural Net Model for Gibbs Reactor
 
+{% hint style="danger" icon="flask" %}
 * We now compare performance of NN against kriging models.
 * NN model is simple, contains one hidden layer with two perceptrons.
 * NN fits data well; can capture high nonlinearity.
 * Fact that this can be done with one hidden layer is remarkable.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_benchmark_gibbs_kriging_nn.png" alt="" width="489"><figcaption><p>Fit of kriging (left) and NN (right) models for Gibbs reactor.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_benchmark_gibbs_kriging_nn.png" alt="" width="489"><figcaption><p>Fit of kriging (left) and NN (right) models for Gibbs reactor.</p></figcaption></figure>
 
 #### Python implementation
 
@@ -199,8 +201,11 @@ NN parameters: 9;  MSE NN = 9.29e-04,  MSE kriging = 8.71e-04
 
 **Note:** As in the book, a network with one layer and a few perceptrons fits this highly nonlinear model extremely well.
 
+---
+
 ## Example: Perceptrons as Basis Functions
 
+{% hint style="danger" icon="flask" %}
 * Why are NNs so effective at capturing such behavior?
 * NNs are sophisticated basis function models (activation funcs are basis funcs).
 * To see this, construct simple NN with $$N$$ perceptrons:
@@ -213,13 +218,16 @@ NN parameters: 9;  MSE NN = 9.29e-04,  MSE kriging = 8.71e-04
 
 * NN output is $$\hat{y}=\sum_{j=1}^{n_I}\theta_j^O h(a_j)$$ (there are no hidden layers).
 * NN model has a total of 18 params.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Fit of NN model to function $$y=\sin(4x)+\sin(8x)+\exp(-x)$$ is excellent.
 * Here we show the sigmoidal functions (basis functions) of the NN model.
 * Hessian reveals that several eigenvalues are close to zero.
 * NN model is highly flexible but data is overfit.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_basis_nn_fit.png" alt="" width="489"><figcaption><p>Fit of NN model to data (left) and parity plot (right).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_basis_nn_fit.png" alt="" width="489"><figcaption><p>Fit of NN model to data (left) and parity plot (right).</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/slides/ch6_basis_nn.png" alt="" width="630"><figcaption><p>Sigmoidal functions of NN model for example model.</p></figcaption></figure>
 

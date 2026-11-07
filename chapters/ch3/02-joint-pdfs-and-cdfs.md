@@ -144,8 +144,11 @@ Bayes' rule check: P(A2|A1) P(A1) / P(A2) = 0.600
 
 **Note:** As in the book, P(B | A) = 1: every point in A is also in B, so event A carries full information about event B.
 
+---
+
 ## Example: Lifetime of Thermostat
 
+{% hint style="danger" icon="flask" %}
 * Thermostat relies on sensor (thermocouple) and computing processor that processes sensor data and sends feedback signals to air conditioning unit.
 * Thermostat fails to operate if any of these components fail.
 * Time to failure of components is $$(X_1,X_2)$$ has joint pdf:
@@ -155,12 +158,14 @@ Bayes' rule check: P(A2|A1) P(A1) / P(A2) = 0.600
   $$
 
    with $$\mathcal{D}=\{0\leq x_1\leq \infty\; \&\; 0\leq x_2\leq \infty\}$$ and $$\mu_1=1$$ and $$\mu_2=10$$ years.
+{% endhint %}
 
 {% hint style="info" %}
 * Compute probability that both components last less than 1 year.
 * Compute the probability of the event that $$X_1\geq 1$$ and $$X_2\geq 2$$.
 {% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Probability that both components last less than 1 year corresponds to $$\mathcal{A}=\{0\leq x_1\leq 1\;\& \; 0\leq x_2\leq 1\}$$.
 * Clearly, $$\mathcal{A}\subseteq\mathcal{D}$$ and probability is:
 
@@ -179,6 +184,7 @@ Bayes' rule check: P(A2|A1) P(A1) / P(A2) = 0.600
   &=0.30.
   \end{aligned}
   $$
+{% endhint %}
 
 #### Python implementation: Probabilities of box events
 
@@ -225,16 +231,21 @@ P(X1 <= 1 & X2 <= 1) = 0.060
 P(X1 >= 1 & X2 >= 2) = 0.30
 ```
 
+---
+
 ## Example: Flow Cytometry
 
+{% hint style="danger" icon="flask" %}
 * A microemulsion with 10,000 droplets is passed through a flow cytometer.
 * Cytometer reports side scatter (SSC) and front scatter (FSC) values for droplets.
 * For simplicity, the SSC and FSC values are assumed to belong to three possible categories - low ($$L$$), medium ($$M$$), and high ($$H$$). In other words, the FSC and SSC are treated as discrete RVs.
 * Use data to obtain the joint pdf for the FSC and SSC.
 * Determine what is the most likely category that the droplets belong to.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch3_flow_cytometer_data.png" alt="" width="280"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch3_flow_cytometer_data.png" alt="" width="280"></figure>
 
+{% hint style="danger" icon="flask" %}
 * Define RV $$X=(X_1,X_2)$$ with $$X_1$$=FSC and $$X_2$$=SSC; the individual domains of the RVs are $$\mathcal{D}_1=\{L,M,H\}$$ and $$\mathcal{D}_2=\{L,M,H\}$$, and the joint domain is:
 
   $$
@@ -268,6 +279,7 @@ P(X1 >= 1 & X2 >= 2) = 0.30
 
 * One can confirm that all the entries in the matrix add up to one.
 * Most likely category is $$(L,M)$$, which has a joint pdf $$\hat{\mathbb{P}}(X_1=L,X_2=M)=0.5994$$. This means that 5,994 droplets lie on this category.
+{% endhint %}
 
 #### Python implementation
 
@@ -373,6 +385,8 @@ f_hat(x2 | x1):
 
 **Note:** As in the book, 8,635 droplets have a low FSC, and P(FSC = L | SSC = L) = 1: knowing the SSC of a droplet tells us its FSC, so the two values vary together.
 
+---
+
 ## Joint PDFs and CDFs
 
 * *Joint cdf* for $$X=(X_1,X_2)$$ is:
@@ -436,6 +450,7 @@ f_hat(x2 | x1):
 
 ## Example: Lifetime of Thermostat
 
+{% hint style="danger" icon="flask" %}
 Determine cdf for thermostat and prob that lifetime of sensor *and* processor  is $$\leq 1$$ yr.
 
 * Domain is $$\mathcal{D}=\{0\leq x_1\leq \infty\;\&\; 0\leq x_2\leq \infty\}$$.
@@ -452,6 +467,7 @@ Determine cdf for thermostat and prob that lifetime of sensor *and* processor  i
 
 * We use this to compute $$\mathbb{P}(X_1\leq t_1\; \&\; X_2\leq t_2)=F(t_1,t_2)=0.06$$.
 * Prob  that both components fail before one year is rather small.
+{% endhint %}
 
 #### Python implementation: Joint cdf
 
@@ -468,6 +484,8 @@ print(f"F(1, 1) = {F(1, 1):.3f}   (integral: {P_box(0, 1, 0, 1):.3f})")
 ```
 F(1, 1) = 0.060   (integral: 0.060)
 ```
+
+---
 
 ## Joint PDFs and CDFs
 
@@ -492,6 +510,7 @@ F(1, 1) = 0.060   (integral: 0.060)
 
 ## Example: Flow Cytometry
 
+{% hint style="danger" icon="flask" %}
 * Treating the FSC and SSC as discrete facilitates analysis, but it is more appropriate to treat these as continuous.
 * Use flow cytometer data to obtain an empirical joint pdf of FSC and SSC.
 * To construct the approximation, we first determine the empirical domain covered by the observations.  From the data, we find:
@@ -505,6 +524,7 @@ F(1, 1) = 0.060   (integral: 0.060)
 * We partition (discretize) box by using bins of size $$\Delta x_1=\Delta x_2=0.05$$.
 * This gives 46 bins in SSC domain and 38 bins in FSC domain (total of $$1748$$ bins).
 * To construct empirical pdf, we count number of observations in each of the bins.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch3_flow_cytometer_joint.png" alt="" width="560"><figcaption><p>Top-left: Scatter plot showing observations. Top-right: Density of observations in bins (darker is denser). Bottom: Empirical pdf shown as 2D histogram.</p></figcaption></figure>
 

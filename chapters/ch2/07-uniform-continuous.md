@@ -103,12 +103,15 @@ Open in Colab: [`ch2_compare_uniformc.ipynb`](https://colab.research.google.com/
 
 ## Example: Setting up an Alarm
 
+{% hint style="danger" icon="flask" %}
 Consider Gibbs reactor and consider situation in which there is no pressure data recorded; all that you know is that,  historically, pressure has remained in the range $$63-234$$ bar.
 
 * Is it adequate to model pressure as a uniform RV?
 * Thermodynamics tells us that we will have unacceptably low conversions at pressures below 100 bar. What is  probability that reactor will exhibit low conversions?
 * Reactor vessel is 30-yr-old and you are unsure if it can tolerate high pressures for much longer. To be safe, you want to design an alarm system; you want to set a threshold that triggers alarm only 1% of the time. What is such threshold value?
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * We only know that pressure is in continuous range $$[63,234]$$ bar, we thus have no reason to doubt that it is equally likely to find pressure anywhere in the range. Consequently, uniform RV is an adequate model with $$b=234$$ and $$a=63$$.
 * Probability that reactor exhibits low conversion is:
 
@@ -129,6 +132,7 @@ Consider Gibbs reactor and consider situation in which there is no pressure data
   $$
   \mathbb{Q}_X(0.99)=63 + 0.99\cdot (234-63)=232.3.
   $$
+{% endhint %}
 
 #### Python implementation
 

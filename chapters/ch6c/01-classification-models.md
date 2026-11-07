@@ -84,6 +84,8 @@ plt.show()
 
 **Note:** The logistic function maps any input to a probability between 0 and 1; its parameters shift and sharpen the transition.
 
+---
+
 * Function $$m(x,\theta)$$ is used to model conditional probs: $$\mathbb{P}(Y=1\,|\,x,\theta)$$ and $$\mathbb{P}(Y=0\,|\,x,\theta)=1-\mathbb{P}(Y=1\,|\,x,\theta)$$.
 * Specifically, want to capture logic:
    * If evidence $$\theta^Tx$$ is large, there is a high prob that $$Y=1$$
@@ -104,18 +106,22 @@ plt.show()
 
 ## Example: Classification for Fault Detection
 
+{% hint style="danger" icon="flask" %}
 * Imagine we have data $$(P_\omega,C_\omega,T_\omega)$$ for Gibbs reactor.
 * Data is separated into two classes; one class represents normal mode (when $$T_\omega$$ is low) and we define corresponding labels as $$y_\omega=1$$.
 * The other class represents failure mode (when $$T_\omega$$ is high)  and we define $$y_\omega=0$$.
 * Our goal is to develop a classification model that predicts mode of operation by using data on pressure and conversion $$x_\omega=(P_\omega,C_\omega)$$.
 * In other words, model should be able to detect if reactor is failing by looking at a data pair of pressure and concentration. Is that possible?
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch6_gibbs_logistic_data.png" alt="" width="420"><figcaption><p>Gibbs reactor data showing separation between normal and failure operating modes.</p></figcaption></figure>
 
+{% hint style="danger" icon="flask" %}
 * Model correctly predicts the class 85% of time (214 out of 250 obs).
 * Logistic class also gives estimate of prob that predictions are in a given class.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_gibbs_logistic_confusion.png" alt="" width="489"><figcaption><p>Confusion matrix (left) and classification probabilities (right) for Gibbs reactor data.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_gibbs_logistic_confusion.png" alt="" width="489"><figcaption><p>Confusion matrix (left) and classification probabilities (right) for Gibbs reactor data.</p></figcaption></figure>
 
 #### Python implementation
 

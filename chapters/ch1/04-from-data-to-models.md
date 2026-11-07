@@ -80,17 +80,21 @@ The procedure to obtain the empirical pdf/cdf of a discrete RV is easier, as the
 
 ## Example: Gibbs Reactor
 
+{% hint style="danger" icon="flask" %}
 Here are $$S=$$1,000 observations $$x_\omega$$ along with the frequency and cumulative frequency.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch1_gibbs_press_pdf_cdf.png" alt="" width="489"></figure>
 
+{% hint style="danger" icon="flask" %}
 * Obtain empirical cdf by normalizing cumulative frequency with $$S=1000$$
 * Obtain empirical pdf by normalizing frequency with $$S=1000$$ and $$\Delta x=10$$
 
-  <figure><img src="../../.gitbook/assets/slides/ch1_gibbs_press_pdf_cdf_fit.png" alt="" width="489"></figure>
-
 * Empirical pdf and cdf match the pdf and cdf of a Gaussian RV model.
 * We conclude that our random phenomenon (pressure) behaves as a Gaussian RV.
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/slides/ch1_gibbs_press_pdf_cdf_fit.png" alt="" width="489"></figure>
 
 #### Python implementation: Empirical pdf/cdf versus a Gaussian model
 
@@ -132,6 +136,8 @@ plt.show()
 ```
 
 <figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-19-0.png" alt="" width="520"></figure>
+
+---
 
 ## Summarizing Statistics (Basic)
 
@@ -234,6 +240,8 @@ E_hat = 9.03,  V_hat = 3.75,  SD_hat = 1.94
 
 **Note:** The mean tells us where the data are located and the variance how spread out they are; together they give a quick summary of a random phenomenon.
 
+---
+
 ## Summarizing Statistics (Sample Approximations)
 
 Need theoretical pdf of $$X$$ to compute expected value, variance, and SD (theoretical statistics).
@@ -262,13 +270,15 @@ Statistics can be related to model parameters (e.g., for a Gaussian: $$\mathbb{E
 
 ## Example: Gibbs Reactor
 
+{% hint style="danger" icon="flask" %}
 Use reactor pressure data to compute empirical estimates for the mean $$\hat{\mathbb{E}}_X$$ and standard deviation $$\hat{\mathbb{SD}}_X$$ (we explore effect of using increasing amounts of data $$S$$).
-
-<figure><img src="../../.gitbook/assets/slides/ch1_gibbs_press_exp_var.png" alt="" width="489"></figure>
 
 Empirical mean and SD converge to the theoretical values $$\mathbb{E}_X=148$$ and $$\mathbb{SD}_X=25$$
 
 Estimates are not accurate for small sample sizes.
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/slides/ch1_gibbs_press_exp_var.png" alt="" width="489"></figure>
 
 #### Python implementation: Convergence of the empirical mean and SD
 
@@ -314,6 +324,8 @@ print(f"E_X = mu = {mu:.1f} bar,  SD_X = sigma = {sigma:.1f} bar")
 ```
 E_X = mu = 147.9 bar,  SD_X = sigma = 25.3 bar
 ```
+
+---
 
 ## Summarizing Statistics (Quantiles)
 

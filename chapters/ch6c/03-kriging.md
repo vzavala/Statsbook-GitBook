@@ -91,15 +91,19 @@
 
 ## Example: Kriging Model for Gibbs Reactor
 
+{% hint style="danger" icon="flask" %}
 * Compare prediction of kriging (nonlinear) model against that of linear model.
 * Gather data for inputs $$X=(P,T)$$ and output (conversion) $$Y=C$$.
 * Kriging model better captures nonlinearity.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_fit_gibbs_kriging_linear.png" alt="" width="489"><figcaption><p>Parity plots for kriging (left) and linear (right) models for Gibbs reactor.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_fit_gibbs_kriging_linear.png" alt="" width="489"><figcaption><p>Parity plots for kriging (left) and linear (right) models for Gibbs reactor.</p></figcaption></figure>
 
+{% hint style="danger" icon="flask" %}
 * Kriging provides uncertainty information for predictions (e.g., confidence intervals).
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_conf_gibbs.png" alt="" width="560"><figcaption><p>Observed outputs (white dots), mean outputs (black dots), and 95% confidence intervals.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_conf_gibbs.png" alt="" width="560"><figcaption><p>Observed outputs (white dots), mean outputs (black dots), and 95% confidence intervals.</p></figcaption></figure>
 
 #### Python implementation
 
@@ -190,12 +194,16 @@ plt.show()
 
 **Note:** As in the book, the observed values always lie within the predicted confidence intervals: the GP characterizes its uncertainty consistently.
 
+---
+
 ## Example: Experimental Design using GP Models
 
+{% hint style="danger" icon="flask" %}
 * In this example we illustrate how the uncertainty quantification capabilities of GP can be used to guide the collection of experiments.
 * Imagine that you have a system in which you can manipulate an input $$x$$ (e.g., temperature) to optimize the performance of an output $$y$$ (e.g., cost).
 * You start with 3 experimental data points that you use to train your GP. Note how the model prediction has no uncertainty at the location of the experimental points, but it has significant uncertainty in the unexplored regions of the input.
 * Note how the uncertainty information provides guidance on where to sample next and provides an indication when the model has been approximated well.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch6_kriging_uq.png" alt="" width="489"><figcaption><p>Evolution of model prediction uncertainty for GP with 3 data points (top-left), 4 data points (top-right), 5 data points (bottom-left) and 6 data points (bottom-right).</p></figcaption></figure>
 

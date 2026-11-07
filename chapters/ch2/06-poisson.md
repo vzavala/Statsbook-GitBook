@@ -96,14 +96,17 @@ Open in Colab: [`ch2_compare_poisson.ipynb`](https://colab.research.google.com/g
 
 ## Example Poisson
 
+{% hint style="danger" icon="flask" %}
 * Experimental reactor is equipped with automated cooling system.
 * Pump of cooling agent is not reliable (cavitates); failures have been recorded daily for last three months.
 * Assuming number of failures per month is Poisson, determine:
    * Is it more probable that the pump does not fail in a month or that the pump fails daily?
    * Probability that the pump fails an average number of times.
+{% endhint %}
 
-     <figure><img src="../../.gitbook/assets/slides/ch2_poissprocess.png" alt="" width="489"><figcaption><p>Pump failures (dark dots) recorded over three months.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch2_poissprocess.png" alt="" width="489"><figcaption><p>Pump failures (dark dots) recorded over three months.</p></figcaption></figure>
 
+{% hint style="danger" icon="flask" %}
 * From data, number of failures per month are $$x_{Jan}=8$$, $$x_{Feb}=12$$, $$x_{Mar}=14$$.
 * From these values we obtain empirical mean:
 
@@ -132,6 +135,7 @@ Open in Colab: [`ch2_compare_poisson.ipynb`](https://colab.research.google.com/g
   $$
 
    We evaluated at $$x=11$$ (and not $$x=11.3$$) because domain $$\mathcal{D}$$ contains integers.
+{% endhint %}
 
 #### Python implementation
 

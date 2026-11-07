@@ -81,11 +81,13 @@ Open in Colab: [`ch2_compare_gammas.ipynb`](https://colab.research.google.com/gi
 
 ## Example: Service Time
 
+{% hint style="danger" icon="flask" %}
 * You run warehouse logistics for your company and are responsible for making sure that queue of electric forklift trucks at charging stations remains under  control.
 * Average charging rate at a station is 0.25 trucks/hr (average charge time is 4 hours).
 * Charge time is random because there is variability in state-of-charge and age of batteries and average charge time is quite long because you need to protect them.
 
 You are interested in addressing the following questions:
+{% endhint %}
 
 {% hint style="info" %}
 * If queue has 2 trucks, what is prob that next truck will wait more than 3 hours?
@@ -94,11 +96,14 @@ You are interested in addressing the following questions:
 * You buy brand new batteries and this allows you to cut down average charging time to 2 hours. What is  prob of waiting more than 3 hours if queue has 1 truck?
 {% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Use $$X$$ to denote waiting time of next truck and let Poisson event represent completion of truck charging.
 * Prob that waiting time for next truck is more than 3 hours is $$\mathbb{P}(X>3)$$.
 * This is the prob that the charging of the 2 trucks in the queue *cannot* be completed in the next 3 hours.
 * $$X$$ is thus time to wait until we observe 2 Poisson events (two charge completions)
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Average waiting time per event is $$\beta=1/0.25=4$$ hr. We use:
 
   $$
@@ -122,6 +127,7 @@ You are interested in addressing the following questions:
   \mathbb{P}(X>3)&=\sum_{k=0}^{2}\frac{1}{k!}\left(\frac{3}{4}\right)^ke^{-3/4}=0.959.
   \end{aligned}
   $$
+{% endhint %}
 
 #### Python implementation
 

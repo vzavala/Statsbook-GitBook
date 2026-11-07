@@ -46,6 +46,7 @@ How much can we trust our parameter estimate and model predictions?
 
 ## Example: Estimating Heat Capacity
 
+{% hint style="danger" icon="flask" %}
 * Parameter estimate and covariance are:
 
   $$
@@ -83,13 +84,16 @@ How much can we trust our parameter estimate and model predictions?
   \theta_{2}&=-9.60\times 10^{-7}\pm1.55\times 10^{-6}.
   \end{aligned}
   $$
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Compute CIs for predicted heat capacities.
 * Compute $$q_S=43.77$$; this is the 0.95 quantile of $$\chi^2(S)$$ with $$S=30$$.
 * Compute $$\textrm{Cov}[\hat{\mathbf{y}}]=\mathbf{X}\textrm{Cov}[\hat{\theta}]\mathbf{X}^T$$ (a 30$$\times$$ 30 matrix).
 * Confidence intervals for outputs, observations, and true values are shown below.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch5_heat_capacity_outputs.png" alt="" width="350"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch5_heat_capacity_outputs.png" alt="" width="350"></figure>
 
 #### Python implementation: Confidence intervals for the parameters
 
@@ -161,6 +165,8 @@ plt.show()
 ```
 
 <figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_uncertainty-08-0.png" alt="" width="520"></figure>
+
+---
 
 #### Python implementation: Confidence intervals for the predictions
 

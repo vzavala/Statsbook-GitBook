@@ -42,6 +42,7 @@
 * Compare probs against the marginal probabilities of survival.
 {% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Conditional pdfs are obtained from joint and marginal pdfs as:
 
   $$
@@ -63,6 +64,7 @@
 * Knowing $$X_2$$ does not influence probability of failure of $$X_1$$ and vice versa.
 * Note conditional pdfs are marginal pdfs of $$X_1$$ and $$X_2$$.
 * Thus have $$\mathbb{P}(X_1\geq 1|X_2 = 1)=\mathbb{P}(X_1 \geq 1)=0.37$$ and $$\mathbb{P}(X_2 \geq 1|X_1 = 1)=\mathbb{P}(X_2 \geq 1)=0.90$$.
+{% endhint %}
 
 #### Python implementation: Conditional pdfs
 

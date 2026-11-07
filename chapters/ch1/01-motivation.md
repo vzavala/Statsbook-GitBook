@@ -68,18 +68,22 @@ From a scientific perspective, *statistics* provides a framework for thinking ab
 
 ## Example: Flow Mixer
 
+{% hint style="danger" icon="flask" %}
 * Consider a mixing system with input flows $$F_1$$, $$F_2$$ and output flow $$F_3$$
 * Sensors measure flows at time $$\omega$$: $$f_1(\omega)=101.5$$, $$f_2(\omega)=50.5$$, $$f_3(\omega)=151$$ gpm
 * Conservation laws tell us that $$f_3(\omega)=f_1(\omega)+f_2(\omega)$$ (but this is not true). Why?
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/mixing_sensor.png" alt="" width="350"></figure>
+<figure><img src="../../.gitbook/assets/slides/mixing_sensor.png" alt="" width="350"></figure>
 
 {% hint style="info" %}
 * What is known and unknown about this system?
 * What is the source of uncertainty?
 {% endhint %}
 
+{% hint style="danger" icon="flask" %}
 Collect  100 observations and monitor mismatch  $$\epsilon(\omega)=f_3(\omega)-f_1(\omega)-f_2(\omega)$$
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch1_mixer_flows.png" alt="" width="350"></figure>
 
@@ -150,15 +154,19 @@ plt.show()
 
 **Note:** As in the book, the mismatch in mass conservation comes from random sensor errors, not from a flaw in the conservation law. Enough data is needed to see this, and both engineering knowledge (conservation) and data are needed to understand the system.
 
+---
+
 ## Example: Gibbs Reactor
 
+{% hint style="danger" icon="flask" %}
 * Consider a reactor in which the reaction $$CO+2H_2\leftrightarrow CH_3OH$$ takes place
 
-  <figure><img src="../../.gitbook/assets/slides/gibbs_diagram.png" alt="" width="210"></figure>
-
-  <figure><img src="../../.gitbook/assets/slides/ch1_gibbs_data.png" alt="" width="350"></figure>
-
 * Data seem to indicate that the reaction is favored (achieves higher conversion $$\xi$$) at high pressure ($$P$$) and low temperature ($$T$$) but this is blurred by variability.
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/slides/gibbs_diagram.png" alt="" width="210"></figure>
+
+<figure><img src="../../.gitbook/assets/slides/ch1_gibbs_data.png" alt="" width="350"></figure>
 
 {% hint style="info" %}
 * What is known and unknown about this system?
@@ -220,8 +228,9 @@ plt.show()
 
 **Note:** As discussed in the book, data reveal trends but cannot explain them alone; a model (thermodynamics) helps, and some aspects of the system remain unknown, so new experiments may still be needed.
 
-<figure><img src="../../.gitbook/assets/slides/gibbs_diagram.png" alt="" width="700"></figure>
+---
 
+{% hint style="danger" icon="flask" %}
 $$
 \begin{aligned}
 \mu^{out}_k&=\mu_k+\gamma_k\cdot \xi\cdot \mu_{CO},\;k\in K\\
@@ -235,6 +244,11 @@ $$
 * This knowledge, however, is limited (e.g., makes assumptions, cannot explain random behavior).
 * How to predict $$\xi$$ as a function of $$P$$ and $$T$$ without any mechanistic knowledge?
 * What are trade-offs between mechanistic and empirical knowledge?
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/slides/gibbs_diagram.png" alt="" width="700"></figure>
+
+---
 
 ## Motivation
 

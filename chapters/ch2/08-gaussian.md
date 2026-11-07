@@ -32,6 +32,7 @@
 
 ## Example: Diffusion Phenomena
 
+{% hint style="danger" icon="flask" %}
 * Gaussian RV naturally emerges in “diffusion-like” phenomena
 * What is density of particles at location $$x$$ in domain $$(-\infty,\infty)$$ and at a given time $$t\in [0,T]$$?
 * One can show that such density, denoted as $$f(x,t)$$, solves the diffusion equation:
@@ -59,6 +60,9 @@
 
 * Particle position at any time is random and given by $$X(t)\sim\mathcal{N}(0,\sigma^2)$$
 * How does uncertainty change with diffusivity $$D$$ and time $$t$$?
+{% endhint %}
+
+---
 
 ## Gaussian
 
@@ -80,19 +84,23 @@ Think about implications from an estimation and uncertainty propagation perspect
 
 ## Example: Gaussian Mixing Problem
 
+{% hint style="danger" icon="flask" %}
 * We have input flow  $$f_1=10$$ (gpm) that can be measured with high accuracy so it is OK to assume this to be deterministic.
 * We have another input flow $$F_2$$ (gpm) that cannot be measured with high accuracy and is thus modeled as an RV $$\mathcal{N}(20,1)$$.
 * Uncertain flow $$F_2$$ can be controlled using a valve with coefficient $$\kappa \in [0,1]$$.
 
-  <figure><img src="../../.gitbook/assets/slides/mixing_diagram.png" alt="" width="420"></figure>
+* We have that $$F_3=10+\kappa F_2$$ and thus $$F_3$$ is a linear transformation of $$F_2$$
+* We thus have that $$F_3\sim\mathcal{N}(10+\kappa\cdot 20,\kappa^2\cdot 1)$$
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/slides/mixing_diagram.png" alt="" width="420"></figure>
 
 {% hint style="info" %}
 * What type of RV is output flow $$F_3=f_1+\kappa\cdot F_2$$? What is its mean and std dev?
 * How does uncertainty in $$F_3$$ change as $$\kappa\to 0$$ and as $$\kappa\to 1$$? Why?
 {% endhint %}
 
-* We have that $$F_3=10+\kappa F_2$$ and thus $$F_3$$ is a linear transformation of $$F_2$$
-* We thus have that $$F_3\sim\mathcal{N}(10+\kappa\cdot 20,\kappa^2\cdot 1)$$
+---
 
 ## Gaussian
 
@@ -142,13 +150,15 @@ Computing cdf involves evaluating an integral that depends on $$\mu$$ and $$\sig
 
 ## Example: Mixing Problem
 
+{% hint style="danger" icon="flask" %}
 * Recall $$F_3\sim\mathcal{N}(10+\kappa\cdot 20,\kappa^2\cdot 1)$$
 * Consider $$\kappa=1$$ and thus flow $$F_3\sim\mathcal{N}(30,1)$$
 
-  <figure><img src="../../.gitbook/assets/slides/ch2_mixing_gauss.png" alt="" width="560"><figcaption><p>Quantile functions for 𝒩(0, 1) (left) and 𝒩(30, 1) (right).</p></figcaption></figure>
-
 * Quantile of $$\mathcal{N}(0,1)$$ at $$\alpha=0.977$$ is  $$z_\alpha=2$$
 * Quantile of  $$\mathcal{N}(\mu,\sigma)$$ should be $$\mu+2\cdot \sigma=32$$.  Confirm this is true from plot
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/slides/ch2_mixing_gauss.png" alt="" width="560"><figcaption><p>Quantile functions for 𝒩(0, 1) (left) and 𝒩(30, 1) (right).</p></figcaption></figure>
 
 #### Python implementation: Quantiles of the output flow
 
@@ -220,6 +230,8 @@ z_alpha = 1.995,  Q_F3(alpha) = 31.995  (direct: 31.995)
 ```
 
 <figure><img src="../../.gitbook/assets/nb/ch2_mixing_gaussians-06-1.png" alt="" width="520"></figure>
+
+---
 
 ## Gaussian
 
@@ -357,12 +369,14 @@ Open in Colab: [`ch2_compare_gaussians.ipynb`](https://colab.research.google.com
 
 ## Example: Mixing Problem
 
+{% hint style="danger" icon="flask" %}
 * In what region (around mean) do we expect $$F_3\sim\mathcal{N}(30,1)$$ to be with 90% prob?
-
-  <figure><img src="../../.gitbook/assets/slides/ch2_conf_mixing.png" alt="" width="420"></figure>
 
 * We have $$1-\alpha=0.9$$ and thus $$\alpha=0.1$$ and $$\mathbb{Q}_Z(1-\frac{\alpha}{2})=1.645$$.
 * We thus have $$F_3\in [30-1.64\cdot 1,30+1.64\cdot 1]=[28.36,31.64]$$ with 90% prob.
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/slides/ch2_conf_mixing.png" alt="" width="420"></figure>
 
 #### Python implementation: 90% confidence region
 

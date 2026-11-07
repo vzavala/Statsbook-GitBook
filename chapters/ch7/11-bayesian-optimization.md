@@ -58,11 +58,14 @@
 
 ## Example: BO for Experimental Design
 
+{% hint style="danger" icon="flask" %}
 * A team of scientists want to determine optimal conditions to extract pectin from sunflower heads using oxalic acid as a solvent.
 * Need to identify how pectin yield ($$Y$$) is influenced by $$u_1$$ (extraction temperature), $$u_2$$ (extraction time), and $$u_3$$ (oxalic acid concentration).
 * Unfortunately, there is *no physical understanding* of system and yield thus needs to be optimized directly using data.
 * Apply BO to automatically identify experimental conditions that maximize yield.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Construct an initial kriging model with 3 experiments.
 * Subset of experiments proposed by BO and evolution of yield are shown below.
 * BO first runs the 3 inputs at their highest values to reduce uncertainty of model.
@@ -70,7 +73,9 @@
 * As such, it decides to increase temperature while continuing to lower time ($$u_2$$) and oxalic acid concentration ($$u_3$$).
 * Yield is improved quickly and it eventually saturates, converging to the conditions $$u_1=1$$, $$u_2=0.426$$, and $$u_3=0.24$$.
 * BO identifies optimal conditions in less than 30 experiments.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 $$
 \left[\begin{array}{ccc}
 1.0000 & 1.0000 & 1.0000 \\
@@ -90,6 +95,7 @@ $$
 $$
 
 *Subset of experiment history suggested by BO.*
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch7_bayesopt_extraction.png" alt="" width="420"><figcaption><p>Evolution of yield using experiments proposed by BO.</p></figcaption></figure>
 

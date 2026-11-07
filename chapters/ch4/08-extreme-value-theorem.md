@@ -34,11 +34,13 @@
 
 ## Example: Verifying Extreme Value Theorem
 
+{% hint style="danger" icon="flask" %}
 * Collect i.i.d. samples $$X_1,...,X_S$$ from $$X\sim \mathcal{N}(2,1)$$ and compute  $$X_{max}^S=\max\{X_1,\cdots, X_S\}$$.
 * Repeat procedure for different sets of samples and visualize pdf of $$X_{max}^S$$.
 * We do this for different $$S$$ to verify that pdf follows that of a GEV as we increase $$S$$.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch4_evt_weibull.png" alt="" width="350"><figcaption><p>Pdf for 𝑋 ∼ 𝒩(2, 1) (top-left) and sample max 𝑋ₘₐₓˢ with 𝑆 = 10 (top-right), 𝑆 = 100 (bottom-left) and 𝑆 = 1000 (bottom-right).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch4_evt_weibull.png" alt="" width="350"><figcaption><p>Pdf for 𝑋 ∼ 𝒩(2, 1) (top-left) and sample max 𝑋ₘₐₓˢ with 𝑆 = 10 (top-right), 𝑆 = 100 (bottom-left) and 𝑆 = 1000 (bottom-right).</p></figcaption></figure>
 
 #### Python implementation
 
@@ -103,6 +105,8 @@ P(X_max > 7) = 0.000273
 ```
 
 **Note:** As in the book, for S = 1000 the peak is likely above 5 but unlikely above 7 (P = 3.6e-4); these probabilities come from the extreme value model, without knowing the nature of X.
+
+---
 
 #### Python implementation
 

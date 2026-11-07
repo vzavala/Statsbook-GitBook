@@ -85,6 +85,7 @@ Open in Colab: [`ch2_compare_chisq.ipynb`](https://colab.research.google.com/git
 
 ## Example: Computing Confidence Intervals
 
+{% hint style="danger" icon="flask" %}
 * Consider output flow $$F_3\sim \mathcal{N}(30,1)$$.
 * Compute 90% confidence interval for $$F_3$$ using quantile of Chi-Squared RV.
 * Confidence interval is $$\mu\pm z_{\alpha/2}\sigma$$ with $$z_{\alpha/2}=\mathbb{Q}_Z(1-\alpha/2)$$ and $$Z\sim \mathcal{N}(0,1)$$.
@@ -96,6 +97,7 @@ Open in Colab: [`ch2_compare_chisq.ipynb`](https://colab.research.google.com/git
 
 * We use numerical package to compute $$\mathbb{Q}_Y(1-0.1)=2.71$$ and thus $$z_{\alpha/2}=\sqrt{2.71}=1.64$$.
 * Confidence interval is $$[30\pm 1\cdot 1.64]=[28.36,31.64]$$ gpm. This is the same confidence interval computed previously using the Gaussian RV model.
+{% endhint %}
 
 #### Python implementation: 90% interval for the mixer output
 
@@ -132,6 +134,8 @@ print(f"90% interval: [{mu - z_alpha_2*sigma:.2f}, {mu + z_alpha_2*sigma:.2f}] g
 Q_Y(0.9) = 2.71,  z_alpha/2 = 1.64  (normal: 1.64)
 90% interval: [28.36, 31.64] gpm
 ```
+
+---
 
 #### Python implementation: Going further: a 2D confidence ellipse from chi2(2)
 

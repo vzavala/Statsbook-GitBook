@@ -71,6 +71,7 @@ A discrete RV is easy to handle computationally (simple summations and counting)
 
 ## Example Discrete RV
 
+{% hint style="danger" icon="flask" %}
 * Consider a discrete RV with domain $$\mathcal{D}=\{-1,0,1,2\}$$ and pdf:
 
   $$
@@ -96,12 +97,15 @@ A discrete RV is easy to handle computationally (simple summations and counting)
   F(0)&=\mathbb{P}(X\leq 0)=\sum_{x|x\leq 0}f(x)=f(-1)+f(0)=0.4
   \end{aligned}
   $$
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 Pdf and cdf of the RV are:
 
-<figure><img src="../../.gitbook/assets/slides/ch1_pdfcdfdiscrete.png" alt="" width="489"><figcaption><p>Pdf and cdf for simple discrete random variable.</p></figcaption></figure>
-
 Note discontinuous nature of these functions.
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/slides/ch1_pdfcdfdiscrete.png" alt="" width="489"><figcaption><p>Pdf and cdf for simple discrete random variable.</p></figcaption></figure>
 
 #### Python implementation
 
@@ -186,6 +190,8 @@ plt.show()
 
 **Note:** The cdf values match the fraction of outcomes below each threshold, e.g. F(0) = 0.4 and F(1) = 1.
 
+---
+
 ## Probability Density of Discrete and Continuous RVs
 
 Continuous $$X$$ has continuous domain $$\mathcal{D}$$ and pdf/cdf are continuous functions.
@@ -234,6 +240,7 @@ A continuous RV is more difficult to handle computationally since it involves in
 
 ## Example Continuous RV
 
+{% hint style="danger" icon="flask" %}
 * Consider continuous RV with domain $$\mathcal{D}=(-\infty,\infty)$$ and pdf of the form:
 
   $$
@@ -251,12 +258,15 @@ A continuous RV is more difficult to handle computationally since it involves in
   $$
 
 * One can show $$f(x)=dF(x)/dx$$ and that cdf satisfies $$0\leq F(t)\leq 1$$ for any $$t\in \mathcal{D}$$.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 Pdf and cdf of the RV are:
 
-<figure><img src="../../.gitbook/assets/slides/ch1_pdfcdfcontinuous.png" alt="" width="489"><figcaption><p>Pdf and cdf of continuous RV and corresponding discrete approximations.</p></figcaption></figure>
-
 Continuous pdf and cdf are approximated using discretized versions with $$\Delta x=0.5$$.
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/slides/ch1_pdfcdfcontinuous.png" alt="" width="489"><figcaption><p>Pdf and cdf of continuous RV and corresponding discrete approximations.</p></figcaption></figure>
 
 #### Python implementation
 

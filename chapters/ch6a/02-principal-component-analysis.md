@@ -152,6 +152,7 @@
 
 ## Example: PCA Analysis for Gibbs Reactor Data
 
+{% hint style="danger" icon="flask" %}
 * Dataset with measurements of pressure, temperature, and conversion $$(P,T,C)$$.
 * If we visualize the data in 3D $$(P,T,C)$$ space, they separate into clusters (failure/normal mode).
 * Humans can only visualize data in a small number of dimensions (typically 2D plots).
@@ -159,11 +160,14 @@
 * Visualizing data in this reduced space hides clusters in the data.
 * Common issue with visualizing data in many dimensions (hundreds to thousands).
 * Specifically, reduction might *hide* key aspects of data.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * We visualize data in 2D but in info space of PCs $$(T_1,T_2)$$ and of $$(T_2,T_3)$$.
 * Visualization clearly reveals the clusters.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_pca_gibbs.png" alt="" width="420"><figcaption><p>3D visual in physical space of 𝑃, 𝑇, 𝐶 (top-left). 2D visualization in physical space of 𝐶, 𝑃 (top-right). 2D visual in info space of 𝑇₁, 𝑇₂ (bottom-left) and of 𝑇₂, 𝑇₃ (bottom-right).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_pca_gibbs.png" alt="" width="420"><figcaption><p>3D visual in physical space of 𝑃, 𝑇, 𝐶 (top-left). 2D visualization in physical space of 𝐶, 𝑃 (top-right). 2D visual in info space of 𝑇₁, 𝑇₂ (bottom-left) and of 𝑇₂, 𝑇₃ (bottom-right).</p></figcaption></figure>
 
 #### Python implementation
 

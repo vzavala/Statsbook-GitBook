@@ -125,6 +125,7 @@ We can now formally analyze if risk measures are proper or not.
 
 ## Example: Risk Measures as Norms
 
+{% hint style="danger" icon="flask" %}
 Consider the vector $$y=(100,70,50,20,10)$$
 
 * Mean is:
@@ -152,6 +153,7 @@ The CVaR values for the vector are:
    $$(1/1)\cdot (100)=100$$
 
 Note how the CVaR has mean and worst-case values as extremes.
+{% endhint %}
 
 #### Python implementation
 

@@ -107,14 +107,17 @@ Open in Colab: [`ch2_compare_binomial.ipynb`](https://colab.research.google.com/
 
 ## Example Binomial
 
+{% hint style="danger" icon="flask" %}
 Consider machine status problem; recall we have established that status is $$\mathcal{B}(0.5)$$.
 
 * What is probability of finding 2 failures in a sequence of 10 times?
 * What is probability of finding 10 failures in a sequence of 10 times?
 * What is average number of failures in a sequence of 10 times?
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch2_unifprocess.png" alt="" width="489"><figcaption><p>Failures (dark dots) recorded over three years.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch2_unifprocess.png" alt="" width="489"><figcaption><p>Failures (dark dots) recorded over three years.</p></figcaption></figure>
 
+{% hint style="danger" icon="flask" %}
 Status is a Bernoulli RV with $$p=0.5$$ and thus the number of failures in an $$n$$-sequence is $$\textrm{Bi}(n,p)$$.
 
 * Probability of finding 2 failures in a sequence of $$n=10$$ times is:
@@ -134,6 +137,7 @@ Status is a Bernoulli RV with $$p=0.5$$ and thus the number of failures in an $$
   $$
   \mathbb{E}_X=n\cdot p=10\cdot 0.5=5
   $$
+{% endhint %}
 
 #### Python implementation
 

@@ -24,12 +24,7 @@
 
 ## Example: Lifetime of Thermostat
 
-{% hint style="info" %}
-* Marginal pdf and cdf of component lifetimes $$X_1,X_2$$.
-* Compute prob that  $$X_1$$ survives after 1 year.
-* Compute prob that $$X_2$$ survives after 1 year.
-{% endhint %}
-
+{% hint style="danger" icon="flask" %}
 * Marginal pdf for $$X_1$$ is obtained by integrating $$X_2$$ out over $$\mathcal{D}_2=[0,\infty)$$:
 
   $$
@@ -46,7 +41,15 @@
   f_2(x_2)&=\frac{1}{\mu_2}e^{-x_2/\mu_2}.
   \end{aligned}
   $$
+{% endhint %}
 
+{% hint style="info" %}
+* Marginal pdf and cdf of component lifetimes $$X_1,X_2$$.
+* Compute prob that  $$X_1$$ survives after 1 year.
+* Compute prob that $$X_2$$ survives after 1 year.
+{% endhint %}
+
+{% hint style="danger" icon="flask" %}
 * Marginals are pdfs of exponential RVs with $$\mu_1=1$$ and $$\mu_2=10$$ years and thus:
 
   $$
@@ -62,6 +65,7 @@
   \mathbb{P}(X_2\geq 1)&=1-F_2(1)=e^{-1/10}=0.90.
   \end{aligned}
   $$
+{% endhint %}
 
 #### Python implementation: Marginal pdfs and survival
 

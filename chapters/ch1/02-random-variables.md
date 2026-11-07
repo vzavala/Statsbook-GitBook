@@ -46,11 +46,13 @@ Some observations:
 
 ## Example: Gibbs Reactor
 
+{% hint style="danger" icon="flask" %}
 * Assume *pressure* varies due to malfunction of flow control and model this as RV $$X$$
 * Collect 1000 realizations $$x_\omega$$ (data); visualize as cumulative frequency and frequency.
 * Cumulative frequency approximates cdf, frequency approximates pdf.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch1_gibbs_press_pdf_cdf.png" alt="" width="420"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch1_gibbs_press_pdf_cdf.png" alt="" width="420"></figure>
 
 #### Python implementation: Realizations, frequency, and cumulative frequency
 

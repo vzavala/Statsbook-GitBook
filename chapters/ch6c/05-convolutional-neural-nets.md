@@ -95,22 +95,27 @@
 
 ## Example: Classification of Flow Cytometry
 
+{% hint style="danger" icon="flask" %}
 * Endotoxins generated from bacteria can be detected by using solution that contains small droplets that are filled with a liquid crystal.
 * Endotoxin binds to surface of droplet and generates perceptible change in configuration of liquid crystal inside droplets.
 * Change in config can be measured using a flow cytometer; thousands of droplets are passed through cytometer and generate a light scatter field.
 * Shape of scatter field changes with concentration and type of endotoxin.
 * Train CNNs to automatically analyze scatter data to detect presence of endotoxin and to determine  bacterial species that endotoxin is associated with.
 * We train CNN to classify presence (or not) of endotoxin; to do so, we collect 98 observations (49 with no endotoxin present and 49 with endotoxin present).
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch6_endotoxins_data_caseI.png" alt="" width="420"><figcaption><p>Example observations for light scatter fields for contaminated and clean solutions.</p></figcaption></figure>
 
+{% hint style="danger" icon="flask" %}
 * We train CNN with single hidden layer that contains a $$3\times 3$$ filter (this is simple CNN).
 * We use a ReLU function to activate convolved images.
 * Confusion matrix shows that CNN perfectly classifies scatter fields (100% accuracy).
 * Spatial pattern of scatter fields contains significant information to tell them apart.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_endotoxins_confusion_caseI.png" alt="" width="489"><figcaption><p>Confusion matrix for training set (left) and validation set (right).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_endotoxins_confusion_caseI.png" alt="" width="489"><figcaption><p>Confusion matrix for training set (left) and validation set (right).</p></figcaption></figure>
 
+{% hint style="danger" icon="flask" %}
 * Upon inspection,  we find that filter matrix is of form:
 
   $$
@@ -124,8 +129,9 @@
 * Filter does not have a structure that we are familiar with (e.g., Sobel or Gaussian).
 * To determine what filter is doing, we visualize activated images.
 * CNN filter highlights shape of scatter field.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_endotoxins_activations_caseI.png" alt="" width="244"><figcaption><p>Activations of images shown in Figure above using CNN filter.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_endotoxins_activations_caseI.png" alt="" width="244"><figcaption><p>Activations of images shown in Figure above using CNN filter.</p></figcaption></figure>
 
 #### Python implementation
 
@@ -262,11 +268,15 @@ Theta =
 
 **Note:** As in the book, the CNN filter highlights the shape of the scatter field: fields with a bipolar shape (no endotoxin) occupy a larger volume.
 
+---
+
+{% hint style="danger" icon="flask" %}
 * Now train CNN to distinguish bacterial species that generate endotoxin.
 * Collect 84 obs; 24 for *Escherichia coli* (EC), 28 for *Pseudomonas aeruginosa* (PA), and 32 for *Salmonella* Minnesota (SM).
 * We use 45 observations for training and 39 for validation.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_endotoxins_data_caseII.png" alt="" width="280"><figcaption><p>Example observations for light scatter fields for three different bacterial species.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_endotoxins_data_caseII.png" alt="" width="280"><figcaption><p>Example observations for light scatter fields for three different bacterial species.</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/slides/ch6_endotoxins_confusion_caseII.png" alt="" width="489"><figcaption><p>Confusion matrix for training set (left) and validation set (right) for classification of bacterial species.</p></figcaption></figure>
 
@@ -408,6 +418,8 @@ Theta_2 =
 <figure><img src="../../.gitbook/assets/nb/ch6_cnn_endotoxins_caseII-09-1.png" alt="" width="520"></figure>
 
 **Note:** Compare the accuracy with Case I: the harder the classes are to tell apart, the lower the accuracy.
+
+---
 
 #### Python implementation
 
@@ -790,6 +802,8 @@ plt.show()
 <figure><img src="../../.gitbook/assets/nb/ch6_cnn_sds_caseI-25-0.png" alt="" width="520"></figure>
 
 **Note:** As in the book, the CNN classifies the droplets perfectly (100% validation accuracy): the spatial pattern of the droplets encodes the presence of SDS.
+
+---
 
 #### Python implementation
 

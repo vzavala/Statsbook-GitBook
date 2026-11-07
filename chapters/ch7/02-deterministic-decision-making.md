@@ -50,6 +50,7 @@
 
 ## Example: Deterministic Decision-Making
 
+{% hint style="danger" icon="flask" %}
 * Facility wants to purchase on-site generator to mitigate rising electricity costs from the local power grid.
 * Power demand/load of facility is random variable $$L$$.
 * Capacity of generator is $$u$$ and residual demand is $$R=\max(L-u,0)$$.
@@ -62,7 +63,9 @@
 
 * To simplify decision, DM  uses representative value of load $$r=\displaystyle \max_{\omega \in\mathcal{S}}r_\omega$$ (peak).
 * Cost in this case is deterministic: $$y(u)=\alpha_R\cdot r^2 + \alpha_u\cdot u^2$$.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * DM has possibility of selecting generators of capacities $$\mathcal{U}=\{0,1,2,...,10\}$$.
 * Case for $$u=0$$ is “do-nothing” case (current system) and $$u=10$$ is max capacity.
 * Deterministic generator design problem is:
@@ -76,6 +79,7 @@
 * Simulations generate costs $$y_\omega(u)=\alpha_R\cdot {r_\omega(u^*_D)}^2 + \alpha_u\cdot (u_D^*)^2$$ for $$\omega \in \mathcal{S}$$.
 * Average cost of new system is $$67.4$$ and average cost of current system is $$50.1$$.
 * However, new system avoids extreme/peak costs (helps with budgeting).
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch7_generator_det.png" alt="" width="560"></figure>
 

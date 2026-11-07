@@ -17,6 +17,7 @@
 
 ## Example: Sparse PCA for Gibbs Reactor
 
+{% hint style="danger" icon="flask" %}
 * Applying PCA to  $$\mathbf{X}^T\mathbf{X}$$ we obtain:
 
   $$
@@ -49,10 +50,13 @@
   $$
 
 * Suggests eliminating $$X_5$$ (temperature), $$X_2$$ ($$CO$$ flow), and $$X_4$$ ($$CH_3OH$$ flow).
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Elimination of $$X_5,X_2,X_4$$ does not affect model fit and provides precise estimates.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_gibbs_pca_fit_sparse.png" alt="" width="560"><figcaption><p>Fit of linear model under PCA estimation (left) and fit using subset of variables identified with sparse PCA (right).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_gibbs_pca_fit_sparse.png" alt="" width="560"><figcaption><p>Fit of linear model under PCA estimation (left) and fit using subset of variables identified with sparse PCA (right).</p></figcaption></figure>
 
 #### Python implementation
 

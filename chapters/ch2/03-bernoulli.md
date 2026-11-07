@@ -96,6 +96,7 @@ Open in Colab: [`ch2_compare_bernoulli.ipynb`](https://colab.research.google.com
 
 ## Example Bernoulli
 
+{% hint style="danger" icon="flask" %}
 * Consider the previous machine status problem and the following questions:
    * Is it suitable to model the machine status as a Bernoulli RV?
    * If so, what would be its parameters?
@@ -114,6 +115,7 @@ Open in Colab: [`ch2_compare_bernoulli.ipynb`](https://colab.research.google.com
 * Machine status thus seems to behave as a Bernoulli RV $$\mathcal{B}(0.5)$$.
 * In this example, uniform and Bernoulli models are identical.
 * Uniform model is a generalization of Bernoulli model.
+{% endhint %}
 
 #### Python implementation: Machine status as a Bernoulli RV
 

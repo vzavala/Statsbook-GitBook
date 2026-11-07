@@ -13,6 +13,7 @@
 
 ## Example: 2D Signals as Superposition of 2D Waves
 
+{% hint style="danger" icon="flask" %}
 * 2D field (e.g., an image) is superposition of 2D fields (each with a different freq).
 * 2D field with a given freq is sheet with wave pattern (higher freqs have finer waves).
 * Consider 2D function:
@@ -25,6 +26,7 @@
 
 * Below we plot this function in 3D and we can see that this forms a wavy field (sheet) and show two waves that form function.
 * We also visualize function as 2D projection. This is what you would see if you observed wavy sheet from the top.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch6_2dsinetotal.png" alt="" width="489"><figcaption><p>2D function 𝑓(𝑥₁, 𝑥₂) shown in 3D and as a projection in 2D (top panels). Low-frequency component (middle panels) and high-frequency component (bottom panels).</p></figcaption></figure>
 
@@ -69,11 +71,15 @@ plt.show()
 
 **Note:** As in the book, any image is a superposition of waves of different frequencies; identifying them lets us design filters.
 
+---
+
 ## Example: 2D FT Applied to Filtering
 
+{% hint style="danger" icon="flask" %}
 * We analyze frequency content of a 2D uniform average filter (defined by a 2D step function) and of a 2D Gaussian filter (defined by a 2D Gaussian kernel).
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_2dfourierfilter.png" alt="" width="489"><figcaption><p>Left panels: Uniform filter, Fourier transform in 2D, and Fourier transform in 3D. Right panels: Gaussian filter, Fourier transform in 2D, and Fourier transform in 3D.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_2dfourierfilter.png" alt="" width="489"><figcaption><p>Left panels: Uniform filter, Fourier transform in 2D, and Fourier transform in 3D. Right panels: Gaussian filter, Fourier transform in 2D, and Fourier transform in 3D.</p></figcaption></figure>
 
 #### Python implementation
 
@@ -122,6 +128,9 @@ plt.show()
 
 **Note:** As in the book, the Gaussian filter keeps only the low frequencies (the bright region in the middle of its spectrum), which is why it preserves only coarse features.
 
+---
+
+{% hint style="danger" icon="flask" %}
 * We now illustrate how to use FTs to perform convolutions.
 * We take original image $$f$$ and obtain its 2D FT $$\hat{f}$$.
 * Construct Gaussian filter with $$\sigma=1$$ ($${g}_{1}$$).  We obtain its FT $$\hat{g}_1=\mathcal{F}\{g_1\}$$.
@@ -129,6 +138,7 @@ plt.show()
 * Value of $$\sigma$$ for first filter is smaller (filter is designed to only eliminate high freqs).
 * Obtain filtered images in freq domain: $$\hat{f}_1=\hat{f}\cdot \hat{g}_1$$ and $$\hat{f}_2=\hat{f}\cdot \hat{g}_2$$.
 * Obtain filtered images in orig domain via inverse FT: $$f_1=\mathcal{F}^{-1}\{\hat{f}_1\}$$, $$f_2=\mathcal{F}^{-1}\{\hat{f}_2\}$$.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch6_2d_fourier_image.png" alt="" width="489"><figcaption><p>Top panels: Original and filtered images. Bottom panels: Frequency spectrum of original and filtered images.</p></figcaption></figure>
 

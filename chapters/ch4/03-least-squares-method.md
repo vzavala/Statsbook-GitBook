@@ -19,6 +19,7 @@
 
 ## Example: Least-Squares for Weibull
 
+{% hint style="danger" icon="flask" %}
 * Want to estimate $$\theta=(\xi,\beta)$$ for model $$X\sim \textrm{Weibull}(\xi,\beta)$$.
 * We are given data $$x_\omega,\; \omega \in \mathcal{S}$$ to obtain empirical cdf $$\hat{F}(t_k)$$ for $$t_k,\, k=1,...,N$$.
 * Recall cdf of Weibull model is $$F_X(t|\theta)=(1-e^{-(t/\beta)^\xi})$$.
@@ -29,10 +30,13 @@
   $$
 
 * We solve this problem using a numerical software package.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Weibull model using the estimated parameters fits  data well.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch4_weibull_ls_fit.png" alt="" width="420"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch4_weibull_ls_fit.png" alt="" width="420"></figure>
 
 #### Python implementation
 

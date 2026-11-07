@@ -154,6 +154,7 @@
 
 ## Example: Kernel Estimation for Hougen-Watson
 
+{% hint style="danger" icon="flask" %}
 * Consider Hougen-Watson model:
 
   $$
@@ -163,8 +164,9 @@
 * This model might not fit data if mechanism proposed is not correct.
 * Instead of using this model, we use data $$(x_\omega,y_\omega)$$ to construct a kernel model.
 * We use $$k(x_\omega,x_{\omega'})=\exp(-\gamma\|x_\omega-x_{\omega'}\|^2)$$ with $$\gamma=0.1,0.001,0.0001$$.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_hougen_fit_kernel.png" alt="" width="630"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_hougen_fit_kernel.png" alt="" width="630"></figure>
 
 #### Python implementation
 

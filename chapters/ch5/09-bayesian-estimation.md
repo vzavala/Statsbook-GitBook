@@ -62,18 +62,22 @@
 
 ## Example: Bayesian Estimation
 
+{% hint style="danger" icon="flask" %}
 * Consider  simple linear model $$Y=\theta X+\epsilon$$ and assume that we have a single observation that we denote as $$(x=1,y=2)$$.
 * Prior knowledge is $$\theta\sim \mathcal{N}(0,1)$$ and this defines the prior $$f(\theta)$$.
 * Info provided by data $$(x,y)$$ is $$y\sim \mathcal{N}(\theta x,1)$$ and this defines  likelihood $$f(y|\theta)$$.
 * Combined information given by posterior pdf $$f(\theta|y)\propto f(y|\theta)f(\theta)$$.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch5_bayes.png" alt="" width="489"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch5_bayes.png" alt="" width="489"></figure>
 
+{% hint style="danger" icon="flask" %}
 * Location of maximum points for pdfs and log pdfs coincides.
 * According to prior information (embedded in $$f(\theta)$$), we have that $$\theta=0$$ is the most likely value.
 * According to new information (embedded in $$f(y|\theta)$$), we have that $$\theta=2$$ is the most likely value. This would be estimate obtained with MLE (ignoring prior information).
 * According to combined prior and new information (embedded in $$f(\theta|y)$$), we have that $$\theta=1$$ is the most likely value.
 * Bayesian estimation naturally “blends" old and new information and finds an estimate that is a trade-off point.
+{% endhint %}
 
 #### Python implementation
 
@@ -130,6 +134,8 @@ posterior (Bayes)  is maximized at theta = 1.00
 ```
 
 **Note:** As in the book, the posterior blends the prior (old information) and the likelihood (new data): its most likely value, theta = 1, is a trade-off between the two.
+
+---
 
 #### Python implementation
 
@@ -197,6 +203,8 @@ after batch 3: theta_hat = [ 6.2546e+00  2.9045e-03 -8.1641e-07],  SD = [9.70e-0
 
 **Note:** As in the book, after the 6th update the covariance equals the one obtained with the full data set: the posterior of one step is the prior of the next.
 
+---
+
 ## Bayesian Estimation
 
 * Bayes framework can naturally capture prior info on input data $$\mathbf{X}$$.
@@ -227,12 +235,15 @@ after batch 3: theta_hat = [ 6.2546e+00  2.9045e-03 -8.1641e-07],  SD = [9.70e-0
 
 ## Example: Data Reconciliation
 
+{% hint style="danger" icon="flask" %}
 * We consider a system with output flow $$Y$$ and input flow $$X$$.
 * There is no transformation in the system and we thus know that conservation $$Y=X$$ must hold.
 * We have a single input-output observation (measurement) that we denote as $$(x_\omega,y_\omega)$$.  These input and output measurements are subject to Gaussian errors with variances $$\sigma_x^2$$ and $$\sigma_y^2$$.
 * Because of sensor errors in input and output flow, observed input and output do not satisfy conservation (i.e., $$x_\omega\neq y_\omega$$).
 * We use Bayesian estimation to obtain estimate of input flow  $$\hat{x}$$ that reconciles observed input and output data  to conservation equation (model).
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Bayes' theorem tells us that $$f(x|y)\propto f(y|x)f(x)$$.
 * We obtain $$\hat{x}$$ by finding value $$x$$ that maximizes $$f(x|y)$$.
 * Bayes estimation problem seeks to maximize $$f(x|y)$$ and can be expressed as:
@@ -245,7 +256,9 @@ after batch 3: theta_hat = [ 6.2546e+00  2.9045e-03 -8.1641e-07],  SD = [9.70e-0
 
 * Estimate $$\hat{x}$$ seeks to minimize error from conservation and minimize deviation from reference value $$x_\omega$$ (from observation).
 * How much weight is put on conservation and correction is controlled by $$\sigma_y^2$$ and $$\sigma_x^2$$.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * To find solution, we take derivative of objective function with respect to $$x$$:
 
   $$
@@ -266,6 +279,7 @@ after batch 3: theta_hat = [ 6.2546e+00  2.9045e-03 -8.1641e-07],  SD = [9.70e-0
 
 * From this expression it is clear that, if we trust output measurement much more than input measurement then $$\sigma_y^2/\sigma_x^2\to 0$$ and thus $$\hat{x}\to y_\omega$$.
 * On the other hand, if we trust input measurement much more than output measurement then $$\sigma_y^2/\sigma_x^2\to \infty$$ and thus $$\hat{x}\to x_\omega$$.
+{% endhint %}
 
 #### Python implementation
 

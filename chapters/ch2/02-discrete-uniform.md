@@ -112,13 +112,16 @@ Open in Colab: [`ch2_compare_uniformd.ipynb`](https://colab.research.google.com/
 
 ## Example Discrete Uniform
 
+{% hint style="danger" icon="flask" %}
 * Have machine that appears to fail randomly and you have collected weekly data for over 3 years (156 weeks).
 * You have not identified any pattern but you have noticed that the machine has failed 79 out of 156 weeks.
    * Is it suitable to model machine status as a uniform RV?
    * If so, what would be parameters?
+{% endhint %}
 
-     <figure><img src="../../.gitbook/assets/slides/ch2_unifprocess.png" alt="" width="489"><figcaption><p>Failures (dark dots) recorded over three years.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch2_unifprocess.png" alt="" width="489"><figcaption><p>Failures (dark dots) recorded over three years.</p></figcaption></figure>
 
+{% hint style="danger" icon="flask" %}
 * Define machine status as $$X=0$$ when it fails and $$X=1$$ when it works.
 * We thus have $$\mathcal{D}=\{0,1\}$$ and thus $$a=0$$, $$b=1$$ and $$n=2$$; i.e., $$X\sim \mathcal{U}(0,1)$$.
 * For uniform RV model we have that $$\mathbb{P}(X=x)=1/n$$ for all $$x\in \mathcal{D}$$ and thus $$\mathbb{P}(X=0)=1/2$$ and $$\mathbb{P}(X=1)=1/2$$.
@@ -132,6 +135,7 @@ Open in Colab: [`ch2_compare_uniformd.ipynb`](https://colab.research.google.com/
   $$
 
 * Data suggests that machine status follows behavior of $$\mathcal{U}(0,1)$$ (it is equally likely that it fails or works).
+{% endhint %}
 
 #### Python implementation: Machine status as a uniform RV
 

@@ -162,8 +162,11 @@ plt.show()
 
 **Note:** As in the book, X^T X has zero eigenvalues (the estimate is not unique), and a model with only three non-zero parameters fits about as well: regularization reduces model complexity.
 
+---
+
 ## Example: Hougen-Watson Regularized
 
+{% hint style="danger" icon="flask" %}
 * We augment SSE using a ridge regularizer:
 
   $$
@@ -173,8 +176,9 @@ plt.show()
    where $$\kappa=1$$ and $$\bar{\theta}=0$$.
 
 * We can see that regularizer helps better define minimum points of SSE function but does not avoid presence of non-physical regions.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch5_hougen_span_reg.png" alt="" width="489"><figcaption><p>Behavior of regularized SSE function as we span values for θ₁ and θ₂.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch5_hougen_span_reg.png" alt="" width="489"><figcaption><p>Behavior of regularized SSE function as we span values for θ₁ and θ₂.</p></figcaption></figure>
 
 #### Python implementation
 
@@ -240,8 +244,11 @@ plt.show()
 
 **Note:** As in the book, the penalty makes the minimum sharper but does not remove the non-physical regions, so numerical issues may remain.
 
+---
+
 ## Example: Hougen-Watson Constrained
 
+{% hint style="danger" icon="flask" %}
 * Consider now constrained MLE problem:
 
   $$
@@ -264,7 +271,9 @@ plt.show()
   \hat{\theta}&=(1.25,0.06,0.04,0.11,1.19).
   \end{aligned}
   $$
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * The numerical package does not provide Hessian info but provides Jacobian  $$\nabla_\theta \mathbf{m}(\hat{\theta})$$.
 * We approximate Hessian using Gauss-Newton approximation.
 * Info used to determine if estimated params are unique and to obtain covariance:
@@ -293,6 +302,7 @@ plt.show()
   $$
   \mathbb{V}[\hat{\theta}]= (5.01\times 10^{-1}, 1.26\times 10^{-3}, 6.36\times 10^{-4}, 3.76\times 10^{-3},4.66\times 10^{-1}).
   $$
+{% endhint %}
 
 #### Python implementation
 

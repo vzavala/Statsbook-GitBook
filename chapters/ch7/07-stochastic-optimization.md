@@ -44,6 +44,7 @@
 
 ## Example: Deterministic vs. Stochastic Decision-Making
 
+{% hint style="danger" icon="flask" %}
 * Consider generator sizing problem and assume now that DM would like to size system in a way that it captures uncertainty of demand.
 * DM formulates optimization problem that minimizes CVaR of cost (with $$\alpha=0.9$$):
 
@@ -52,13 +53,16 @@
   $$
 
 * Stochastic problem selects a generator with capacity of $$u^*=4$$, which is smaller than deterministic $$u_D^*=6$$.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * We compare the pdf/cdf for the deterministic and stochastic design.
 * It is clear that stochastic solution reduces overall costs.
 * Stochastic solution offers  same level of protection to extreme costs as deterministic.
 * This indicates that deterministic solution is *unnecessarily* conservative.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch7_generator_stoch.png" alt="" width="350"><figcaption><p>Pdf and cdf for generator sizing problem using deterministic and stochastic decision-making.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch7_generator_stoch.png" alt="" width="350"><figcaption><p>Pdf and cdf for generator sizing problem using deterministic and stochastic decision-making.</p></figcaption></figure>
 
 #### Python implementation
 
@@ -139,6 +143,8 @@ plt.show()
 <figure><img src="../../.gitbook/assets/nb/ch7_generator_stoch-04-0.png" alt="" width="520"></figure>
 
 **Note:** As in the book, stochastic optimization lets us shape the pdf/cdf of the cost; CVaR is particularly useful because the probability level alpha tunes the protection against high costs.
+
+---
 
 #### Python implementation
 

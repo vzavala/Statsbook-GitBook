@@ -24,6 +24,7 @@
 
 ## Example: Conflict Resolution in Sizing
 
+{% hint style="danger" icon="flask" %}
 * DM is now interested in exploring trade-off between expected cost and standard deviation:
 
   $$
@@ -42,12 +43,15 @@
   $$
 
    for different values of $$\alpha\in[0,1]$$.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * In top-left, can see that there is conflict between mean cost and its variance as we span $$\kappa$$.
 * In top-right, we see how optimal capacity increases as we put more emphasis on SD.
 * In bottom row we see the trade-off curve of mean and SD as we span $$\alpha$$. This has a similar effect as spanning $$\kappa$$.
 * This highlights how CVaR can be used to explore trade-offs. However, we notice differences in size of generators.
 * Difference is due to asymmetric penalization of CVaR vs. symmetric of SD.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch7_generator_conflict.png" alt="" width="489"><figcaption><p>Trade-off curve obtained as we span κ in mean-variance risk measure (top). Trade-off curve obtained as we span α in CVaR risk measure (bottom).</p></figcaption></figure>
 

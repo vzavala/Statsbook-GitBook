@@ -39,6 +39,7 @@
 
 ## Example: FT of Periodic Signal
 
+{% hint style="danger" icon="flask" %}
 * Construct a periodic signal:
 
   $$
@@ -48,8 +49,9 @@
    with freqs $$\omega_1=30$$ and $$\omega_2=60$$.
 
 * Compute FT to obtain $$\hat{f}(\omega)$$; this reveals dominant freqs at $$\omega_1=30$$ and $$\omega_2=60$$.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_sine_signal.png" alt="" width="420"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_sine_signal.png" alt="" width="420"></figure>
 
 #### Python implementation
 
@@ -130,14 +132,18 @@ plt.show()
 
 **Note:** As in the book, the Fourier transform reveals the two dominant frequencies of the signal (30 and 60).
 
+---
+
 ## Example: FT of Pulse and Gaussian
 
+{% hint style="danger" icon="flask" %}
 * FT for rect pulse function and for Gaussian function.
 * Rect has strong content at low freqs and decays (non-monotonic) at high freqs.
 * Gaussian has strong content at low freqs and decays (monotonic) at high freqs.
 * Freq content of Gaussian controlled using $$\sigma$$.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_fourier_filters.png" alt="" width="350"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_fourier_filters.png" alt="" width="350"></figure>
 
 #### Python implementation
 
@@ -187,6 +193,8 @@ plt.show()
 <figure><img src="../../.gitbook/assets/nb/ch6_fourier_transform_filters-03-0.png" alt="" width="520"></figure>
 
 **Note:** As in the book, a wide Gaussian has only low frequencies and a narrow one needs high frequencies: sigma controls the frequency content of the filter.
+
+---
 
 #### Python implementation
 
@@ -240,6 +248,8 @@ plt.show()
 
 **Note:** As in the book, the filter removes the high-frequency component and keeps the low-frequency one, as the convolution theorem predicts.
 
+---
+
 #### Python implementation: Input signal
 
 {% hint style="success" %}
@@ -289,6 +299,8 @@ u = np.concatenate([0 * u_pulse] * 8
                    + [0 * u_pulse] * 7)
 ```
 
+---
+
 #### Python implementation: Simulated response
 
 Simulate the first-order system with the input $$u(t)$$, then add uniform noise in $$[0,1]$$ ppm and
@@ -337,6 +349,8 @@ print(data.shape)
 ```
 
 **Note:** The estimation itself is in the notebook ch6_sysid_co2_est.
+
+---
 
 #### Python implementation
 

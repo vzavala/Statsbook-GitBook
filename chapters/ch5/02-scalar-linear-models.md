@@ -107,19 +107,23 @@
 
 ## Example: Linear Estimation with Correct Model
 
+{% hint style="danger" icon="flask" %}
 * Consider $$X,Y$$ with structural  relationship $$Y=\theta X$$ and $$\theta=2$$.
 * Assume that observations $$Y$$ are corrupted by noise $$\epsilon_\omega  \sim \mathcal{N}(0,0.0625)$$.
 * Use model to generate $$S=100$$ observations $$(x_\omega,y_\omega)$$.
 * We postulate a model $$Y=\theta X + \epsilon$$ with $$\epsilon\sim \mathcal{N}(0,\sigma^2)$$ and estimate $$\theta$$ using MLE.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch5_results_lin_est.png" alt="" width="350"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch5_results_lin_est.png" alt="" width="350"></figure>
 
+{% hint style="danger" icon="flask" %}
 * Plot $$SSE(\theta)$$ for different amounts of data $$S=10,100,1000$$.
 * Surface becomes better defined as we add data and reveals true value $$\theta=2$$.
 * If we use $$S=10$$, $$SSE(\theta)$$ is minimized at $$\hat{\theta}=2.2$$.
 * If we use $$S=100$$ or $$S=1000$$ obs, $$SSE(\theta)$$ is minimized  at $$\hat{\theta}=2$$.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch5_sharpness_lin_est.png" alt="" width="350"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch5_sharpness_lin_est.png" alt="" width="350"></figure>
 
 #### Python implementation
 
@@ -211,6 +215,8 @@ plt.show()
 <figure><img src="../../.gitbook/assets/nb/ch5_linear_est_example-06-0.png" alt="" width="520"></figure>
 
 **Note:** As in the book, with S = 10 the SSE is minimized at theta of about 2.2, and with S = 100 or 1000 close to 2: more data helps identify the true parameter.
+
+---
 
 ## Bias, Precision, and Information
 

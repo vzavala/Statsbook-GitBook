@@ -63,10 +63,12 @@
 
 ## Example: Monte Carlo Approximations
 
+{% hint style="danger" icon="flask" %}
 * We generate random samples $$X_\omega,\; \omega \in \mathcal{S}$$ from $$X\sim \textrm{Weibull}(1,2)$$.
 * Compute MC approxs for $$\mathbb{E}[X]$$, $$\mathbb{E}[\log(X)]$$, $$\mathbb{V}[\exp(X)+X^2]$$, and $$\mathbb{P}(X\geq 1)$$  for different $$S$$.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch4_convergence_mc.png" alt="" width="420"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch4_convergence_mc.png" alt="" width="420"></figure>
 
 #### Python implementation
 

@@ -36,6 +36,7 @@
 
 ## Example: Estimation for Exponential using MLE
 
+{% hint style="danger" icon="flask" %}
 * Use MLE to estimate $$\beta$$ for model $$\textrm{Exp}(\beta)$$ from data $$x_\omega,\; \omega \in \mathcal{S}$$.
 * Pdf of exponential RV is $$f(x|\beta)=\frac{1}{\beta}e^{-x/\beta}$$ and thus likelihood function is:
 
@@ -54,13 +55,16 @@
 
 * Value of $$\beta$$ that maximizes log likelihood satisfies $$\frac{\partial \log L(\beta)}{\partial \beta}=0$$.
 * Best estimate is $$\displaystyle\hat{\beta}=\frac{1}{S}\sum_{\omega=1}^Sx_\omega$$; *best* estimate $$\hat{\beta}$$ is empirical mean $$\hat{\mathbb{E}}_X$$.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * From data provided we find that $$\hat{\beta}=\hat{\mathbb{E}}_X=2$$.
 * Note that this is precisely location where $$\log L(\beta)$$ is maximized.
 * Note that values of likelihood function $$L(\theta)$$ are extremely small.
 * This is why using a log transformation of likelihood function is necessary.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch4_loglike_exp.png" alt="" width="350"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch4_loglike_exp.png" alt="" width="350"></figure>
 
 #### Python implementation
 

@@ -314,6 +314,33 @@ def render_notebook(name, cells, ctx, first, part_title=None):
     return f"\n{head}\n\n{badge}" + "\n".join(body) + "\n"
 
 
+EXAMPLE_HINT = '{% hint style="danger" icon="flask" %}'
+
+
+def box_example(md):
+    """Put the text of an example frame in a red hint box.
+
+    GitBook hints hold text, lists and equations, but not figures or other hints,
+    so those are moved (in their original order) to just below the box."""
+    lines, kept, moved, i = md.splitlines(), [], [], 0
+    while i < len(lines):
+        s = lines[i].strip()
+        if s.startswith("{% hint"):
+            j = next((k for k in range(i, len(lines)) if lines[k].strip() == "{% endhint %}"), len(lines) - 1)
+            moved.append("\n".join(lines[i:j + 1]))
+            i = j + 1
+        elif s.startswith("<figure"):
+            j = next((k for k in range(i, len(lines)) if "</figure>" in lines[k]), i)
+            moved.append("\n".join(l.strip() for l in lines[i:j + 1]))
+            i = j + 1
+        else:
+            kept.append(lines[i])
+            i += 1
+    text = re.sub(r"\n{3,}", "\n\n", "\n".join(kept)).strip()
+    out = f"\n{EXAMPLE_HINT}\n{text}\n{{% endhint %}}\n" if text else ""
+    return out + "".join(f"\n{m}\n" for m in moved)
+
+
 def notebook_chunks(name):
     """Split cells into parts (part 0 is merged into part 1)."""
     cells = load_cells(name)
@@ -441,10 +468,23 @@ def build_chapter(ch):
             if f["title"] and f["title"] != prev and not (i == k and f["title"] == title):
                 md.append(f"\n## {f['title']}\n")
             prev = f["title"] or prev
-            md.append(f["md"])
-            for name, ptitle, cells, first in inserts.get(i, []):
-                md.append(render_notebook(name, cells, ctx, first, ptitle if len(notebook_chunks(name)) > 1 else None))
-        text = re.sub(r"\n{3,}", "\n\n", "\n".join(md)).strip() + "\n"
+            is_example = f["title"].startswith("Example")
+            md.append(box_example(f["md"]) if is_example else f["md"])
+            code = [render_notebook(name, cells, ctx, first, ptitle if len(notebook_chunks(name)) > 1 else None)
+                    for name, ptitle, cells, first in inserts.get(i, [])]
+            code = [c for c in code if c.strip()]
+            divided = False
+            for c in code:
+                # a divider closes each Python implementation
+                full = c.lstrip().startswith("####")
+                md.append(c + ("\n---\n" if full else ""))
+                divided = divided or full
+            ends_example = is_example and (i + 1 == end or frames[i + 1]["title"] != f["title"])
+            if ends_example and not divided:
+                md.append("\n---\n")         # a divider closes each example
+        text = re.sub(r"\n{3,}", "\n\n", "\n".join(md)).strip()
+        text = re.sub(r"(\n---\n)(\s*---\n)+", r"\1", text + "\n")      # no doubled dividers
+        text = re.sub(r"\n---\s*$", "", text).strip() + "\n"            # none at the page end
         fname = f"{n + 1:02d}-{slug(title)}.md"
         (folder / fname).write_text(text)
         pages.append((title, f"chapters/{ch['key']}/{fname}"))

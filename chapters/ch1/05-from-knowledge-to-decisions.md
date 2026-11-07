@@ -62,12 +62,14 @@ The above procedure is known as *Monte Carlo (MC) simulation* and is widely used
 
 ## Example: Gibbs Reactor
 
+{% hint style="danger" icon="flask" %}
 * Empirical pdf and cdf for pressure (input $$X$$) and conversion (output $$Y$$).
 * Note change in behavior of $$Y$$; pdf of $$X$$ is unimodal, while pdf of $$Y$$ is bimodal.
 
-  <figure><img src="../../.gitbook/assets/slides/ch1_gibbs_press_extent.png" alt="" width="560"></figure>
-
 * Complex behavior of the conversion pdf is the result of strong nonlinear behavior
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/slides/ch1_gibbs_press_extent.png" alt="" width="560"></figure>
 
 #### Python implementation: Propagation of pressure to conversion
 
@@ -93,6 +95,8 @@ plt.show()
 
 <figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-30-0.png" alt="" width="520"></figure>
 
+---
+
 ## Decision-Making under Uncertainty
 
 We would like now to find a decision $$u$$ that manipulates $$Y(u)=\varphi(X,u)$$ in some desirable way (e.g., minimizes uncertainty/variance).
@@ -115,12 +119,14 @@ Consider the questions:
 
 ## Example: Gibbs Reactor
 
+{% hint style="danger" icon="flask" %}
 * Can counteract variability in pressure $$X$$ by modifying the operating temperature ($$u$$).
 * We compare empirical pdf and cdf for conversion at low ($$Y(u)$$) and high ($$Y(u')$$) temperature
 * Should we operate at low or high temp?
 * By comparing cdfs, we can see that operating at low temp is *consistently* more likely to achieve higher yields.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch1_gibbs_extent_temp.png" alt="" width="420"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch1_gibbs_extent_temp.png" alt="" width="420"></figure>
 
 #### Python implementation: Comparing decisions u and u'
 
@@ -156,6 +162,8 @@ plt.show()
 ```
 
 <figure><img src="../../.gitbook/assets/nb/ch1_gibbs_example-33-0.png" alt="" width="520"></figure>
+
+---
 
 ## Decision-Making under Uncertainty
 

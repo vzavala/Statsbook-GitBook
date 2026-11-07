@@ -93,9 +93,11 @@ Open in Colab: [`ch2_compare_exponentials.ipynb`](https://colab.research.google.
 
 ## Example: Residence Time in Mixing System
 
+{% hint style="danger" icon="flask" %}
 * Mixed system with volume $$V$$ and input/output flow $$F$$
 * At time $$t=0$$ we inject tracer so that input concentration is $$C_0$$.
 * Tracer concentration in system at time $$t$$ is $$C(t)$$
+{% endhint %}
 
 {% hint style="info" %}
 For how long will a tracer particle reside in the system?  What factors influence this time?
@@ -103,6 +105,7 @@ For how long will a tracer particle reside in the system?  What factors influenc
 
 <figure><img src="../../.gitbook/assets/slides/particle_diagram.png" alt="" width="210"></figure>
 
+{% hint style="danger" icon="flask" %}
 * Material balance reveals that:
 
   $$
@@ -112,13 +115,16 @@ For how long will a tracer particle reside in the system?  What factors influenc
 * Interpret $$T$$ as random time required for a particle to exit system (residence time)
 * Pdf of $$T$$, $$f_T(t)$$, is interpreted as fraction of injected particles exiting at time $$T=t$$
 * Balance suggests that $$T\sim\textrm{Exp}(\tau)$$
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Mean residence time is $$\mathbb{E}[T]=\tau=V/Q$$ and variance is $$\mathbb{V}[T]=(V/Q)^2$$.
 * What is effect of $$V$$ and $$Q$$ on uncertainty?
 * Fraction of particles that have exited up to time $$t$$ is $$\mathbb{P}(T\leq t)=F_T(t)$$.
 * $$F_T(t)=\displaystyle\int_{0}^tf_T(t')dt'=(1-e^{-t/\tau})$$ and thus $$F_T(0)=0$$ and $$F_T(\infty)=1$$.
 * Fraction of particles that remain in system at time $$t$$  is $$\mathbb{P}(T>t)=1-F_T(t)=e^{-t/\tau}$$
 * Function $$\mathbb{P}(T>t)$$ is known as the “survival function".
+{% endhint %}
 
 #### Python implementation
 

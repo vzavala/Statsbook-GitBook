@@ -84,12 +84,16 @@ Open in Colab: [`ch2_compare_weibull.ipynb`](https://colab.research.google.com/g
 
 ## Example: Modeling Wind Conditions
 
+{% hint style="danger" icon="flask" %}
 * Wind is rather unpredictable but it is known that the 10-min wind speed (time average over 10 minutes) follows a Weibull distribution (see Figure).
 * Information on wind speed distribution is used in planning studies to determine how much wind power can be extracted using wind turbines at a given location.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch2_windspeed.png" alt="" width="420"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch2_windspeed.png" alt="" width="420"></figure>
 
+{% hint style="danger" icon="flask" %}
 Use the pdf and cdf to determine the following:
+{% endhint %}
 
 {% hint style="info" %}
 * Scale and shape parameters for 10-min wind speed.
@@ -97,6 +101,7 @@ Use the pdf and cdf to determine the following:
 * Wind turbines extract high power when wind speed is [10-20 m/s]. Over what fraction of the time will the turbine operate in this high-power range at this location?
 {% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * We have that $$F(x)=0.63$$ occurs at $$x=$$6 m/s (this gives $$\beta$$).
 * $$F(x)=0.5$$ occurs at $$x=5$$ m/s; we thus have $$\mathbb{M}_X=5$$ and $$5=\beta(\log\,2)^{1/\xi}$$.
 * Applying logarithms we obtain:
@@ -108,7 +113,9 @@ Use the pdf and cdf to determine the following:
   $$
 
    Solving for $$\xi$$ we obtain $$\xi=2$$.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * The  average 10-min windspeed (in m/s) is
 
   $$
@@ -132,6 +139,7 @@ Use the pdf and cdf to determine the following:
   $$
 
    Wind turbine will only operate 6% of the time in the high-power range.
+{% endhint %}
 
 #### Python implementation
 

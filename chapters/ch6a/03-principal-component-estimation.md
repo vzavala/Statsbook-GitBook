@@ -70,6 +70,7 @@
 
 ## Example: PCA Estimation for Gibbs Reactor
 
+{% hint style="danger" icon="flask" %}
 * Develop a model that predicts conversion as a function of different vars:
 
   $$
@@ -80,7 +81,9 @@
 * Have total of $$n+1=6$$ params and $$S=250$$ obs.
 * Some of the data is redundant (variables are strongly correlated).
 * However, it is difficult to know which set of variables can predict conversion or if there is a minimum set of variables that we should consider.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Standard MLE gives estimates $$\hat{\theta}$$ with good SSE of $$2.44\times 10^{-3}$$.
 * However, we find that covariance matrix of these parameters is singular.
 * This is because the eigs of kernel matrix $$\mathbf{X}^T\mathbf{X}$$ are:
@@ -90,7 +93,9 @@
   $$
 
 * Three parameters cannot be estimated reliably.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * To eliminate effect, we obtain eigenvecs $$\mathbf{W}$$ and eliminate columns corresponding to three smallest eigs, to give $$\mathbf{W}_1$$.
 * We reduce data  $$\mathbf{T}_1=\mathbf{X}\mathbf{W}_1$$ and estimate $$\hat{\gamma}$$ and $$\hat{\theta}=\mathbf{W}_1\hat{\gamma}$$.
 * SSE value remains the same $$2.44\times 10^{-3}$$ but variances are:
@@ -100,6 +105,7 @@
   $$
 
 * Parameters can be estimated reliably with data reduction.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch6_gibbs_pca_fit.png" alt="" width="560"><figcaption><p>Fit of linear model under standard estimation (left) and PCA estimation (right).</p></figcaption></figure>
 

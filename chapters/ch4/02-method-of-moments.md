@@ -31,6 +31,7 @@
 
 ## Example: Method of Moments for Gaussian
 
+{% hint style="danger" icon="flask" %}
 * Want $$\theta=(\mu,\sigma^2)$$ for model $$X\sim \mathcal{N}(\mu,\sigma^2)$$ to see if  this matches data $$x_\omega,\; \omega \in \mathcal{S}$$.
 * Gaussian model has property that $$\mu=\mathbb{E}_X$$ and $$\sigma^2=\mathbb{V}_X$$.
 * Use data to obtain $$\hat{\mathbb{E}}_X=\frac{1}{S}\sum_{\omega\in\mathcal{S}}x_\omega$$ and $$\hat{\mathbb{V}}_X=\frac{1}{S}\sum_{\omega\in\mathcal{S}}(x_\omega-\hat{\mathbb{E}}_X)^2$$.
@@ -44,10 +45,13 @@
 
 * From definition of second central moment we have $$\mathbb{CMO}_2(\theta)=\mathbb{V}_X=\sigma^2$$.
 * Thus $$\mathbb{CMO}_2(\theta)=\hat{\mathbb{CMO}}_2$$ indicates that $$\hat{\sigma}^2=\hat{\mathbb{V}}_X$$.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * We used moment matching with $$S=10$$ and $$S=100$$ data points to estimate parameters. If we use $$S=10$$, the estimates are $$\hat{\mu}=0.45$$ and $$\hat{\sigma}=1.43$$;  if we use $$S=100$$, the estimates are $$\hat{\mu}=0.9$$ and $$\hat{\sigma}=2$$. The true parameters are $$\mu=1$$ and $$\sigma=2$$; we can thus see that we get closer as we increase $$S$$.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch4_gaussian_moments_example.png" alt="" width="420"><figcaption><p>Empirical pdf/cdf for Gaussian RV obtained from data and model predictions obtained with estimated parameters. Results for 𝑆 = 10 (top row) and for 𝑆 = 100 (bottom row).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch4_gaussian_moments_example.png" alt="" width="420"><figcaption><p>Empirical pdf/cdf for Gaussian RV obtained from data and model predictions obtained with estimated parameters. Results for 𝑆 = 10 (top row) and for 𝑆 = 100 (bottom row).</p></figcaption></figure>
 
 #### Python implementation
 
@@ -110,8 +114,11 @@ S = 100:  mu_hat = 1.12,  sigma_hat = 1.77
 
 **Note:** As in the book, with S = 10 the model pdf/cdf cannot match the data well, while with S = 100 they match well and the data reveal the Gaussian nature of the phenomenon.
 
+---
+
 ## Example: Method of Moments for Weibull
 
+{% hint style="danger" icon="flask" %}
 Now want to postulate $$\textrm{Weibull}(\xi,\beta)$$ and see if this matches data.
 
 * We are given observations $$x_\omega,\; \omega \in \mathcal{S}$$.
@@ -127,6 +134,7 @@ Now want to postulate $$\textrm{Weibull}(\xi,\beta)$$ and see if this matches da
   $$
 
 * This is challenging due to complex nature of $$\Gamma$$ function.  Is there another way?
+{% endhint %}
 
 #### Python implementation
 

@@ -159,8 +159,11 @@ ratio of variances (MC / exact): [0.928 0.94  0.944]
 
 **Note:** As in the book, the Monte Carlo covariance is close to the exact one: the uncertainty of an estimate is its sensitivity to perturbations in the data.
 
+---
+
 ## Example: Hougen-Watson
 
+{% hint style="danger" icon="flask" %}
 * We are interested in finding parameters for Hougen-Watson (HW)  model:
 
   $$
@@ -170,7 +173,9 @@ ratio of variances (MC / exact): [0.928 0.94  0.944]
 * Model captures competitive reaction and adsorption rates in a heterogeneous catalytic reaction (gas components adsorb onto the solid catalyst).
 * In this model, $$Y$$ is reaction rate and $$(X_1,X_2,X_3)$$ are species partial pressures.
 * Parameters $$(\theta_0,\theta_1,\theta_2,\theta_3,\theta_4)$$ have physical meaning (these represent adsorption and reaction rates and thus need to be non-negative).
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * We have $$S=13$$ observations $$(y_\omega,x_\omega)$$ available and $$n=5$$ parameters to estimate.
 * We are not given info about noise model and we thus solve SSE problem:
 
@@ -185,14 +190,18 @@ ratio of variances (MC / exact): [0.928 0.94  0.944]
   $$
   m_\omega(\theta)=\frac{(\theta_0x_{2,\omega}-x_{3,\omega}/\theta_4)}{(1+\theta_1x_{1,\omega}+\theta_2x_{2,\omega}+\theta_3x_{3,\omega})}.
   $$
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * HW model is highly nonlinear and this results in high nonlinearity of $$SSE(\theta)$$.
 * Below we show behavior of $$SSE(\theta)$$ for different values of $$\theta_1\in [-2,2]$$ and $$\theta_2\in [-2,2]$$  (while keeping rest of parameters fixed).
 * In a nonlinear model, we can find  emergence of max and min points in $$SSE(\theta)$$ and complex behavior (e.g., SSE function “blows up" at specific parameter values).
 * This behavior differs from that observed in linear model (SSE function only has minimum points) and makes nonlinear problems difficult to solve.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch5_hougen_span.png" alt="" width="489"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch5_hougen_span.png" alt="" width="489"></figure>
 
+{% hint style="danger" icon="flask" %}
 * We have intentionally evaluated SSE function at negative values of parameters.
 * We know from physical understanding that these parameters cannot be negative.
 * Unless this knowledge is explicitly encoded in SSE problem, we run risk that numerical solver lands at minimum point that has non-physical values.
@@ -209,7 +218,9 @@ ratio of variances (MC / exact): [0.928 0.94  0.944]
   $$
 
 * Minimum SSE value found was $$SSE(\hat{\theta})=0.2989$$; we use initial guess $$\hat{\theta}=(1,1,1,1,1)$$ to initialize the Newton algorithm used by $$\texttt{fitnlm}$$.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * We now solve problem by using initial guess $$\hat{\theta}=(-1,-1,-1,-1,-1)$$ and find that  Newton algorithm does not converge after 200 iterations and delivers estimates:
 
   $$
@@ -226,6 +237,7 @@ ratio of variances (MC / exact): [0.928 0.94  0.944]
 
 * Interestingly, these estimates give $$SSE(\hat{\theta})=0.3834$$, which is not too far from value found with the other set of estimates.
 * This shows how numerical solvers might encounter estimates that give excellent fits (minimize the SSE function) but that are non-physical.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch5_hougen_fit.png" alt="" width="560"><figcaption><p>Fit of HW model to exp data with physical (left) and non-physical (right) parameters.</p></figcaption></figure>
 
@@ -292,6 +304,8 @@ plt.show()
 ```
 
 <figure><img src="../../.gitbook/assets/nb/ch5_hougen_watson-08-0.png" alt="" width="520"></figure>
+
+---
 
 #### Python implementation: Good and bad initial guesses
 

@@ -35,6 +35,7 @@
 
 ## Example: Two-Stage Formulation for Sizing
 
+{% hint style="danger" icon="flask" %}
 * Want to size generator to control costs for demands $$X=(X_1,X_2)$$.
 * Generator can be operated flexibly; power output $$W(X)$$) satisfies $$W(X)\leq u$$.
 * Generator power can be adjusted depending on load conditions $$X$$ observed.
@@ -58,7 +59,9 @@
   $$
 
 * This set depends on decision $$u$$ and it dictates how flexible the system can be.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * We find optimal sizing by formulating two-stage stochastic problem:
 
   $$
@@ -80,6 +83,7 @@
   $$
 
 * Size that results from this problem is $$u^*_D=10$$ (more conservative).
+{% endhint %}
 
 #### Python implementation
 

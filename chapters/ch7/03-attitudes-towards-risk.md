@@ -16,19 +16,23 @@
 
 ## Example: Comparing Random Variables
 
+{% hint style="danger" icon="flask" %}
 * Example illustrates how disagreements naturally arise due to different perceptions of risk.
 * Have options $$u$$ (Option I) and $$u'$$ (Option II) with random costs $$Y(u)$$ and $$Y(u')$$.
 * Option $$u$$ has low mean cost but high variance; option $$u'$$ has high mean cost but low variance.
 
 Which option is better?
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch7_mean_var_options_pdf_cdf.png" alt="" width="350"><figcaption><p>Probability density and cumulative distribution functions for cost of competing decisions.</p></figcaption></figure>
 
+{% hint style="danger" icon="flask" %}
 * There is no unique answer; “better” depends on how DM attributes value to different aspects of the cost distributions.
 * If DM values average cost, $$u$$ is clearly better than $$u'$$, but this choice fails to capture the fact that $$u$$ has a higher uncertainty and has a higher probability of incurring a large cost. In other words, option $$u$$ is more “risky”.
 * If DM values certainty (less “risk”) they will protect themselves against outcomes of high cost. As such, they would prefer $$u'$$ (even if this leads to higher mean cost).
 * To formalize comparisons, we need to model the preferences of decision-makers.
 * This is done using *risk measures*.
+{% endhint %}
 
 #### Python implementation: Pdfs and cdfs of the two options
 
@@ -61,6 +65,8 @@ plt.show()
 ```
 
 <figure><img src="../../.gitbook/assets/nb/ch7_mean_var_comparison-04-0.png" alt="" width="520"></figure>
+
+---
 
 ## Attitudes Towards Risk
 
@@ -100,12 +106,14 @@ The following are typical attitudes towards risk and associated risk measures:
 
 ## Example: Attitudes Towards Risk
 
+{% hint style="danger" icon="flask" %}
 We revisit cost pdf/cdf of previous example and analyze risk attitudes.
 
 * *Risk-neutral* DM: you select option $$u$$ because this has lower expected cost.
 * *Risk-conscious* DM: you select threshold for cost that you are willing to tolerate (e.g., 5 MUSD). You select option $$u'$$ because this has a higher probability of achieving a cost that is below a threshold.
 * *Risk-averse* DM: you focus on outcomes of high cost. You select $$u'$$ because this has no outcomes with high cost (e.g., above 6 MUSD). DM focuses on right tail of pdf.
 * *Risk-taking* DM: you focus on outcomes of low cost. You select $$u$$ because this has outcomes of low cost (e.g., below 1 MUSD). DM focuses on left tail of pdf. Note that $$u$$ yields outcomes with negative cost (revenue). DM thus exploit risk.
+{% endhint %}
 
 #### Python implementation: Risk attitudes
 
@@ -133,8 +141,11 @@ Option II: E = 4.00,  P(Y <= 5) = 0.977,  VaR = 4.64,  CVaR = 4.88 (4.88)
 
 **Note:** As in the book, the mean and the variance lead to contradictory decisions; risk measures that look at the tails of the pdf capture the attitude of the decision-maker toward risk.
 
+---
+
 ## Example: Comparing Investment Options
 
+{% hint style="danger" icon="flask" %}
 * Have a couple of investment opportunities:
    * Capital $$c_I=25,000$$ USD with annual rate of return $$R_I\sim \mathcal{N}(0.5,0.1)$$.
    * Capital $$c_{II}=50,000$$ USD with annual rate of return $$R_{II}\sim \mathcal{N}(0.4,0.2)$$.
@@ -148,15 +159,18 @@ Option II: E = 4.00,  P(Y <= 5) = 0.977,  VaR = 4.64,  CVaR = 4.88 (4.88)
   $$
 
 * Want NPV to be as small as possible (negative values indicate revenue).
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch7_comparison_NPV.png" alt="" width="560"><figcaption><p>Density functions for NPVs for competing investment options.</p></figcaption></figure>
 
+{% hint style="danger" icon="flask" %}
 * Option I has high mean but is always negative (always makes money and is “safer”).
 * Moreover,  Option I has a low variance (low uncertainty).
 * Option II has high variance and loses money 9% of time; in some instances it can lose more than 150,000 USD.
 * However, with Option II, we make money 90% of the time and it is possible to make a lot of money (at levels that Option I cannot reach).
 * If you are risk-averse (do not want to lose money), I seems better.
 * If you are a risk-taker (you might be willing to take a chance of losing money sometimes in exchange for large gains), II is better.
+{% endhint %}
 
 #### Python implementation: Distributions of the NPV
 

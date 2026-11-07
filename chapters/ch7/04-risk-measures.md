@@ -66,6 +66,7 @@
 
 ## Example: Measuring Risk for Investment Optimization
 
+{% hint style="danger" icon="flask" %}
 We compute risk measures for investment example.
 
 * Expected Value:
@@ -99,6 +100,7 @@ We compute risk measures for investment example.
 * Best-Case:
 
    $$\min Y(u)=-140,609$$ USD and $$\min Y(u')=-363,708$$ USD.
+{% endhint %}
 
 #### Python implementation: Risk measures for the two options
 

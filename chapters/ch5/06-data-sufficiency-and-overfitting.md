@@ -68,6 +68,8 @@ plt.show()
 
 **Note:** A Hessian with positive eigenvalues defines a unique (sharp) minimum; zero eigenvalues give a flat valley, where the estimate is not unique.
 
+---
+
 #### Python implementation
 
 {% hint style="success" %}
@@ -140,8 +142,11 @@ Model II: sum of test MSE over folds = 0.0499
 
 **Note:** As in the book, the cdf of the errors of Model I lies above that of Model II (smaller errors are more likely), and cross-validation confirms that Model I generalizes better.
 
+---
+
 ## Example: Estimating Heat Capacity with Insufficient Data
 
+{% hint style="danger" icon="flask" %}
 * Want model of heat capacity $$C$$ as a function of temperature $$T$$:
 
   $$
@@ -152,9 +157,11 @@ Model II: sum of test MSE over folds = 0.0499
 * Can $$\theta_0,\theta_1$$ be estimated *uniquely* from $$(t_1,c_1)$$?
 * There are multiple (infinite) combinations of $$(\theta_0,\theta_1)$$ that can fit single data point.
 * If we were to estimate these parameters using MLE, model will overfit data.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/heatcapacity_diag.png" alt="" width="420"></figure>
+<figure><img src="../../.gitbook/assets/slides/heatcapacity_diag.png" alt="" width="420"></figure>
 
+{% hint style="danger" icon="flask" %}
 * Consider SSE minimization problem:
 
   $$
@@ -186,7 +193,9 @@ Model II: sum of test MSE over folds = 0.0499
   \mathcal{H}(\hat{\theta})=\left[\begin{array}{cc}1&t_1\\ t_1 & t_1^2\end{array}\right]
   \end{aligned}
   $$
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Since model is linear, can also obtain Hessian by noticing that $$\mathcal{H}(\hat{\theta})=\mathbf{X}^T\mathbf{X}$$ with:
 
   $$
@@ -208,3 +217,4 @@ Model II: sum of test MSE over folds = 0.0499
   $$
 
 * This tells us that one of the eigenvalues is zero and thus $$\theta_0,\theta_1$$ cannot be estimated uniquely from data.
+{% endhint %}

@@ -82,6 +82,8 @@ plt.show()
 
 **Note:** Multivariate RVs can be independent, linearly related (positively or negatively), or related in nonlinear ways; the joint pdf captures these relationships.
 
+---
+
 ## Domains and Subdomains
 
 * Multivariate RVs give rise to data and functions that live in multiple dimensions.

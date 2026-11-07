@@ -171,6 +171,7 @@ Open in Colab: [`ch3_compare_multigaussians.ipynb`](https://colab.research.googl
 
 ## Example: Uncertainty Reduction in Gibbs Reactor (Part I)
 
+{% hint style="danger" icon="flask" %}
 Pressure and conversion $$(X_1,X_2)$$ are Gaussian with covariance and correlation:
 
 $$
@@ -183,14 +184,18 @@ $$
 0.53   &       1\end{array}\right].
 \end{aligned}
 $$
+{% endhint %}
 
 {% hint style="info" %}
 * How does knowledge of pressure resolve uncertainty in conversion?
 * How does having knowledge in conversion resolves uncertainty in pressure?
 {% endhint %}
 
+---
+
 ## Example: Uncertainty Reduction in Gibbs Reactor (Part II)
 
+{% hint style="danger" icon="flask" %}
 * To quantify by how much uncertainty in conversion is reduced by having knowledge of pressure,  we compute variance of conditional pdf $$f(x_2|x_1)$$.
 * Variance of $$X_2|X_1$$ is given by:
 
@@ -215,6 +220,7 @@ $$
   $$
 
    This is a relative reduction of *22%*. Knowledge of conversion has the same relative effect.
+{% endhint %}
 
 #### Python implementation: Conditional variance of pressure and conversion
 
@@ -257,6 +263,8 @@ V[conversion] = 0.0158,  V[conversion | other 4 variables] = 0.0111
 ```
 
 **Note:** As in the book, the variables are strongly related, and the data cloud concentrates around the sample means; knowing the other variables reduces the variance of the conversion without shifting its mean (Example 3.17).
+
+---
 
 ## Multivariate Gaussian
 
@@ -370,13 +378,15 @@ $$
 
 ## Example: Geometry of 2D Gaussian Ellipsoid
 
+{% hint style="danger" icon="flask" %}
 We visualize joint pdf and marginal pdfs for $$\mu=(0,0)$$ and $$\Sigma=\left[\begin{array}{cc}1 &-1/2\\ -1/2 & 1\end{array}\right]$$.
-
-<figure><img src="../../.gitbook/assets/slides/ch3_gaussian_geom_corre.png" alt="" width="350"></figure>
 
 * Ellipsoid is tilted to left (because $$\Sigma_{12}<0$$) and is centered at $$\mu=(0,0)$$.
 * Axes along $$x_1$$ and $$x_2$$ directions have same length (because $$\Sigma_{11}=\Sigma_{22}$$).
 * Marginal box does not capture its shape (its tilt) while the enclosing box does.
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/slides/ch3_gaussian_geom_corre.png" alt="" width="350"></figure>
 
 #### Python implementation
 
@@ -457,13 +467,17 @@ chi2(2) quantile Q_n = 5.99,  chi2(1) quantile Q_1 = 3.84
 
 **Note:** As in the book, the shape and orientation of the ellipse come from the covariance matrix (its eigenvalues and eigenvectors).
 
-We now present 95% ellipsoidal region and 1000 realizations from  Gaussian.
+---
 
-<figure><img src="../../.gitbook/assets/slides/ch3_gaussian_ellipsoid_points.png" alt="" width="350"></figure>
+{% hint style="danger" icon="flask" %}
+We now present 95% ellipsoidal region and 1000 realizations from  Gaussian.
 
 * We have that 942 out of $$S=1000$$ realizations (94.2%)  lie inside ellipsoid
 * Realizations inside ellipse satisfy constraint $$(x_\omega-\mu)^T\Sigma^{-1}(x_\omega-\mu)\leq \mathbb{Q}(1-\alpha)$$
 * Fraction of realizations that are inside ellipsoid is not exactly 95%. Why?
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/slides/ch3_gaussian_ellipsoid_points.png" alt="" width="350"></figure>
 
 #### Python implementation
 

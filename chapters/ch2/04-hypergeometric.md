@@ -144,6 +144,7 @@ Open in Colab: [`ch2_compare_hypergeometric.ipynb`](https://colab.research.googl
 
 ## Example Hypergeometric
 
+{% hint style="danger" icon="flask" %}
 Cannot afford to monitor machine status every week for 3 years (time-consuming)
 
 * If you inspect the machine 5 times (selected at random)... What is the probability that the machine will be in failure mode 5 out of 5 times that you inspected?
@@ -165,6 +166,7 @@ We inspect at random, it is thus appropriate to model number of failures as $$X\
   \mathbb{P}(X=10)&=f(10)=8\times 10^{-4}.
   \end{aligned}
   $$
+{% endhint %}
 
 #### Python implementation
 

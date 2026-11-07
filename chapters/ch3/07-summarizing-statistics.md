@@ -234,11 +234,13 @@ For multiv $$X$$, we seek to understand variability of $$X_1$$ and $$X_2$$ and t
 
 ## Example: Covariance and Correlation for Gibbs Reactor
 
+{% hint style="danger" icon="flask" %}
 * Revisit reactor in which the reaction $$CO+2H_2\leftrightarrow CH_3OH$$ takes place.
 * Recall that this reaction is favored at high pressure.
 * Have data available for $$n=5$$ RVs: pressure, conversion, output flow for reactants ($$CO$$, $$H_2$$) and for product $$CH_3OH$$.
 
 Consider the following questions:
+{% endhint %}
 
 {% hint style="info" %}
 * Do you expect positive or negative corr between conversion and pressure?
@@ -246,15 +248,20 @@ Consider the following questions:
 * How are the output flows for $$CO$$, $$H_2$$, and $$CH_3OH$$ related?
 {% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Without even looking at the data, our physical understanding of reactor gives us some intuition as to how the variables are connected to each other.
 * We know that reaction is favored by high pressure and thus expect that conversion is positively correlated with pressure.
 * From conservation laws, we also know that output flows of reactants decrease as we increase the output flow of product (with higher conversion).
 * We thus expect that output flow of $$CO$$ is negatively correlated with pressure (knowledge of one variable is encoded in another variable).
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 Interdependencies are confirmed visually from data, but trends are partly hidden by noise.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch3_correlation_gibbs.png" alt="" width="489"></figure>
 
+{% hint style="danger" icon="flask" %}
 * Use data for computing sample covariance and Pearson correlation matrices.
 * Covariance matrix is:
 
@@ -286,6 +293,7 @@ Interdependencies are confirmed visually from data, but trends are partly hidden
   $$
 
 * Sample covariance and correlation matrices confirm physical intuition.
+{% endhint %}
 
 #### Python implementation: Sample covariance and correlation
 

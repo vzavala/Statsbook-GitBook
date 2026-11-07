@@ -88,12 +88,14 @@
 
 ## Example: Moving Average Filter for Pulse Signal
 
+{% hint style="danger" icon="flask" %}
 * Rectangular signal $$f$$, moving average filter $$g$$, and convolution $$\varphi=f*g$$.
 * Signal and filter are vectors with 100 entries.
 * Filter has window with $$N=20$$ entries and each weight is $$1/N=1/20$$.
 * Note convolution peaks at location in which filter and signal match.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_pulse_average_filter.png" alt="" width="350"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_pulse_average_filter.png" alt="" width="350"></figure>
 
 #### Python implementation: Moving average filter for a pulse
 
@@ -151,6 +153,8 @@ N=5, alpha=2: [0.14 0.61 1.   0.61 0.14]
 
 <figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-04-1.png" alt="" width="520"></figure>
 
+---
+
 ## 1D Convolution Operations
 
 * Another popular filter is the Gaussian filter:
@@ -184,18 +188,24 @@ N=5, alpha=2: [0.14 0.61 1.   0.61 0.14]
 
 ## Example: Gaussian Filter for Pulse Signal
 
+{% hint style="danger" icon="flask" %}
 * Rectangular pulse signal $$f$$, Gaussian $$g$$, and convolution $$\varphi=f*g$$.
 * Filter constructed using window with $$N=20$$ and setting $$\alpha=4$$ ($$\sigma=2.4$$).
 * Applying Gaussian filter has effect of smoothing sharp edges.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_pulse_gaussian_filter.png" alt="" width="350"><figcaption><p>Signal (top), filter (middle), and convolution (bottom) using Gaussian filter.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_pulse_gaussian_filter.png" alt="" width="350"><figcaption><p>Signal (top), filter (middle), and convolution (bottom) using Gaussian filter.</p></figcaption></figure>
+
+---
 
 ## Example: Gaussian Filter for Noisy Signal
 
+{% hint style="danger" icon="flask" %}
 * Show signal $$f$$ and convolution $$\varphi=f*g$$ using Gaussian filter $$g=(0.60,    0.94, 0.94, 0.60)$$.
 * We also perform convolution using Gaussian filter $$g=(0.0003, 0.41, 0.41, 0.0003)$$. Smoothing is not as effective; why?
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_noise_gauss_filter.png" alt="" width="350"><figcaption><p>Signal (top), convolution with Gaussian filter with σ = 1.5 (middle), and convolution with Gaussian filter with σ = 0.37 (bottom).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_noise_gauss_filter.png" alt="" width="350"><figcaption><p>Signal (top), convolution with Gaussian filter with σ = 1.5 (middle), and convolution with Gaussian filter with σ = 0.37 (bottom).</p></figcaption></figure>
 
 #### Python implementation: Gaussian filter for a pulse
 
@@ -211,6 +221,8 @@ sigma = 2.38
 ```
 
 <figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-06-1.png" alt="" width="520"></figure>
+
+---
 
 #### Python implementation: Gaussian filters for a noisy signal
 
@@ -237,6 +249,8 @@ plt.show()
 <figure><img src="../../.gitbook/assets/nb/ch6_example_convolutions-08-0.png" alt="" width="520"></figure>
 
 **Note:** As in the book, convolution transforms the signal: the filters smooth the pulse and remove noise, and the type and tuning of the filter decide the effect.
+
+---
 
 ## 1D Convolution Operations
 
@@ -271,13 +285,15 @@ plt.show()
 
 ## Example: Applying Derivative Filter to Signal
 
+{% hint style="danger" icon="flask" %}
 * We have previously observed that pdf is derivative of cdf.
 * To verify, define $$f$$ as cdf for $$\mathcal{N}(0,1)$$ and use derivative filter $$g=(1,0,-1)$$.
 * Cdf $$f$$ and convolution $$f*g$$ are shown below.
 * Convolution exactly matches pdf of $$\mathcal{N}(0,1)$$.
 * Convolution tells us where cdf grows faster/slower.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_pdf_derivative_filter.png" alt="" width="489"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_pdf_derivative_filter.png" alt="" width="489"></figure>
 
 #### Python implementation
 

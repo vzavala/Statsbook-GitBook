@@ -62,6 +62,8 @@ R^2 = S_m/S_y = 0.9549   (1 - S_e/S_y = 0.9549)
 
 **Note:** As in the book, the model captures the trend, the residuals are Gaussian (purely random), and the parameter variances are small: the Fisher information shows a sharp minimum and precise estimates.
 
+---
+
 #### Python implementation
 
 {% hint style="success" %}

@@ -78,20 +78,25 @@ Open in Colab: [`ch2_compare_lognormals.ipynb`](https://colab.research.google.co
 
 ## Example: Particle Size Distribution in Pharma Products
 
+{% hint style="danger" icon="flask" %}
 * In pharma industry, particle characterization of powder materials is crucial in drug product development and quality control of solid oral dosage forms.
 * Particle size
    distribution (PSD) affects product performance (e.g., dissolution and bioavailability).
 
 * Laser diffraction was used to characterize PSD for 1000 kg of product
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch2_lognormalpsd.png" alt="" width="350"></figure>
+<figure><img src="../../.gitbook/assets/slides/ch2_lognormalpsd.png" alt="" width="350"></figure>
 
+{% hint style="danger" icon="flask" %}
 * Address the following questions:
    * Does PSD follow a lognormal RV?
    * If so, what are the parameters of RV? What is PSD?
    * Product is considered to be acceptable if particle sizes are in $$[250,400]$$ $$\mu m$$.
    * How many kg of the batch are in the acceptable range?
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * From data at size 200 $$\mu m$$,  we have that probability of finding a particle with size below this value is 50%. This is empirical median (obtained from experimental data).
 * If PSD is lognormal, median should be $$\mathbb{M}_X=\exp(\mu)=200$$ and from here we estimate that $$\mu=\log\,200$$.
 * From data we observe that probability of finding particle size below 400 $$\mu m$$ is 90%. Under our model hypothesis, we thus have that:
@@ -107,7 +112,9 @@ Open in Colab: [`ch2_compare_lognormals.ipynb`](https://colab.research.google.co
   $$
 
    Substituting terms we find estimate $$\sigma=0.54$$.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Use parameters to obtain the cdf of the PSD and we see this matches  data well.
 * Having parameters, we can also obtain pdf (note that the particle size spans two orders of magnitude)
 * Probability that the particle size is in the acceptable range is:
@@ -117,6 +124,7 @@ Open in Colab: [`ch2_compare_lognormals.ipynb`](https://colab.research.google.co
   $$
 
    i.e., 24% of our product is acceptable ($$1000\cdot 0.24=240$$ kg is acceptable).
+{% endhint %}
 
 #### Python implementation
 

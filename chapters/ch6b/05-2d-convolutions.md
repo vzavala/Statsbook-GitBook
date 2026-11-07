@@ -46,6 +46,7 @@
 
 ## Example: Convolution of Matrix with Filter
 
+{% hint style="danger" icon="flask" %}
 * Consider conv of $$f$$ given by $$5\times 5$$ matrix and filter given by $$3\times 3$$ matrix $$g$$:
 
   $$
@@ -72,6 +73,7 @@
 * In 1st approach we center filter at every entry of signal matrix but in such a way that the window is always inside signal matrix (we avoid boundary entries); this will return a convolution $$f*g$$ that is a $$3\times 3$$ matrix.
 * In 2nd approach, we center filter at every entry of signal matrix and allow for some entries of  window to be outside signal matrix (we simply ignore any filter entries that are outside); this will return a convolution $$f*g$$ that is a $$5\times 5$$ matrix.
 * Note that convolution matrix has high values where pattern matches.
+{% endhint %}
 
 #### Python implementation
 
@@ -117,6 +119,8 @@ phi = f*g (same):
 
 **Note:** The 'valid' mode keeps the filter inside the matrix (3 x 3 result) and the 'same' mode keeps the size of the matrix (5 x 5 result).
 
+---
+
 ## 2D Convolutional Filters
 
 * Define 2D kernel functions to generate filters; e.g., kernel of 2D Gaussian filter is:
@@ -130,11 +134,13 @@ phi = f*g (same):
 
 ## Example: Weight Matrix of 2D Gaussian Filter
 
+{% hint style="danger" icon="flask" %}
 * Below we see 2D Gaussian filter with $$10\times 10$$ window and $$\sigma=\sqrt{2}$$.
 * Here, we visualize filter matrix and image (a 2D field).
 * Filter is symmetric around center point; center point has highest value and values decay quickly as one moves away from the center point.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_2D_gaussian_field.png" alt="" width="350"><figcaption><p>Weight matrix for 2D Gaussian filter (top) and visualization as a 2D field (bottom).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_2D_gaussian_field.png" alt="" width="350"><figcaption><p>Weight matrix for 2D Gaussian filter (top) and visualization as a 2D field (bottom).</p></figcaption></figure>
 
 #### Python implementation
 
@@ -183,6 +189,8 @@ plt.show()
 
 **Note:** As in the book, the filter is symmetric around its center, where it is largest, and decays quickly away from it.
 
+---
+
 ## 2D Convolutional Filters
 
 * Deriv filters are used in image analysis to extract gradients and detect boundaries.
@@ -229,11 +237,13 @@ plt.show()
 
 ## Example: Applying 2D Filters to an Image
 
+{% hint style="danger" icon="flask" %}
 * Left panel is micrograph of liquid crystal droplet when exposed to polarized light.
 * Middle panel shows micrograph after applying a horizontal Sobel filter; this reveals regions in which the brightness exhibits strong changes in intensity (gradients).
 * In the right panel, we see that application of Gaussian filter smooths out image and this reveals coarse features of micrograph.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/ch6_micrograph_2Dfilters.png" alt="" width="420"><figcaption><p>Micrograph image (left), image filtered with Sobel filter (middle), and image filtered with Gaussian filter  (right).</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/slides/ch6_micrograph_2Dfilters.png" alt="" width="420"><figcaption><p>Micrograph image (left), image filtered with Sobel filter (middle), and image filtered with Gaussian filter  (right).</p></figcaption></figure>
 
 #### Python implementation
 

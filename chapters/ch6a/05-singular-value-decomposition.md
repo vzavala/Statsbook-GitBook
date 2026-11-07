@@ -50,6 +50,7 @@
 
 ## Example: SVD for Gibbs Reactor
 
+{% hint style="danger" icon="flask" %}
 * Perform SVD on $$\mathbf{X}$$ (this has $$S=250$$ rows and $$n=6$$ columns) to obtain:
 
   $$
@@ -75,7 +76,9 @@
   $$
 
 * 1st and 6th columns are linearly dependent but rest of dependencies are less obvious.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Redundancies are identified as:
 
   $$
@@ -91,6 +94,7 @@
 
 * 4th, 5th, and 6th columns are dependent on the 1st, 2nd, and 3rd columns.
 * These dependencies arise due to mass balances (conservation); sum of some flows results in another flow.
+{% endhint %}
 
 #### Python implementation
 
@@ -145,8 +149,11 @@ rank(X[:, 1..6]) = 3
 
 **Note:** As in the book, the ranks of column subsets reveal which combinations of variables are redundant (for example, keeping X2, X4, X5).
 
+---
+
 ## Example: Images as Matrices
 
+{% hint style="danger" icon="flask" %}
 * Any matrix $$\mathbf{X}$$ can be represented as grayscale image; each entry corresponds to a pixel and number at such entry is intensity  (i.e., how dark pixel is).
 * Similarly, any grayscale image can be represented as a matrix $$\mathbf{X}$$ and this is the basic property that enables image processing (e.g., compression and filtering).
 * To illustrate this, consider matrix (notice symmetry and decaying magnitudes):
@@ -168,9 +175,11 @@ rank(X[:, 1..6]) = 3
   $$
 
 * What is image corresponding to this matrix? What if this is corrupted with noise?
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/ch6_svd_matrix_images.png" alt="" width="420"><figcaption><p>Image corresponding to matrix 𝐗 (top-left) and to perturbed matrix 𝐗_ε (top-right). Image corresponding to compression of matrix 𝐗 (bottom-left) and of perturbed matrix 𝐗_ε (bottom-right) using first singular value.</p></figcaption></figure>
 
+{% hint style="danger" icon="flask" %}
 * Images contain $$10\times 10=$$100 pixels and capture spatial pattern of matrices.
 * To human eye, it is easier to visualize patterns using images.
 * However, matrix representation enables analysis, storage, and manipulation.
@@ -181,7 +190,9 @@ rank(X[:, 1..6]) = 3
   $$
 
    where $$\mathbf{u}_i$$ and $$\mathbf{v}_i$$ are vectors of dimension 10.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * From SVD we find that image has 4 non-zero singular values:
 
   $$
@@ -192,6 +203,7 @@ rank(X[:, 1..6]) = 3
 * We have reduced the amount of data that we need to store by 80%.
 * SVD applied to noisy image can be used to eliminate noise.
 * Compression possible because of strong redundancies in the image (note that it is symmetric in all directions).
+{% endhint %}
 
 #### Python implementation
 
@@ -251,21 +263,27 @@ rank(X) = 4   rank(X_eps) = 10
 
 **Note:** As in the book, eliminating principal components filters out the noise: images can be analyzed as matrices.
 
+---
+
 ## Example: Image Compression using SVD
 
+{% hint style="danger" icon="flask" %}
 * Decompose complex image $$\mathbf{X}=\sum_{k=1}^ns_k\mathbf{u}_k\mathbf{v}_k^T$$.
 * Large components tend to contain broad (global) features while small components contain granular (local) features such as noise.
 * By truncating expansion to compress image, we ignore (filter out) granular behavior.
 * Image is matrix $$\mathbf{X}$$ of dimension 605$$\times$$ 605 and has total of 366,025 pixels.
+{% endhint %}
 
-  <figure><img src="../../.gitbook/assets/slides/droplet1g.jpg" alt="" width="210"></figure>
+<figure><img src="../../.gitbook/assets/slides/droplet1g.jpg" alt="" width="210"></figure>
 
+{% hint style="danger" icon="flask" %}
 * Upon applying SVD, we find that matrix is full rank (regular).
 * Obtain approx images by truncating series with $$n=1,3,10,100$$.
 * Coarse features develop quickly ($$n=3$$) while granular features develop slowly.
 * Elements $$s_ju_jv_j^T$$ of SVD series encode different “features" of image.
 * Observe that  a nearly perfect image is obtained with $$n=100$$.
 * Truncating series filters out granular features (*imperceptible to human eye*).
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/slides/droplet1g.jpg" alt="" width="280"></figure>
 

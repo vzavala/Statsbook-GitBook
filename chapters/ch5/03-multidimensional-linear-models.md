@@ -145,6 +145,7 @@
 
 ## Example: Estimating Heat Capacity
 
+{% hint style="danger" icon="flask" %}
 * Calorimetry experiments used to determine heat capacity as function of temperature.
 * Hypothesize a structural relationship of the form:
 
@@ -162,14 +163,18 @@
   $$
 
    where $$X_1=X$$ as temperature and $$X_2=X^2$$ as squared temperature.
+{% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Conduct a total of $$S=30$$ experiments (10 replicates at each temperature).
 * Why is there variability?
 
-  <figure><img src="../../.gitbook/assets/slides/ch5_heat_capacity_data.png" alt="" width="350"></figure>
-
 * This variability in replicates is the type of behavior that the random component of our model captures. Experiments, in general, are not perfectly reproducible.
+{% endhint %}
 
+<figure><img src="../../.gitbook/assets/slides/ch5_heat_capacity_data.png" alt="" width="350"></figure>
+
+{% hint style="danger" icon="flask" %}
 * We usually do not have information about sensor accuracy.
 * Assume noise covariance is diagonal with entries $$\Sigma_{\omega,\omega}=\sigma^2$$.
 * MLE thus reduces to minimization of SSE with solution:
@@ -182,9 +187,10 @@
 
 * Fit and residuals are shown below
 
-  <figure><img src="../../.gitbook/assets/slides/ch5_heat_capacity_fit.png" alt="" width="420"></figure>
-
 * Hessian $$\nabla_\theta^2 SSE(\theta)=\mathbf{X}^T\mathbf{X}$$ has positive eigenvalues (estimates are unique).
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/slides/ch5_heat_capacity_fit.png" alt="" width="420"></figure>
 
 #### Python implementation: Least-squares estimate
 
@@ -267,6 +273,8 @@ eigenvalues of X^T X: [5.263e-01 6.980e+05 7.938e+12]
 
 <figure><img src="../../.gitbook/assets/nb/ch5_heat_capacity_lin_est-06-1.png" alt="" width="520"></figure>
 
+---
+
 ## Multidimensional Linear Models
 
 * Recall that observations are random $$\mathbf{y}=\mathbf{X}\theta+\mathbf{e}$$  ($$\theta$$ is true parameter).
@@ -293,6 +301,7 @@ eigenvalues of X^T X: [5.263e-01 6.980e+05 7.938e+12]
 
 ## Example: Estimating Heat Capacity
 
+{% hint style="danger" icon="flask" %}
 * From fit of residuals we find $$\epsilon\sim \mathcal{N}(\hat{\mu},\hat{\sigma}^2)$$ with $$\hat{\mu}=5.02\times 10^{-14}$$ and $$\hat{\sigma}=0.13$$.
 * We confirm that noise has a mean of zero and $$\hat{\theta}$$ is unbiased.
 * From this we also find that parameter covariance matrix is:
@@ -310,6 +319,7 @@ eigenvalues of X^T X: [5.263e-01 6.980e+05 7.938e+12]
   $$
 
 * Parameter variances (diagonal entries) are small; estimates have a small uncertainty.
+{% endhint %}
 
 #### Python implementation: Parameter covariance
 
@@ -330,6 +340,8 @@ Cov[theta_hat] =
  [-7.836e-05  3.047e-07 -2.488e-10]
  [ 6.219e-08 -2.488e-10  2.073e-13]]
 ```
+
+---
 
 ## Bias, Precision, and Information
 
@@ -364,6 +376,7 @@ Cov[theta_hat] =
 
 ## Example: Estimating Heat Capacity
 
+{% hint style="danger" icon="flask" %}
 * Since model is linear, FI is inverse of $$\textrm{Cov}[\hat{\theta}]$$:
 
   $$
@@ -380,6 +393,7 @@ Cov[theta_hat] =
 * FI has large eigenvalues $$(4.77\times 10^{14}, 4.19\times 10^7, 3.16\times 10^1)$$.
 * We conclude that data contains significant information.
 * This also indicates that estimates lie on a sharp minimum of log likelihood.
+{% endhint %}
 
 #### Python implementation: Fisher information
 

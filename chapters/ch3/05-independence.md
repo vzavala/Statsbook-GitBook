@@ -35,13 +35,16 @@ This gives rise to concept of *independence*.
 
 ## Example: Lifetime of Thermostat
 
+{% hint style="danger" icon="flask" %}
 Consider the thermostat example and address the following:
+{% endhint %}
 
 {% hint style="info" %}
 * Prove that lifetimes $$X_1$$ and $$X_2$$ are independent and provide a physical explanation.
 * Prove that joint cdf is the product of marginal cdfs.
 {% endhint %}
 
+{% hint style="danger" icon="flask" %}
 * Condition for independence is $$f(x_1,x_2)=f_1(x_1)f_2(x_2)$$.
 * From previous examples we have that:
 
@@ -62,6 +65,7 @@ Consider the thermostat example and address the following:
 * Failure of components might be independent if they do not interact physically.
 * Joint cdf is $$F(x_1,x_2)=(1-e^{-x_1/\mu_1})(1-e^{-x_2/\mu_2})$$ and marginals are $$F_1(x_1)=1-e^{-x_1/\mu_1}$$ and $$F_2(x_2)=1-e^{-x_2/\mu_2}$$.
 * We thus have $$F(x_1,x_2)=F_1(x_1)\cdot F_2(x_2)$$ and this implies $$\mathbb{P}(X_1\leq x_1\; \& \;X_2\leq x_2)=\mathbb{P}(X_1\leq x_1)\cdot \mathbb{P}(X_2\leq x_2)$$.
+{% endhint %}
 
 #### Python implementation: Independence
 
