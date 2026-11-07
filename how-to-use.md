@@ -38,7 +38,7 @@ cd StatsBook/Python && jupyter lab
 ```
 
 The notebooks are set up to run from the `Python/` folder, where they find `Data/` and `Support/`. The CNN notebooks of
-Chapter 6 also need PyTorch (`torch`). The same repository has the [slides](https://github.com/vzavala/StatsBook/tree/master/Slides)
-and the [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab).
+Chapter 6 also need PyTorch (`torch`). The same repository has the [slides](https://github.com/vzavala/StatsBook/tree/master/Slides),
+the [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab), and the [MATLAB live scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab-Live).
 
 

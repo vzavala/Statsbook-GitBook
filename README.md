@@ -19,6 +19,7 @@ All course materials are in the book's GitHub repository, [vzavala/StatsBook](ht
   [4-up handouts](https://github.com/vzavala/StatsBook/tree/master/Slides/handouts)
 * [Python notebooks](https://github.com/vzavala/StatsBook/tree/master/Python) for every example (the ones shown in this book)
 * [MATLAB scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab) for the examples
+* [MATLAB live scripts](https://github.com/vzavala/StatsBook/tree/master/Matlab-Live) (`.mlx`) for the examples
 * [Data for the exercises](https://github.com/vzavala/StatsBook/tree/master/DataExercises)
 * [Errata](https://github.com/vzavala/StatsBook/blob/master/Errata/errata.pdf) for the printed book
 
